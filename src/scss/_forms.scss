@@ -1,0 +1,54 @@
+.login {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(calc(50vw - 50%), calc(42vh - 50%));
+    color: #ddd;
+    text-align: center;
+    max-width: 33vh;
+    min-width: 310px;
+    margin: 0 auto;
+    font-family: Tahoma, Geneva, sans-serif;
+    padding: 1vh 2vh;
+    background: rgba(102, 102, 102, 0.5);
+    border-radius: 3px;
+    label p {
+        font-size: 1.4rem;
+    }
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 1vh;
+        margin-bottom: 1vh;
+        box-sizing: border-box;
+        font-size:1.2rem;
+    }
+
+    input[type="submit"] {
+        background-color: #333;
+        border: 1px solid #666;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    button {
+        color: white;
+        background: red;
+        border: none;
+        font-size: 1.2rem;
+        padding: 8px 10px;
+        font-weight: 700;
+        border-radius: 3px;
+    }
+}
