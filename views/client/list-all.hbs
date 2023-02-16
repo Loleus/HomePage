@@ -1,0 +1,45 @@
+{{> backLogo}}
+<h1>Lista klientów</h1>
+<table>
+    <colgroup>
+        <col style="width:20%">
+        <col style="width:20%">
+        <col style="width:20%">
+        <col style="width:10%">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>e-mail</th>
+            <th>data</th>
+            <th>akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each clients}}
+
+        <tr>
+            <th>
+                <a href='/client/{{this.id}}'>{{this.name}}</a>
+            </th>
+            <td>
+                <a class="sendEmail" href='mailto:{{this.mail}}' target='_blank'>{{this.mail}}</a>
+            </td>
+            <td>
+                {{this.nextContactAt}}
+            </td>
+            <td class="actionBtns">
+                <a class="editBtn" href='/client/form/edit/{{this.id}}'>E</a>
+                <form class="deleteBtn-form" method='POST' action='/client/{{this.id}}?_method=DELETE'>
+                    <button type='submit' disabled="true" class='btn-delete'>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each }}
+    </tbody>
+</table>
+<form class="button_form" method='GET' action='/client/form/add'>
+    <button type='submit'>NOWY KLIENT</button>
+</form>
+{{> go-to-home}}
