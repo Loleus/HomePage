@@ -1,6 +1,5 @@
 const express = require('express');
 const hbs = require('express-handlebars');
-const { engine } = require ('express-handlebars')
 const {handleError} = require("./utils/errors")
 const methodOverride = require('method-override');
 const {clientRouter} = require('./routes/client')
@@ -12,7 +11,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({
     extended: true,
 }));
-// app.use(express.static(join(__dirname, 'public')));
+app.use("/public", express.static(join(__dirname, 'public')));
 app.use(express.static(join(__dirname, 'src')));
 // app.get('/', (req, res) => {
 //   res.send('public/index.html')
