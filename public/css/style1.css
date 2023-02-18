@@ -1,0 +1,70 @@
+#nav { margin: 0 auto; -ms-flex-item-align: center; align-self: center; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; display: -webkit-box; display: -ms-flexbox; display: flex; max-width: 1200px; }
+
+#nav button { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: .8vh 1vh; border: 1px solid black; background: #aaa; cursor: pointer; font-size: 1.3rem; text-transform: uppercase; }
+
+#nav button:disabled { background: #ddd; cursor: default; }
+
+table { -webkit-box-sizing: border-box; box-sizing: border-box; width: 80%; min-width: 320px; margin: 0 auto 20px; table-layout: fixed; font-size: 2vh; background: #666666; }
+
+table tr { background: #999; }
+
+table tr:nth-child(2n) { background: #888; }
+
+table thead tr th { background: #b9b9b9; padding: 8px 0; }
+
+table tbody tr th, table tbody tr td { overflow: hidden; padding: 4px 0; }
+
+table tbody tr th { background: #bbb; }
+
+table tbody tr:nth-of-type(2n) th { background: #aaa; }
+
+table tbody tr th a { color: #00112c; }
+
+table form.button { width: 150px; text-align: center; margin: 1vh auto; }
+
+table td form { display: inline; }
+
+table td.actionBtns { position: relative; }
+
+table form.deleteBtn-form { background: red; position: absolute; right: 0; top: 0; padding: 0; margin: 0; cursor: pointer; display: inline-block; width: 50%; height: auto; border-radius: 3px; }
+
+table button.btn-delete { width: 2rem; height: 2rem; background-image: url("../favicons/favicon-32x32.png"); background-size: cover; border: none; }
+
+table a.editBtn { width: 50%; position: absolute; top: 0; left: 0; border-top-left-radius: 0; background: #28cf28; font-size: 1.4rem; padding: 2px 5px; border-radius: 3px; color: #00112c; }
+
+table a.sendEmail { color: #00112c; vertical-align: top; line-height: 1rem; }
+
+.login { width: 100vw; height: 100vh; position: relative; }
+
+.form { position: absolute; top: 0; left: 0; -webkit-transform: translate(calc(50vw - 50%), calc(42vh - 50%)); transform: translate(calc(50vw - 50%), calc(42vh - 50%)); color: #ddd; text-align: center; max-width: 33vh; min-width: 310px; margin: 0 auto; font-family: Tahoma, Geneva, sans-serif; padding: 1vh 2vh; background: rgba(102, 102, 102, 0.5); border-radius: 3px; }
+
+.form label p { font-size: 1.4rem; }
+
+.form input, .form select, .form textarea { width: 100%; padding: 1vh; margin-bottom: 1vh; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 1.2rem; }
+
+.form input[type="submit"] { background-color: #333; border: 1px solid #666; -webkit-box-sizing: border-box; box-sizing: border-box; cursor: pointer; font-weight: bold; color: #ffffff; font-size: 1rem; margin-bottom: 0; }
+
+.form button { color: white; background: red; border: none; font-size: 1.2rem; padding: 8px 10px; font-weight: 700; border-radius: 3px;}
+
+* { -webkit-box-sizing: border-box; box-sizing: border-box; list-style: none; font-family: 'Consolas', sans-serif; margin: 0; padding: 0; text-decoration: none; font-size: 2vh; }
+
+body { height: 100vh; width: 100%; background: #222; text-align: center; }
+
+ul { text-align: center; color: #aaa; max-width: 1200px; margin: 0 auto; padding: 0; }
+
+ul li { font-size: 1.4rem; background: rgba(102, 102, 102, 0.5); }
+
+h1 { text-transform: uppercase; color: #b4b4b4; text-align: center; font-size: 1.9rem; }
+
+button { padding: 0 1vh; }
+
+a { text-decoration: none; color: #aaa; }
+
+a.btn-back { max-width: 30vh; min-width: 240px; position: absolute; bottom: 0; left: 0; -webkit-transform: translate(calc(50vw - 50%), 0); transform: translate(calc(50vw - 50%), 0); color: #aaa; background: rgba(102, 102, 102, 0.5); padding: .6vh 1vh .9vh; font-size: 1.2rem; border-radius: 3px; }
+
+form.button_form button { min-width: 26vh; padding: 5px; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 1.3rem; }
+
+.backLogo { -webkit-box-sizing: border-box; box-sizing: border-box; position: absolute; height: 100vh; width: 100%; top: 0; left: 0; text-align: center; overflow: hidden; z-index: -1; background: #3f5efb; background: radial-gradient(circle, #15214b 0%, #2c0d0d 120%); }
+
+.backLogo svg { max-width: 90vw; max-height: 80vh; z-index: -1; display: block; margin: 8vh auto 0 auto; opacity: .34; }
+/*# sourceMappingURL=style.css.map */

@@ -6,9 +6,12 @@ homeRouter
     .get('/', (req, res) => {
         res.redirect('/login');
         // res.redirect('/public');
+        // res.sendFile('index.html', {
+        //     root: '/public'
+        //   });
     })
     
-    .get('/home', (req, res) => {
+    .get('/main', (req, res) => {
         res.render('home/main');
     })
 

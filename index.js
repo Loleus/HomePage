@@ -11,16 +11,18 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({
     extended: true,
 }));
-app.use("/public", express.static(join(__dirname, 'public')));
-app.use(express.static(join(__dirname, 'src')));
+
+app.use("/", express.static(join(__dirname, 'public')));
 // app.get('/', (req, res) => {
-//   res.send('public/index.html')
+//   res.sendFile('index.html', {
+//     root: './public/'
+//   });
 // })
 // app.get('/admin', (req, res) => {
 //   res.send('login')
 // })
 
-
+// app.use("/", express.static(join(__dirname, 'src')));
 app.engine('.hbs', hbs.engine({
   defaultLayout: 'main',
   extname: '.hbs',
@@ -28,8 +30,8 @@ app.engine('.hbs', hbs.engine({
 }));
 app.set('view engine', '.hbs');
 
-app.use('/', homeRouter);
 app.use('/home', homeRouter);
+app.use('/home/home', homeRouter);
 app.use('/login', loginRouter)
 app.use('/client', clientRouter)
 app.use(handleError)
