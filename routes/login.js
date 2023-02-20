@@ -10,7 +10,7 @@ loginRouter
         let password = req.body.password;
          if (username == 'admin' && password == 'admin') {
            console.log('loggedIn')
-            res.redirect('home/main');
+            res.redirect('/client');
 
         } else {
              console.log('notLogged')

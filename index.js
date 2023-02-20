@@ -21,7 +21,6 @@ app.engine('.hbs', hbs.engine({
 }));
 app.set('view engine', '.hbs');
 app.use('/', homeRouter);
-app.use('/home', homeRouter);
 app.use('/login', loginRouter)
 app.use('/client', clientRouter)
 app.use(handleError)
