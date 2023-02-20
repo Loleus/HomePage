@@ -12,13 +12,7 @@ app.use(express.urlencoded({
     extended: true,
 }));
 
-app.use("/", express.static(join(__dirname, 'public')));
-app.get('/start', (req, res) => {
-  res.sendFile('index.html', {
-    root: './public/'
-  });
-  res.end();
-})
+app.use(express.static(join(__dirname, 'public')));
 
 app.engine('.hbs', hbs.engine({
   defaultLayout: 'main',
@@ -26,6 +20,7 @@ app.engine('.hbs', hbs.engine({
   layoutsDir: join(__dirname, 'views/layouts')
 }));
 app.set('view engine', '.hbs');
+app.use('/', homeRouter);
 app.use('/home', homeRouter);
 app.use('/login', loginRouter)
 app.use('/client', clientRouter)

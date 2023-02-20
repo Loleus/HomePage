@@ -4,6 +4,10 @@ const homeRouter = express.Router();
 homeRouter
 
     .get('/', (req, res) => {
+        res.render('home/start');
+    })
+    
+    .get('/home', (req, res) => {
         res.redirect('/login');
     })
     

@@ -16,7 +16,7 @@ export default class Repos extends HTMLElement {
   async getRepos(url) {
     this.loading = true;
     const response = await fetch(url, { mode: 'cors' });
-    const temp = await fetch("./components/repos/template.html")
+    const temp = await fetch("/components/repos/template.html")
     const tempStream = await temp.text()
     this.base = tempStream;
     const json = await response.json();
