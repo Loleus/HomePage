@@ -50,8 +50,9 @@ export default class Modal extends HTMLElement {
     if (id == "video") {
       return `${yt}`
     }
-    if (id == "photo") {
-      return `<my-photo></my-photo>`
+    if (id == "blog") {
+      window.location.href = "/main";
+      return ""
     }
   }
   getTemp(vis, id, text) {
