@@ -21,6 +21,9 @@ export default class Repos extends HTMLElement {
     this.base = tempStream;
     const json = await response.json();
     this.reps = json;
+    this.tmp = document.createElement('template');
+    this.tmp.innerHTML += this.base
+    this.setRepos(); 
     this.loading = false;
   }
   async connectedCallback() {
@@ -34,7 +37,7 @@ export default class Repos extends HTMLElement {
     let i = 1;
     this.reps.map(repo => {
       if (repo.name != "loleus.github.io") {
-        this.shadowRoot.getElementById("repos").innerHTML += `
+        this.tmp.content.getElementById("repos").innerHTML += `
           <tr>
             <td id="no">${i++}</td>
             <td id="name"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
@@ -49,11 +52,12 @@ export default class Repos extends HTMLElement {
     this.render();
   }
   render() {
+
     if (this.loading) {
       this.shadowRoot.innerHTML = `Loading...`;
     } else {
-      this.shadowRoot.innerHTML = `${this.base}`;
-      this.setRepos();
+      this.shadowRoot.innerHTML = ``;
+      this.shadowRoot.appendChild(this.tmp.content.cloneNode(true));
     }
   }
 };
