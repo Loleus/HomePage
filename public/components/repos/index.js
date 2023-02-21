@@ -1,4 +1,5 @@
 import Modal from "../modal/index.js";
+
 customElements.define("nav-modal", Modal);
 
 export default class Repos extends HTMLElement {
@@ -33,6 +34,7 @@ export default class Repos extends HTMLElement {
     await this.getRepos("https://api.github.com/users/Loleus/repos");
   }
   disconnectedCallback() { }
+
   setRepos() {
     let i = 1;
     this.reps.map(repo => {
@@ -48,6 +50,7 @@ export default class Repos extends HTMLElement {
       }
     }).join("")
   }
+
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
   }
