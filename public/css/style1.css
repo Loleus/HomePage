@@ -120,10 +120,10 @@ table a.editBtn {
 }
 
 table a.sendEmail {
-  color: #00112c;
+  color: #cec6a5;
   vertical-align: top;
   line-height: 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .login {
