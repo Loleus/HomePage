@@ -11,9 +11,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({
     extended: true,
 }));
-
 app.use(express.static(join(__dirname, 'public')));
-
 app.engine('.hbs', hbs.engine({
   defaultLayout: 'main',
   extname: '.hbs',
