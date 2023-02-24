@@ -1,7 +1,8 @@
-let sc, yt, info;
+let sc, yt, info, blog;
 fetch("/components/modal/soundcloud/sc.html").then(stream => stream.text()).then(text => sc = text);
 fetch("/components/modal/youtube/yt.html").then(stream => stream.text()).then(text => yt = text);
 fetch("/components/modal/aboutMe/info.html").then(stream => stream.text()).then(text => info = text);
+fetch("/components/modal/blog/blog.html").then(stream => stream.text()).then(text => blog = text);
 const getHTML = (id) => {
   let retTemp;
   switch (id) {
@@ -11,7 +12,9 @@ const getHTML = (id) => {
       break;
     case "video": retTemp = `${yt}`;
       break;
-    case "blog": retTemp = ""; window.location.href = "/main";
+    case "blog": retTemp = `${blog}`;
+      break;
+    case "admin": retTemp =  window.location.href = "/home";
       break;
     default: retTemp = "I have never heard of that link...";
   }
