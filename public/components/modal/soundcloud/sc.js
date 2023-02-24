@@ -12,4 +12,5 @@
     });
     widget.setVolume(50);
   });
+  console.log("jeb")
 }());

@@ -14,7 +14,7 @@ const output = ({ name }) => {
 const renderList = async (post) => {
 
     post.forEach(function (item) {
-      ul.innerHTML += output(item);
+      document.getElementById("posts").innerHTML += output(item);
     });
 
 }
@@ -25,10 +25,11 @@ const renderMenu = async () => {
     for (let obj of getList) {
       posts.push(obj)
     }
-    renderList(post);
+    console.log(posts)
+    renderList(posts);
   } catch (err) {
     console.error(err)
   }
 }
-ul.innerHTML = '';
+console.log("jeb")
 renderMenu();
