@@ -1,4 +1,6 @@
-export default class Repos extends HTMLElement {
+customElements.define("about-card", Modal);
+
+export default class About extends HTMLElement {
   static get observedAttributes() { return ["loading"]; }
   constructor() {
     super();
@@ -10,42 +12,23 @@ export default class Repos extends HTMLElement {
   set loading(v) {
     this.setAttribute("loading", JSON.stringify(v));
   }
-  async getRepos(url) {
+  async getCard() {
     this.loading = true;
-    const response = await fetch(url, { mode: 'cors' });
-    const temp = await fetch("/components/repos/template.html")
+    const temp = await fetch("/components/repos/template.html", { mode: 'cors' })
     const tempStream = await temp.text()
     this.base = tempStream;
-    const json = await response.json();
-    this.reps = json;
     this.tmp = document.createElement('template');
     this.tmp.innerHTML += this.base
-    this.setRepos(); 
     this.loading = false;
   }
+  
   async connectedCallback() {
     this.shadowRoot.addEventListener("click", (e) => {
       console.log(e.target)
     });
-    await this.getRepos("https://api.github.com/users/Loleus/repos");
+    await this.getCard();
   }
   disconnectedCallback() { }
-
-  setRepos() {
-    let i = 1;
-    this.reps.map(repo => {
-      if (repo.name != "loleus.github.io") {
-        this.tmp.content.getElementById("repos").innerHTML += `
-          <tr>
-            <td id="no">${i++}</td>
-            <td id="name"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
-            <td id="type">${repo.description}</td>
-            <td id="lang">${repo.language}</td>
-          </tr>
-            `
-      }
-    }).join("")
-  }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
