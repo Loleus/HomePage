@@ -1,5 +1,3 @@
-customElements.define("about-card", Modal);
-
 export default class About extends HTMLElement {
   static get observedAttributes() { return ["loading"]; }
   constructor() {
@@ -14,7 +12,7 @@ export default class About extends HTMLElement {
   }
   async getCard() {
     this.loading = true;
-    const temp = await fetch("/components/repos/template.html", { mode: 'cors' })
+    const temp = await fetch("/components/aboutMe/template.html", { mode: 'cors' })
     const tempStream = await temp.text()
     this.base = tempStream;
     this.tmp = document.createElement('template');
@@ -27,14 +25,15 @@ export default class About extends HTMLElement {
       console.log(e.target)
     });
     await this.getCard();
+    this.render();
   }
   disconnectedCallback() { }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.render();
+
   }
   render() {
-
+console.log("tutej")
     if (this.loading) {
       this.shadowRoot.innerHTML = `Loading...`;
     } else {

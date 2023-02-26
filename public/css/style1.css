@@ -198,11 +198,11 @@ table a.sendEmail {
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: #222;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 ul {

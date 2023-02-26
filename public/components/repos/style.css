@@ -1,8 +1,6 @@
 span {
   display: flex;
   flex-flow: column;
-  height: 100%;
-  min-height: 100vh;
   overflow: auto;
   justify-content: center;
 }
@@ -37,7 +35,7 @@ tr th {
 }
 h1 {
   pointer-events: none;
-  margin: 6vh 0;
+  margin: 1vh 0;
   padding: 0.3em 0 0.5em;
   color: #ffa70480;
   line-height: 1em;

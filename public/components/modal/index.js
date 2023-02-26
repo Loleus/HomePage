@@ -1,7 +1,5 @@
-customElements.define("modal-card", Modal);
-
 export default class Modal extends HTMLElement {
-  static get observedAttributes() { return ["visibility", "label-text", "id"]; }
+  static get observedAttributes() { return [ "visibility", "label-text", "id"]; }
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -14,12 +12,15 @@ export default class Modal extends HTMLElement {
   }
   async getModal() {
     this.loading = true;
-    const temp = await fetch("/components/repos/template.html", { mode: 'cors' })
+    const temp = await fetch("./components/modal/template.html", { mode: 'cors' })
+    console.log(temp)
     const tempStream = await temp.text()
     this.base = tempStream;
     this.tmp = document.createElement('template');
     this.tmp.innerHTML += this.base
+    console.log(this.tmp)
     this.loading = false;
+
   }
   get labelText() {
     return this.getAttribute('label-text');
@@ -46,7 +47,8 @@ export default class Modal extends HTMLElement {
       window.scrollTo(0, 0);
     });
     this.visibility = false
-    await this.getCard();
+    await this.getModal();
+
   }
   disconnectedCallback() { }
 
@@ -58,8 +60,17 @@ export default class Modal extends HTMLElement {
     if (this.loading) {
       this.shadowRoot.innerHTML = `Loading...`;
     } else {
-      this.shadowRoot.innerHTML = ``;
-      this.shadowRoot.appendChild(this.tmp.content.cloneNode(true));
+      if(this.visibility) {
+        this.shadowRoot.innerHTML = ``;
+        this.shadowRoot.appendChild(this.tmp.content.cloneNode(true));
+      } else {
+        this.shadowRoot.innerHTML = ``;
+        this.shadowRoot.innerHTML = `
+        <link rel="stylesheet" href="/components/modal/button.css">
+        <button>${this.labelText}</button>
+        `;
+      }
+
     }
   }
 }
