@@ -1,3 +1,4 @@
+import blog from "./blog.js"
 export default class Blog extends HTMLElement {
   static get observedAttributes() { return ["loading"]; }
   constructor() {
@@ -38,6 +39,7 @@ export default class Blog extends HTMLElement {
     } else {
       shadowRoot.innerHTML = ``;
       shadowRoot.appendChild(tmp.cloneNode(true));
+      blog(shadowRoot);
     }
   }
 };
