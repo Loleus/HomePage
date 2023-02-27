@@ -13,14 +13,16 @@ export default class Modal extends HTMLElement {
   async getModal() {
     this.loading = true;
     const temp = await fetch("./components/modal/template.html", { mode: 'cors' })
-    console.log(temp)
     const tempStream = await temp.text()
     this.base = tempStream;
     this.tmp = document.createElement('template');
     this.tmp.innerHTML += this.base
-    console.log(this.tmp)
     this.loading = false;
 
+  }
+  clickAction() {
+    this.visibility = !this.visibility;
+    window.scrollTo(0, 0);
   }
   get labelText() {
     return this.getAttribute('label-text');
@@ -41,12 +43,8 @@ export default class Modal extends HTMLElement {
   }
   async connectedCallback() {
     this.textContent = this.labelText;
-    this.shadowRoot.addEventListener("click", (e) => {
-      this.visibility = !this.visibility
-      console.log(this.index)
-      window.scrollTo(0, 0);
-    });
-    this.visibility = false
+    this.shadowRoot.addEventListener("click", this.clickAction.bind(this), false);
+    // this.visibility = false
     await this.getModal();
 
   }
@@ -67,6 +65,7 @@ export default class Modal extends HTMLElement {
       content = `<youtube-card></youtube-card>`
     }
     if (this.index == "blog") {
+      this.shadowRoot.removeEventListener("click", this.clickAction.bind(this), false);
       content =  `<blog-card></blog-card>`
     }
     return content

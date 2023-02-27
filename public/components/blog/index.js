@@ -20,9 +20,6 @@ export default class Blog extends HTMLElement {
   }
 
   async connectedCallback() {
-    this.shadowRoot.addEventListener("click", (e) => {
-      console.log(e.target)
-    });
     await this.getCard();
     this.render();
   }
