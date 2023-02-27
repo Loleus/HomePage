@@ -1,4 +1,4 @@
-export default class About extends HTMLElement {
+export default class Blog extends HTMLElement {
   static get observedAttributes() { return ["loading"]; }
   constructor() {
     super();
@@ -12,7 +12,7 @@ export default class About extends HTMLElement {
   }
   async getCard() {
     this.loading = true;
-    const html = await fetch("/components/aboutMe/template.html", { mode: 'cors' })
+    const html = await fetch("/components/blog/template.html", { mode: 'cors' })
     const tempStream = await html.text()
     this.base = tempStream;
     this.loading = false;

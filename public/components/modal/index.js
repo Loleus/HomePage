@@ -55,6 +55,22 @@ export default class Modal extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
   }
+  getContent() {
+    let content
+    if (this.index == "about" ) {
+      content = `<about-card></about-card>`
+    }
+    if (this.index == "music") {
+      content =  `<soundcloud-card></soundcloud-card>`
+    }
+    if (this.index == "video" ) {
+      content = `<youtube-card></youtube-card>`
+    }
+    if (this.index == "blog") {
+      content =  `<blog-card></blog-card>`
+    }
+    return content
+  }
   render() {
 
     if (this.loading) {
@@ -63,10 +79,37 @@ export default class Modal extends HTMLElement {
       if(this.visibility) {
         this.shadowRoot.innerHTML = ``;
         this.shadowRoot.appendChild(this.tmp.content.cloneNode(true));
+        this.shadowRoot.getElementById('content').innerHTML =  this.getContent()
       } else {
         this.shadowRoot.innerHTML = ``;
         this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="/components/modal/button.css">
+        <style>
+        button {
+          pointer-events: auto;
+          border-radius: 0.5em;
+          cursor: pointer;
+          font-size: 0.6em;
+          box-shadow: 0px 0px 6px -1px #b37e0e;
+          border: none;
+          background: #333b;
+          color: #a5a5a5;
+          padding: 5px 16px 7px;
+          text-shadow: 1px 2px 1px #272727;
+          color: #d6b212;
+          transition: box-shadow 0.24s linear;
+          margin: 0 1em;
+        }
+        
+        button:hover {
+          box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
+          color: #8fcc00;
+        }
+        @media only screen and (max-width: 1020px) {
+          button {
+            display:block;
+            margin: 0 auto;
+          }
+        }</style>
         <button>${this.labelText}</button>
         `;
       }
