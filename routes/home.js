@@ -14,6 +14,9 @@ homeRouter
     .get('/main', (req, res) => {
         res.render('home/main');
     })
+    .get('/info', (req, res) => {
+        res.render('home/info');
+    })
 
 module.exports = {
     homeRouter,

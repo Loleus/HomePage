@@ -31,7 +31,7 @@ const content = (shadowRoot) => {
             let btn = document.createElement('button')
             btn.textContent = name;
             nav.append(btn)
-            btn.addEventListener('click', () => {
+            btn.addEventListener('mouseover', () => {
                 ul.innerHTML = '';
                 renderList(name);
                 for (let b of [...nav.children]) {
