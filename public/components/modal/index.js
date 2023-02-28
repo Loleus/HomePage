@@ -43,8 +43,9 @@ export default class Modal extends HTMLElement {
   }
   async connectedCallback() {
     this.textContent = this.labelText;
-    this.shadowRoot.addEventListener("click", this.clickAction.bind(this), false);
-    // this.visibility = false
+    this.clickAction = this.clickAction.bind(this)
+    this.shadowRoot.addEventListener("click", this.clickAction, true);
+    this.visibility = false
     await this.getModal();
 
   }
@@ -65,7 +66,7 @@ export default class Modal extends HTMLElement {
       content = `<youtube-card></youtube-card>`
     }
     if (this.index == "blog") {
-      this.shadowRoot.removeEventListener("click", this.clickAction.bind(this), false);
+      this.shadowRoot.removeEventListener("click", this.clickAction, true);
       content =  `<blog-card></blog-card>`
     }
     return content
