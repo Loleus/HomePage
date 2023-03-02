@@ -1,6 +1,6 @@
 import blog from "./blog.js"
 export default class Blog extends HTMLElement {
-  static get observedAttributes() { return ["loading"]; }
+  static get observedAttributes() { return ["visibility","loading"]; }
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -18,8 +18,18 @@ export default class Blog extends HTMLElement {
     this.base = tempStream;
     this.loading = false;
   }
-
+  get visibility() {
+    return JSON.parse(this.getAttribute("visibility"));
+  }
+  set visibility(v) {
+    this.setAttribute("visibility", JSON.stringify(v));
+  }
   async connectedCallback() {
+    this.shadowRoot.addEventListener("click",()=>{
+      this.visibility = !this.visibility;
+      window.scrollTo(0, 0);
+    },true)
+    this.visibility = false
     await this.getCard();
     this.render();
   }

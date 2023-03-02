@@ -20,7 +20,8 @@ export default class Modal extends HTMLElement {
     this.loading = false;
 
   }
-  clickAction() {
+  clickAction(e) {
+    e.stopPropagation();
     this.visibility = !this.visibility;
     window.scrollTo(0, 0);
   }
@@ -66,7 +67,6 @@ export default class Modal extends HTMLElement {
       content = `<youtube-card></youtube-card>`
     }
     if (this.index == "blog") {
-      this.shadowRoot.removeEventListener("click", this.clickAction, true);
       content =  `<blog-card></blog-card>`
     }
     return content
@@ -77,6 +77,7 @@ export default class Modal extends HTMLElement {
       this.shadowRoot.innerHTML = `Loading...`;
     } else {
       if(this.visibility) {
+        // this.shadowRoot.removeEventListener("click", this.clickAction, true);
         this.shadowRoot.innerHTML = ``;
         this.shadowRoot.appendChild(this.tmp.content.cloneNode(true));
         this.shadowRoot.getElementById('content').innerHTML =  this.getContent()

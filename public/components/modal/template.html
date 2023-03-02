@@ -1,6 +1,6 @@
 <style>
 .container {
-  pointer-events:auto;
+  pointer-events:none;
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
@@ -17,6 +17,7 @@
   cursor: pointer;
 }
 .container::after {
+  pointer-events:auto;
   border-radius: 1em;
   cursor: pointer;
   display: block;

@@ -25,8 +25,10 @@ export default class Repos extends HTMLElement {
   }
   async connectedCallback() {
     this.shadowRoot.addEventListener("click", (e) => {
-      console.log(e.target)
-    });
+      e.stopPropagation();
+      e.preventDefault();
+      e.cancelBubble = true;
+    },true);
     await this.getRepos("https://api.github.com/users/Loleus/repos");
   }
   disconnectedCallback() { }
