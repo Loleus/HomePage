@@ -57,7 +57,7 @@ export default class Modal extends HTMLElement {
   }
   getContent() {
     let content
-    if (this.index == "about" ) {
+    if (this.index == "info" ) {
       content = `<about-card></about-card>`
     }
     if (this.index == "music") {
@@ -111,7 +111,11 @@ export default class Modal extends HTMLElement {
             margin: 0 auto;
           }
         }</style>
-        <button>${this.labelText}</button>
+        <button>
+        <a href="/${this.index}">
+        ${this.labelText}
+        </a>
+        </button>
         `;
       }
 

@@ -6,11 +6,6 @@ homeRouter
     .get('/', (req, res) => {
         res.render('home/start');
     })
-    
-    .get('/home', (req, res) => {
-        res.redirect('/login');
-    })
-    
     .get('/main', (req, res) => {
         res.render('home/main');
     })
@@ -20,6 +15,14 @@ homeRouter
     .get('/blog', (req, res) => {
         res.render('home/blog');
     })
+    .get('/video', (req, res) => {
+        res.render('home/video');
+    })
+    .get('/music', (req, res) => {
+        res.render('home/music');
+    })
+    
+    
 
 module.exports = {
     homeRouter,
