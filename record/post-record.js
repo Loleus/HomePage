@@ -1,4 +1,5 @@
 const {ValidationError} = require('../utils/errors')
+
 class PostRecord {
   constructor(obj) {
       const {id, date, title, lastEdit, text, picUrl} = obj;

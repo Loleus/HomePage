@@ -5,13 +5,16 @@ const methodOverride = require('method-override');
 const {clientRouter} = require('./routes/client')
 const {loginRouter} = require('./routes/login')
 const {homeRouter} = require('./routes/home');
+const postsRouter = require("./routes/posts");
 const {join } = require('path');
+
 const app = express()
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({
     extended: true,
 }));
 app.use(express.static(join(__dirname, 'public')));
+
 app.engine('.hbs', hbs.engine({
   defaultLayout: 'main',
   extname: '.hbs',
@@ -20,6 +23,7 @@ app.engine('.hbs', hbs.engine({
 app.set('view engine', '.hbs');
 app.use('/', homeRouter);
 app.use('/login', loginRouter)
+app.use('/posts', postsRouter)
 app.use('/client', clientRouter)
 app.use(handleError)
 app.listen(3000, '0.0.0.0',() => {
