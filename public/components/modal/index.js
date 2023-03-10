@@ -105,17 +105,23 @@ export default class Modal extends HTMLElement {
           box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
           color: #8fcc00;
         }
+        a {
+          text-decoration:none;
+          xolor:inherit;
+        }
         @media only screen and (max-width: 1020px) {
           button {
             display:block;
             margin: 0 auto;
           }
         }</style>
-        <button>
+
         <a href="/${this.index}">
+        <button>
         ${this.labelText}
-        </a>
         </button>
+        </a>
+
         `;
       }
 

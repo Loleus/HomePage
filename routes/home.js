@@ -1,10 +1,9 @@
 const express = require('express');
 const homeRouter = express.Router();
-
+const path = require('path');
 homeRouter
-
     .get('/', (req, res) => {
-        res.render('home/start');
+        res.sendFile(path.resolve(__dirname, '../pages/index.html'));
     })
     .get('/main', (req, res) => {
         res.render('home/main');
@@ -21,8 +20,8 @@ homeRouter
     .get('/music', (req, res) => {
         res.render('home/music');
     })
-    
-    
+
+
 
 module.exports = {
     homeRouter,
