@@ -15,6 +15,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.static(join(__dirname, 'public')));
 app.use('/',homeRouter)
+app.use('/info',homeRouter)
 
 
 // app.get('/about', (req, res) => {

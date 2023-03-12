@@ -6,7 +6,7 @@
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KADRA</title>
-  <link rel="stylesheet" href="/css/style1.css">
+
   <link rel="stylesheet" href="/components/repos/style.css">
   <link rel="stylesheet" href="/css/style.css">
   <script type="module" src="/index.js"></script>
@@ -15,23 +15,42 @@
 
 <body>
 
-  <nav id="nav"></nav>
-  <ul id="ul"></ul>
-  <my-repos>
-  </my-repos>
-  <h1>
-    <modal-card id="info" label-text="About Me"></modal-card>
-    <modal-card id="music" label-text="Music Tracks"></modal-card>
-    <modal-card id="video" label-text="Music Videos"></modal-card>
-    <modal-card id="blog" label-text="Blog"></modal-card>
-  </h1>
-  <script src="/js/index.js"></script>
-  <script>
-    const navi = document.getElementById('nav')
-    if (navi) {
-      renderMenu();
-    }
-  </script>
+  <header class="header-area">
+
+    <!-- site-navbar start -->
+    <div class="navbar-area"> 
+      <div class="container">
+
+        <nav class="site-navbar">
+          <!-- site logo -->
+          <a href="/" class="site-logo">logo</a>
+  
+          <!-- site menu/nav -->
+          <ul>
+            <li><a name="home">home</a></li>
+            <li><a name="info">info</a></li>
+            <li><a name="music">music</a></li>
+            <li><a name="video">video</a></li>
+            <li><a name="blog">blog</a></li>
+          </ul>
+  
+          <!-- nav-toggler for mobile version only -->
+          <button class="nav-toggler">
+            <div></div>
+          </button>
+        </nav>
+        
+      </div>
+    </div><!-- navbar-area end -->
+  
+    <div class="intro-area">
+      <div id="rack" class="container">
+        <my-repos>
+        </my-repos>
+      </div>
+    </div>
+  </header>
+
 </body>
 
 </html>
