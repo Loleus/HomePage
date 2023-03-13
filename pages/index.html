@@ -27,12 +27,12 @@
   
 
           <ul>
-            <li><a name="home">home</a></li>
-            <li><a name="info">info</a></li>
-            <li><a name="music">music</a></li>
-            <li><a name="video">video</a></li>
-            <li><a name="blog">blog</a></li>
-          </ul>
+          <li><a route="/">Home</a></li>
+          <li><a route="/about/">About</a></li>
+          <li><a route="/contact/">Contact</a></li>
+          <li><a route="/users">Users</a></li>
+          <li><a route="/misc">Misc</a></li>
+        </ul>
   
 
           <button class="nav-toggler">
@@ -56,85 +56,53 @@
 </html> -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Jasim" />
-    <meta
-      name="viewport"
-      content="width=device-width,minimum-scale=1,initial-scale=1"
-    />
-    <meta name="theme-color" content="#FF00FF" />
-    <title>Router</title>
-    <style>
-      * {
-  box-sizing: border-box;
-}
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font: 14px/1.3 system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  overflow: hidden;
-}
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Jasim" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+  <meta name="theme-color" content="#FF00FF" />
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="module" src="/index.js"></script>
+  <title>Router</title>
+  <style>
+    .page {
+      padding: 10px;
+    }
+  </style>
+</head>
 
-.nav {
-  padding: 10x;
-}
+<body>
+  <wc-router>
+      <div class="navbar-area">
+        <div class="container">
+          <nav class="site-navbar nav">
+            <a route="/" class="site-logo">logo</a>
+            <ul>
+              <li><a route="/">Home</a></li>
+              <li><a route="/about/">About</a></li>
+              <li><a route="/contact/">Contact</a></li>
+              <li><a route="/users">Users</a></li>
+              <li><a route="/misc">Misc</a></li>
+            </ul>
 
-.nav ul {
-  list-style: none;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
+            <button class="nav-toggler">
+              <div></div>
+            </button>
+        </div>
+      </div>
 
-.nav ul li {
-  padding: 10px;
-  display: inline-block;
-}
+    </nav>
+    <wc-route path="/" title="Home" component="wc-home"></wc-route>
+    <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
+    <wc-route path="/contact" title="Contact Us" component="wc-contact" resourceUrl="/js/pages/contact.js"></wc-route>
+    <wc-route path="/users" title="Users" component="wc-users"></wc-route>
+    <wc-route path="/users/:id" title="User Details" component="wc-userdetails"></wc-route>
+    <wc-route path="*" title="404" component="wc-notfound"></wc-route>
+    <wc-outlet></wc-outlet>
+  </wc-router>
+  <script type="module" src="./js/router.js"></script>
+  <script type="module" src="./js/pages/index.js"></script>
+</body>
 
-.nav ul li a {
-  color: #333;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.page {
-  padding: 10px;
-}
-
-    </style>
-  </head>
-  <body>
-    <wc-router>
-      <nav class="nav">
-        <ul>
-          <li><a route="/">Home</a></li>
-          <li><a route="/about/">About</a></li>
-          <li><a route="/contact/">Contact</a></li>
-          <li><a route="/users">Users</a></li>
-          <li><a route="/misc">Misc</a></li>
-        </ul>
-      </nav>
-      <wc-route path="/" title="Home" component="wc-home"></wc-route>
-      <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
-      <wc-route
-        path="/contact"
-        title="Contact Us"
-        component="wc-contact"
-        resourceUrl="/js/pages/contact.js"
-      ></wc-route>
-      <wc-route path="/users" title="Users" component="wc-users"></wc-route>
-      <wc-route
-        path="/users/:id"
-        title="User Details"
-        component="wc-userdetails"
-      ></wc-route>
-      <wc-route path="*" title="404" component="wc-notfound"></wc-route>
-      <wc-outlet></wc-outlet>
-    </wc-router>
-    <script type="module" src="./js/router.js"></script>
-    <script type="module" src="./js/pages/index.js"></script>
-  </body>
 </html>
