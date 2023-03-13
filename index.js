@@ -15,7 +15,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.static(join(__dirname, 'public')));
 app.use('/',homeRouter)
-app.use('/info',homeRouter)
+
 
 
 // app.get('/about', (req, res) => {
@@ -36,9 +36,9 @@ app.use('/info',homeRouter)
 // }));
 // app.set('view engine', '.hbs');
 // app.use('/', homeRouter);
-app.use('/login', loginRouter)
+// app.use('/login', loginRouter)
 // app.use('/posts', postsRouter)
-app.use('/client', clientRouter)
+// app.use('/client', clientRouter)
 app.use(handleError)
 app.listen(3000, '0.0.0.0',() => {
   console.log("Listening on http://0.0.0.0:3000")

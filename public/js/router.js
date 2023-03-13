@@ -40,10 +40,40 @@ export default class Router extends HTMLElement {
   }
 
   connectedCallback() {
+    this.innerHTML =   `
+    <script type="module" src="./index.js"></script>
+    <div class="navbar-area">
+    <div class="container">
+      <nav class="site-navbar nav">
+        <a route="/" class="site-logo">lolo_2023</a>
+        <ul>
+          <li><a route="/">Home</a></li>
+          <li><a route="/about/">About</a></li>
+          <li><a route="/contact/">Contact</a></li>
+          <li><a route="/users">Blog</a></li>
+          <li><a route="/misc">Misc</a></li>
+        </ul>
+
+        <button class="nav-toggler">
+          <div></div>
+        </button>
+    </div>
+  </div>
+
+</nav>
+<wc-route path="/" title="Home" component="wc-home"></wc-route>
+<wc-route path="/about" title="About Us" component="wc-about"></wc-route>
+<wc-route path="/contact" title="Contact Us" component="wc-contact" resourceUrl="/pages/contact.js"></wc-route>
+<wc-route path="/users" title="Users" component="wc-users"></wc-route>
+<wc-route path="/users/:id" title="User Details" component="wc-userdetails"></wc-route>
+<wc-route path="*" title="404" component="wc-notfound"></wc-route>
+<wc-outlet></wc-outlet>
+`;
     this.updateLinks();
     this.navigate(window.location.pathname);
 
     window.addEventListener("popstate", this._handlePopstate);
+
   }
 
   disconnectedCallback() {
