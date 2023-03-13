@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jasim" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <meta name="theme-color" content="#FF00FF" />
+    <title>Router</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <wc-router>
+      <nav class="nav">
+        <ul>
+          <li><a route="/">Home</a></li>
+          <li><a route="/about/">About</a></li>
+          <li><a route="/contact/">Contact</a></li>
+          <li><a route="/users">Users</a></li>
+          <li><a route="/misc">Misc</a></li>
+        </ul>
+      </nav>
+      <wc-route path="/" title="Home" component="wc-home"></wc-route>
+      <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
+      <wc-route
+        path="/contact"
+        title="Contact Us"
+        component="wc-contact"
+        resourceUrl="/js/pages/contact.js"
+      ></wc-route>
+      <wc-route path="/users" title="Users" component="wc-users"></wc-route>
+      <wc-route
+        path="/users/:id"
+        title="User Details"
+        component="wc-userdetails"
+      ></wc-route>
+      <wc-route path="*" title="404" component="wc-notfound"></wc-route>
+      <wc-outlet></wc-outlet>
+    </wc-router>
+    <script type="module" src="./js/router.js"></script>
+    <script type="module" src="./js/pages/index.js"></script>
+  </body>
+</html>
