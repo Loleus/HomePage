@@ -57,10 +57,10 @@ export default class Router extends HTMLElement {
         <button class="nav-toggler">
           <div></div>
         </button>
+        </nav>
     </div>
   </div>
 
-</nav>
 <wc-route path="/" title="Home" component="wc-home"></wc-route>
 <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
 <wc-route path="/contact" title="Contact Us" component="wc-contact" resourceUrl="/pages/contact.js"></wc-route>

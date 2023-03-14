@@ -7,8 +7,8 @@
 // import About from "./components/aboutMe/index.js";
 // customElements.define("wc-about", About)
 
-import Soundcloud from "./components/soundcloud/index.js";
-customElements.define("soundcloud-card", Soundcloud)
+// import Soundcloud from "./components/soundcloud/index.js";
+// customElements.define("soundcloud-card", Soundcloud)
 
 import Youtube from "./components/youtube/index.js";
 customElements.define("youtube-card", Youtube)
