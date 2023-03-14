@@ -41,7 +41,7 @@ export default class Router extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML =   `
-    <script type="module" src="./index.js"></script>
+
     <div class="navbar-area">
     <div class="container">
       <nav class="site-navbar nav">
@@ -63,7 +63,7 @@ export default class Router extends HTMLElement {
 
 <wc-route path="/" title="Home" component="wc-home"></wc-route>
 <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
-<wc-route path="/contact" title="Contact Us" component="wc-contact" resourceUrl="/pages/contact.js"></wc-route>
+<wc-route path="/contact" title="Contact Us" component="wc-contact"></wc-route>
 <wc-route path="/users" title="Users" component="wc-users"></wc-route>
 <wc-route path="/users/:id" title="User Details" component="wc-userdetails"></wc-route>
 <wc-route path="*" title="404" component="wc-notfound"></wc-route>
