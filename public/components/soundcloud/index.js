@@ -24,6 +24,20 @@ export default class Soundcloud extends HTMLElement {
       });
       await this.getCard();
       this.render();
+  console.log("jeb")
+  const widgetIframe = this.shadowRoot.getElementById('sc-widget');
+  const widget = SC.Widget(widgetIframe);
+  widget.bind(SC.Widget.Events.READY, function () {
+    widget.bind(SC.Widget.Events.PLAY, function () {
+      widget.getCurrentSound(function (currentSound) {
+        console.log('sound ' + currentSound.get('') + 'began to play');
+      });
+    });
+    widget.getVolume(function (volume) {
+      console.log('current volume value is ' + volume);
+    });
+    widget.setVolume(50);
+  });
     }
     htmlToElement(html) {
       const temp = document.createElement('template');

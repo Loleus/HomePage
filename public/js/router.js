@@ -48,8 +48,8 @@ export default class Router extends HTMLElement {
         <a route="/" class="site-logo">lolo_2023</a>
         <ul>
           <li><a route="/">Home</a></li>
-          <li><a route="/about/">About</a></li>
-          <li><a route="/contact/">Contact</a></li>
+          <li><a route="/about">About</a></li>
+          <li><a route="/contact">Contact</a></li>
           <li><a route="/users">Blog</a></li>
           <li><a route="/misc">Misc</a></li>
         </ul>

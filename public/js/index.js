@@ -70,7 +70,7 @@
 const navToggler = document.querySelector('.nav-toggler');
 const navMenu = document.querySelector('.site-navbar ul');
 const navLinks = document.querySelectorAll('.site-navbar a');
-console.log(navToggler,navMenu, navLinks)
+
 // load all event listners
 allEventListners();
 
