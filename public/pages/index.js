@@ -5,8 +5,12 @@ import AboutUs from "/components/aboutMe/index.js";
 customElements.define("wc-about", AboutUs)
 import Music from "/components/soundcloud/index.js";
 customElements.define("wc-music", Music);
+import Video from "/components/youtube/index.js";
+customElements.define("wc-video", Video);
+import Contact from "/components/contact/index.js";
+customElements.define("wc-contact", Contact);
 import NotFound from "./notfound.js";
 import Users from "./users.js";
 import UserDetails from "./userdetails.js";
 
-export { Home, AboutUs, Music, NotFound, Users, UserDetails };
+export { Home, AboutUs, Music, Video, Contact, NotFound, Users, UserDetails };
