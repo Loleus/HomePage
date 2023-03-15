@@ -36,7 +36,7 @@ app.use('/',homeRouter)
 // }));
 // app.set('view engine', '.hbs');
 // app.use('/', homeRouter);
-// app.use('/login', loginRouter)
+app.use('/login', loginRouter)
 // app.use('/posts', postsRouter)
 // app.use('/client', clientRouter)
 app.use(handleError)

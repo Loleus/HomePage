@@ -27,7 +27,7 @@ export default class Router extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <div class="navbar-area">
+  <div class="navbar-area">
     <div class="container">
       <nav class="site-navbar nav">
         <a route="/" class="site-logo">lolo_2023</a>
@@ -45,6 +45,13 @@ export default class Router extends HTMLElement {
         </button>
         </nav>
     </div>
+    <div class="login">
+    <form class="form" action="/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="LOGIN">
+    </form>
+</div>
   </div>
 <wc-route path="/" title="Home" component="wc-home"></wc-route>
 <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
