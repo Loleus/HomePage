@@ -2,16 +2,7 @@
 import { match } from "./util.js";
 
 export default class Router extends HTMLElement {
-  /**
-   * Router looks for a wc-outlet tag for updating the views on history updates.
-   * Example:
-   *
-   * <wc-router>
-   *  <wc-outlet>
-   *    <!-- All DOM update will be happening here on route change -->
-   *  </wc-outlet>
-   * </wc-router>
-   */
+
   get outlet() {
     return this.querySelector("wc-outlet");
   }
@@ -49,7 +40,7 @@ export default class Router extends HTMLElement {
         <ul>
           <li><a route="/">Home</a></li>
           <li><a route="/about">About</a></li>
-          <li><a route="/contact">Contact</a></li>
+          <li><a route="/music">Music</a></li>
           <li><a route="/users">Blog</a></li>
           <li><a route="/misc">Misc</a></li>
         </ul>
@@ -63,7 +54,7 @@ export default class Router extends HTMLElement {
 
 <wc-route path="/" title="Home" component="wc-home"></wc-route>
 <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
-<wc-route path="/contact" title="Contact Us" component="wc-contact"></wc-route>
+<wc-route path="/music" title="music Us" component="wc-music"></wc-route>
 <wc-route path="/users" title="Users" component="wc-users"></wc-route>
 <wc-route path="/users/:id" title="User Details" component="wc-userdetails"></wc-route>
 <wc-route path="*" title="404" component="wc-notfound"></wc-route>
@@ -73,11 +64,17 @@ export default class Router extends HTMLElement {
     this.navigate(window.location.pathname);
 
     window.addEventListener("popstate", this._handlePopstate);
+    window.addEventListener("beforeunload", event => {
+      event.preventDefault()
+      event.returnValue = ""
+    })
+
 
   }
 
   disconnectedCallback() {
     window.removeEventListener("popstate", this._handlePopstate);
+    window.removeEventListener("beforeunload", this.preventNav);
   }
 
   _handlePopstate = () => {
