@@ -38,7 +38,7 @@ app.use('/',homeRouter)
 // app.use('/', homeRouter);
 app.use('/login', loginRouter)
 // app.use('/posts', postsRouter)
-// app.use('/client', clientRouter)
+app.use('/client', clientRouter)
 app.use(handleError)
 app.listen(3000, '0.0.0.0',() => {
   console.log("Listening on http://0.0.0.0:3000")

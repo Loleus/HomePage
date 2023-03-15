@@ -10,11 +10,11 @@ loginRouter
         let password = req.body.password;
          if (username == 'admin' && password == 'admin') {
            console.log('loggedIn')
-            res.redirect('/client');
+            res.send(true);
 
         } else {
              console.log('notLogged')
-            res.render('home/login')
+             res.send(false)
         }
 });
 module.exports = {
