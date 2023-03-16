@@ -1,32 +1,27 @@
 const express = require('express');
-const hbs = require('express-handlebars');
-const {handleError} = require("./utils/errors")
+// const hbs = require('express-handlebars');
+// const { handleError } = require("./utils/errors")
 const methodOverride = require('method-override');
-const {clientRouter} = require('./routes/client')
-const {loginRouter} = require('./routes/login')
-const {homeRouter} = require('./routes/home');
+const { clientRouter } = require('./routes/client')
+const { loginRouter } = require('./routes/login')
+const { homeRouter } = require('./routes/home');
 const postsRouter = require("./routes/posts");
 const session = require('express-session');
-const {join } = require('path');
+const path = require('path');
 
 const app = express()
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({
-    extended: true,
+  extended: true,
 }));
-app.use(express.static(join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-	secret: 'secret',
-	resave: true,
-	saveUninitialized: true,
-  cookie: {
-    secure: true,
-    httpOnly: true,
-    sameSite: 'none',
-  },
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
 }));
-app.use('/',homeRouter)
+app.use('/', homeRouter)
 
 
 
@@ -51,8 +46,19 @@ app.use('/',homeRouter)
 // app.use('/login', loginRouter)
 // app.use('/posts', postsRouter)
 app.get('/login', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../pages/admin.html'));
+  res.sendFile(path.resolve(__dirname, '../pages/index.html'));
 })
+let auth = function(req, res, next) {
+  console.log(req.session.loggedin)
+  console.log("dupa")
+  if (!req.session.loggedin) {
+    res.redirect("/login");
+  } else {
+    console.log("ghere")
+    res.sendFile(path.resolve(__dirname, './pages/admin.html'));;
+    res.end()
+  }
+};
 app.post('/login', (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
@@ -65,19 +71,25 @@ app.post('/login', (req, res) => {
   //      res.sendFile(path.resolve(__dirname, '../pages/index.html'));
   // }
   if (username == 'admin' && password == 'admin') {
-      // Execute SQL query that'll select the account from the database based on the specified username and password
-      req.session.loggedin = true;
-      req.session.username = username;
-      console.log("loggedIn")
-      console.log(req.session)
-      res.redirect('/client')
+    // Execute SQL query that'll select the account from the database based on the specified username and password
+    req.session.loggedin = true;
+    req.session.username = username;
+    console.log("loggedIn")
+    console.log(req.session)
+    res.redirect('/client')
   } else {
-      response.send('Please enter Username and Password!');
-      response.end();
+    res.send('Please enter Username and Password!');
+    res.end();
   }
 });
-app.use('/client', clientRouter)
-app.use(handleError)
-app.listen(3000, '0.0.0.0',() => {
+app.get('/client', (req, res) => {
+  if (req.session.loggedin) {
+    res.sendFile(path.resolve(__dirname, './pages/admin.html'));;;
+  } else {
+    console.log("notLogged")
+  }
+})
+// app.use(handleError)
+app.listen(3000, '0.0.0.0', () => {
   console.log("Listening on http://0.0.0.0:3000")
 });
