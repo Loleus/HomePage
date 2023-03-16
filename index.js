@@ -46,19 +46,9 @@ app.use('/', homeRouter)
 // app.use('/login', loginRouter)
 // app.use('/posts', postsRouter)
 app.get('/login', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../pages/index.html'));
+  res.sendFile(path.resolve(__dirname, './pages/index.html'));
 })
-let auth = function(req, res, next) {
-  console.log(req.session.loggedin)
-  console.log("dupa")
-  if (!req.session.loggedin) {
-    res.redirect("/login");
-  } else {
-    console.log("ghere")
-    res.sendFile(path.resolve(__dirname, './pages/admin.html'));;
-    res.end()
-  }
-};
+
 app.post('/login', (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
@@ -87,6 +77,8 @@ app.get('/client', (req, res) => {
     res.sendFile(path.resolve(__dirname, './pages/admin.html'));;;
   } else {
     console.log("notLogged")
+    res.redirect('/')
+    res.end()
   }
 })
 // app.use(handleError)
