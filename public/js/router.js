@@ -10,7 +10,9 @@ export default class Router extends HTMLElement {
   get root() {
     return window.location.pathname;
   }
-
+  get form() {
+    return this.querySelector("form")
+  }
   get routes() {
     return Array.from(this.querySelectorAll("wc-route"))
       .filter(node => node.parentNode === this)
@@ -24,7 +26,11 @@ export default class Router extends HTMLElement {
         resourceUrl: r.getAttribute("resourceUrl")
       }));
   }
+  submitForm(e) {
+    console.log("prevent")
+    e.preventDefault()
 
+  }
   connectedCallback() {
     this.innerHTML = `
   <div class="navbar-area">
@@ -49,6 +55,7 @@ export default class Router extends HTMLElement {
     <form class="form" action="/login" method="POST">
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
+
         <input type="submit" value="LOGIN">
     </form>
 </div>
@@ -63,9 +70,14 @@ export default class Router extends HTMLElement {
 <wc-route path="*" title="404" component="wc-notfound"></wc-route>
 <wc-outlet></wc-outlet>
 `;
+
+    // this.form.addEventListener("submit", this.submitForm)
     this.updateLinks();
     this.navigate(window.location.pathname);
     window.addEventListener("popstate", this._handlePopstate);
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+  }
     window.addEventListener("beforeunload", event => {
       event.preventDefault()
       event.returnValue = ""
