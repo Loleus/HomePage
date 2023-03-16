@@ -2,10 +2,18 @@ const express = require('express');
 const clientRouter = express.Router();
 const {db} = require('../utils/db');
 const {NotFoundError} = require('../utils/errors')
+const path = require('path');
 clientRouter
 	
 .get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../pages/admin.html'));;
+  console.log(req.session)
+  if (req.session.loggedin) {
+
+    res.sendFile(path.resolve(__dirname, '../pages/admin.html'));;
+  } else {
+    res.send('dupa')
+  }
+
 })
 .get('/getAll', (req, res) => {
   res.send(db.getAll());
