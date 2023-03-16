@@ -36,34 +36,31 @@ export default class Router extends HTMLElement {
   <div class="navbar-area">
     <div class="container">
       <nav class="site-navbar nav">
-        <a route="/" class="site-logo">lolo_2023</a>
+        <a route="/client" class="site-logo">lolo_2023</a>
         <ul>
-          <li><a route="/">Home</a></li>
-          <li><a route="/about">About</a></li>
-          <li><a route="/music">Music</a></li>
-          <li><a route="/video">Video</a></li>
-          <li><a route="/users">Blog</a></li>
-          <li><a route="/contact">Contact</a></li>
+          <li><a route="/client">Home</a></li>
+          <li><a route="/client/about">About</a></li>
+          <li><a route="/client/music">Music</a></li>
+          <li><a route="/client/video">Video</a></li>
+          <li><a route="/client/users">Blog</a></li>
+          <li><a route="/client/contact">Contact</a></li>
+          <li><a route="/client/contact">Add Post</a></li>
         </ul>
-        <form class="form" action="/login" method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="LOGIN">
-        </form>
         <button class="nav-toggler">
           <div></div>
         </button>
         </nav>
     </div>
-
   </div>
 <wc-route path="/" title="Home" component="wc-home"></wc-route>
-<wc-route path="/about" title="About Us" component="wc-about"></wc-route>
-<wc-route path="/music" title="Music" component="wc-music"></wc-route>
-<wc-route path="/video" title="Video" component="wc-video"></wc-route>
-<wc-route path="/contact" title="Contact" component="wc-contact"></wc-route>
-<wc-route path="/users" title="Users" component="wc-users"></wc-route>
-<wc-route path="/users/:id" title="User Details" component="wc-userdetails"></wc-route>
+<wc-route path="/client" title="Home" component="wc-home"></wc-route>
+
+<wc-route path="/client/about" title="About Us" component="wc-about"></wc-route>
+<wc-route path="/client/music" title="Music" component="wc-music"></wc-route>
+<wc-route path="/client/video" title="Video" component="wc-video"></wc-route>
+<wc-route path="/client/contact" title="Contact" component="wc-contact"></wc-route>
+<wc-route path="/client/users" title="Users" component="wc-users"></wc-route>
+<wc-route path="/client/users/:id" title="User Details" component="wc-userdetails"></wc-route>
 <wc-route path="*" title="404" component="wc-notfound"></wc-route>
 <wc-outlet></wc-outlet>
 `;
@@ -75,10 +72,10 @@ export default class Router extends HTMLElement {
     if ( window.history.replaceState ) {
       window.history.replaceState( null, null, window.location.href );
   }
-    // window.addEventListener("beforeunload", event => {
-    //   event.preventDefault()
-    //   event.returnValue = ""
-    // })
+    window.addEventListener("beforeunload", event => {
+      event.preventDefault()
+      event.returnValue = ""
+    })
   }
 
   disconnectedCallback() {
