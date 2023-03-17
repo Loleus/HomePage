@@ -32,40 +32,6 @@ export default class Router extends HTMLElement {
 
   }
   connectedCallback() {
-    this.innerHTML = `
-  <div class="navbar-area">
-    <div class="container">
-      <nav class="site-navbar nav">
-        <a route="/client" class="site-logo">lolo_2023</a>
-        <ul>
-          <li><a route="/client">Home</a></li>
-          <li><a route="/client/about">About</a></li>
-          <li><a route="/client/music">Music</a></li>
-          <li><a route="/client/video">Video</a></li>
-          <li><a route="/client/users">Blog</a></li>
-          <li><a route="/client/contact">Contact</a></li>
-          <li><a route="/client/contact">Add Post</a></li>
-        </ul>
-        <button class="nav-toggler">
-          <div></div>
-        </button>
-        </nav>
-    </div>
-  </div>
-<wc-route path="/" title="Home" component="wc-home"></wc-route>
-<wc-route path="/client" title="Home" component="wc-home"></wc-route>
-
-<wc-route path="/client/about" title="About Us" component="wc-about"></wc-route>
-<wc-route path="/client/music" title="Music" component="wc-music"></wc-route>
-<wc-route path="/client/video" title="Video" component="wc-video"></wc-route>
-<wc-route path="/client/contact" title="Contact" component="wc-contact"></wc-route>
-<wc-route path="/client/users" title="Users" component="wc-users"></wc-route>
-<wc-route path="/client/users/:id" title="User Details" component="wc-userdetails"></wc-route>
-<wc-route path="*" title="404" component="wc-notfound"></wc-route>
-<wc-outlet></wc-outlet>
-`;
-
-    // this.form.addEventListener("submit", this.submitForm)
     this.updateLinks();
     this.navigate(window.location.pathname);
     window.addEventListener("popstate", this._handlePopstate);

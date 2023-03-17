@@ -19,7 +19,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'secret',
   resave: true,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie: {
+    maxAge: 24 * 60 * 60 * 1000,
+    httpOnly: true, 
+    secure: false,
+    SameSite: 'strict',
+  } 
 }));
 app.use('/', homeRouter)
 

@@ -9,11 +9,42 @@
   <link rel="stylesheet" href="/css/style1.css">
   <title>Router</title>
 </head>
+
 <body>
   <wc-router>
+    <div class="navbar-area">
+      <div class="container">
+        <nav class="site-navbar nav">
+          <a route="/" class="site-logo">lolo_2023</a>
+          <ul>
+            <li><a route="/">Home</a></li>
+            <li><a route="/about">About</a></li>
+            <li><a route="/music">Music</a></li>
+            <li><a route="/video">Video</a></li>
+            <li><a route="/users">Blog</a></li>
+            <li><a route="/contact">Contact</a></li>
+            <li><a route="/login">Login</a></li>
+          </ul>
+          <button class="nav-toggler">
+            <div></div>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <wc-route path="/" title="Home" component="wc-home"></wc-route>
+    <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
+    <wc-route path="/music" title="Music" component="wc-music"></wc-route>
+    <wc-route path="/video" title="Video" component="wc-video"></wc-route>
+    <wc-route path="/contact" title="Contact" component="wc-contact"></wc-route>
+    <wc-route path="/login" title="Login" component="wc-login"></wc-route>
+    <wc-route path="/users" title="Users" component="wc-users"></wc-route>
+    <wc-route path="/users/:id" title="User Details" component="wc-userdetails"></wc-route>
+    <wc-route path="*" title="404" component="wc-notfound"></wc-route>
+    <wc-outlet></wc-outlet>
   </wc-router>
   <script type="module" src="./js/router.js"></script>
   <script type="module" src="./pages/index.js"></script>
   <script type="module" src="./js/index.js"></script>
 </body>
+
 </html>
