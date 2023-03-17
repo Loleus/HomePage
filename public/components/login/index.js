@@ -1,9 +1,4 @@
 export default class Login extends HTMLElement {
-  submitForm(e) {
-    console.log("prevent")
-    e.preventDefault()
-
-  }
   connectedCallback() {
     this.innerHTML = `
     <form class="form" action="/login" method="POST">
@@ -12,7 +7,5 @@ export default class Login extends HTMLElement {
     <input type="submit" value="LOGIN">
     </form>
     `;
-
-    this.form.addEventListener("submit", this.submitForm)
   }
 }

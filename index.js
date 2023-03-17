@@ -23,20 +23,20 @@ app.use(session({
     maxAge: 24 * 60 * 60 * 1000,
     httpOnly: true, 
     secure: false,
-    SameSite: 'strict',
+    sameSite: 'strict',
   } 
 }));
 app.use('/', homeRouter)
 
 
 
-// app.get('/about', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, './pages/index.html'));
-// });
+app.get('/about', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './pages/index.html'));
+});
 
-// app.get('/contact', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, './pages/index.html'));
-// });
+app.get('/contact', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './pages/index.html'));
+});
 
 // app.get('/post', (req, res) => {
 //     res.sendFile(path.resolve(__dirname, 'pages/post.html'));
@@ -63,7 +63,7 @@ app.post('/login', (req, res) => {
     res.end();
   }
 });
-app.get('/client', (req, res) => {
+const auth = (req, res) => {
   if (req.session.loggedin) {
     res.sendFile(path.resolve(__dirname, './pages/admin.html'));;;
   } else {
@@ -71,7 +71,9 @@ app.get('/client', (req, res) => {
     res.redirect('/')
     res.end()
   }
-})
+}
+app.get('/client', auth)
+// app.get('/client/*', auth)
 // app.use(handleError)
 app.listen(3000, '0.0.0.0', () => {
   console.log("Listening on http://0.0.0.0:3000")
