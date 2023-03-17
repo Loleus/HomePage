@@ -1,43 +1,35 @@
 export default class Contact extends HTMLElement {
-  static get observedAttributes() { return [ "loading"]; }
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-  }
-  get loading() {
-    return JSON.parse(this.getAttribute("loading"));
-  }
-  set loading(v) {
-    this.setAttribute("loading", JSON.stringify(v));
-  }
-  async getModal() {
-    this.loading = true;
-    const temp = await fetch("./components/contact/template.html", { mode: 'cors' })
-    const tempStream = await temp.text()
-    this.base = tempStream;
-    this.tmp = document.createElement('template');
-    this.tmp.innerHTML += this.base
-    this.loading = false;
+  connectedCallback() {
+    this.innerHTML = `
+    <style>
+  h1 {
+  pointer-events: none;
+  margin: 1vh 0;
+  padding: 0.3em 0 0.5em;
+  color: #ffa70480;
+  line-height: 1em;
+  font-size: 0.8em;
+  text-shadow: 1px 1px 2px #272727;
+  background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
+  box-shadow: 0px 0px 3px 0px #cc0b0b;
+  transition: color 0.24s linear;
+}
+h1:hover {
+  color: #b99700;
+}
+h1 a {
+  pointer-events: auto;
+  text-decoration: none;
+  display: inline-block;
+  text-shadow: 1px 2px 1px #272727;
+  color: #d6b212;
+}
+h1 a:hover {
+  color: #96c42d;
+}
+</style>
+    <h1>Feel free to <adress><a href="mailto:07zglossie@wp.pl?subject=aboutCode">mail me</a></adress></h1>
 
-  }
-  async connectedCallback() {
-    await this.getModal();
-
-  }
-  disconnectedCallback() { }
-
-  attributeChangedCallback(attrName, oldVal, newVal) {
-    this.render();
-  }
-
-  render() {
-
-    if (this.loading) {
-      this.shadowRoot.innerHTML = `Loading...`;
-    } else {
-        this.shadowRoot.innerHTML = ``;
-        this.shadowRoot.appendChild(this.tmp.content.cloneNode(true));
-
-    }
+    `;
   }
 }
