@@ -11,8 +11,10 @@ import Contact from "/components/contact/index.js";
 customElements.define("wc-contact", Contact);
 import Login from "/components/login/index.js";
 customElements.define("wc-login", Login);
+import Menu from "/components/menu/index.js";
+customElements.define("wc-menu", Menu);
 import NotFound from "./notfound.js";
 import Users from "./users.js";
 import UserDetails from "./userdetails.js";
 
-export { Home, AboutUs, Music, Video, Contact, Login, NotFound, Users, UserDetails };
+export { Home, AboutUs, Music, Video, Contact, Login, Menu, NotFound, Users, UserDetails };

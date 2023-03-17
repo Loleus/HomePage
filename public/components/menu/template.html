@@ -1,61 +1,19 @@
-<header class="header-area">
-  <!-- site-navbar start -->
-  <div class="navbar-area"> 
-    <div class="container">
-      <nav class="site-navbar">
-        <!-- site logo -->
-        <a href="/" class="site-logo">logo</a>
-
-        <!-- site menu/nav -->
-        <ul>
-          <li><a href="/">home</a></li>
-          <li><a href="/info">info</a></li>
-          <li><a href="/music">music</a></li>
-          <li><a href="/video">video</a></li>
-          <li><a href="/blog">blog</a></li>
-        </ul>
-
-        <!-- nav-toggler for mobile version only -->
-        <button class="nav-toggler">
-          <div></div>
-        </button>
-      </nav>
-    </div>
-  </div><!-- navbar-area end -->
-
-  <div class="intro-area">
-    <div class="container">
-      <my-repos>
-      </my-repos>
-    </div>
+<div class="navbar-area">
+  <div class="container">
+    <nav class="site-navbar nav">
+      <a route="/" class="site-logo">lolo_2023</a>
+      <ul>
+        <li><a route="/">Home</a></li>
+        <li><a route="/about">About</a></li>
+        <li><a route="/music">Music</a></li>
+        <li><a route="/video">Video</a></li>
+        <li><a route="/users">Blog</a></li>
+        <li><a route="/contact">Contact</a></li>
+        <li><a route="/login">Login</a></li>
+      </ul>
+      <button class="nav-toggler">
+        <div></div>
+      </button>
+    </nav>
   </div>
-  <script>
-    const navToggler = document.querySelector('.nav-toggler');
-const navMenu = document.querySelector('.site-navbar ul');
-const navLinks = document.querySelectorAll('.site-navbar a');
-
-// load all event listners
-allEventListners();
-
-// functions of all event listners
-function allEventListners() {
-// toggler icon click event
-navToggler.addEventListener('click', togglerClick);
-// nav links click event
-navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
-}
-
-// togglerClick function
-function togglerClick() {
-navToggler.classList.toggle('toggler-open');
-navMenu.classList.toggle('open');
-}
-
-// navLinkClick function
-function navLinkClick() {
-if(navMenu.classList.contains('open')) {
-  navToggler.click();
-}
-}
-  </script>
-</header>
+</div>

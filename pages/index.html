@@ -6,31 +6,13 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
   <meta name="theme-color" content="#FF00FF" />
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/style1.css">
+
   <title>Router</title>
 </head>
 
 <body>
   <wc-router>
-    <div class="navbar-area">
-      <div class="container">
-        <nav class="site-navbar nav">
-          <a route="/" class="site-logo">lolo_2023</a>
-          <ul>
-            <li><a route="/">Home</a></li>
-            <li><a route="/about">About</a></li>
-            <li><a route="/music">Music</a></li>
-            <li><a route="/video">Video</a></li>
-            <li><a route="/users">Blog</a></li>
-            <li><a route="/contact">Contact</a></li>
-            <li><a route="/login">Login</a></li>
-          </ul>
-          <button class="nav-toggler">
-            <div></div>
-          </button>
-        </nav>
-      </div>
-    </div>
+    <wc-menu></wc-menu>
     <wc-route path="/" title="Home" component="wc-home"></wc-route>
     <wc-route path="/about" title="About Us" component="wc-about"></wc-route>
     <wc-route path="/music" title="Music" component="wc-music"></wc-route>
