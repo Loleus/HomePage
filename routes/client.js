@@ -15,6 +15,7 @@ clientRouter
   }
 
 })
+
 .get('/getAll', (req, res) => {
   res.send(db.getAll());
 })

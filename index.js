@@ -99,8 +99,16 @@ const auth = (req, res) => {
   }
 }
 app.get('/client', auth)
-// app.get('/client/*', auth)
-// app.use(handleError)
+.get('/client/*', (req, res) => {
+  console.log(req.session)
+  if (req.session.loggedin) {
+    res.redirect('/client');
+    res.end()
+  } else {
+    res.send('oh w#t&f%s !!!s')
+  }
+
+})
 app.listen(3000, '0.0.0.0', () => {
   console.log("Listening on http://0.0.0.0:3000")
 });

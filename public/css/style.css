@@ -28,7 +28,6 @@ body {
   * {
     font-size: 26px;
   }
-
 }
 
 .container {
@@ -42,7 +41,7 @@ body {
 }
 /* navbar regular css start */
 .navbar-area {
-  background: rgba(0,0,0,.6);
+  background: rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid #000;
 }
 .site-navbar {
@@ -71,10 +70,9 @@ a.site-logo {
   text-transform: uppercase;
 }
 .site-navbar ul li a:hover {
-  background: rgba(255,255,255,.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 /* navbar regular css end */
-
 
 /* nav-toggler css start */
 .nav-toggler {
@@ -85,21 +83,21 @@ a.site-logo {
   height: 39px;
   display: none;
 }
-.nav-toggler div, 
-.nav-toggler div:before, 
+.nav-toggler div,
+.nav-toggler div:before,
 .nav-toggler div:after {
   width: 28px;
   height: 3px;
   background-color: #fff;
   display: block;
-  transition: .3s;
+  transition: 0.3s;
 }
 .nav-toggler div:before {
-  content: '';
+  content: "";
   transform: translateY(-9px);
 }
 .nav-toggler div:after {
-  content: '';
+  content: "";
   transform: translateY(6px);
 }
 .nav-toggler.toggler-open div {
@@ -113,7 +111,6 @@ a.site-logo {
 }
 /* nav-toggler css start */
 
-
 /* intro-area css start */
 .intro-area {
   height: calc(100vh - 61px);
@@ -126,23 +123,22 @@ a.site-logo {
 }
 /* intro-area css end */
 
-
 /* mobile breakpoint start */
 @media screen and (max-width: 767px) {
- .modal-comp {
-  position: relative;
-  display: flex;
-  flex-flow: column;
-z-index: -1;
-  justify-content: center;
- height: calc(100vh-39px);
-  /* overflow-y: scroll; */
-}
+  .modal-comp {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    z-index: -1;
+    justify-content: center;
+    height: calc(100vh-39px);
+    /* overflow-y: scroll; */
+  }
   .container {
     max-width: 720px;
   }
   /* navbar css for mobile start */
-  .nav-toggler{
+  .nav-toggler {
     display: block;
   }
   .site-navbar {
@@ -157,10 +153,10 @@ z-index: -1;
     flex-direction: column;
     align-items: center;
     border-top: 1px solid #444;
-    background-color: rgba(0,0,0,.75);
+    background-color: rgba(0, 0, 0, 0.75);
     max-height: 0;
     overflow: hidden;
-    transition: .3s;
+    transition: 0.3s;
   }
   .site-navbar ul li {
     width: 100%;
@@ -170,7 +166,7 @@ z-index: -1;
     padding: 25px;
   }
   .site-navbar ul li a:hover {
-    background-color: rgba(255,255,255,.1);
+    background-color: rgba(255, 255, 255, 0.1);
   }
   .site-navbar ul.open {
     max-height: 100vh;
@@ -179,8 +175,7 @@ z-index: -1;
 
   /* navbar css for mobile end */
 }
-/* mobile breakpoint end */ 
-
+/* mobile breakpoint end */
 
 .form {
   position: absolute;
@@ -189,8 +184,19 @@ z-index: -1;
   transform: translate(calc(50vw - 50%), calc(42vh - 50%));
   color: #ddd;
   text-align: center;
-  max-width: 33vh;
-  min-width: 310px;
+  width: 100vw;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Tahoma, Geneva, sans-serif;
+  padding: 1vh 2vh;
+  background: rgba(102, 102, 102, 0.5);
+  border-radius: 3px;
+}
+form.addForm {
+  color: #ddd;
+  text-align: center;
+  width: 100vw;
+  max-width: 500px;
   margin: 0 auto;
   font-family: Tahoma, Geneva, sans-serif;
   padding: 1vh 2vh;
@@ -198,16 +204,16 @@ z-index: -1;
   border-radius: 3px;
 }
 label p {
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 input,
 select,
 textarea {
   width: 100%;
-  padding: 1vh;
-  margin-bottom: 1vh;
+  padding: .5vh;
+  margin-bottom: .5;
   box-sizing: border-box;
-  font-size:1.2rem;
+  font-size: .8rem;
 }
 
 input[type="submit"] {
@@ -222,11 +228,24 @@ input[type="submit"] {
 }
 
 button {
-  color: white;
-  background: red;
-  border: none;
-  font-size: 1.2rem;
-  padding: 8px 10px;
-  font-weight: 700;
-  border-radius: 3px;
+  padding: 1vh;
+  margin-bottom: 1vh;
+  box-sizing: border-box;
+  background-color: #333;
+  border: 1px solid #666;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+span.form {
+  display: flex;
+  flex-flow: column;
+  overflow: auto;
+  justify-content: center;
+  width:100%;
+  height: calc(100vh - 79px);
 }
