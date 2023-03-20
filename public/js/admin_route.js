@@ -55,7 +55,7 @@ export default class Router extends HTMLElement {
 
   updateLinks() {
     this.querySelectorAll("a[route]").forEach(link => {
-      const target = link.getAttribute("route");
+      const target = window.location.href + link.getAttribute("route");
       link.setAttribute("href", target);
       link.onclick = e => {
         e.preventDefault();

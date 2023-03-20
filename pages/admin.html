@@ -20,7 +20,7 @@
             <li><a route="/client/about">About</a></li>
             <li><a route="/client/music">Music</a></li>
             <li><a route="/client/video">Video</a></li>
-            <li><a route="/client/users">Blog</a></li>
+            <li><a route="/client/blog">Blog</a></li>
             <li><a route="/client/contact">Contact</a></li>
             <li><a route="/client/addPost">Add Post</a></li>
           </ul>
@@ -37,8 +37,8 @@
     <wc-route path="/client/video" title="Video" component="wc-video"></wc-route>
     <wc-route path="/client/contact" title="Contact" component="wc-contact"></wc-route>
     <wc-route path="/client/addPost" title="Add post" component="wc-addpost"></wc-route>
-    <wc-route path="/client/users" title="Users" component="wc-users"></wc-route>
-    <wc-route path="/client/users/:id" title="User Details" component="wc-userdetails"></wc-route>
+    <wc-route path="/client/blog" title="Blog" component="wc-users"></wc-route>
+    <wc-route path="/blog/:id" title="Post Details" component="wc-userdetails"></wc-route>
     <wc-route path="*" title="404" component="wc-notfound"></wc-route>
     <wc-outlet></wc-outlet>
   </wc-router>
