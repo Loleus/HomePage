@@ -3,22 +3,22 @@ const clientRouter = express.Router();
 const {db} = require('../utils/db');
 const {NotFoundError} = require('../utils/errors')
 const path = require('path');
-clientRouter
+// clientRouter
 	
-.get('/', (req, res) => {
-  console.log(req.session)
-  if (req.session.loggedin) {
+// .get('/', (req, res) => {
+//   console.log(req.session)
+//   if (req.session.loggedin) {
 
-    res.sendFile(path.resolve(__dirname, '../pages/admin.html'));;
-  } else {
-    res.send('dupa')
-  }
+//     res.sendFile(path.resolve(__dirname, '../pages/admin.html'));;
+//   } else {
+//     res.send('dupa')
+//   }
 
-})
+// })
 
-.get('/getAll', (req, res) => {
-  res.send(db.getAll());
-})
+// .get('/getAll', (req, res) => {
+//   res.send(db.getAll());
+// })
 
 // .get('/:id', (req, res) => {
 //   const client = db.getOne(req.params.id);

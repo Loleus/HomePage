@@ -1,11 +1,12 @@
 const express = require('express');
-// const { handleError } = require("./utils/errors")
+const { handleError } = require("./utils/errors")
 const methodOverride = require('method-override');
 const { clientRouter } = require('./routes/client')
 const { loginRouter } = require('./routes/login')
 const { homeRouter } = require('./routes/home');
 const postsRouter = require("./routes/posts");
 const session = require('express-session');
+const {db} = require('./utils/dbp');
 const path = require('path');
 
 const app = express()
@@ -99,16 +100,32 @@ const auth = (req, res) => {
   }
 }
 app.get('/client', auth)
-.get('/client/*', (req, res) => {
-  console.log(req.session)
-  if (req.session.loggedin) {
-    res.redirect('/client');
-    res.end()
-  } else {
-    res.send('oh w#t&f%s !!!s')
-  }
 
-})
+// app.get('/client/getAll', (req, res) => {
+//   res.send(db.getAll());
+// })
+
+app.get('/client/getAll', async function(req, res, next) {
+  try {
+    // res.json(await posts.getMultiple(req.query.page));
+    res.send(db.getAll());
+  } catch (err) {
+    console.error(`Error while getting programming languages `, err.message);
+    next(err);
+  }
+});
+// app.get('/client/*', (req, res) => {
+//   console.log(req.session)
+//   if (req.session.loggedin) {
+//     res.redirect('/client');
+//     res.end()
+//   } else {
+//     res.send('oh w#t&f%s !!!s')
+//   }
+
+
+// })
+
 app.listen(3000, '0.0.0.0', () => {
   console.log("Listening on http://0.0.0.0:3000")
 });

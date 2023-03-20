@@ -208,7 +208,8 @@ label p {
 }
 input,
 select,
-textarea {
+textarea,
+form button {
   width: 100%;
   padding: .5vh;
   margin-bottom: .5;
@@ -219,33 +220,17 @@ textarea {
 input[type="submit"] {
   background-color: #333;
   border: 1px solid #666;
-  box-sizing: border-box;
   cursor: pointer;
   font-weight: bold;
   color: #ffffff;
-  font-size: 1rem;
   margin-bottom: 0;
 }
 
-button {
-  padding: 1vh;
-  margin-bottom: 1vh;
-  box-sizing: border-box;
+form button {
   background-color: #333;
   border: 1px solid #666;
-  box-sizing: border-box;
   cursor: pointer;
   font-weight: bold;
   color: #ffffff;
-  font-size: 1rem;
   margin-bottom: 0;
-}
-
-span.form {
-  display: flex;
-  flex-flow: column;
-  overflow: auto;
-  justify-content: center;
-  width:100%;
-  height: calc(100vh - 79px);
 }

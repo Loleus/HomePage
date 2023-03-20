@@ -1,12 +1,13 @@
-// const fetchJson = async () => {
-//     try {
-//         let response = await fetch('/client/getAll');
-//         let parsedList = await response.json();
-//         return parsedList
-//     } catch (err) {
-//         console.error(err)
-//     }
-// }
+const fetchJson = async () => {
+    try {
+        let response = await fetch('/client/getAll');
+        let parsedList = await response.json();
+        console.log(parsedList)
+        return parsedList
+    } catch (err) {
+        console.error(err)
+    }
+}
 // const output = ({name}) => {
 //     return `<li> ${name} </li>`
 // }
@@ -111,3 +112,4 @@ function navLinkClick() {
     navToggler.click();
   }
 }
+fetchJson()

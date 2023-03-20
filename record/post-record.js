@@ -11,17 +11,17 @@ class PostRecord {
         throw new ValidationError('Imię musi być tekstem o długości min. 3 znaków.');
       }
 
-      if(!date || typeof date !== 'string' || date.indexOf('@') === -1) {
-        throw new ValidationError('Edate Nieprawidłowy!');
-      }
+      // if(!date || typeof date !== 'string' || date.indexOf('@') === -1) {
+      //   throw new ValidationError('Edate Nieprawidłowy!');
+      // }
 
-      if (typeof lastEdit !== 'string') {
-        throw new ValidationError('Data następnego kontaktu musi być tekstem!')
-      }
+      // if (typeof lastEdit !== 'string') {
+      //   throw new ValidationError('Data następnego kontaktu musi być tekstem!')
+      // }
 
-      if (typeof text !== 'string') {
-        throw new ValidationError('Notatki muszą być tekstem!')
-      }
+      // if (typeof text !== 'string') {
+      //   throw new ValidationError('Notatki muszą być tekstem!')
+      // }
 
       this.id = id;
       this.title = title;
