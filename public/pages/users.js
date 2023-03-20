@@ -31,8 +31,11 @@ export default class Users extends HTMLElement {
       <div class="page">
         <h1>Posts</h1>
         <ul>
-          ${list.map(e => `<li><a route="blog/${e.id}">${e.title}</a>${editBtn(window.location.href)}</li>`).join("")}
-          
+          ${list.map(e => `
+          <li>
+          <a route="blog/${e.id}">${e.title}</a>
+          ${editBtn(window.location.href)}
+          </li>`).join("")}
         </ul>
       </div>
     `;
