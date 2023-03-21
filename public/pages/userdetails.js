@@ -28,6 +28,9 @@ export default class UserDetails extends HTMLElement {
           <div>${post.text}</div>
           <div>${post.picUrl}</div>
         </div>
+        <form class="addForm">
+        <button type="button" onclick="javascript:history.back()">Back to posts</button>
+        </form>
       `;
     }
   }

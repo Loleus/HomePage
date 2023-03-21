@@ -13,13 +13,13 @@ userList()
 console.log(list)
 export default class Users extends HTMLElement {
   connectedCallback() {
-    const editBtn = (route) => {
-      console.log(route)
+    const editBtn = (route,id) => {
+      console.log(route,id)
       if(route.includes("client")) {
         return `
-        <a class="editBtn" href='/client/form/edit/{{this.id}}'>E</a>
-        <form class="deleteBtn-form" method='POST' action='/client/{{this.id}}?_method=DELETE'>
-            <button type='submit' disabled="true" class='btn-delete'>X
+        <a class="editBtn" route="blog/edit/${id}">E</a>
+        <form class="deleteBtn-form" method='POST' action='/client/${id}?_method=DELETE'>
+            <button type='submit' class='btn-delete'>X
             </button>
         </form>
         `
@@ -34,7 +34,7 @@ export default class Users extends HTMLElement {
           ${list.map(e => `
           <li>
           <a route="blog/${e.id}">${e.title}</a>
-          ${editBtn(window.location.href)}
+          ${editBtn(window.location.href, e.id)}
           </li>`).join("")}
         </ul>
       </div>

@@ -32,13 +32,14 @@
     </div>
     <wc-route path="/" title="Home" component="wc-home"></wc-route>
     <wc-route path="/client" title="Home" component="wc-home"></wc-route>
-    <wc-route path="/client/about" title="About Us" component="wc-about"></wc-route>
+    <wc-route path="/client/about" title="About Me" component="wc-about"></wc-route>
     <wc-route path="/client/music" title="Music" component="wc-music"></wc-route>
     <wc-route path="/client/video" title="Video" component="wc-video"></wc-route>
     <wc-route path="/client/contact" title="Contact" component="wc-contact"></wc-route>
     <wc-route path="/client/addPost" title="Add post" component="wc-addpost"></wc-route>
     <wc-route path="/client/blog" title="Blog" component="wc-users"></wc-route>
     <wc-route path="/blog/:id" title="Post Details" component="wc-userdetails"></wc-route>
+    <wc-route path="/blog/edit/:id" title="Edit Post" component="wc-editpost"></wc-route>
     <wc-route path="*" title="404" component="wc-notfound"></wc-route>
     <wc-outlet></wc-outlet>
   </wc-router>

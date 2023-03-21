@@ -13,9 +13,10 @@ import Login from "/components/login/index.js";
 customElements.define("wc-login", Login);
 import AddPost from "/components/addPost/index.js";
 customElements.define("wc-addpost", AddPost);
+import EditPost from "/components/editPost/index.js";
 
 import NotFound from "./notfound.js";
 import Users from "./users.js";
 import UserDetails from "./userdetails.js";
 
-export { Home, AboutUs, Music, Video, Contact, Login, AddPost, NotFound, Users, UserDetails };
+export { Home, AboutUs, Music, Video, Contact, Login, AddPost, EditPost, NotFound, Users, UserDetails };
