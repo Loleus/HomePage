@@ -4,7 +4,7 @@ const userList = async () => {
       let response = await fetch('/client/getAll');
       let parsedList = await response.json();
       console.log(parsedList)
-      list = parsedList
+      list =  parsedList
   } catch (err) {
       console.error(err)
   }

@@ -30,12 +30,14 @@ app.use(session({
 app.use('/', homeRouter)
 
 
-
 app.get('/about', (req, res) => {
     res.sendFile(path.resolve(__dirname, './pages/index.html'));
 });
 
 app.get('/contact', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './pages/index.html'));
+});
+app.get('/blog', (req, res) => {
     res.sendFile(path.resolve(__dirname, './pages/index.html'));
 });
 

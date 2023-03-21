@@ -23,7 +23,16 @@ body {
   background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
   background-size: 100% cover;
 }
-
+footer {
+  height:1.3em;
+  position:absolute;
+  bottom:0;
+  display:block;
+  left:0;
+  background:black;
+  width:100%;
+  font-size: .5em;
+}
 @media only screen and (max-width: 1020px) {
   * {
     font-size: 26px;
