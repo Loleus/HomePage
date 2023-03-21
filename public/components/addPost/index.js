@@ -2,33 +2,29 @@ export default class AddPost extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
 
-    <h1>Nowy post</h1>
+    <h1>New post</h1>
     <form class="addForm" method='POST' action='/client'>
     <label>
-        <p>e-mail:</p>
-        <input type='email' name='mail'>
+        <p>Title</p>
+        <input type='text' name='title' required>
     </label>
     <label>
-        <p>Imię:</p>
-        <input type='text' name='name' required>
+        <p>Created at:</p>
+        <input type='date' name='createdAt'>
     </label>
     <label>
-        <p>Data wizyty:</p>
-        <input type='date' name='nextContactAt'>
+        <p>Last edit at:</p>
+        <input type='date' name='lastEdit'>
     </label>
     <label>
-        <p>Uwagi:</p>
-        <textarea name='notes'></textarea>
+        <p>Content:</p>
+        <textarea name='post'></textarea>
     </label>
     <label>
-        <p>Liga:</p>
-        <select name='category'>
-            <option value="BIZNES">BIZNES</option>
-            <option value="WOJSKO">WOJSKO</option>
-            <option value="POLITYKA">POLITYKA</option>
-        </select>
+        <p>Url to photo</p>
+        <input name='picUrl'>
     </label>
-    <button disabled="true" type='submit'>Zapisz</button>
+    <button type='submit'>Save</button>
 </form> 
     `;
   }

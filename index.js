@@ -40,6 +40,12 @@ app.get('/contact', (req, res) => {
 app.get('/blog', (req, res) => {
     res.sendFile(path.resolve(__dirname, './pages/index.html'));
 });
+app.get('/music', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './pages/index.html'));
+});
+app.get('/video', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './pages/index.html'));
+});
 
 // app.get('/post', (req, res) => {
 //     res.sendFile(path.resolve(__dirname, 'pages/post.html'));

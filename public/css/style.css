@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: rgb(224, 224, 206);
   text-align: center;
   font-family: "Barlow", sans-serif;
   font-size: 29px;
@@ -23,6 +22,7 @@ body {
   background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
   background-size: 100% cover;
 }
+
 footer {
   height:1.3em;
   position:fixed;
@@ -32,6 +32,7 @@ footer {
   background:black;
   width:100%;
   font-size: .5em;
+  color:  #ffa70480;;
 }
 @media only screen and (max-width: 1020px) {
   * {
@@ -59,11 +60,13 @@ footer {
   align-items: center;
 }
 a.site-logo {
-  font-size: 26px;
+  font-size: 35px;
+
   font-weight: 800;
   text-transform: uppercase;
-  color: #fff;
   text-decoration: none;
+  color: #ffa600ce;
+  text-shadow: 1px 1px 2px black;
 }
 .site-navbar ul {
   margin: 0;
@@ -72,11 +75,11 @@ a.site-logo {
   display: flex;
 }
 .site-navbar ul li a {
-  color: #fff;
   padding: 20px;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
+  color: #916617;
 }
 .site-navbar ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
