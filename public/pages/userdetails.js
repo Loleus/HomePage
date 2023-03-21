@@ -16,7 +16,7 @@ export default class UserDetails extends HTMLElement {
     return ["id"];
   }
 
-  connectedCallback() {
+  async connectedCallback() {
     const id = this.getAttribute("id");
     console.log(id)
     if (id && id !== null) {
