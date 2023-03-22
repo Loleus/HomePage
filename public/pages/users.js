@@ -3,18 +3,15 @@ const userList = async () => {
   try {
       let response = await fetch('/client/getAll');
       let parsedList = await response.json();
-      console.log(parsedList)
       list =  parsedList
   } catch (err) {
       console.error(err)
   }
 }
 userList()
-console.log(list)
 export default class Users extends HTMLElement {
   connectedCallback() {
     const editBtn = (route,id) => {
-      console.log(route,id)
       if(route.includes("client")) {
         return `
         <a class="editBtn" route="blog/edit/${id}">E</a>

@@ -95,7 +95,6 @@ app.post('/login', (req, res) => {
     res.redirect('/client')
   } else {
     res.send('Please enter Username and Password!');
-    res.end();
   }
 });
 const auth = (req, res) => {
@@ -104,7 +103,6 @@ const auth = (req, res) => {
   } else {
     console.log("notLogged")
     res.redirect('/')
-    res.end()
   }
 }
 app.get('/client', auth)
@@ -144,6 +142,7 @@ app.delete('/client/:id', (req, res) => {
   res.status(201)
   .redirect('/client' );
 })
+app.use(handleError)
 // app.get('/client/*', (req, res) => {
 //   console.log(req.session)
 //   if (req.session.loggedin) {
@@ -152,8 +151,6 @@ app.delete('/client/:id', (req, res) => {
 //   } else {
 //     res.send('oh w#t&f%s !!!s')
 //   }
-
-
 // })
 
 app.listen(3000, '0.0.0.0', () => {
