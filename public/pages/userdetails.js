@@ -25,7 +25,7 @@ export default class UserDetails extends HTMLElement {
           <h1>Post Details</h1>
           <div>${post.title}</div>
           <div>${post.text}</div>
-          <div>${post.picUrl}</div>
+          <img src="${post.picUrl}" alt="blogpic"/  >
         </div>
         <form class="addForm">
         <button type="button" onclick="javascript:history.back()">Back to posts</button>
