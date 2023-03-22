@@ -125,7 +125,7 @@ app.get('/client/getAll', async function(req, res, next) {
 app.post('/client', (req,res) => {
   db.create(req.body);
   res.status(201)
-  .redirect('/client' );
+  .send(`<p>${req.body.title}</p><a href="/client/blog">Back to posts</a>` );
 })
 // app.get('/client/:id', (req, res) => {
 //   const client = db.getOne(req.params.id);
