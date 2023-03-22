@@ -34,11 +34,11 @@ export default class EditPost extends HTMLElement {
   </label>
   <label>
       <p>Last edit at:</p>
-      <input value="${post.lastEditAt}" type='date' name='lastEdit'>
+      <input value="${post.lastEditAt}" type='date' name='lastEditAt'>
   </label>
   <label>
       <p>Content:</p>
-      <textarea name='post'>${post.text}</textarea>
+      <textarea name='text'>${post.text}</textarea>
   </label>
           <label>
           <p>Url to photo</p>

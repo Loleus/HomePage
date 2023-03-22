@@ -2,7 +2,7 @@ const {ValidationError} = require('../utils/errors')
 
 class PostRecord {
   constructor(obj) {
-      const {id, date, title, lastEdit, text, picUrl} = obj;
+      const {id, createdAt, title, lastEditAt, text, picUrl} = obj;
       if (!id || typeof id !== 'string') {
         throw new ValidationError('ID nie może być puste!');
       }
@@ -19,14 +19,14 @@ class PostRecord {
       //   throw new ValidationError('Data następnego kontaktu musi być tekstem!')
       // }
 
-      // if (typeof text !== 'string') {
-      //   throw new ValidationError('Notatki muszą być tekstem!')
-      // }
+      if (typeof text !== 'string') {
+        throw new ValidationError('Notatki muszą być tekstem!')
+      }
 
       this.id = id;
       this.title = title;
-      this.date = date;
-      this.lastEdit = lastEdit;
+      this.createdAt = createdAt;
+      this.lastEditAt = lastEditAt;
       this.text = text;
       this.picUrl = picUrl;
   }

@@ -122,6 +122,11 @@ app.get('/client/getAll', async function(req, res, next) {
     next(err);
   }
 });
+app.post('/client', (req,res) => {
+  db.create(req.body);
+  res.status(201)
+  .redirect('/client' );
+})
 // app.get('/client/*', (req, res) => {
 //   console.log(req.session)
 //   if (req.session.loggedin) {

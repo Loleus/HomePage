@@ -14,11 +14,11 @@ export default class AddPost extends HTMLElement {
     </label>
     <label>
         <p>Last edit at:</p>
-        <input type='date' name='lastEdit'>
+        <input type='date' name='lastEditAt'>
     </label>
     <label>
         <p>Content:</p>
-        <textarea name='post'></textarea>
+        <textarea name='text'></textarea>
     </label>
     <label>
         <p>Url to photo</p>
