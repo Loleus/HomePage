@@ -22,30 +22,29 @@ export default class EditPost extends HTMLElement {
     if (id && id !== null) {
       let post = list.find(e => e.id === id);
       this.innerHTML = `
-      <h1>Edytujesz ${post.title}</h1>
+      <h1>Edit ${post.title}</h1>
       <form class="addForm" method='POST' action='/client/${post.id}?_method=PUT'>
+      <label>
+      <p>Title</p>
+      <input type='text' name='title' required value="${post.title}">
+  </label>
+  <label>
+      <p>Created at:</p>
+      <input value="${post.createdAt}" type='date' name='createdAt'>
+  </label>
+  <label>
+      <p>Last edit at:</p>
+      <input value="${post.lastEditAt}" type='date' name='lastEdit'>
+  </label>
+  <label>
+      <p>Content:</p>
+      <textarea name='post'>${post.text}</textarea>
+  </label>
           <label>
-              <p>Imię:</p>
-              <input type='text' name='name' value='${post.title}'>
-          </label>
-          <label>
-              <p>Data wizyty:</p>
-              <input type='date' name='nextContactAt' value='${post.date}'>
-          </label>
-          <label>
-              <p>Uwagi:<p>
-              <textarea name='notes'>${post.text}</textarea>
-          </label>
-          <label>
-              <p>Liga:</p>
-              <select name='category'>
-                  <option value="" selected disabled>${post.category}</option>
-                  <option value="BIZNES">BIZNES</option>
-                  <option value="WOJSKO">WOJSKO</option>
-                  <option value="POLITYKA">POLITYKA</option>
-              </select>
-          </label>
-          <button disabled="true" type='submit'>Zapisz</button>
+          <p>Url to photo</p>
+          <input value="${post.picUrl}" name='picUrl'>
+      </label>
+          <button type='submit'>Update</button>
       </form>
       `;
     }

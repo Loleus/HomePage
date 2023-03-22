@@ -65,8 +65,15 @@ a.site-logo {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffa600ce;
-  text-shadow: 1px 1px 2px black;
+  color: #ffa60083;
+}
+a.site-logo:hover {
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #bb8a2f;
+  text-shadow: none;
 }
 .site-navbar ul {
   margin: 0;
@@ -79,10 +86,11 @@ a.site-logo {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #916617;
+  color: #a37621;
 }
 .site-navbar ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
+  color: #e6a52e;
 }
 /* navbar regular css end */
 
