@@ -1,16 +1,15 @@
-let list
-const userList = async () => {
+let post
+const userList = async (id) => {
   try {
-    let response = await fetch('client/getAll');
+    let response = await fetch('/client/'+id);
     let parsedList = await response.json();
-    console.log(parsedList)
-    list = parsedList
+    post = parsedList
   } catch (err) {
     console.error(err)
   }
 }
-userList()
-console.log(list)
+
+console.log(post)
 export default class UserDetails extends HTMLElement {
   static observedAttributes() {
     return ["id"];
@@ -18,9 +17,9 @@ export default class UserDetails extends HTMLElement {
 
   async connectedCallback() {
     const id = this.getAttribute("id");
+    await userList(id)
     console.log(id)
     if (id && id !== null) {
-      let post = list.find(e => e.id === id);
       this.innerHTML = `
         <div class="page">
           <h1>Post Details</h1>

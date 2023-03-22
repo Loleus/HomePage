@@ -127,15 +127,13 @@ app.post('/client', (req,res) => {
   res.status(201)
   .send(`<p>${req.body.title}</p><a href="/client/blog">Back to posts</a>` );
 })
-// app.get('/client/:id', (req, res) => {
-//   const client = db.getOne(req.params.id);
-//   if(!client) {
-//     throw new NotFoundError()
-//   }
-//   res.render('client/one', {
-//     client,
-//   });
-// })
+app.get('/client/:id', (req, res) => {
+  const client = db.getOne(req.params.id);
+  if(!client) {
+    throw new NotFoundError()
+  }
+  res.send(client);
+})
 app.put('/client/:id', (req, res) => {
   db.update(req.params.id, req.body);
   res.status(201)
