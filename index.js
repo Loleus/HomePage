@@ -1,5 +1,5 @@
 const express = require('express');
-const { handleError } = require("./utils/errors")
+const {NotFoundError}= require("./utils/errors")
 const methodOverride = require('method-override');
 const { clientRouter } = require('./routes/client')
 const { loginRouter } = require('./routes/login')
@@ -37,9 +37,9 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
     res.sendFile(path.resolve(__dirname, './pages/index.html'));
 });
-app.get('/blog', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './pages/index.html'));
-});
+// app.get('/blog', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, './pages/index.html'));
+// });
 app.get('/music', (req, res) => {
     res.sendFile(path.resolve(__dirname, './pages/index.html'));
 });
@@ -47,12 +47,10 @@ app.get('/video', (req, res) => {
     res.sendFile(path.resolve(__dirname, './pages/index.html'));
 });
 
-// app.get('/post', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'pages/post.html'));
-// });
 // app.use('/', homeRouter);
 // app.use('/login', loginRouter)
 // app.use('/posts', postsRouter)
+
 app.get('/login', (req, res) => {
   res.sendFile(path.resolve(__dirname, './pages/index.html'));
 })
@@ -107,10 +105,6 @@ const auth = (req, res) => {
 }
 app.get('/client', auth)
 
-// app.get('/client/getAll', (req, res) => {
-//   res.send(db.getAll());
-// })
-
 app.get('/client/getAll', async function(req, res, next) {
   try {
     // res.json(await posts.getMultiple(req.query.page));
@@ -124,6 +118,14 @@ app.post('/client', (req,res) => {
   db.create(req.body);
   res.status(201)
   .send(`<p>${req.body.title}</p><a href="/client/blog">Back to posts</a>` );
+})
+app.get('/client/blog', (req, res) => {
+  console.log(req.session)
+  if (req.session.loggedin) {
+    res.redirect('/client');
+  } else {
+    res.redirect('/');
+  }
 })
 app.get('/client/:id', (req, res) => {
   const client = db.getOne(req.params.id);
@@ -139,19 +141,20 @@ app.put('/client/:id', (req, res) => {
 })
 app.delete('/client/:id', (req, res) => {
   db.delete(req.params.id);
-  res.status(201)
-  .redirect('/client' );
+  res.redirect('/client' );
 })
-app.use(handleError)
-// app.get('/client/*', (req, res) => {
-//   console.log(req.session)
-//   if (req.session.loggedin) {
-//     res.redirect('/client');
-//     res.end()
-//   } else {
-//     res.send('oh w#t&f%s !!!s')
-//   }
-// })
+// app.use(handleError)
+
+
+app.get('*', (req, res) => {
+  console.log(req.session)
+  if (req.session.loggedin) {
+    res.redirect('/client');
+  } else {
+    res.redirect('/');
+  }
+})
+
 
 app.listen(3000, '0.0.0.0', () => {
   console.log("Listening on http://0.0.0.0:3000")
