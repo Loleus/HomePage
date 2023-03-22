@@ -127,6 +127,25 @@ app.post('/client', (req,res) => {
   res.status(201)
   .redirect('/client' );
 })
+// app.get('/client/:id', (req, res) => {
+//   const client = db.getOne(req.params.id);
+//   if(!client) {
+//     throw new NotFoundError()
+//   }
+//   res.render('client/one', {
+//     client,
+//   });
+// })
+app.put('/client/:id', (req, res) => {
+  db.update(req.params.id, req.body);
+  res.status(201)
+  .redirect('/client' );
+})
+app.delete('/client/:id', (req, res) => {
+  db.delete(req.params.id);
+  res.status(201)
+  .redirect('/client' );
+})
 // app.get('/client/*', (req, res) => {
 //   console.log(req.session)
 //   if (req.session.loggedin) {
