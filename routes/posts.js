@@ -8,7 +8,7 @@ postsRouter.get('/', async function(req, res, next) {
     // res.json(await posts.getMultiple(req.query.page));
     res.send(await posts.getMultiple(req.query.page))
   } catch (err) {
-    console.error(`Error while getting programming languages `, err.message);
+    console.error(`Error while getting posts `, err.message);
     next(err);
   }
 });

@@ -6,7 +6,7 @@ const { loginRouter } = require('./routes/login')
 const { homeRouter } = require('./routes/home');
 const postsRouter = require("./routes/posts");
 const session = require('express-session');
-const {db} = require('./utils/dbp');
+const {db} = require('./utils/db');
 const path = require('path');
 
 const app = express()
