@@ -25,17 +25,17 @@ export default class Users extends HTMLElement {
     }
   }
     this.innerHTML = `
-      <div class="page">
+
+      <h1 class="title">My Photo Blog</h1>
         <ul>
           ${list.map(e => `
-          <h1><a route="blog/${e.id}">${e.title}</h1></a>
-          <li class="container">
+          <a class="blogListTitle" route="blog/${e.id}">${e.title}</a>
+          <li class="container blogPost">
           <p>${e.text}</p>
           ${editBtn(window.location.href, e.id)}
           <img src="https://drive.google.com/thumbnail?id=${e.picUrl}" alt="blogpic"/  >
           </li>`).join("")}
         </ul>
-      </div>
     `;
   }
 }

@@ -23,7 +23,7 @@ export default class UserDetails extends HTMLElement {
     if (id && id !== null) {
       this.innerHTML = `
         <div class="page">
-          <h1>${post.title}</h1>
+          <h1 class="title blogListTitle ">${post.title}</h1>
           <p class="container">${post.text}</p>
           <img style="height:67vh;display:none" src="https://drive.google.com/uc?id=${post.picUrl}" alt="blogpic"/>
         </div>

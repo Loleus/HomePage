@@ -1,4 +1,5 @@
 * {
+  text-decoration: none;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -52,11 +53,18 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 15px;
   font-weight: 400;
   list-style: none;
 }
-
+.blogPost.container {
+display: flex; 
+flex-direction: row; 
+background: #6666661f;
+color: bisque;
+}
+.blogPost.container p {
+  padding: 1%;
+}
 /* navbar regular css start */
 .navbar-area {
   background: rgba(0, 0, 0, 0.6);
