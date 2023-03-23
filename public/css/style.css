@@ -11,29 +11,37 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 @font-face {
   font-family: Barlow;
   src: url(../assets/fonts/Barlow/Barlow-Regular.ttf);
 }
+
 html {
   height: 100%;
-}
-body {
   background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
   background-size: 100% cover;
 }
 
 footer {
-  height:1.3em;
-  position:fixed;
-  bottom:0;
-  display:block;
-  left:0;
-  background:black;
-  width:100%;
+  height: 1.3em;
+  position: fixed;
+  bottom: 0;
+  display: block;
+  left: 0;
+  background: black;
+  width: 100%;
   font-size: .5em;
-  color:  #ffa70480;;
+  color: #ffa70480;
+  ;
 }
+
 @media only screen and (max-width: 1020px) {
   * {
     font-size: 26px;
@@ -46,18 +54,21 @@ footer {
   margin: 0 auto;
   padding: 0 15px;
   font-weight: 400;
-  line-height: 16px;
+  list-style: none;
 }
+
 /* navbar regular css start */
 .navbar-area {
   background: rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid #000;
 }
+
 .site-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 a.site-logo {
   font-size: 35px;
 
@@ -66,6 +77,7 @@ a.site-logo {
   text-decoration: none;
   color: #ffa60083;
 }
+
 a.site-logo:hover {
   font-size: 35px;
   font-weight: 800;
@@ -74,12 +86,14 @@ a.site-logo:hover {
   color: #bb8a2f;
   text-shadow: none;
 }
+
 .site-navbar ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
 }
+
 .site-navbar ul li a {
   padding: 20px;
   display: block;
@@ -87,10 +101,12 @@ a.site-logo:hover {
   text-transform: uppercase;
   color: #a37621;
 }
+
 .site-navbar ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #e6a52e;
 }
+
 /* navbar regular css end */
 
 /* nav-toggler css start */
@@ -102,6 +118,7 @@ a.site-logo:hover {
   height: 39px;
   display: none;
 }
+
 .nav-toggler div,
 .nav-toggler div:before,
 .nav-toggler div:after {
@@ -111,20 +128,25 @@ a.site-logo:hover {
   display: block;
   transition: 0.3s;
 }
+
 .nav-toggler div:before {
   content: "";
   transform: translateY(-9px);
 }
+
 .nav-toggler div:after {
   content: "";
   transform: translateY(6px);
 }
+
 .nav-toggler.toggler-open div {
   background-color: transparent;
 }
+
 .nav-toggler.toggler-open div:before {
   transform: translateY(0px) rotate(45deg);
 }
+
 .nav-toggler.toggler-open div:after {
   transform: translateY(-3px) rotate(-45deg);
 }
@@ -140,17 +162,21 @@ a.site-logo:hover {
     height: calc(100vh-39px);
     /* overflow-y: scroll; */
   }
+
   .container {
     max-width: 720px;
   }
+
   /* navbar css for mobile start */
   .nav-toggler {
     display: block;
-    width:auto;
+    width: auto;
   }
+
   .site-navbar {
     min-height: 60px;
   }
+
   .site-navbar ul {
     position: absolute;
     width: 100%;
@@ -165,16 +191,20 @@ a.site-logo:hover {
     overflow: hidden;
     transition: 0.3s;
   }
+
   .site-navbar ul li {
     width: 100%;
     text-align: center;
   }
+
   .site-navbar ul li a {
     padding: 25px;
   }
+
   .site-navbar ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
+
   .site-navbar ul.open {
     max-height: 100vh;
     overflow: visible;
@@ -182,6 +212,7 @@ a.site-logo:hover {
 
   /* navbar css for mobile end */
 }
+
 /* mobile breakpoint end */
 
 .form {
@@ -199,6 +230,7 @@ a.site-logo:hover {
   background: rgba(102, 102, 102, 0.5);
   border-radius: 3px;
 }
+
 .addForm {
   color: #ddd;
   text-align: center;
@@ -210,9 +242,11 @@ a.site-logo:hover {
   background: rgba(102, 102, 102, 0.5);
   border-radius: 3px;
 }
+
 label p {
   font-size: 1rem;
 }
+
 input,
 select,
 textarea,
@@ -234,7 +268,8 @@ input[type="submit"] {
   margin-bottom: 0;
 }
 
-form button, button {
+form button,
+button {
   background-color: #333;
   border: 1px solid #666;
   cursor: pointer;
@@ -242,6 +277,7 @@ form button, button {
   color: #ffffff;
   margin-bottom: 0;
 }
+
 button.btn-delete {
   display: inline;
   width: 2rem;
@@ -250,6 +286,7 @@ button.btn-delete {
   background-size: cover;
   border: none;
 }
+
 form.deleteBtn-form {
   padding: 0;
   margin: 0;
@@ -258,6 +295,7 @@ form.deleteBtn-form {
   height: auto;
   border-radius: 3px;
 }
+
 a.editBtn {
   width: 10px;
   display: inline;
@@ -265,6 +303,6 @@ a.editBtn {
   background: rgb(40, 207, 40);
   font-size: 1.4rem;
   padding: 2px 5px;
-  border-radius:3px;
+  border-radius: 3px;
   color: #00112c;
 }

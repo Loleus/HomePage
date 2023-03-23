@@ -28,11 +28,12 @@ export default class Users extends HTMLElement {
       <div class="page">
         <ul>
           ${list.map(e => `
-          <li>
           <h1><a route="blog/${e.id}">${e.title}</h1></a>
+          <li class="container">
           <p>${e.text}</p>
           ${editBtn(window.location.href, e.id)}
-          </li><img src="https://drive.google.com/thumbnail?id=${e.picUrl}" alt="blogpic"/  >`).join("")}
+          <img src="https://drive.google.com/thumbnail?id=${e.picUrl}" alt="blogpic"/  >
+          </li>`).join("")}
         </ul>
       </div>
     `;

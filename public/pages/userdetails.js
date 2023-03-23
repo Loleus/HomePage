@@ -19,18 +19,22 @@ export default class UserDetails extends HTMLElement {
     const id = this.getAttribute("id");
     await userList(id)
     console.log(id)
+  
     if (id && id !== null) {
       this.innerHTML = `
         <div class="page">
           <h1>${post.title}</h1>
           <p class="container">${post.text}</p>
-          <img style="height:67vh;" src="https://drive.google.com/uc?id=${post.picUrl}" alt="blogpic"/  >
+          <img style="height:67vh;display:none" src="https://drive.google.com/uc?id=${post.picUrl}" alt="blogpic"/>
         </div>
         <form class="addForm">
         <button type="button" onclick="javascript:history.back()">Back to posts</button>
         </form>
       `;
     }
+    document.querySelector('img').onload = () => {
+      document.querySelector('img').style = "height:67vh;display:inline-block"
+    };
   }
 }
 
