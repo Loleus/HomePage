@@ -89,7 +89,6 @@ app.post('/login', (req, res) => {
     req.session.loggedin = true;
     req.session.username = username;
     console.log("loggedIn")
-    console.log(req.session)
     res.redirect('/client')
   } else {
     res.send('Please enter Username and Password!');

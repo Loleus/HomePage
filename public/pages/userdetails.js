@@ -22,10 +22,9 @@ export default class UserDetails extends HTMLElement {
     if (id && id !== null) {
       this.innerHTML = `
         <div class="page">
-          <h1>Post Details</h1>
-          <div>${post.title}</div>
-          <div>${post.text}</div>
-          <img src="${post.picUrl}" alt="blogpic"/  >
+          <h1>${post.title}</h1>
+          <p class="container">${post.text}</p>
+          <img style="height:67vh;" src="https://drive.google.com/uc?id=${post.picUrl}" alt="blogpic"/  >
         </div>
         <form class="addForm">
         <button type="button" onclick="javascript:history.back()">Back to posts</button>

@@ -31,15 +31,15 @@ export default class Router extends HTMLElement {
     if (window.history.replaceState) {
       window.history.replaceState(null, null, window.location.href);
     }
-    // window.addEventListener("beforeunload", event => {
-    //   event.preventDefault()
-    //   event.returnValue = ""
-    // })
+    window.addEventListener("beforeunload", event => {
+      event.preventDefault()
+      event.returnValue = ""
+    })
   }
 
   disconnectedCallback() {
     window.removeEventListener("popstate", this._handlePopstate);
-    // window.removeEventListener("beforeunload", this.preventNav);
+    window.removeEventListener("beforeunload", this.preventNav);
   }
 
   _handlePopstate = () => {

@@ -26,13 +26,13 @@ export default class Users extends HTMLElement {
   }
     this.innerHTML = `
       <div class="page">
-        <h1>Posts</h1>
         <ul>
           ${list.map(e => `
           <li>
-          <a route="blog/${e.id}">${e.title}</a>
+          <h1><a route="blog/${e.id}">${e.title}</h1></a>
+          <p>${e.text}</p>
           ${editBtn(window.location.href, e.id)}
-          </li>`).join("")}
+          </li><img src="https://drive.google.com/thumbnail?id=${e.picUrl}" alt="blogpic"/  >`).join("")}
         </ul>
       </div>
     `;
