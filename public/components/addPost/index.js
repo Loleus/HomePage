@@ -2,7 +2,7 @@ export default class AddPost extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
 
-    <h1>New post</h1>
+    <h1 class="title">New post</h1>
     <form class="addForm" method='POST' action='/client'>
     <label>
         <p>Title</p>

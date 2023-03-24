@@ -21,7 +21,7 @@ export default class Users extends HTMLElement {
         </form>
         `
     } else {
-      return ``
+      return
     }
   }
     this.innerHTML = `
@@ -30,7 +30,7 @@ export default class Users extends HTMLElement {
     ${list.map(e => `
     <section class="blogCard container">
     <li class="blogPost">
-    <a class="blogListTitle" route="blog/${e.id}">${e.title}</a>
+    <a class="blogPostTitle" route="blog/${e.id}">${e.title}</a>
     <p>${e.text}</p>
     ${editBtn(window.location.href, e.id)}
     </li>

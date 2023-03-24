@@ -22,7 +22,7 @@ export default class EditPost extends HTMLElement {
     if (id && id !== null) {
       let post = list.find(e => e.id === id);
       this.innerHTML = `
-      <h1>Edit ${post.title}</h1>
+      <h1 class="title">Edit ${post.title}</h1>
       <form class="addForm" method='POST' action='/client/${post.id}?_method=PUT'>
       <label>
       <p>Title</p>

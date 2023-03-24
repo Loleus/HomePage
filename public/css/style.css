@@ -68,12 +68,13 @@ color: bisque;
   overflow: hidden;
   font-size: 1em;
 }
-.blogPost.container a{
+a.blogPostTitle {
   padding: 1%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 3em;
+  color: #d6b212;
   }
   ul.blogCards {
     display: flex;
