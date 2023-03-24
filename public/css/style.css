@@ -38,9 +38,8 @@ footer {
   left: 0;
   background: black;
   width: 100%;
-  font-size: .5em;
+  font-size: 0.5em;
   color: #ffa70480;
-  ;
 }
 
 @media only screen and (max-width: 1020px) {
@@ -54,14 +53,16 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   list-style: none;
+  position:relative;
 }
-li.blogPost{
-display: flex; 
-flex-direction: column; 
-background: #6666661f;
-color: bisque;
+
+.blogPost {
+  display: flex;
+  flex-direction: column;
+  background: #6666661f;
+  color: bisque;
 }
-li.blogPost p {
+.blogPostText {
   padding: 1%;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -73,20 +74,29 @@ a.blogPostTitle {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-size: 3em;
+  font-size: 2em;
   color: #d6b212;
+  width:100%
+}
+.blogCards {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1440px;
+  margin: 0 auto;
+  list-style: none;
+  position:relative;
   }
-  ul.blogCards {
-    display: flex;
-  flex-direction: column;
-
-  }
-  section.blogCard {
-    display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  width: 33%;
-  }
+.blogCard {
+  width: 21vw;
+  height: 21vw;
+  display: inline-block;
+  box-shadow: 1px 1px 2px 0 black;
+  padding:10px;
+  border-radius: 50%;
+}
 /* navbar regular css start */
 .navbar-area {
   background: rgba(0, 0, 0, 0.6);
@@ -183,7 +193,6 @@ a.site-logo:hover {
 
 /* mobile breakpoint start */
 @media screen and (max-width: 767px) {
-
   .container {
     max-width: 720px;
   }
@@ -274,10 +283,10 @@ textarea,
 button,
 form button {
   width: 100%;
-  padding: .5vh;
-  margin-bottom: .5;
+  padding: 0.5vh;
+  margin-bottom: 0.5;
   box-sizing: border-box;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 input[type="submit"] {

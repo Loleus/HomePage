@@ -21,20 +21,19 @@ export default class Users extends HTMLElement {
         </form>
         `
     } else {
-      return
+      return ''
     }
   }
     this.innerHTML = `
     <h1 class="title">My Photo Blog</h1>
-    <ul class="blogCards container">
+    <ul class="blogCards ">
     ${list.map(e => `
-    <section class="blogCard">
+    <section style="background: url('https://drive.google.com/thumbnail?id=${e.picUrl} ') no-repeat center;background-size:cover;" class="blogCard">
     <li class="blogPost">
     <a class="blogPostTitle" route="blog/${e.id}">${e.title}</a>
-    <p>${e.text}</p>
-    ${editBtn(window.location.href, e.id)}
+    <p class="blogPostText">${e.text}</p>
     </li>
-    <img src="https://drive.google.com/thumbnail?id=${e.picUrl}" alt="blogpic"/ >
+    ${editBtn(window.location.href, e.id)}
     </section>
           `).join("")}
         </ul>
