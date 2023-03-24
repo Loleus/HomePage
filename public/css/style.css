@@ -94,7 +94,11 @@ a.blogPostTitle {
   height: 14vw;
   display: inline-block;
   box-shadow: 1px 1px 2px 0 black;
-  border-radius: 50%;
+  border-radius: 2vw;
+  filter: blur(3px);
+}
+.blogCard:hover {
+  filter: blur(0);
 }
 /* navbar regular css start */
 .navbar-area {
