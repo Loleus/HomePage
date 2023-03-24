@@ -28,7 +28,7 @@ export default class Users extends HTMLElement {
     <h1 class="title">My Photo Blog</h1>
     <ul class="blogCards container">
     ${list.map(e => `
-    <section class="blogCard container">
+    <section class="blogCard">
     <li class="blogPost">
     <a class="blogPostTitle" route="blog/${e.id}">${e.title}</a>
     <p>${e.text}</p>

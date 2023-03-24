@@ -55,13 +55,13 @@ footer {
   margin: 0 auto;
   list-style: none;
 }
-li.blogPost.container {
+li.blogPost{
 display: flex; 
 flex-direction: column; 
 background: #6666661f;
 color: bisque;
 }
-.blogPost.container p {
+li.blogPost p {
   padding: 1%;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -85,6 +85,7 @@ a.blogPostTitle {
     display: flex;
   flex-direction: row;
   overflow: hidden;
+  width: 33%;
   }
 /* navbar regular css start */
 .navbar-area {
