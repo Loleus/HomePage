@@ -56,50 +56,7 @@ footer {
   position:relative;
 }
 
-.blogPost {
-  display: flex;
-  height: 14vw;
-  flex-direction: column;
 
-  color: bisque;
-  justify-content: center;
-}
-.blogPostText {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 1em;
-  background: #66666680;
-  padding: 0 1vw;
-}
-a.blogPostTitle {
-  font-size: 1.4em;
-  color: #d6b212;
-  width:100%;
-  background: #66666680;
-}
-.blogCards {
-  flex-basis: 100%;
-  display: flex;
-  flex-direction:row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  max-width: 1440px;
-  margin: 0 auto;
-  list-style: none;
-  position:relative;
-  }
-.blogCard {
-  width: 14vw;
-  height: 14vw;
-  display: inline-block;
-  box-shadow: 1px 1px 2px 0 black;
-  border-radius: 2vw;
-  filter: blur(3px);
-}
-.blogCard:hover {
-  filter: blur(0);
-}
 /* navbar regular css start */
 .navbar-area {
   background: rgba(0, 0, 0, 0.6);

@@ -25,13 +25,14 @@ export default class Users extends HTMLElement {
     }
   }
     this.innerHTML = `
+    <link rel="stylesheet" href="/pages/blog.css">
     <h1 class="title">My Photo Blog</h1>
     <ul class="blogCards ">
     ${list.map(e => `
-    <section style="background: url('https://drive.google.com/thumbnail?id=${e.picUrl} ') no-repeat center;background-size:cover;" class="blogCard">
+    <section style="background-image: url('https://drive.google.com/thumbnail?id=${e.picUrl} ')" class="blogCard">
     <li class="blogPost">
     <a class="blogPostTitle" route="blog/${e.id}">${e.title}</a>
-    <p class="blogPostText">${e.text}</p>
+    <p class="blogPostText">${e.createdAt}</p>
     </li>
     ${editBtn(window.location.href, e.id)}
     </section>
