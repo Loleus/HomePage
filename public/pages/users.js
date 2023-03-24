@@ -25,16 +25,18 @@ export default class Users extends HTMLElement {
     }
   }
     this.innerHTML = `
-
-      <h1 class="title">My Photo Blog</h1>
-        <ul>
-          ${list.map(e => `
-          <a class="blogListTitle" route="blog/${e.id}">${e.title}</a>
-          <li class="container blogPost">
-          <p>${e.text}</p>
-          ${editBtn(window.location.href, e.id)}
-          <img src="https://drive.google.com/thumbnail?id=${e.picUrl}" alt="blogpic"/  >
-          </li>`).join("")}
+    <h1 class="title">My Photo Blog</h1>
+    <ul class="blogCards container">
+    ${list.map(e => `
+    <section class="blogCard container">
+    <li class="blogPost">
+    <a class="blogListTitle" route="blog/${e.id}">${e.title}</a>
+    <p>${e.text}</p>
+    ${editBtn(window.location.href, e.id)}
+    </li>
+    <img src="https://drive.google.com/thumbnail?id=${e.picUrl}" alt="blogpic"/ >
+    </section>
+          `).join("")}
         </ul>
     `;
   }
