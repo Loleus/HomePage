@@ -58,25 +58,25 @@ footer {
 
 .blogPost {
   display: flex;
+  height: 14vw;
   flex-direction: column;
-  background: #6666661f;
+
   color: bisque;
+  justify-content: center;
 }
 .blogPostText {
-  padding: 1%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 1em;
+  background: #66666680;
+  padding: 0 1vw;
 }
 a.blogPostTitle {
-  padding: 1%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 2em;
+  font-size: 1.4em;
   color: #d6b212;
-  width:100%
+  width:100%;
+  background: #66666680;
 }
 .blogCards {
   flex-basis: 100%;
@@ -90,11 +90,10 @@ a.blogPostTitle {
   position:relative;
   }
 .blogCard {
-  width: 21vw;
-  height: 21vw;
+  width: 14vw;
+  height: 14vw;
   display: inline-block;
   box-shadow: 1px 1px 2px 0 black;
-  padding:10px;
   border-radius: 50%;
 }
 /* navbar regular css start */
