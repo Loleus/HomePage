@@ -21,13 +21,11 @@
 html {
   height: 100%;
   background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
-  overflow: hidden;
+  background-attachment: fixed;
 }
 
 body {
   height: 100%;
-  overflow: auto;
-  background-size: 100% cover;
 }
 
 footer {
@@ -40,6 +38,7 @@ footer {
   width: 100%;
   font-size: 0.5em;
   color: #ffa70480;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 1020px) {
@@ -188,7 +187,7 @@ a.site-logo:hover {
   }
 
   .site-navbar ul li a {
-    padding: 25px;
+    padding: 17px 25px;
   }
 
   .site-navbar ul li a:hover {
@@ -196,6 +195,7 @@ a.site-logo:hover {
   }
 
   .site-navbar ul.open {
+    z-index: 1;
     max-height: 100vh;
     overflow: visible;
   }

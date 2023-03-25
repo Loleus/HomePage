@@ -43,6 +43,17 @@
     <wc-outlet></wc-outlet>
     <footer>No time Toulouse</footer>
   </wc-router>
+  <template id="blog_temp">
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <div class="page">
+      <h1 id="title" class="title"></h1>
+      <p id="text" class="container"></p>
+      <img id="img1" style="height:67vh;display:none"  alt="blogpic"/>
+    </div>
+    <form style="margin-bottom:20px;" class="addForm">
+    <button type="button" onclick="javascript:history.back()">Back to posts</button>
+    </form>
+  </template>
   <script type="module" src="./js/router.js"></script>
   <script type="module" src="./pages/index.js"></script>
   <script type="module" src="./js/index.js"></script>
