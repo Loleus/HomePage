@@ -272,6 +272,7 @@ button.btn-delete {
   background: none;
   border: none;
   font-size: 1.4rem;
+  padding: 0;
 }
 
 form.deleteBtn-form {
@@ -289,7 +290,7 @@ a.editBtn {
   border-top-left-radius: 0;
   background: rgb(40, 207, 40);
   font-size: 1.4rem;
-  padding: 2px 5px;
+  padding: 0 5px;
   border-radius: 3px;
   color: #00112c;
 }

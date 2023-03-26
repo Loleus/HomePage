@@ -41,11 +41,14 @@ export default class EditPost extends HTMLElement {
       <textarea name='text'>${post.text}</textarea>
   </label>
           <label>
-          <p>Url to photo</p>
+          <p>Photo ID on my Google Drive</p>
           <input value="${post.picUrl}" name='picUrl'>
       </label>
           <button type='submit'>Update</button>
       </form>
+      <form style="margin-bottom:20px;" class="addForm">
+    <button type="button" onclick="javascript:history.back()">Back to posts</button>
+    </form>
       `;
     }
   }

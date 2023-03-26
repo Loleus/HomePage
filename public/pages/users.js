@@ -14,7 +14,7 @@ export default class Users extends HTMLElement {
     const editBtn = (route,id) => {
       if(route.includes("client")) {
         return `
-        <div style="display:flex;margin-top:-2.1rem; margin-left:3px;">
+        <div style="position:absolute;display:flex;margin-top:-1.8rem; margin-left:3px;z-index:2;">
         <a class="editBtn" route="blog/edit/${id}">E</a>
         <form class="deleteBtn-form" method='POST' action='/client/${id}?_method=DELETE'>
             <button type='submit' class='btn-delete'>X
@@ -29,7 +29,7 @@ export default class Users extends HTMLElement {
   }
     this.innerHTML = `
     <link rel="stylesheet" href="/pages/blog.css">
-    <h1 class="title">My Photo Blog</h1>
+    <h1 class="title">Photo gallery</h1>
     <ul class="blogCards ">
     ${list.map(e => `
     <section style="background-image: url('https://drive.google.com/thumbnail?id=${e.picUrl} ')" class="blogCard">
