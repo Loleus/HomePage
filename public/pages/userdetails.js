@@ -27,20 +27,13 @@ export default class UserDetails extends HTMLElement {
       let cont = temp.content.cloneNode(true);
       this.appendChild(cont)
       document.getElementById('title').innerHTML = post.title
-      document.getElementById('text').innerHTML = post.text
+      document.getElementById('text').innerHTML = "loading..."
       const image = document.getElementById('img1');
-      const getExif = () => {
-        window.EXIF.getData(image, function () {
-          var MetaData = window.EXIF.getAllTags(this);
-          console.log(JSON.stringify(MetaData, null, "\t"));
-        });
-      }
       image.src = `http://drive.google.com/uc?id=${post.picUrl}`;
       image.onload = () => {
-
-        image.style = "height:67vh;display:inline-block";
+        document.getElementById('text').innerHTML = post.text
+        image.style = "background:none;width:100%;height:100%;display:inline-block";
     }
-            getExif();
     };
   }
 }

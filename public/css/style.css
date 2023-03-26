@@ -272,23 +272,23 @@ button.btn-delete {
   display: inline;
   width: 2rem;
   height: 2rem;
-  background-image: url("../favicon.ico");
-  background-size: cover;
-  border: none;
+  background: red;
+
 }
 
 form.deleteBtn-form {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  display: inline-block;
-  height: auto;
+  display: flex;
+  width: 1.4rem;
   border-radius: 3px;
 }
 
 a.editBtn {
-  width: 10px;
-  display: inline;
+  display: flex;
+  margin-top:-240px;
+  width: 1.4rem;
   border-top-left-radius: 0;
   background: rgb(40, 207, 40);
   font-size: 1.4rem;

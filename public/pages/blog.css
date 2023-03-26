@@ -54,6 +54,7 @@ section.blogCard {
   background-position: bottom;
   background-repeat: no-repeat;
   transition: background-size 0.1s linear;
+  margin-bottom:2vh;
 }
 @media screen and (max-width: 767px) {
   section.blogCard {
