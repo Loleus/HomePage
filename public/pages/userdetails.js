@@ -32,7 +32,7 @@ export default class UserDetails extends HTMLElement {
       image.src = `http://drive.google.com/uc?id=${post.picUrl}`;
       image.onload = () => {
         document.getElementById('text').innerHTML = post.text
-        image.style = "background:none;width:100%;height:100%;display:inline-block";
+        image.style = "background:none";
     }
     };
   }

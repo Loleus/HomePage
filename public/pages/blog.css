@@ -10,6 +10,7 @@ section.blogCard {
   transition: background-size 0.1s linear;
   margin-bottom:2vh;
 }
+
 .blogPost {
   opacity: 0;
   display: flex;
