@@ -14,11 +14,14 @@ export default class Users extends HTMLElement {
     const editBtn = (route,id) => {
       if(route.includes("client")) {
         return `
+        <div style="display:flex;margin-top:-2.1rem; margin-left:3px;">
         <a class="editBtn" route="blog/edit/${id}">E</a>
         <form class="deleteBtn-form" method='POST' action='/client/${id}?_method=DELETE'>
             <button type='submit' class='btn-delete'>X
             </button>
         </form>
+        </div>
+
         `
     } else {
       return ''

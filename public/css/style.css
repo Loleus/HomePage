@@ -269,25 +269,22 @@ button {
 }
 
 button.btn-delete {
-  display: inline;
-  width: 2rem;
-  height: 2rem;
-  background: red;
-
+  background: none;
+  border: none;
+  font-size: 1.4rem;
 }
 
 form.deleteBtn-form {
+  
+  background: red;
   padding: 0;
   margin: 0;
   cursor: pointer;
-  display: flex;
   width: 1.4rem;
   border-radius: 3px;
 }
 
 a.editBtn {
-  display: flex;
-  margin-top:-240px;
   width: 1.4rem;
   border-top-left-radius: 0;
   background: rgb(40, 207, 40);

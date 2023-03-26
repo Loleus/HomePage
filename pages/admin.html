@@ -44,6 +44,16 @@
     <wc-route path="*" title="404" component="wc-notfound"></wc-route>
     <wc-outlet></wc-outlet>
   </wc-router>
+  <template id="blog_temp">
+    <div class="page">
+      <h1 id="title" class="title"></h1>
+      <p style="color:blanchedalmond;margin-bottom:5px" id="text"></p>
+      <img title="right click + copy link for download full size" id="img1" style="height:20vh;width:20vh;display:inline-block;background:orange;"/>
+    </div>
+    <form style="margin-bottom:20px;" class="addForm">
+    <button type="button" onclick="javascript:history.back()">Back to posts</button>
+    </form>
+  </template>
   <script type="module" src="./js/router.js"></script>
   <script type="module" src="./pages/index.js"></script>
   <script type="module" src="./js/index.js"></script>
