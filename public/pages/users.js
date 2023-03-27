@@ -11,6 +11,14 @@ const userList = async () => {
 userList()
 export default class Users extends HTMLElement {
   connectedCallback() {
+    const addLister = (e) => {
+      const section = document.querySelector('.blogPost')
+      console.log(section)
+      section.addEventListener('click', ()=> {
+        console.log('jeste')
+        window.location.replace("/blog/" + e.id);
+      }, false)
+    }
     const editBtn = (route,id) => {
       if(route.includes("client")) {
         return `
@@ -32,16 +40,18 @@ export default class Users extends HTMLElement {
     <h1 class="title">Photo gallery</h1>
     <ul class="blogCards ">
     ${list.map(e => `
-    <section style="background-image: url('https://drive.google.com/thumbnail?id=${e.picUrl} ')" class="blogCard">
+    <section id="card" style="background-image: url('https://drive.google.com/thumbnail?id=${e.picUrl} ')" class="blogCard">
     <li class="blogPost">
     <a class="blogPostTitle" route="blog/${e.id}">${e.title}</a>
     <p class="blogPostText">${e.createdAt}</p>
     </li>
     ${editBtn(window.location.href, e.id)}
+    ${addLister(e)}
     </section>
           `).join("")}
         </ul>
     `;
+
   }
 }
 
