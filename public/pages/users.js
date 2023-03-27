@@ -11,14 +11,6 @@ const userList = async () => {
 userList()
 export default class Users extends HTMLElement {
   connectedCallback() {
-    const addLister = (e) => {
-      const section = document.querySelector('.blogPost')
-      console.log(section)
-      section.addEventListener('click', ()=> {
-        console.log('jeste')
-        window.location.replace("/blog/" + e.id);
-      }, false)
-    }
     const editBtn = (route,id) => {
       if(route.includes("client")) {
         return `
@@ -46,7 +38,6 @@ export default class Users extends HTMLElement {
     <p class="blogPostText">${e.createdAt}</p>
     </li>
     ${editBtn(window.location.href, e.id)}
-    ${addLister(e)}
     </section>
           `).join("")}
         </ul>

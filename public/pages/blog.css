@@ -44,7 +44,6 @@ li.blogPost {
   height: 11vw;
   min-height: 256px;
   background: #6666663b;
-cursor: pointer;
 }
 .blogPost:hover {
   transition: opacity 0.2s linear;
@@ -69,6 +68,7 @@ line-height: 1.4rem;
 a.blogPostTitle:hover {
   background: #fff;
   color: black;
+  text-shadow: none;
 }
 
 
@@ -76,7 +76,7 @@ a.blogPostTitle:hover {
   section.blogCard {
     display: block;
   }
-  .blogPost {
+  li.blogPost {
     opacity: 1;
     background: none;
   }
