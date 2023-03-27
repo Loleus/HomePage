@@ -1,16 +1,17 @@
 <style>
-  h1 {
-pointer-events: none;
-margin: 1vh 0;
-padding: 1em 0;
-color: #ffa70480;
-line-height: 1em;
-font-size: 0.8em;
-text-shadow: 1px 1px 2px #272727;
-background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
-box-shadow: 0px 0px 3px 0px #cc0b0b;
-transition: color 0.24s linear;
-}
+h1.title {
+  pointer-events: none;
+  margin: 1vh 0;
+  padding: 0 0 5px;
+  color: #ffa704b2;
+  line-height: 2.3em;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 2px #272727;
+  background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
+  box-shadow: 0px 0px 3px 0px #cc0b0b;
+  transition: color 0.24s linear;
+  text-transform: uppercase;
+  }
   #sc-widget {
     width: 80%;
     height: calc(98vh - 79px - 2.5em);
@@ -24,7 +25,7 @@ transition: color 0.24s linear;
 
   }
 </style>
-<h1>Some sounds</h1>
+<h1 class="title">Some sounds</h1>
 <div class="container">
   <iframe id="sc-widget" scrolling="no" frameborder="no" allow="autoplay"
   src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/loleus/"></iframe>

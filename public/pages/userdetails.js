@@ -31,8 +31,8 @@ export default class UserDetails extends HTMLElement {
       const image = document.getElementById('img1');
       image.src = `http://drive.google.com/uc?id=${post.picUrl}`;
       image.onload = () => {
-        document.getElementById('text').innerHTML = post.text
-        image.style = "background:none";
+        document.getElementById('text').innerHTML = post.text;
+        image.style = "background:bisque";
     }
     };
   }
