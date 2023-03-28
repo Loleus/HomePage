@@ -36,8 +36,9 @@ export default class UserDetails extends HTMLElement {
         console.log(image)
         EXIF.getData(image, function () {
           console.log(this)
-          var MetaData = EXIF.getAllTags(this);
+          const MetaData = EXIF.getAllTags(this);
           console.log(JSON.stringify(MetaData, null, "\t"));
+          alert(EXIF.pretty(this))
         });
     }
     };
