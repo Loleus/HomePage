@@ -33,6 +33,12 @@ export default class UserDetails extends HTMLElement {
       image.onload = () => {
         document.getElementById('text').innerHTML = post.text;
         image.style = "background:bisque";
+        console.log(image)
+        EXIF.getData(image, function () {
+          console.log(this)
+          var MetaData = EXIF.getAllTags(this);
+          console.log(JSON.stringify(MetaData, null, "\t"));
+        });
     }
     };
   }

@@ -87,6 +87,7 @@ text-decoration: none;
 display: inline-block;
 text-shadow: 1px 2px 1px #272727;
 color: #d6b212;
+text-transform: none;
 }
 h1.title a:hover {
 color: #96c42d;
