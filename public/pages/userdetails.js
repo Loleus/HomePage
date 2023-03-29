@@ -29,18 +29,12 @@ export default class UserDetails extends HTMLElement {
       document.getElementById('title').innerHTML = post.title
       document.getElementById('text').innerHTML = "loading..."
       const image = document.getElementById('img1');
-      image.src = `http://drive.google.com/uc?id=${post.picUrl}`;
-      image.onload = () => {
+      image.src = `/images/${post.id}.jpg`;
+      // image.src = `http://drive.google.com/uc?id=${post.picUrl}`;
+      image.onload = function () {
         document.getElementById('text').innerHTML = post.text;
         image.style = "background:bisque";
-        console.log(image)
-        EXIF.getData(image, function () {
-          console.log(this)
-          const MetaData = EXIF.getAllTags(this);
-          console.log(JSON.stringify(MetaData, null, "\t"));
-          alert(EXIF.pretty(this))
-        });
-    }
+      }
     };
   }
 }
