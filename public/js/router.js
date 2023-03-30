@@ -4,7 +4,7 @@ import { match } from "./util.js";
 export default class Router extends HTMLElement {
 
   get outlet() {
-    return this.querySelector("wc-outlet");
+    return document.querySelector(".wc-outlet");
   }
   get root() {
     return window.location.pathname;

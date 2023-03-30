@@ -1,3 +1,17 @@
+.pager {
+  display: flex;
+  width:100%;
+  justify-content: space-evenly;
+  padding: 0 10vh;
+}
+.pager p {
+  width:20%;
+  background:#aaa;
+  border:1px solid #333;
+}
+.pager button {
+  width: 20%;
+}
 .blogCards {
   flex-basis: 100%;
   display: flex;
@@ -5,12 +19,14 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto 10%;
   list-style: none;
   position: relative;
-  padding: 0.5rem 0;
-  background: #7a5b357c;
+  padding: 0 0 0.5rem 0;
+  /* background: #7a5b357c; */
   border-radius: 3px;
+  background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
+  box-shadow: 0px 0px 3px 0px #cc0b0b;
 }
 section.blogCard {
   width: 11vw;
@@ -22,7 +38,7 @@ section.blogCard {
   background-position: bottom;
   background-repeat: no-repeat;
   transition: background-size 0.1s linear;
-  margin-bottom: 2vh;
+  margin: 3vh 10vh 2vh 10vh;
   box-shadow: 2px 2px 3px black;
   border-radius: 0.1em;
 }

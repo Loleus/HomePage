@@ -1,8 +1,7 @@
 let list
-let currentPage = 2;
-let listPerPage = 8;
-let getOffset = () => {
-  return (currentPage - 1) * [listPerPage];
+let listPerPage = 6;
+let getOffset = (page) => {
+  return (page - 1) * [listPerPage];
 }
 
 const userList = async () => {
@@ -19,10 +18,10 @@ export default class Users extends HTMLElement {
   static get observedAttributes() { return ["page"]; }
 
   get page() {
-    return JSON.parse(this.getAttribute("loading"));
+    return JSON.parse(this.getAttribute("page"));
   }
   set page(v) {
-    this.setAttribute("loading", JSON.stringify(v));
+    this.setAttribute("page", JSON.stringify(v));
   }
 getEditBtns(route,id) {
   if(route.includes("client")) {
@@ -41,39 +40,55 @@ getEditBtns(route,id) {
 }
 }
   connectedCallback() {
+    this.page = 1;
+    this.addEventListener("click", (e) => {
+      console.log(e.target.id == "inc")
+      e.preventDefault();
+      switch(e.target.id) {
+        case "inc":
+          this.page = this.page + 1;
+          break;
+        
+        case "dec":
+          this.page = this.page - 1;
+          break;
+        
+        default :
+          console.log(e.target)
+          break;
+      }
+    },true);
     this.render();
-
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
+    console.log("huj")
     this.render();
-  }
-  incresePage() {
-    this.page(--this.page)
-  }
-  decresePage() {
-    this.page(++this.page)
   }
   render() {
     this.innerHTML = `
     <link rel="stylesheet" href="/pages/blog.css">
     <h1 class="title">Photo gallery</h1>
     <ul class="blogCards ">
-    ${list.slice(getOffset(),getOffset() + listPerPage).map(e => `
+    ${list.slice(getOffset(this.page),getOffset(this.page) + listPerPage).map(e => `
     <section id="card" style="background-image: url('https://drive.google.com/thumbnail?id=${e.picUrl} ')" class="blogCard">
     <li class="blogPost">
+    <wc-router>
     <a class="blogPostTitle" route="blog/${e.id}">${e.title}</a>
+    <wc-route path="/blog/:id" title="Post Details" component="wc-userdetails"></wc-route>
+
+    </wc-router>
     <p class="blogPostText">${e.createdAt}</p>
     </li>
-    ${getEditBtns(window.location.href, e.id)}
+    ${this.getEditBtns(window.location.href, e.id)}
     </section>
           `).join("")}
-
+          <div class="pager">
+          <button id="dec"><--</button>
+          <p>${this.page}</p>
+          <button id="inc")">--></button>
+          </div>
         </ul>
-        <div class="pager">
-        <button onclick=""><--</button>
-        <p>${currentPage}</p>
-        <button onclick="")">--></button>
-        </div>
+
     `;
 
   }
