@@ -29,8 +29,8 @@ export default class UserDetails extends HTMLElement {
       document.getElementById('title').innerHTML = post.title
       document.getElementById('text').innerHTML = "loading..."
       const image = document.getElementById('img1');
-      image.src = `/images/${post.id}.jpg`;
-      // image.src = `http://drive.google.com/uc?id=${post.picUrl}`;
+      // image.src = `/images/${post.id}.jpg`;
+      image.src = `http://drive.google.com/uc?id=${post.picUrl}`;
       image.onload = function () {
         document.getElementById('text').innerHTML = post.text;
         image.style = "background:bisque";

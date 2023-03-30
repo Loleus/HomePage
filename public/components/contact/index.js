@@ -5,14 +5,15 @@ export default class Contact extends HTMLElement {
     h1.title {
       pointer-events: none;
       margin: 1vh 0;
-      padding: 1em 0;
-      color: #ffa70480;
-      line-height: 1em;
-      font-size: 0.8em;
+      padding: 0 0 5px;
+      color: #ffa704b2;
+      line-height: 2.3em;
+      font-size: 1.3em;
       text-shadow: 1px 1px 2px #272727;
       background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
       box-shadow: 0px 0px 3px 0px #cc0b0b;
       transition: color 0.24s linear;
+      text-transform: uppercase;
       }
     h1:hover {
       color: #b99700;
@@ -23,6 +24,7 @@ export default class Contact extends HTMLElement {
       display: inline-block;
       text-shadow: 1px 2px 1px #272727;
       color: #d6b212;
+      font-size: 1.3rem;
     }
     h1 a:hover {
       color: #96c42d;

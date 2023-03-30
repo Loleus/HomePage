@@ -50,6 +50,7 @@ export default class Repos extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
   }
+  
   render() {
 
     if (this.loading) {
