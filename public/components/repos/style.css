@@ -9,6 +9,7 @@ span {
 table {
   margin: 0 auto;
   font-size: 27px;
+  background: #87b1de80;
 }
 
 th,
@@ -21,17 +22,11 @@ td {
   color: #a5a5a5;
   box-shadow: 0px 0px 3px 0px #b37e0e;
   background: rgba(59, 49, 36, 0.38);
-  transition: all 0.24s linear;
+  transition: all 0.2s linear;
 }
-@media only screen and (max-width: 1020px) {
-  th,
-td {
-    font-size: 20px;
-  }
-}
+
 tr:nth-child(n + 1) td:first-child {
   background: #1118;
-  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
 
 td:hover {
@@ -68,7 +63,7 @@ h1.title {
   text-shadow: 1px 1px 2px #272727;
   background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
   box-shadow: 0px 0px 3px 0px #cc0b0b;
-  transition: color 0.24s linear;
+  transition: color 0.2s linear;
   text-transform: uppercase;
   }
   h1.blogListTitle.title, a.blogListTitle {
@@ -91,4 +86,13 @@ text-transform: none;
 }
 h1.title a:hover {
 color: #96c42d;
+}
+@media only screen and (max-width: 1020px) {
+  h1.title {
+    font-size: 1em;
+  }
+  th,
+td {
+    font-size: 20px;
+  }
 }

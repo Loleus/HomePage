@@ -13,8 +13,9 @@ import Login from "/components/login/index.js";
 customElements.define("wc-login", Login);
 import AddPost from "/components/addPost/index.js";
 customElements.define("wc-addpost", AddPost);
-import EditPost from "/components/editPost/index.js";
 
+
+import EditPost from "/components/editPost/index.js";
 import NotFound from "./notfound.js";
 import Users from "./users.js";
 import UserDetails from "./userdetails.js";

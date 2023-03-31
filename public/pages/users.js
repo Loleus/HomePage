@@ -27,7 +27,16 @@ getEditBtns(route,id) {
   if(route.includes("client")) {
     return `
     <div style="position:absolute;display:flex;margin-top:-1.8rem; margin-left:3px;z-index:2;">
+
+    <wc-router>
     <a class="editBtn" route="blog/edit/${id}">E</a>
+    <wc-route path="/blog/edit/:id" title="Edit Post" component="wc-editpost"></wc-route>
+
+    </wc-router>
+
+
+    
+    
     <form class="deleteBtn-form" method='POST' action='/client/${id}?_method=DELETE'>
         <button type='submit' class='btn-delete'>X
         </button>
@@ -42,7 +51,6 @@ getEditBtns(route,id) {
   connectedCallback() {
     this.page = 1;
     this.addEventListener("click", (e) => {
-      console.log(e.target.id == "inc")
       e.preventDefault();
       switch(e.target.id) {
         case "inc":
@@ -61,7 +69,6 @@ getEditBtns(route,id) {
     this.render();
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
-    console.log("huj")
     this.render();
   }
   render() {
@@ -75,7 +82,6 @@ getEditBtns(route,id) {
     <wc-router>
     <a class="blogPostTitle" route="blog/${e.id}">${e.title}</a>
     <wc-route path="/blog/:id" title="Post Details" component="wc-userdetails"></wc-route>
-
     </wc-router>
     <p class="blogPostText">${e.createdAt}</p>
     </li>
