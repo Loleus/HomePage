@@ -10,7 +10,6 @@ const userList = async () => {
   }
 }
 userList()
-console.log(list)
 export default class EditPost extends HTMLElement {
   static observedAttributes() {
     return ["id"];

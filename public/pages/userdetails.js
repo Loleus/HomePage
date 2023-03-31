@@ -9,7 +9,6 @@ const userList = async (id) => {
   }
 }
 
-console.log(post)
 export default class UserDetails extends HTMLElement {
   static observedAttributes() {
     return ["id"];

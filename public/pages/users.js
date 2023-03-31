@@ -27,28 +27,22 @@ getEditBtns(route,id) {
   if(route.includes("client")) {
     return `
     <div style="position:absolute;display:flex;margin-top:-1.8rem; margin-left:3px;z-index:2;">
-
     <wc-router>
     <a class="editBtn" route="blog/edit/${id}">E</a>
     <wc-route path="/blog/edit/:id" title="Edit Post" component="wc-editpost"></wc-route>
-
     </wc-router>
-
-
-    
-    
     <form class="deleteBtn-form" method='POST' action='/client/${id}?_method=DELETE'>
         <button type='submit' class='btn-delete'>X
         </button>
     </form>
     </div>
-
     `
 } else {
   return ''
 }
 }
   connectedCallback() {
+    this.render();
     this.page = 1;
     this.addEventListener("click", (e) => {
       e.preventDefault();
@@ -66,9 +60,23 @@ getEditBtns(route,id) {
           break;
       }
     },true);
-    this.render();
+setTimeout(() => {
+  document.getElementById('dec').disabled = true 
+  document.getElementById('inc').disabled = false
+});
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
+    setTimeout(() => {
+ 
+      if(this.page==1){
+        document.getElementById('dec').disabled = true 
+        document.getElementById('inc').disabled = false
+      } else {
+        document.getElementById('inc').disabled = true;
+        document.getElementById('dec').disabled = false
+      }
+
+    });
     this.render();
   }
   render() {
@@ -95,7 +103,7 @@ getEditBtns(route,id) {
           </div>
         </ul>
 
-    `;
+    `
 
   }
 }
