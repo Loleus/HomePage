@@ -1,7 +1,7 @@
 let list
 const userList = async () => {
   try {
-    let response = await fetch('client/getAll');
+    let response = await fetch('admin/getAll');
     let parsedList = await response.json();
     console.log(parsedList)
     list = parsedList
@@ -22,7 +22,7 @@ export default class EditPost extends HTMLElement {
       let post = list.find(e => e.id === id);
       this.innerHTML = `
       <h1 class="title">Edit ${post.title}</h1>
-      <form class="addForm" method='POST' action='/client/${post.id}?_method=PUT'>
+      <form class="addForm" method='POST' action='/admin/${post.id}?_method=PUT'>
       <label>
       <p>Title</p>
       <input type='text' name='title' required value="${post.title}">

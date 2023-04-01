@@ -6,7 +6,7 @@ let getOffset = (page) => {
 
 const userList = async () => {
   try {
-      let response = await fetch('/client/getAll');
+      let response = await fetch('/admin/getAll');
       let parsedList = await response.json();
       list =  parsedList
   } catch (err) {
@@ -24,14 +24,14 @@ export default class Users extends HTMLElement {
     this.setAttribute("page", JSON.stringify(v));
   }
 getEditBtns(route,id) {
-  if(route.includes("client")) {
+  if(route.includes("admin")) {
     return `
     <div style="position:absolute;display:flex;margin-top:-1.8rem; margin-left:3px;z-index:2;">
     <wc-router>
     <a class="editBtn" route="blog/edit/${id}">E</a>
     <wc-route path="/blog/edit/:id" title="Edit Post" component="wc-editpost"></wc-route>
     </wc-router>
-    <form class="deleteBtn-form" method='POST' action='/client/${id}?_method=DELETE'>
+    <form class="deleteBtn-form" method='POST' action='/admin/${id}?_method=DELETE'>
         <button type='submit' class='btn-delete'>X
         </button>
     </form>

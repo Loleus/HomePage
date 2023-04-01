@@ -3,7 +3,7 @@ export default class AddPost extends HTMLElement {
     this.innerHTML = `
 
     <h1 class="title">New post</h1>
-    <form class="addForm" method='POST' action='/client'>
+    <form class="addForm" method='POST' action='/admin'>
     <label>
         <p>Title</p>
         <input type='text' name='title' required>

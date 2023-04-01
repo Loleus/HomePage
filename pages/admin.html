@@ -17,13 +17,13 @@
         <nav class="site-navbar nav">
           <a href="/" class="site-logo">lolo_2023</a>
           <ul>
-            <li><a route="/client">Home</a></li>
-            <li><a route="/client/about">About</a></li>
-            <li><a route="/client/music">Music</a></li>
-            <li><a route="/client/video">Video</a></li>
-            <li><a route="/client/blog">Photo</a></li>
-            <li><a route="/client/contact">Contact</a></li>
-            <li><a route="/client/addPost">Add Post</a></li>
+            <li><a route="/admin">Home</a></li>
+            <li><a route="/admin/about">About</a></li>
+            <li><a route="/admin/music">Music</a></li>
+            <li><a route="/admin/video">Video</a></li>
+            <li><a route="/admin/blog">Photo</a></li>
+            <li><a route="/admin/contact">Contact</a></li>
+            <li><a route="/admin/addPost">Add Post</a></li>
           </ul>
           <button class="nav-toggler">
             <div></div>
@@ -32,13 +32,13 @@
       </div>
     </div>
     <wc-route path="/" title="Home" component="wc-home"></wc-route>
-    <wc-route path="/client" title="Home" component="wc-home"></wc-route>
-    <wc-route path="/client/about" title="About Me" component="wc-about"></wc-route>
-    <wc-route path="/client/music" title="Music" component="wc-music"></wc-route>
-    <wc-route path="/client/video" title="Video" component="wc-video"></wc-route>
-    <wc-route path="/client/contact" title="Contact" component="wc-contact"></wc-route>
-    <wc-route path="/client/addPost" title="Add post" component="wc-addpost"></wc-route>
-    <wc-route path="/client/blog" title="Blog" component="wc-users"></wc-route>
+    <wc-route path="/admin" title="Home" component="wc-home"></wc-route>
+    <wc-route path="/admin/about" title="About Me" component="wc-about"></wc-route>
+    <wc-route path="/admin/music" title="Music" component="wc-music"></wc-route>
+    <wc-route path="/admin/video" title="Video" component="wc-video"></wc-route>
+    <wc-route path="/admin/contact" title="Contact" component="wc-contact"></wc-route>
+    <wc-route path="/admin/addPost" title="Add post" component="wc-addpost"></wc-route>
+    <wc-route path="/admin/blog" title="Blog" component="wc-users"></wc-route>
     <wc-route path="/blog/:id" title="Post Details" component="wc-userdetails"></wc-route>
     <wc-route path="/blog/edit/:id" title="Edit Post" component="wc-editpost"></wc-route>
     <wc-route path="*" title="404" component="wc-notfound"></wc-route>
