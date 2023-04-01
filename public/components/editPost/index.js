@@ -3,7 +3,6 @@ const userList = async () => {
   try {
     let response = await fetch('admin/getAll');
     let parsedList = await response.json();
-    console.log(parsedList)
     list = parsedList
   } catch (err) {
     console.error(err)
