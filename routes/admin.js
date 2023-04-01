@@ -20,7 +20,7 @@ const auth = (req, res) => {
     try {
       res.send(db.getAll());
     } catch (err) {
-      console.error(`Error while getting programming languages `, err.message);
+      console.error(`Error while getting photos `, err.message);
       next(err);
     }
   })
@@ -28,9 +28,9 @@ const auth = (req, res) => {
   .post('/', (req,res) => {
     db.create(req.body);
     res.status(201)
-    .send(`<p>${req.body.title}</p><a href="/client/blog">Back to posts</a>` );
+    .send(`<p>${req.body.title}</p><a href="/admin/photos">Back to photos</a>` );
   })
-  .get('/blog', (req, res) => {
+  .get('/photos', (req, res) => {
     console.log(req.session)
     if (req.session.loggedin) {
       res.redirect('/admin');
@@ -39,11 +39,11 @@ const auth = (req, res) => {
     }
   })
   .get('/:id', (req, res) => {
-    const client = db.getOne(req.params.id);
-    if(!client) {
+    const photo = db.getOne(req.params.id);
+    if(!photo) {
       throw new NotFoundError()
     }
-    res.send(client);
+    res.send(photo);
   })
   .put('/:id', (req, res) => {
     db.update(req.params.id, req.body);

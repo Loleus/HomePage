@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#FF00FF" />
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/components/repos/style.css">
-  <title>Router</title>
+  <title>Homepage/Admin</title>
 </head>
 
 <body>
@@ -21,9 +21,9 @@
             <li><a route="/admin/about">About</a></li>
             <li><a route="/admin/music">Music</a></li>
             <li><a route="/admin/video">Video</a></li>
-            <li><a route="/admin/blog">Photo</a></li>
+            <li><a route="/admin/photos">Photo</a></li>
             <li><a route="/admin/contact">Contact</a></li>
-            <li><a route="/admin/addPost">Add Post</a></li>
+            <li><a route="/admin/addPhoto">Add Post</a></li>
           </ul>
           <button class="nav-toggler">
             <div></div>
@@ -37,14 +37,14 @@
     <wc-route path="/admin/music" title="Music" component="wc-music"></wc-route>
     <wc-route path="/admin/video" title="Video" component="wc-video"></wc-route>
     <wc-route path="/admin/contact" title="Contact" component="wc-contact"></wc-route>
-    <wc-route path="/admin/addPost" title="Add post" component="wc-addpost"></wc-route>
-    <wc-route path="/admin/blog" title="Blog" component="wc-users"></wc-route>
-    <wc-route path="/blog/:id" title="Post Details" component="wc-userdetails"></wc-route>
-    <wc-route path="/blog/edit/:id" title="Edit Post" component="wc-editpost"></wc-route>
+    <wc-route path="/admin/addPhoto" title="Add photo" component="wc-addphoto"></wc-route>
+    <wc-route path="/admin/photos" title="Photos" component="wc-photos"></wc-route>
+    <wc-route path="/photos/:id" title="Photo" component="wc-photo"></wc-route>
+    <wc-route path="/photos/edit/:id" title="Edit Photo" component="wc-editphoto"></wc-route>
     <wc-route path="*" title="404" component="wc-notfound"></wc-route>
     <wc-outlet class="wc-outlet"></wc-outlet>
   </wc-router>
-  <template id="blog_temp">
+  <template id="photo_temp">
     <style>
       img#img1 {
         position: relative;

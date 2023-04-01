@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#FF00FF" />
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/components/repos/style.css">
-  <title>Router</title>
+  <title>Homepage</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <li><a route="/about">About</a></li>
             <li><a route="/music">Music</a></li>
             <li><a route="/video">Video</a></li>
-            <li><a route="/blog">Photo</a></li>
+            <li><a route="/photos">Photos</a></li>
             <li><a route="/contact">Contact</a></li>
             <li><a route="/login">Login</a></li>
           </ul>
@@ -37,13 +37,13 @@
     <wc-route path="/video" title="Video" component="wc-video"></wc-route>
     <wc-route path="/contact" title="Contact" component="wc-contact"></wc-route>
     <wc-route path="/login" title="Login" component="wc-login"></wc-route>
-    <wc-route path="/blog" title="Blog" component="wc-users"></wc-route>
-    <wc-route path="/blog/:id" title="Post Details" component="wc-userdetails"></wc-route>
+    <wc-route path="/photos" title="photos" component="wc-photos"></wc-route>
+    <wc-route path="/photos/:id" title="Photo" component="wc-photo"></wc-route>
     <wc-route path="*" title="404" component="wc-notfound"></wc-route>
     <wc-outlet class="wc-outlet"></wc-outlet>
     <footer>No time Toulouse</footer>
   </wc-router>
-  <template id="blog_temp">
+  <template id="photo_temp">
     <style>
       img#img1 {
         position: relative;

@@ -1,7 +1,7 @@
 const { readFile, writeFile } = require('fs').promises;
 const { join } = require('path');
 const { v4: uuid } = require('uuid');
-const {PostRecord} = require('../record/post-record')
+const {PhotoRecord} = require('../record/photo-record')
 
 class DB {
 
@@ -10,14 +10,14 @@ class DB {
     this._load();
   }
   async _load() {
-    this._data = JSON.parse(await readFile(this.dbFileName, 'utf8')).map(obj => new PostRecord(obj));
+    this._data = JSON.parse(await readFile(this.dbFileName, 'utf8')).map(obj => new PhotoRecord(obj));
   }
   _save() {
     writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
   }
   create(obj) {
     const id = uuid();
-    this._data.push(new PostRecord({
+    this._data.push(new PhotoRecord({
       id,
       ...obj,
     }));
@@ -53,7 +53,7 @@ class DB {
   }
 }
 
-const db = new DB('posts.json')
+const db = new DB('photos.json')
 module.exports = {
   db,
 };

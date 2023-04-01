@@ -1,8 +1,8 @@
-export default class AddPost extends HTMLElement {
+export default class AddPhoto extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
 
-    <h1 class="title">New post</h1>
+    <h1 class="title">New photo</h1>
     <form class="addForm" method='POST' action='/admin'>
     <label>
         <p>Title</p>
@@ -13,16 +13,12 @@ export default class AddPost extends HTMLElement {
         <input type='date' name='createdAt'>
     </label>
     <label>
-        <p>Last edit at:</p>
-        <input type='date' name='lastEditAt'>
-    </label>
-    <label>
-        <p>Content:</p>
+        <p>Details:</p>
         <textarea name='text'></textarea>
     </label>
     <label>
-        <p>Url to photo</p>
-        <input name='picUrl'>
+        <p>Photo ID on Google Drive</p>
+        <input name='picId'>
     </label>
     <button type='submit'>Save</button>
 </form> 
