@@ -16,8 +16,8 @@ customElements.define("wc-addpost", AddPost);
 
 
 import EditPost from "/components/editPost/index.js";
-import NotFound from "./notfound.js";
-import Users from "./users.js";
-import UserDetails from "./userdetails.js";
+import NotFound from "../components/pages/notfound.js";
+import Users from "../components/pages/users.js";
+import UserDetails from "../components/pages/userdetails.js";
 
 export { Home, AboutUs, Music, Video, Contact, Login, AddPost, EditPost, NotFound, Users, UserDetails };

@@ -1,7 +1,7 @@
 let post
 const userList = async (id) => {
   try {
-    let response = await fetch('/client/' + id);
+    let response = await fetch('/admin/' + id);
     let parsedList = await response.json();
     post = parsedList
   } catch (err) {
