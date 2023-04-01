@@ -81,7 +81,7 @@ setTimeout(() => {
   }
   render() {
     this.innerHTML = `
-    <link rel="stylesheet" href="components/pages/blog.css">
+    <link rel="stylesheet" href="/components/pages/blog.css">
     <h1 class="title">Photo gallery</h1>
     <ul class="blogCards ">
     ${list.slice(getOffset(this.page),getOffset(this.page) + listPerPage).map(e => `
