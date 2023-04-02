@@ -52,7 +52,9 @@ export default class Router extends HTMLElement {
   }
 
   connectedCallback() {
+
     this.updateLinks();
+    this.querySelectorAll("a[route]")[1].style.color = "gold"
     this.navigate(window.location.pathname);
     window.addEventListener("popstate", this._handlePopstate);
     if (window.history.replaceState) {
@@ -75,13 +77,19 @@ export default class Router extends HTMLElement {
 
   updateLinks() {
     this.querySelectorAll("a[route]").forEach(link => {
+
       const target = link.getAttribute("route");
       link.setAttribute("href", target);
       link.onclick = e => {
         e.preventDefault();
         this.navigate(target);
+        this.querySelectorAll("a[route]").forEach(link => {
+          link.style.color = ""
+        });
+        e.target.style.color = "gold"
       };
     });
+    
   }
 
   navigate(url) {

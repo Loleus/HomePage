@@ -21,12 +21,15 @@
 
 html {
   height: 100%;
-  background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
-  background-attachment: fixed;
+  overflow: hidden;
 }
 
 body {
+  background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   height: 100%;
+  overflow-y: scroll;
 }
 
 footer {
@@ -54,7 +57,7 @@ footer {
 
 /* navbar regular css start */
 .navbar-area {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.67);
   border-bottom: 1px solid #000;
 }
 

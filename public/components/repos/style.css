@@ -4,6 +4,7 @@ span {
   overflow: auto;
   justify-content: center;
   width:100%;
+  /* margin-bottom: 12vh; */
 }
 
 table {
@@ -23,7 +24,7 @@ td {
   line-height: 1.3em;
   color: #a5a5a5;
   box-shadow: 0px 0px 3px 0px #044a60;
-  background: rgba(5, 38, 20, 0.7);
+  background: rgba(5, 38, 20, 0.5);
   transition: all 0.2s linear;
 }
 

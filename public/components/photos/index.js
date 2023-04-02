@@ -84,7 +84,7 @@ export default class Photos extends HTMLElement {
     console.log(list)
     this.innerHTML = `
     <link rel="stylesheet" href="/components/photos/style.css">
-    <h1 class="title">Photos</h1>
+    <h1 class="title">Shots</h1>
     <ul class="blogCards ">
     ${list.slice(getOffset(this.page), getOffset(this.page) + listPerPage).map(e => `
     <section id="card" style="background-image: url('https://drive.google.com/thumbnail?id=${e.picId} ')" class="blogCard">
