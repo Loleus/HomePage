@@ -69,7 +69,7 @@ a.site-logo {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffa60083;
+  color: #ffd700bd;
   margin-left:10px;
 }
 
@@ -245,6 +245,7 @@ form button {
   margin-bottom: 0.5;
   box-sizing: border-box;
   font-size: 0.8rem;
+  border-radius: 3px;
 }
 
 input[type="submit"] {
@@ -264,6 +265,7 @@ button {
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 0;
+  border-radius: 3px;
 }
 
 button.btn-delete {

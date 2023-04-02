@@ -36,7 +36,7 @@ export default class EditPhoto extends HTMLElement {
   </label>
           <label>
           <p>Photo ID on my Google Drive</p>
-          <input value="${photo.picUrl}" name='picUrl'>
+          <input value="${photo.picId}" name='picUrl'>
       </label>
           <button type='submit'>Update</button>
       </form>

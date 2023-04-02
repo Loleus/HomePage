@@ -6,12 +6,12 @@ let getOffset = (page) => {
 
 const photoList = async () => {
   try {
-      let response = await fetch('/admin/getAll');
-      let parsedList = await response.json();
-      list =  parsedList
+    let response = await fetch('/admin/getAll');
+    let parsedList = await response.json();
+    list = parsedList
 
   } catch (err) {
-      console.error(err)
+    console.error(err)
   }
 }
 photoList()
@@ -24,9 +24,9 @@ export default class Photos extends HTMLElement {
   set page(v) {
     this.setAttribute("page", JSON.stringify(v));
   }
-getEditBtns(route,id) {
-  if(route.includes("admin")) {
-    return `
+  getEditBtns(route, id) {
+    if (route.includes("admin")) {
+      return `
     <div style="position:absolute;display:flex;margin-top:-1.8rem; margin-left:3px;z-index:2;">
     <wc-router>
     <a class="editBtn" route="photos/edit/${id}">E</a>
@@ -38,39 +38,39 @@ getEditBtns(route,id) {
     </form>
     </div>
     `
-} else {
-  return ''
-}
-}
+    } else {
+      return ''
+    }
+  }
   connectedCallback() {
     this.render();
     this.page = 1;
     this.addEventListener("click", (e) => {
       e.preventDefault();
-      switch(e.target.id) {
+      switch (e.target.id) {
         case "inc":
           this.page = this.page + 1;
           break;
-        
+
         case "dec":
           this.page = this.page - 1;
           break;
-        
-        default :
+
+        default:
           console.log(e.target)
           break;
       }
-    },true);
-setTimeout(() => {
-  document.getElementById('dec').disabled = true 
-  document.getElementById('inc').disabled = false
-});
+    }, true);
+    setTimeout(() => {
+      document.getElementById('dec').disabled = true
+      document.getElementById('inc').disabled = false
+    });
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
     setTimeout(() => {
- 
-      if(this.page==1){
-        document.getElementById('dec').disabled = true 
+
+      if (this.page == 1) {
+        document.getElementById('dec').disabled = true
         document.getElementById('inc').disabled = false
       } else {
         document.getElementById('inc').disabled = true;
@@ -86,12 +86,12 @@ setTimeout(() => {
     <link rel="stylesheet" href="/components/photos/style.css">
     <h1 class="title">Photos</h1>
     <ul class="blogCards ">
-    ${list.slice(getOffset(this.page),getOffset(this.page) + listPerPage).map(e => `
+    ${list.slice(getOffset(this.page), getOffset(this.page) + listPerPage).map(e => `
     <section id="card" style="background-image: url('https://drive.google.com/thumbnail?id=${e.picId} ')" class="blogCard">
     <li class="blogPost">
     <wc-router>
     <a class="blogPostTitle" route="photos/${e.id}">${e.title}</a>
-    <wc-route path="/photos/:id" title="Photo Details" component="wc-photodetails"></wc-route>
+    <wc-route path="/photos/:id" title="Photo Details" component="wc-photo"></wc-route>
     </wc-router>
     <p class="blogPostText">${e.createdAt}</p>
     </li>
