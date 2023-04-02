@@ -8,6 +8,7 @@
   width:20%;
   background:#aaa;
   border:1px solid #333;
+  border-radius: 3px;
 }
 .pager button {
   width: 20%;
@@ -19,7 +20,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 1440px;
-  margin: 0 auto 1%;
+  margin: 0 auto 3%;
   list-style: none;
   position: relative;
   padding: 0 0 0.5rem 0;
@@ -58,6 +59,7 @@ li.blogPost {
   height: 11vw;
   min-height: 256px;
   background: #6666663b;
+  border-radius: 3px;
 }
 .blogPost:hover {
   transition: opacity 0.2s linear;
@@ -71,16 +73,15 @@ li.blogPost {
   color: #fff;
 }
 a.blogPostTitle {
+  display: inline-block;
   font-size: 1.4em;
   width: 100%;
   background: #fff;
   color: black;
-  padding-bottom: 5px;
+  padding: 0 5px;
   transition: color 0.2s linear;
-  line-height: 1.4rem;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px maroon;
-  margin-top: 0.7em;
 }
 
 @media screen and (max-width: 767px) {

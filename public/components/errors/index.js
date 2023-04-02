@@ -8,4 +8,4 @@ export default class NotFound extends HTMLElement {
   }
 }
 
-customElements.define("wc-notfound", NotFound);
+

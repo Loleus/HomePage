@@ -21,12 +21,15 @@
 
 html {
   height: 100%;
-  background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
-  background-attachment: fixed;
+  overflow: hidden;
 }
 
 body {
+  background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   height: 100%;
+  overflow-y: scroll;
 }
 
 footer {
@@ -54,7 +57,7 @@ footer {
 
 /* navbar regular css start */
 .navbar-area {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.67);
   border-bottom: 1px solid #000;
 }
 
@@ -69,7 +72,7 @@ a.site-logo {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffa60083;
+  color: #ffd700bd;
   margin-left:10px;
 }
 
@@ -245,6 +248,7 @@ form button {
   margin-bottom: 0.5;
   box-sizing: border-box;
   font-size: 0.8rem;
+  border-radius: 3px;
 }
 
 input[type="submit"] {
@@ -264,6 +268,7 @@ button {
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 0;
+  border-radius: 3px;
 }
 
 button.btn-delete {
