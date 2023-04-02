@@ -54,7 +54,7 @@ export default class Router extends HTMLElement {
   connectedCallback() {
 
     this.updateLinks();
-    this.querySelectorAll("a[route]")[1].style.color = "gold"
+    this.querySelectorAll("a[route]")[1] ? this.querySelectorAll("a[route]")[1].style.color = "gold" : null
     this.navigate(window.location.pathname);
     window.addEventListener("popstate", this._handlePopstate);
     if (window.history.replaceState) {

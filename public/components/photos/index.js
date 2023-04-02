@@ -81,7 +81,6 @@ export default class Photos extends HTMLElement {
     this.render();
   }
   render() {
-    console.log(list)
     this.innerHTML = `
     <link rel="stylesheet" href="/components/photos/style.css">
     <h1 class="title">Shots</h1>
