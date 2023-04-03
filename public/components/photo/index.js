@@ -29,7 +29,7 @@ export default class Photo extends HTMLElement {
       document.getElementById('title').innerHTML = photo.title
       document.getElementById('text').innerHTML = "loading..."
       const image = document.getElementById('img1');
-      // image.src = `/images/${post.id}.jpg`;
+      // image.src = `/images/${photo.id}.jpg`;
       image.src = `http://drive.google.com/uc?id=${photo.picId}`;
       image.onload = function () {
         document.getElementById('text').innerHTML = photo.text;
@@ -38,4 +38,3 @@ export default class Photo extends HTMLElement {
     };
   }
 }
-
