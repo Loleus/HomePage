@@ -1,13 +1,12 @@
 ## My profile web
 
-Backend: EpressJs, flatfile json database
-Frntend: WebComponents based client router
+Backend: EpressJS, flatfile json database
+Frontend: WebComponents based client router
 
 
 1 - install app
-#npm i
+# npm i
 2- start app
-#npm start
+# npm start
 
 See in action: https://home/lukaszkaminski2.repl.co
- 
