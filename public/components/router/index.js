@@ -1,27 +1,5 @@
 "use strict";
 import { match } from "./util.js";
-const navToggler = document.querySelector('.nav-toggler');
-const navMenu = document.querySelector('.site-navbar ul');
-const navLinks = document.querySelectorAll('.site-navbar a');
-
-allEventListners();
-
-function allEventListners() {
-  navToggler.addEventListener('click', togglerClick);
-  navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
-}
-
-function togglerClick() {
-  navToggler.classList.toggle('toggler-open');
-  navMenu.classList.toggle('open');
-}
-
-function navLinkClick() {
-  if(navMenu.classList.contains('open')) {
-    navToggler.click();
-  }
-}
-
 export default class Router extends HTMLElement {
 
   get outlet() {
@@ -132,5 +110,3 @@ export default class Router extends HTMLElement {
     window.history.go(-1);
   }
 }
-
-customElements.define("wc-router", Router);

@@ -1,3 +1,5 @@
+import Router from "/components/router/index.js";
+customElements.define("wc-router", Router);
 import Home from "/components/repos/index.js";
 customElements.define("wc-home", Home);
 import AboutUs from "/components/aboutMe/index.js";
@@ -20,4 +22,6 @@ import Photo from "/components/photo/index.js";
 customElements.define("wc-photo", Photo);
 import NotFound from "/components/errors/index.js";
 customElements.define("wc-notfound", NotFound);
-export { Home, AboutUs, Music, Video, Contact, Login, AddPhoto, EditPhoto, Photos, Photo, NotFound };
+import Menu from "/components/menu/index.js";
+
+export { Router, Home, AboutUs, Music, Video, Contact, Login, AddPhoto, EditPhoto, Photos, Photo, NotFound, Menu};
