@@ -8,14 +8,16 @@ export default class Router extends HTMLElement {
   get root() {
     return window.location.pathname;
   }
+  get anchors() {
+    const anch = this.querySelectorAll("a[route]");
+    return anch
+  }
   get routes() {
     return Array.from(this.querySelectorAll("wc-route"))
       .filter(node => node.parentNode === this)
       .map(r => ({
         path: r.getAttribute("path"),
-        // Optional: document title
         title: r.getAttribute("title"),
-        // name of the web component the should be displayed
         component: r.getAttribute("component"),
         // Bundle path if lazy loading the component
         resourceUrl: r.getAttribute("resourceUrl")
@@ -23,9 +25,8 @@ export default class Router extends HTMLElement {
   }
 
   connectedCallback() {
-
     this.updateLinks();
-    this.querySelectorAll("a[route]")[1] ? this.querySelectorAll("a[route]")[1].style.color = "gold" : null
+    this.anchors[1] ? this.anchors[1].style.color = "gold" : null
     this.navigate(window.location.pathname);
     window.addEventListener("popstate", this._handlePopstate);
     if (window.history.replaceState) {
@@ -47,14 +48,13 @@ export default class Router extends HTMLElement {
   };
 
   updateLinks() {
-    this.querySelectorAll("a[route]").forEach(link => {
-
+    this.anchors.forEach(link => {
       const target = link.getAttribute("route");
       link.setAttribute("href", target);
       link.onclick = e => {
         e.preventDefault();
         this.navigate(target);
-        this.querySelectorAll("a[route]").forEach(link => {
+        this.anchors.forEach(link => {
           link.style.color = ""
         });
         e.target.style.color = "gold"

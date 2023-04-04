@@ -10,3 +10,9 @@ Frontend: WebComponents based client router
 
 See in action: https://home.lukaszkaminski2.repl.co
 
+## To do:
+- better errors handling
+- alternate photo upload input
+- routes for gallery pagination
+- exif metadata reader
+- comments & scoring component -> migration to sql
