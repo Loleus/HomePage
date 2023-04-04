@@ -1,0 +1,161 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  list-style: none;
+  position:relative;
+}
+
+
+/* navbar regular css start */
+.navbar-area {
+  background: rgba(0, 0, 0, 0.67);
+  border-bottom: 1px solid #000;
+}
+
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.site-logo {
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffd700bd;
+  margin-left:10px;
+}
+
+a.site-logo:hover {
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #bb8a2f;
+  text-shadow: none;
+}
+
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.site-navbar ul li a {
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #a37621;
+}
+
+.site-navbar ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e6a52e;
+}
+
+/* navbar regular css end */
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid #d6b212;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  margin-right:10px;
+  display: none;
+}
+
+.nav-toggler div,
+.nav-toggler div:before,
+.nav-toggler div:after {
+  width: 28px;
+  height: 3px;
+  background-color:#d6b212;
+  ;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-toggler div:before {
+  content: "";
+  transform: translateY(-9px);
+}
+
+.nav-toggler div:after {
+  content: "";
+  transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open div {
+  background-color: transparent;
+}
+
+.nav-toggler.toggler-open div:before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open div:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+  span#lmb {
+    display: none;
+  }
+  /* navbar css for mobile start */
+  .nav-toggler {
+    display: block;
+    width: auto;
+  }
+
+  .site-navbar {
+    min-height: 60px;
+  }
+
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(10, 5, 7, 0.9);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-navbar ul li a {
+    padding: 17px 25px;
+  }
+
+  .site-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .site-navbar ul.open {
+    z-index: 1;
+    max-height: 100vh;
+    overflow: visible;
+  }
+
+  /* navbar css for mobile end */
+}
+
+/* mobile breakpoint end */
