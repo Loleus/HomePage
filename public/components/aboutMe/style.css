@@ -11,8 +11,9 @@ h1.title {
   transition: color 0.24s linear;
   text-transform: uppercase;
   }
+  
 p {
-  text-shadow: 1px 1px 0px #cc0b0b;
+  text-shadow: 1px 1px 0px #00000080;
   text-indent: 1em;
   text-align: justify;
   text-justify: auto;

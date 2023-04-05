@@ -8,7 +8,7 @@ class PhotoRecord {
       }
 
       if(!title || typeof title !== 'string' || title.length < 3) {
-        throw new ValidationError('Imię musi być tekstem o długości min. 3 znaków.');
+        throw new ValidationError('Tytuł musi być tekstem o długości min. 3 znaków.');
       }
 
       if (typeof text !== 'string') {
