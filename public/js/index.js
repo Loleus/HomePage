@@ -1,9 +1,10 @@
 import Router from "/components/router/index.js";
 customElements.define("wc-router", Router);
+
 import Home from "/components/repos/index.js";
 customElements.define("wc-home", Home);
-import AboutUs from "/components/aboutMe/index.js";
-customElements.define("wc-about", AboutUs)
+import AboutMe from "/components/aboutMe/index.js";
+customElements.define("wc-about", AboutMe)
 import Music from "/components/soundcloud/index.js";
 customElements.define("wc-music", Music);
 import Video from "/components/youtube/index.js";
@@ -24,4 +25,4 @@ import NotFound from "/components/errors/index.js";
 customElements.define("wc-notfound", NotFound);
 import Menu from "/components/menu/index.js";
 
-export { Router, Home, AboutUs, Music, Video, Contact, Login, AddPhoto, EditPhoto, Photos, Photo, NotFound, Menu};
+export { Router, Home, AboutMe, Music, Video, Contact, Login, AddPhoto, EditPhoto, Photos, Photo, NotFound, Menu};

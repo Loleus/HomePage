@@ -28,6 +28,7 @@ export default class Photos extends HTMLElement {
     if (route.includes("admin")) {
       return `
       <style>
+
 button.btn-delete {
   background: none;
   border: none;

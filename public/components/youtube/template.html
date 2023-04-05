@@ -4,7 +4,7 @@ h1.title {
   margin: 1vh 0;
   padding: 0 0 5px;
   color: #ffa704b2;
-  line-height: 2.3em;
+  line-height:1.4em;
   font-size: 1.3em;
   text-shadow: 1px 1px 2px #272727;
   background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
@@ -12,8 +12,13 @@ h1.title {
   transition: color 0.24s linear;
   text-transform: uppercase;
   }
+  iframe#player {
+    width:100vw;
+    max-width: 80%;
+    height: 45vw;
+  }
 </style>
 <h1 class="title">Some clips</h1>
-<iframe id="player" type="text/html" width="640" height="360"
+<iframe id="player" type="text/html" 
 src="https://www.youtube.com/embed?listType=playlist&list=PLkXJmTe_aZnZncsAHK4LgkP6kkt-ataG3"
 frameborder="0"></iframe>
