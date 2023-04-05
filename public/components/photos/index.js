@@ -27,6 +27,35 @@ export default class Photos extends HTMLElement {
   getEditBtns(route, id) {
     if (route.includes("admin")) {
       return `
+      <style>
+
+button.btn-delete {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0;
+}
+
+form.deleteBtn-form {
+  
+  background: red;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 1.4rem;
+  border-radius: 3px;
+}
+
+a.editBtn {
+  width: 1.4rem;
+  border-top-left-radius: 0;
+  background: rgb(40, 207, 40);
+  font-size: 1.4rem;
+  padding: 0 5px;
+  border-radius: 3px;
+  color: #00112c;
+}
+      </style>
     <div style="position:absolute;display:flex;margin-top:-1.8rem; margin-left:3px;z-index:2;">
     <wc-router>
     <a class="editBtn" route="photos/edit/${id}">E</a>

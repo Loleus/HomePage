@@ -12,6 +12,7 @@
 }
 .pager button {
   width: 20%;
+  padding-bottom: 0.2rem;
 }
 .blogCards {
   flex-basis: 100%;
@@ -24,9 +25,8 @@
   list-style: none;
   position: relative;
   padding: 0 0 0.5rem 0;
-  /* background: #7a5b357c; */
   border-radius: 3px;
-  background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
+  background-image: linear-gradient(to left, #7a5b3541, #7a5b3580 50%, #7a5b3541);
   box-shadow: 0px 0px 3px 0px #cc0b0b;
 }
 section.blogCard {
