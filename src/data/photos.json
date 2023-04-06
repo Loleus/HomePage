@@ -1,56 +1,56 @@
 [
   {
     "id": "6993b77a-a2df93",
-    "title": "Schody w cieniu dupa",
-    "createdAt": "2020-11-27",
-    "text": "Lorem ipsum dolor sit",
+    "title": "Schody w cieniu",
+    "createdAt": "2023-03-18",
+    "text": "30mm f7.1 ISO100",
     "picId": "17THHw8N0BmNmvCaNaBptkGAml6onD2UV"
   },
   {
     "id": "0ef9c623-2bd3-4d7f-a827-e3d8caf0a6d0",
-    "title": "Kino 3",
-    "createdAt": "2020-11-27",
-    "text": "Lorem ipsum dolor sit",
+    "title": "Kino w bramie",
+    "createdAt": "2023-03-18",
+    "text": "30mm f5 ISO100",
     "picId": "15V9Uc2b_vDm0OlutFWTEC5J4MDSWN2a5"
   },
   {
     "id": "5f9e1c88-113c-42a4-ba08-b23dc5f00e92",
-    "title": "Facio w niedziele",
-    "createdAt": "2020-11-27",
-    "text": "Lorem ipsum dolor sit",
+    "title": "Niedziela na widoku",
+    "createdAt": "2023-03-18",
+    "text": "105mm f8 ISO100",
     "picId": "1_iUgjlwDK1wwubMoofA0gegr37ZpjTGT"
   },
   {
     "id": "820dc2fc-901e-4085-95ff-b6beae76eaf0",
     "title": "Mur w bramie",
-    "createdAt": "2020-11-27",
-    "text": "Lorem ipsum dolor sit",
+    "createdAt": "2023-03-18",
+    "text": "16mm f5 ISO100",
     "picId": "1vJXBd55i1UOFDAkHLC1qFykbmYWNhW11"
   },
   {
     "id": "6993b77a-a293",
-    "title": "Schody w cieniu dupa",
+    "title": "Stodoła z murem",
     "createdAt": "2020-11-27",
     "text": "Lorem ipsum dolor sit",
     "picId": "1CLFOj-ZTtq6bOPGXI5ynEpdPQic6Syae"
   },
   {
     "id": "0ef9c623-2bd3-4d7f-a82s7-e3d8caf0a6d0",
-    "title": "Kino",
+    "title": "Jwiat",
     "createdAt": "2020-11-27",
     "text": "Lorem ipsum dolor sit",
     "picId": "1EzEmf6Pd0OJPXwJINLRONhFTvXzZWTkQ"
   },
   {
     "id": "5f9e1asc88-113c-42a4-ba08-b23dc5f00e92",
-    "title": "Facio w niedziele",
+    "title": "Park koło poczty",
     "createdAt": "2020-11-27",
     "text": "Lorem ipsum dolor sit",
     "picId": "1p1A7C3KJhxdGdyFPGsPA9QD8uIhQncyi"
   },
   {
     "id": "820dsc2fc-901e-4085-95ff-b6beae76eaf0",
-    "title": "Mur w bramie",
+    "title": "Porannej nocy",
     "createdAt": "2020-11-27",
     "text": "Lorem ipsum dolor sit",
     "picId": "1jG0GSun8jyr0s2oR2DO2kwCTyqaCO2Bf"
@@ -71,7 +71,7 @@
   },
   {
     "id": "cd74f3a6-ebcf-4a07-b202-e806dc07972d",
-    "title": "Ahoj",
+    "title": "Ahrruj",
     "createdAt": "2023-04-12",
     "text": "DT 18-55",
     "picId": "1tRQ8NEHZcBAu95JCqSSjrXSlRaWS2MoI"
