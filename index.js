@@ -4,7 +4,8 @@ const session = require('express-session');
 const path = require('path');
 const sessionObj = require('./src/utils/session');
 const router = require('./src/utils/router');
-
+require('dotenv').config()
+console.log(process.env)
 const app = express()
 
 app.use(express.json());

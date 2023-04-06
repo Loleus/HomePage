@@ -3,7 +3,7 @@ module.exports = (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
 
-  if (username == 'admin' && password == 'admin') {
+  if (username == process.env.LOGIN && password == process.env.PASSWORD) {
 
     req.session.loggedin = true;
     req.session.username = username;
