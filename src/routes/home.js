@@ -1,7 +1,7 @@
 const express = require('express');
 const homeRouter = express.Router();
 const path = require('path');
-const auth = require('../utils/auth')
+const auth = require('../services/auth')
 
 const index = (req, res) => {
     res.sendFile(path.resolve(__dirname, '../pages/index.html'));

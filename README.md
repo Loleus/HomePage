@@ -7,7 +7,7 @@ Frontend: WebComponents based client router
 2- start app
 ## npm start
 3- start in develope mode
-## npm start dev
+## npm run dev
 
 See in action: https://lolo.lukaszkaminski2.repl.co
 
