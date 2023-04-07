@@ -48,15 +48,23 @@ form.deleteBtn-form {
 
 a.editBtn {
   width: 1.4rem;
-  border-top-left-radius: 0;
   background: rgb(40, 207, 40);
   font-size: 1.4rem;
   padding: 0 5px;
   border-radius: 3px;
   color: #00112c;
 }
+div#edit {
+  position:absolute;
+  display:flex;
+  margin-top:-1.9rem;
+  margin-left:3px;
+  z-index:2;
+  background:white;
+  padding:2px;
+}
       </style>
-    <div style="position:absolute;display:flex;margin-top:-1.8rem; margin-left:3px;z-index:2;">
+    <div id="edit">
     <wc-router>
     <a class="editBtn" route="photos/edit/${id}">E</a>
     <wc-route path="/photos/edit/:id" title="Edit Post" component="wc-editphoto"></wc-route>
