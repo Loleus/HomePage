@@ -5,12 +5,12 @@ const photoService = require('../services/photo')
 
 adminRouter
   .get('/', auth)
-  .get('/getAll', photoService.getAll(req, res, next))
-  .post('/', photoService.create(req, res))
+  .get('/getAll', photoService.getAll)
+  .post('/', photoService.create)
   .get('/photos', auth)
-  .get('/:id', photoService.getOne(req, res))
-  .put('/:id', photoService.update(req, res))
-  .delete('admin/:id', photoService.remove(req, res))
+  .get('/:id', photoService.getOne)
+  .put('/:id', photoService.update)
+  .delete('admin/:id', photoService.remove)
 
 module.exports = {
   adminRouter,
