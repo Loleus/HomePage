@@ -1,8 +1,9 @@
 require('dotenv').config()
-
+const port = process.env.PORT || 3001;
 const express = require('express');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const memoryStore = new session.MemoryStore();
 const path = require('path');
 const sessionObj = require('./src/utils/session');
 const router = require('./src/utils/router');
@@ -12,10 +13,10 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'src/public')));
-app.use(session(sessionObj()));
+app.use(session(sessionObj(memoryStore)));
 
 router(app);
 
-app.listen(3000, '0.0.0.0', () => {
-  console.log("Listening on http://0.0.0.0:3000")
+app.listen(port, () => {
+  console.log(`Listening on port ${port}!`)
 });
