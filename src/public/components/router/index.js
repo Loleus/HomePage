@@ -60,7 +60,6 @@ export default class Router extends HTMLElement {
         e.target.style.color = "gold"
       };
     });
-    
   }
 
   navigate(url) {
