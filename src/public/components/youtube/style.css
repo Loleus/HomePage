@@ -1,0 +1,18 @@
+h1.title {
+  pointer-events: none;
+  margin: 1vh 0;
+  padding: 0 0 5px;
+  color: #ffa704b2;
+  line-height:1.4em;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 2px #272727;
+  background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
+  box-shadow: 0px 0px 3px 0px #cc0b0b;
+  transition: color 0.24s linear;
+  text-transform: uppercase;
+  }
+  iframe#player {
+    width:100vw;
+    max-width: 80%;
+    height: 45vw;
+  }

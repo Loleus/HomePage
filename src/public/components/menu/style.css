@@ -6,7 +6,6 @@
   position:relative;
 }
 
-
 /* navbar regular css start */
 .navbar-area {
   background: rgba(0, 0, 0, 0.67);
@@ -49,7 +48,7 @@ a.site-logo:hover {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #a37621;
+  color: #b8990f;
 }
 
 .site-navbar ul li a:hover {

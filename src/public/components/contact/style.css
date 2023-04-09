@@ -1,0 +1,7 @@
+h1.title a {
+  pointer-events: auto;
+  font-size: 1.3rem;
+}
+h1.title a:hover {
+  color: #96c42d;
+}
