@@ -1,14 +1,4 @@
-let photo
-const photoList = async (id) => {
-  try {
-    let response = await fetch('/admin/' + id);
-    let parsedList = await response.json();
-    photo = parsedList
-    console.log(photo)
-  } catch (err) {
-    console.error(err)
-  }
-}
+import { photoList } from "../../js/utils/helper.util.js";
 
 export default class Photo extends HTMLElement {
   static observedAttributes() {
@@ -17,7 +7,7 @@ export default class Photo extends HTMLElement {
 
   async connectedCallback() {
     const id = this.getAttribute("id");
-    await photoList(id)
+    let photo = await photoList(id);
     console.log(id)
 
     if (id && id !== null) {

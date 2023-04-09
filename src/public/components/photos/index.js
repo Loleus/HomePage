@@ -1,20 +1,7 @@
-let list
-let listPerPage = 6;
-let getOffset = (page) => {
-  return (page - 1) * [listPerPage];
-}
+import { getOffset, photoList, listPerPage } from "../../js/utils/helper.util.js";
 
-const photoList = async () => {
-  try {
-    let response = await fetch('/admin/getAll');
-    let parsedList = await response.json();
-    list = parsedList
+const list = await photoList();
 
-  } catch (err) {
-    console.error(err)
-  }
-}
-photoList()
 export default class Photos extends HTMLElement {
   static get observedAttributes() { return ["page"]; }
 

@@ -10,6 +10,7 @@ Frontend: WebComponents based client router
 ## npm run dev
 
 See in action: https://lolo.lukaszkaminski2.repl.co
+               https://lolo-cvgk.onrender.com
 
 ## To do:
 - tests
