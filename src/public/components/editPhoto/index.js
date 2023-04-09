@@ -1,14 +1,5 @@
-let list
-const photoList = async () => {
-  try {
-    let response = await fetch('admin/getAll');
-    let parsedList = await response.json();
-    list = parsedList
-  } catch (err) {
-    console.error(err)
-  }
-}
-photoList()
+import { photoList } from "../../js/utils/helper.util.js";
+
 export default class EditPhoto extends HTMLElement {
   static observedAttributes() {
     return ["id"];
@@ -18,7 +9,7 @@ export default class EditPhoto extends HTMLElement {
     const id = this.getAttribute("id");
     console.log(id)
     if (id && id !== null) {
-      let photo = list.find(e => e.id === id);
+      const photo = await photoList(id);
       this.innerHTML = `
       <style>
       .addForm {
