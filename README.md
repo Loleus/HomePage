@@ -9,8 +9,7 @@ Frontend: WebComponents based client router
 3- start in develope mode
 ## npm run dev
 
-See in action: https://lolo.lukaszkaminski2.repl.co
-               https://lolo-cvgk.onrender.com
+See in action: https://lolo-cvgk.onrender.com
 
 ## To do:
 - tests
