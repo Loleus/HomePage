@@ -40,7 +40,7 @@ export default class Photos extends HTMLElement {
         break;
 
       default:
-        console.log(id)
+
         break;
     }
   }
