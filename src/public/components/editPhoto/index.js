@@ -1,13 +1,14 @@
 import { photoList } from "../../js/utils/helper.util.js";
+
 export default class EditPhoto extends HTMLElement {
+
   static observedAttributes() {
     return ["id"];
   }
+
   async connectedCallback() {
-    const id = this.getAttribute("id");
-    console.log(id)
-    if (id && id !== null) {
-      const photo = await photoList(id);
+    if (this.id && this.id !== null) {
+      const photo = await photoList(this.id);
       this.innerHTML = `
       <link rel="stylesheet" href="/components/editPhoto/style.css">
       <h1 class="title">Edit ${photo.title}</h1>
@@ -33,7 +34,7 @@ export default class EditPhoto extends HTMLElement {
       <form style="margin-bottom:20px;" class="addForm">
         <button type="button" onclick="javascript:history.back()">Back to photos</button>
       </form>
-      `;
-    }
-  }
-}
+      `
+    };
+  };
+};

@@ -1,17 +1,20 @@
-"use strict";
 import { match } from "./util.js";
+
 export default class Router extends HTMLElement {
 
   get outlet() {
     return document.querySelector(".wc-outlet");
   }
+
   get root() {
     return window.location.pathname;
   }
+
   get anchors() {
     const anch = this.querySelectorAll("a[route]");
     return anch
   }
+
   get routes() {
     return Array.from(this.querySelectorAll("wc-route"))
       .filter(node => node.parentNode === this)
@@ -83,6 +86,7 @@ export default class Router extends HTMLElement {
       while (this.outlet.firstChild) {
         this.outlet.removeChild(this.outlet.firstChild);
       }
+
       const updateView = () => {
         const view = document.createElement(component);
         document.title = title || document.title;

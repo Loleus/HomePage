@@ -8,5 +8,5 @@ export default class Login extends HTMLElement {
       <input type="submit" value="LOGIN">
     </form>
     `;
-  }
-}
+  };
+};
