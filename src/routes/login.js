@@ -3,10 +3,10 @@ const loginRouter = express.Router();
 const auth = require('../services/auth')
 const valid = require('../services/valid')
 
-  loginRouter
+loginRouter
   .get('/', auth)
   .post('/', valid);
 
 module.exports = {
-    loginRouter,
-}
+  loginRouter,
+};

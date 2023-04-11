@@ -1,7 +1,7 @@
 const express = require('express');
 const homeRouter = express.Router();
 const path = require('path');
-const auth = require('../services/auth')
+const auth = require('../services/auth');
 
 const index = (req, res) => {
     res.sendFile(path.resolve(__dirname, '../pages/index.html'));
@@ -13,8 +13,8 @@ homeRouter
     .get('/contact', index)
     .get('/music', index)
     .get('/video', index)
-    .get('*',auth)
-    
+    .get('*', auth)
+
 module.exports = {
     homeRouter,
 };

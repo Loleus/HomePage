@@ -4,7 +4,7 @@ export default class Photo extends HTMLElement {
 
   static observedAttributes() {
     return ["id"];
-  }
+  };
 
   loadPic(photo) {
     let text = document.getElementById('text')
@@ -15,7 +15,7 @@ export default class Photo extends HTMLElement {
     image.onload = function () {
       text.innerHTML = photo.text;
       image.style = "background:bisque";
-    }
+    };
   };
 
   async connectedCallback() {

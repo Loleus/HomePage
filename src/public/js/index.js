@@ -18,6 +18,6 @@ const routes = [
 
 for (let route of routes) {
   customElements.define(route[0],route[1])
-}
+};
 
 export { Router, Home, AboutMe, Music, Video, Contact, Login, AddPhoto, EditPhoto, Photos, Photo, NotFound, Menu};

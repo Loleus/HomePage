@@ -1,7 +1,7 @@
 const express = require('express');
 const adminRouter = express.Router();
-const auth = require('../services/auth')
-const photoService = require('../services/photo')
+const auth = require('../services/auth');
+const photoService = require('../services/photo');
 
 adminRouter
   .get('/', auth)
@@ -14,4 +14,4 @@ adminRouter
 
 module.exports = {
   adminRouter,
-}
+};

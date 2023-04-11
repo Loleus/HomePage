@@ -9,6 +9,7 @@ const getAll = async (req, res, next) => {
     next(err);
   }
 };
+
 const getOne = async (req, res) => {
   const photo = db.getOne(req.params.id);
   if (!photo) {
@@ -16,6 +17,7 @@ const getOne = async (req, res) => {
   }
   res.send(photo);
 };
+
 const create = async (req, res) => {
   db.create(req.body);
   res.status(201)
@@ -27,15 +29,16 @@ const update = async (req, res) => {
   res.status(201)
     .redirect('/admin');
 };
+
 const remove = async (req, res) => {
   db.delete(req.params.id);
   res.redirect('/admin');
-}
+};
 
 module.exports = {
-getAll,
-getOne,
-create,
-update,
-remove,
-}
+  getAll,
+  getOne,
+  create,
+  update,
+  remove,
+};

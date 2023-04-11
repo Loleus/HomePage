@@ -3,14 +3,17 @@ import { getOffset, photoList, listPerPage } from "../../js/utils/helper.util.js
 const list = await photoList();
 
 export default class Photos extends HTMLElement {
-  static get observedAttributes() { return ["page"]; }
+
+  static get observedAttributes() { return ["page"] };
 
   get page() {
     return JSON.parse(this.getAttribute("page"));
-  }
+  };
+
   set page(v) {
     this.setAttribute("page", JSON.stringify(v));
-  }
+  };
+
   getEditBtns(route, id) {
     if (route.includes("admin")) {
       return `
@@ -28,7 +31,8 @@ export default class Photos extends HTMLElement {
     } else {
       return ''
     }
-  }
+  };
+
   buttonStates(id) {
     switch (id) {
       case "inc":
@@ -43,7 +47,7 @@ export default class Photos extends HTMLElement {
 
         break;
     }
-  }
+  };
 
   async connectedCallback() {
     this.render();
@@ -58,7 +62,7 @@ export default class Photos extends HTMLElement {
       this.dec.disabled = true
       this.inc.disabled = false
     });
-  }
+  };
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     setTimeout(() => {
@@ -72,7 +76,8 @@ export default class Photos extends HTMLElement {
 
     });
     this.render();
-  }
+  };
+
   render() {
     this.innerHTML = `
       <link rel="stylesheet" href="/components/photos/style.css">
@@ -99,6 +104,5 @@ export default class Photos extends HTMLElement {
         </div>
       </ul>
     `
-  }
-}
-
+  };
+};

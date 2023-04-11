@@ -1,4 +1,5 @@
 export default class AddPhoto extends HTMLElement {
+  
   connectedCallback() {
     this.innerHTML = `
     <link rel="stylesheet" href="/components/addPhoto/style.css">
@@ -23,5 +24,5 @@ export default class AddPhoto extends HTMLElement {
       <button type='submit'>Save</button>
     </form> 
     `;
-  }
-}
+  };
+};

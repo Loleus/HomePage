@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const port = process.env.PORT || 3001;
 const express = require('express');
 const methodOverride = require('method-override');
@@ -7,7 +7,7 @@ const memoryStore = new session.MemoryStore();
 const path = require('path');
 const sessionObj = require('./src/utils/session');
 const router = require('./src/utils/router');
-const app = express()
+const app = express();
 
 app.use(express.json());
 app.use(methodOverride('_method'));

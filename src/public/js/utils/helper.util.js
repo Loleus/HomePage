@@ -3,7 +3,7 @@ let listPerPage = 6;
 
 let getOffset = (page) => {
   return (page - 1) * [listPerPage];
-}
+};
 
 const photoList = async (id) => {
   try {
@@ -16,10 +16,10 @@ const photoList = async (id) => {
     console.error(err)
     return
   }
-}
+};
 
 export {
-getOffset,
-photoList,
-listPerPage
-}
+  getOffset,
+  photoList,
+  listPerPage
+};
