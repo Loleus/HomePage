@@ -7,14 +7,7 @@ export default class Photo extends HTMLElement {
   };
 
   async render() {
-    let allArr = await photoList();
     let photo = await photoList(this.id);
-    const photoIdList = allArr.map((x) => {
-      return x.id;
-    });
-    const indexOfPhoto = await photoIdList.indexOf(photo.id)
-    const founded = allArr[indexOfPhoto];
-    let text = document.getElementById('text');
     document.getElementById('title').innerHTML = photo.title;
     text.innerHTML = "loading...";
     const image = document.getElementById('img1');
