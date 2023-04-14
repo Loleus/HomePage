@@ -14,11 +14,6 @@ export default class Photo extends HTMLElement {
     });
     const indexOfPhoto = await photoIdList.indexOf(photo.id)
     const founded = allArr[indexOfPhoto];
-    console.log(await photoIdList)
-    console.log(indexOfPhoto)
-    this.id=indexOfPhoto - 1;
-    console.log(founded);
-    console.log(this.id);
     let text = document.getElementById('text');
     document.getElementById('title').innerHTML = photo.title;
     text.innerHTML = "loading...";
