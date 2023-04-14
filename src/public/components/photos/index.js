@@ -1,7 +1,8 @@
 import { getOffset, photoList, listPerPage } from "../../js/utils/helper.util.js";
 
 const list = await photoList();
-
+const photoListL = list;
+console.log(Math.ceil(photoListL.length/listPerPage))
 export default class Photos extends HTMLElement {
 
   static get observedAttributes() { return ["page"] };
@@ -38,7 +39,9 @@ export default class Photos extends HTMLElement {
     e.preventDefault();
     switch (id) {
       case "inc":
-        (this.page >= 1) ? this.page += 1 : null;
+        console.log(Math.ceil(photoListL.length/listPerPage));
+        console.log(this.page);
+        (this.page == Math.ceil(photoListL.length/listPerPage)) ? this.page : this.page += 1;
         break;
 
       case "dec":
