@@ -33,48 +33,34 @@ export default class Photos extends HTMLElement {
     }
   };
 
-  buttonStates(id) {
+  buttonStates(e) {
+    let id = e.target.id
+    e.preventDefault();
     switch (id) {
       case "inc":
-        this.page = this.page + 1;
+        (this.page >= 1) ? this.page += 1 : null;
         break;
 
       case "dec":
-        this.page = this.page - 1;
+        (this.page == 1) ? this.page = this.page  : this. page -= 1;
         break;
 
       default:
-
         break;
     }
   };
 
   async connectedCallback() {
     this.render();
-    this.dec = document.getElementById('dec');
-    this.inc = document.getElementById('inc');
     this.page = 1;
+    const btns = this.querySelectorAll('button');
+    console.log(btns)
     this.addEventListener("click", (e) => {
-      e.preventDefault();
-      this.buttonStates(e.target.id)
+      this.buttonStates(e)
     }, true);
-    setTimeout(() => {
-      this.dec.disabled = true
-      this.inc.disabled = false
-    });
   };
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    setTimeout(() => {
-      if (this.page == 1) {
-        this.dec.disabled = true
-        this.inc.disabled = false
-      } else {
-        this.dec.disabled = true;
-        this.inc.disabled = false
-      }
-
-    });
     this.render();
   };
 
