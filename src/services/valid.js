@@ -4,7 +4,9 @@ module.exports = (req, res) => {
   if (username == process.env.LOGIN && password == process.env.PASSWORD) {
     req.session.loggedin = true;
     req.session.username = username;
+
     console.log("loggedIn")
+    
     res.redirect('/admin')
   } else {
     res.send('Please enter Username and Password!');
