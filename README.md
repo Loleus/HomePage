@@ -18,6 +18,5 @@ See in action: https://lolo-cvgk.onrender.com
 - tests
 - errors handling
 - alternate photo upload input
-- add :page route for photos pagination
 - exif metadata reader
 - comments & scoring component -> migration to sql (rebuild app struct)
