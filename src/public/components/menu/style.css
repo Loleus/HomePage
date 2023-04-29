@@ -8,7 +8,7 @@
 
 /* navbar regular css start */
 .navbar-area {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(25, 29, 34);
   border-bottom: 1px solid #000;
 }
 
@@ -152,7 +152,7 @@ a.site-logo:hover {
   .site-navbar ul.open {
     z-index: 1;
     max-height: 100vh;
-    overflow: visible;
+    overflow: hidden;
   }
 
   /* navbar css for mobile end */

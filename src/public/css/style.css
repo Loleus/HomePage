@@ -19,7 +19,7 @@
   src: url(../assets/fonts/Barlow/Barlow-Regular.ttf);
 }
 
-html {
+/* html {
   height: 100%;
   overflow: hidden;
 }
@@ -30,10 +30,26 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
+} */
+html {
+  height: 100%;
+  width: 100%;
+
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(72, 88, 102), rgb(19, 32, 48));
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: visible;
+}
 footer {
   height: 1.3em;
   position: fixed;
@@ -42,7 +58,6 @@ footer {
   left: 0;
   background: black;
   width: 100%;
-  font-size: 0.5em;
   color: #ffa70480;
   z-index: 1;
 }
