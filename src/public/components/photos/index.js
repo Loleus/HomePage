@@ -3,6 +3,7 @@ import { getOffset, photoList, listPerPage } from "../../js/utils/helper.util.js
 const list = await photoList();
 const photoListL = list;
 const lastPage = Math.ceil(photoListL.length/listPerPage);
+
 export default class Photos extends HTMLElement {
 
   static get observedAttributes() { return ["page"] };
@@ -67,7 +68,6 @@ export default class Photos extends HTMLElement {
   render() {
     this.innerHTML = `
       <link rel="stylesheet" href="/components/photos/style.css">
-      <h1 class="title">Shots</h1>
       <ul class="blogCards ">
     ${list
       .slice(getOffset(this.page), getOffset(this.page) + listPerPage)

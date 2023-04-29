@@ -33,7 +33,7 @@ tr:nth-child(n + 1) td:first-child {
 }
 
 td:hover {
-  box-shadow: 0px 0px 3px 1px rgb(204, 11, 11);
+  box-shadow: 0px 0px 3px 0px #d6b212;
 }
 
 tr th {
@@ -45,7 +45,7 @@ tr th {
 td a {
   pointer-events: auto;
   font-weight: bold;
-  color: #d4d0bf;
+  color: #d6b212;
   font-size: 1em;
   line-height: 1.3em;
   text-underline-position: under;
@@ -59,14 +59,11 @@ td a:hover {
 }
 h1.title {
   pointer-events: none;
-  margin: 1vh 0;
-  padding: 0 0 5px;
+  margin: 1/3vh 0;
   color: #ffa704b2;
-  line-height: 2.3em;
+  line-height: 1.3em;
   font-size: 1.3em;
   text-shadow: 1px 1px 2px #272727;
-  background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
-  box-shadow: 0px 0px 3px 0px #cc0b0b;
   transition: color 0.2s linear;
   text-transform: uppercase;
 }
@@ -91,12 +88,12 @@ h1.title a {
 h1.title a:hover {
   color: #96c42d;
 }
+td#name {
+  background-color: rgb(39, 50, 53);
+}
 @media only screen and (max-width: 1020px) {
-  h1.title {
-    font-size: 1em;
-  }
   th,
   td {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
