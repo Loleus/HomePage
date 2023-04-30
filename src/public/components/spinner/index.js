@@ -1,4 +1,4 @@
-export default class Spinner extends HTMLElement {
+export default class About extends HTMLElement {
 
   static get observedAttributes() { return ["loading"]; }
 

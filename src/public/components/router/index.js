@@ -29,7 +29,7 @@ export default class Router extends HTMLElement {
 
   connectedCallback() {
     this.updateLinks();
-    this.anchors[1] ? this.anchors[1].style.color = "gold" : null
+    this.anchors[1] ? this.anchors[0].style.color = "gold" : null
     this.navigate(window.location.pathname);
     window.addEventListener("popstate", this._handlePopstate);
     if (window.history.replaceState) {
