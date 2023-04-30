@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/components/menu/style.css">
   <link rel="stylesheet" href="/components/repos/style.css">
   <link rel="stylesheet" href="/css/style.css">
+
   <title>Homepage</title>
 </head>
 
@@ -18,7 +19,7 @@
         <nav class="site-navbar nav">
           <a route="/" class="site-logo">lolo_2023</a>
           <ul>
-            <li><a route="/">Repos</a></li>
+            <li><a route="/repos">Repos</a></li>
             <li><a route="/about">About</a></li>
             <li><a route="/music">Music</a></li>
             <li><a route="/video">Video</a></li>
@@ -32,7 +33,8 @@
         </nav>
       </div>
     </div>
-    <wc-route path="/" title="Repos" component="wc-home"></wc-route>
+    <wc-route path="/" title="Home" component="wc-home"></wc-route>
+    <wc-route path="/repos" title="Repos" component="wc-repos"></wc-route>
     <wc-route path="/about" title="About Me" component="wc-about"></wc-route>
     <wc-route path="/music" title="Music" component="wc-music"></wc-route>
     <wc-route path="/video" title="Video" component="wc-video"></wc-route>
