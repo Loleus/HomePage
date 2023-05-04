@@ -1,3 +1,4 @@
+
 import { getOffset, photoList, listPerPage } from "../../js/utils/helper.util.js";
 
 const list = await photoList();
@@ -64,13 +65,12 @@ export default class Photos extends HTMLElement {
     }, true);
     await this.getCard();
     this.render();
-    this.querySelector("#page").innerHTML = this.page
   };
 
   getEditBtns(route, id) {
-      if (route.includes("admin")) {
-        return `
-        <link rel="stylesheet" href="/components/photo/editBtns.css">
+    if (route.includes("admin")) {
+      return `
+        <link rel="stylesheet" href="/components/photos/editBtns.css">
         <div id="edit">
           <wc-router>
             <a class="editBtn" route="photos/edit/${id}">E</a>
@@ -81,9 +81,9 @@ export default class Photos extends HTMLElement {
           </form>
         </div>
         `
-      } else {
-        return ''
-      }
+    } else {
+      return ''
+    }
   }
   getPhotoCard(e) {
     return `
@@ -95,7 +95,7 @@ export default class Photos extends HTMLElement {
         </wc-router>
         <p class="blogPostText">${e.createdAt}</p>
       </li>
-      ${thisgetEditBtns(window.location.href, e.id)}
+      ${this.getEditBtns(window.location.href, e.id)}
     </section>
   `
   }
@@ -113,10 +113,10 @@ export default class Photos extends HTMLElement {
       this.innerHTML = ``;
       this.appendChild(tmp.cloneNode(true));
       const gal = document.getElementById("gal");
-      const page = document.getElementById("page");
       gal.innerHTML += photoListL
         .slice(getOffset(this.page), getOffset(this.page) + listPerPage)
         .map(e => this.getPhotoCard(e, this.page)).join("");
+      const page = document.getElementById("page");
       page.innerText = this.page;
     }
   };
