@@ -64,10 +64,29 @@ export default class Photos extends HTMLElement {
     }, true);
     await this.getCard();
     this.render();
-    const list = await photoList();
-    list
-      .slice(getOffset(this.page), getOffset(this.page) + listPerPage)
-      .map(e => `
+    this.querySelector("#page").innerHTML = this.page
+  };
+
+  getEditBtns(route, id) {
+      if (route.includes("admin")) {
+        return `
+        <link rel="stylesheet" href="/components/photo/editBtns.css">
+        <div id="edit">
+          <wc-router>
+            <a class="editBtn" route="photos/edit/${id}">E</a>
+            <wc-route path="/photos/edit/:id" title="Edit Post" component="wc-editphoto"></wc-route>
+          </wc-router>
+          <form class="deleteBtn-form" method='POST' action='/admin/${id}?_method=DELETE'>
+           <button type='submit' class='btn-delete'>X</button>
+          </form>
+        </div>
+        `
+      } else {
+        return ''
+      }
+  }
+  getPhotoCard(e) {
+    return `
     <section id="card" style="background-image: url('https://drive.google.com/thumbnail?id=${e.picId} ')" class="blogCard">
       <li class="blogPost">
         <wc-router>
@@ -76,11 +95,10 @@ export default class Photos extends HTMLElement {
         </wc-router>
         <p class="blogPostText">${e.createdAt}</p>
       </li>
-      ${getEditBtns(window.location.href, e.id)}
+      ${thisgetEditBtns(window.location.href, e.id)}
     </section>
-  `).join("");
-  };
-
+  `
+  }
   htmlToElement(html) {
     const temp = document.createElement('template');
     temp.innerHTML += html;
@@ -94,7 +112,12 @@ export default class Photos extends HTMLElement {
     } else {
       this.innerHTML = ``;
       this.appendChild(tmp.cloneNode(true));
-
+      const gal = document.getElementById("gal");
+      const page = document.getElementById("page");
+      gal.innerHTML += photoListL
+        .slice(getOffset(this.page), getOffset(this.page) + listPerPage)
+        .map(e => this.getPhotoCard(e, this.page)).join("");
+      page.innerText = this.page;
     }
   };
 };
