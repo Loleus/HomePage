@@ -15,7 +15,10 @@ export default class Youtube extends HTMLElement {
       const html = await fetch("/components/youtube/template.html", { mode: 'cors' })
       const tempStream = await html.text()
       this.base = tempStream;
-      this.loading = false;
+      this.tmp = this.htmlToElement(this.base);
+      const vidol = this.tmp.querySelector('#player');
+      console.log(vidol)
+        this.loading = false;
     }
   
     async connectedCallback() {
@@ -32,12 +35,11 @@ export default class Youtube extends HTMLElement {
     }
     render() {
       const { shadowRoot } = this;
-      const tmp = this.htmlToElement(this.base);
       if (this.loading) {
-        shadowRoot.innerHTML = `Loading...`;
+        shadowRoot.innerHTML = `<wc-spinner></wc-spinner>`;
       } else {
         shadowRoot.innerHTML = ``;
-        shadowRoot.appendChild(tmp.cloneNode(true));
+        shadowRoot.appendChild(this.tmp.cloneNode(true));
       }
     }
   };

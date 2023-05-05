@@ -60,7 +60,7 @@ export default class Repos extends HTMLElement {
 
   render() {
     if (this.loading) {
-      this.shadowRoot.innerHTML = `Loading...`;
+      this.shadowRoot.innerHTML = `<wc-spinner></wc-spinner>`;
     } else {
       this.shadowRoot.innerHTML = ``;
       this.shadowRoot.appendChild(this.tmp.content.cloneNode(true));

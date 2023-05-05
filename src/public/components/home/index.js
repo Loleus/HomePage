@@ -4,6 +4,7 @@ export default class Home extends HTMLElement {
 
   constructor() {
     super();
+    this.attachShadow({ mode: "open" });
   };
 
   get loading() {
@@ -36,10 +37,10 @@ export default class Home extends HTMLElement {
   render() {
     const tmp = this.htmlToElement(this.base);
     if (this.loading) {
-      this.innerHTML = `Loading...`;
+      this.shadowRoot.innerHTML = `<p>Loading...</p>`;
     } else {
-      this.innerHTML = ``;
-      this.appendChild(tmp.cloneNode(true));
+      this.shadowRoot.innerHTML = ``;
+      this.shadowRoot.appendChild(tmp.cloneNode(true));
     }
   };
 };
