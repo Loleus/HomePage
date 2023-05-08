@@ -16,9 +16,7 @@ export default class Youtube extends HTMLElement {
       const tempStream = await html.text()
       this.base = tempStream;
       this.tmp = this.htmlToElement(this.base);
-      const vidol = this.tmp.querySelector('#player');
-      console.log(vidol)
-        this.loading = false;
+      this.loading = false;
     }
   
     async connectedCallback() {

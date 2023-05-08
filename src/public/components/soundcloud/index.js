@@ -12,9 +12,11 @@ export default class Soundcloud extends HTMLElement {
     }
     async getCard() {
       this.loading = true;
-      const html = await fetch("/components/soundcloud/template.html", { mode: 'cors' }, import.meta.url)
+      const html = await fetch("/components/soundcloud/template.html")
       const tempStream = await html.text()
       this.base = tempStream;
+      const tmp = this.htmlToElement(this.base);
+      this.tmp = tmp;
       this.loading = false;
     }
   
@@ -32,12 +34,11 @@ export default class Soundcloud extends HTMLElement {
     }
     render() {
       const { shadowRoot } = this;
-      const tmp = this.htmlToElement(this.base);
       if (this.loading) {
-        shadowRoot.innerHTML = `Loading...`;
+        shadowRoot.innerHTML = `<wc-spinner></wc-spinner>`;
       } else {
         shadowRoot.innerHTML = ``;
-        shadowRoot.appendChild(tmp.cloneNode(true));
+        shadowRoot.appendChild(this.tmp.cloneNode(true));
       }
     }
   };
