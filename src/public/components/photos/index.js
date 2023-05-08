@@ -1,4 +1,3 @@
-
 import { getOffset, photoList, listPerPage } from "../../js/utils/helper.util.js";
 
 const list = await photoList();
@@ -25,11 +24,6 @@ export default class Photos extends HTMLElement {
     this.setAttribute("page", JSON.stringify(v));
   };
 
-  constructor() {
-    super();
-  };
-
-
   buttonStates(e) {
     let id = e.target.id
     e.preventDefault();
@@ -40,14 +34,19 @@ export default class Photos extends HTMLElement {
       case "dec":
         (this.page == 1) ? this.page = this.page : this.page -= 1;
         break;
-
       default:
         break;
     }
   };
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.render();
+    attrName == "page" ? this.updatePage() : this.render();
+  };
+
+  htmlToElement(html) {
+    const temp = document.createElement('template');
+    temp.innerHTML += html;
+    return temp.content;
   };
 
   async getCard() {
@@ -55,69 +54,42 @@ export default class Photos extends HTMLElement {
     const html = await fetch("/components/photos/template.html", { mode: 'cors' })
     const tempStream = await html.text()
     this.base = tempStream;
+    this.tmp = this.htmlToElement(this.base);
     this.loading = false;
   };
 
   async connectedCallback() {
-    this.page = 1;
     this.addEventListener("click", (e) => {
       this.buttonStates(e)
     }, true);
     await this.getCard();
-    this.render();
   };
 
-  getEditBtns(route, id) {
-    if (route.includes("admin")) {
-      return `
-        <link rel="stylesheet" href="/components/photos/editBtns.css">
-        <div id="edit">
-          <wc-router>
-            <a class="editBtn" route="photos/edit/${id}">E</a>
-            <wc-route path="/photos/edit/:id" title="Edit Post" component="wc-editphoto"></wc-route>
-          </wc-router>
-          <form class="deleteBtn-form" method='POST' action='/admin/${id}?_method=DELETE'>
-           <button type='submit' class='btn-delete'>X</button>
-          </form>
-        </div>
-        `
-    } else {
-      return ''
-    }
-  }
   getPhotoCard(e) {
+    let {picId, id, title, createdAt}= e;
     return `
-    <section id="card" style="background-image: url('https://drive.google.com/thumbnail?id=${e.picId} ')" class="blogCard">
-      <li class="blogPost">
-        <wc-router>
-          <a class="blogPostTitle" route="photos/${e.id}">${e.title}</a>
-          <wc-route path="/photos/:id" title="Photo Details" component="wc-photo"></wc-route>
-        </wc-router>
-        <p class="blogPostText">${e.createdAt}</p>
-      </li>
-      ${this.getEditBtns(window.location.href, e.id)}
-    </section>
-  `
+    <wc-card id="${id}" picid="${picId}" title="${title}" createdat="${createdAt}"></wc-card>
+    `
   }
-  htmlToElement(html) {
-    const temp = document.createElement('template');
-    temp.innerHTML += html;
-    return temp.content;
-  };
+
+  async updatePage() {
+    this.loading = true;
+    const page = this.tmp.getElementById("page");
+    page.innerText = this.page;
+    const gallery = this.tmp.getElementById("gal");
+    const photoParams = await photoListL.slice(getOffset(this.page), getOffset(this.page) + listPerPage);
+    const setCards = photoParams.map(e => this.getPhotoCard(e));
+    gallery.innerHTML = setCards.join("");
+    this.loading = false;
+  }
 
   render() {
-    const tmp = this.htmlToElement(this.base);
     if (this.loading) {
-      this.innerHTML = `Loading...`;
+      this.innerHTML = `<wc-spinner></wc-spinner>`;
     } else {
       this.innerHTML = ``;
-      this.appendChild(tmp.cloneNode(true));
-      const gal = document.getElementById("gal");
-      gal.innerHTML += photoListL
-        .slice(getOffset(this.page), getOffset(this.page) + listPerPage)
-        .map(e => this.getPhotoCard(e, this.page)).join("");
-      const page = document.getElementById("page");
-      page.innerText = this.page;
-    }
+      this.appendChild(this.tmp.cloneNode(true));
+      !this.page ? this.page = 1 : null;
+    };
   };
 };
