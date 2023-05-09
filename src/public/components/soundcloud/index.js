@@ -1,43 +1,24 @@
 export default class Soundcloud extends HTMLElement {
-    static get observedAttributes() { return ["loading"]; }
-    constructor() {
-      super();
-      this.attachShadow({ mode: "open" });
-    }
-    get loading() {
-      return JSON.parse(this.getAttribute("loading"));
-    }
-    set loading(v) {
-      this.setAttribute("loading", JSON.stringify(v));
-    }
-    async getCard() {
-      this.loading = true;
-      const html = await fetch("/components/soundcloud/template.html", { mode: 'cors' }, import.meta.url)
-      const tempStream = await html.text()
-      this.base = tempStream;
-      this.loading = false;
-    }
-  
-    async connectedCallback() {
-      this.shadowRoot.addEventListener("click", (e) => {
-        console.log(e.target)
-      });
-      await this.getCard();
-      this.render();
-    }
-    htmlToElement(html) {
-      const temp = document.createElement('template');
-      temp.innerHTML += html;
-      return temp.content;
-    }
-    render() {
-      const { shadowRoot } = this;
-      const tmp = this.htmlToElement(this.base);
-      if (this.loading) {
-        shadowRoot.innerHTML = `Loading...`;
-      } else {
-        shadowRoot.innerHTML = ``;
-        shadowRoot.appendChild(tmp.cloneNode(true));
-      }
-    }
-  };
+
+  async connectedCallback() {
+    this.tmp = this.htmlToElement();
+    this.render();
+  }
+
+  htmlToElement() {
+    const temp = document.createElement('template');
+    temp.innerHTML += `
+    <link rel="stylesheet" href="/components/soundcloud/style.css">
+    <div class="container"><iframe id="sc-widget" scrolling="no" frameborder="no" allow="autoplay"></iframe></div>
+    `;
+    const player = temp.content.querySelector('#sc-widget');
+    player.setAttribute('src', "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/loleus/");
+    return temp.content;
+  }
+
+  render() {
+    this.innerHTML = ``;
+    this.appendChild(this.tmp.cloneNode(true));
+  }
+
+};
