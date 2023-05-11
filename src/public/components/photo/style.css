@@ -1,3 +1,12 @@
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff80;
+}
+
+
 img#img1 {
   position: relative;
   cursor: pointer;

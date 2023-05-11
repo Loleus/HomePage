@@ -18,7 +18,12 @@ export default class Card extends HTMLElement {
 
   connectedCallback() {
     this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
-    this.render()
+    this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
+    this.render();
+    this.zoomButton = this.querySelector('#zoom');
+    this.zoomButton.onclick = ()=>{
+      this.showPic(this.picUrl)
+    };
   };
 
   getEditBtns(route, id) {
@@ -38,16 +43,28 @@ export default class Card extends HTMLElement {
       return ''
     }
   }
-
+  async showPic(pic) {
+    if (this.id && this.id !== null) {
+      const temp = document.getElementById("photo_temp");
+      console.log(temp)
+      temp.content.getElementById('title').innerHTML = this.title;
+      let cont = temp.content.cloneNode(true);
+      this.appendChild(cont);
+      text.innerHTML = "loading...";
+      const image = document.getElementById('img1');
+      image.src = `${pic}`;
+      image.onload = function () {
+        text.innerHTML = this.text;
+        image.style = "background:bisque";
+      };
+    };
+  }
   render() {
     this.innerHTML = `
     <link rel="stylesheet" href="/components/photos_card/style.css">
     <section style="background-image: url('${this.thumbUrl}')" class="blogCard">
       <li class="blogPost">
-        <wc-router>
-          <a class="blogPostTitle" route="photos/${this.id}">${this.title}</a>
-          <wc-route path="/photos/:id" title="Photo Details" component="wc-photo"></wc-route>
-        </wc-router>
+          <button id="zoom">${this.title}</button>
         <p class="blogPostText">${this.createdat}</p>
       </li>
       ${this.getEditBtns(window.location.href, this.id)}
