@@ -16,6 +16,11 @@ export default class Card extends HTMLElement {
     return this.getAttribute("createdat");
   };
 
+  get text() {
+    return this.getAttribute("text");
+  };
+
+
   connectedCallback() {
     this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
     this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
@@ -24,6 +29,7 @@ export default class Card extends HTMLElement {
     this.zoomButton.onclick = ()=>{
       this.showPic(this.picUrl)
     };
+    console.log(this.text)
   };
 
   getEditBtns(route, id) {
@@ -53,7 +59,7 @@ export default class Card extends HTMLElement {
       text.innerHTML = "loading...";
       const image = document.getElementById('img1');
       image.src = `${pic}`;
-      image.onload = function () {
+      image.onload =  () => {
         text.innerHTML = this.text;
         image.style = "background:bisque";
       };

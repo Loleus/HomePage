@@ -66,9 +66,9 @@ export default class Photos extends HTMLElement {
   };
 
   getPhotoCard(e) {
-    let {picId, id, title, createdAt}= e;
+    let {picId, id, title, createdAt, text}= e;
     return `
-    <wc-card id="${id}" picid="${picId}" title="${title}" createdat="${createdAt}"></wc-card>
+    <wc-card id="${id}" picid="${picId}" title="${title}" createdat="${createdAt}" text="${text}"></wc-card>
     `
   }
 
