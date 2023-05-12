@@ -47,25 +47,22 @@
     <wc-route path="/admin/contact" title="Contact" component="wc-contact"></wc-route>
     <wc-route path="/admin/addPhoto" title="Add photo" component="wc-addphoto"></wc-route>
     <wc-route path="/admin/photos" title="Photos" component="wc-photos"></wc-route>
-    <wc-route path="/photos/:id" title="Photo" component="wc-photo"></wc-route>
     <wc-route path="/photos/edit/:id" title="Edit Photo" component="wc-editphoto"></wc-route>
     <wc-route path="*" title="404" component="wc-notfound"></wc-route>
     <wc-outlet class="wc-outlet"></wc-outlet>
   </wc-router>
   
   <template id="photo_temp">
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/components/photo/style.css">
-    <noscript><link rel="stylesheet" href="/components/photo/style.css"></noscript>
+
     <div class="page">
       <h1 id="title" class="title"></h1>
       <p style="color:blanchedalmond;margin-bottom:5px" id="text"></p>
-      <img title="hold left mouse button to show in full size" id="img1"
+      <img id="img1"
         style="height:20vh;width:20vh;display:inline-block;background:orange;" />
+        <form style="margin-bottom:20px;" class="addForm">
+          <button type="button" onclick="javascript:document.querySelector('.page').remove()">Back to photos</button>
+        </form>
     </div>
-    <span id="lmb" style="color: blanchedalmond;">lef mouse button + scroll for full size</span>
-    <form style="margin-bottom:20px;" class="addForm">
-      <button type="button" onclick="javascript:history.back()">Back to photos</button>
-    </form>
   </template>
 
   <script type="module" src="/js/index.js"></script>
