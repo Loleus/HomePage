@@ -9,16 +9,21 @@ export default class Soundcloud extends HTMLElement {
     const temp = document.createElement('template');
     temp.innerHTML += `
     <link rel="stylesheet" href="/components/soundcloud/style.css">
-    <div class="container"><iframe id="sc-widget" scrolling="no" frameborder="no" allow="autoplay"></iframe></div>
+    <div class="container"><iframe id="scwidget" scrolling="no" frameborder="no" allow="autoplay"></iframe></div>
     `;
-    const player = temp.content.querySelector('#sc-widget');
+    const player = temp.content.querySelector('#scwidget');
     player.setAttribute('src', "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/loleus/");
     return temp.content;
   }
 
   render() {
-    this.innerHTML = ``;
+    this.innerHTML = `<wc-spinner></wc-spinner>`;
     this.appendChild(this.tmp.cloneNode(true));
+    scwidget.style.visibility = "hidden"
+    scwidget.addEventListener('load', (e) => {
+      scwidget.style.visibility = "visible";
+      this.removeChild(this.firstElementChild)
+  })
   }
 
 };
