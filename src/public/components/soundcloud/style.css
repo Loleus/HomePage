@@ -1,11 +1,11 @@
-  #sc-widget {
+  #scwidget {
     margin-top: 1vw;
     width: 80%;
     height: calc(98vh - 90px);
   }
 
   @media only screen and (max-width: 1020px) {
-    #sc-widget {
+    #scwidget {
       width: 100vw;
       height: calc(100vh - 65px);
     }

@@ -29,7 +29,6 @@ export default class Card extends HTMLElement {
     this.zoomButton.onclick = ()=>{
       this.showPic(this.picUrl)
     };
-    console.log(this.text)
   };
 
   getEditBtns(route, id) {
@@ -51,11 +50,9 @@ export default class Card extends HTMLElement {
   }
   async showPic(pic) {
     if (this.id && this.id !== null) {
-      const temp = document.getElementById("photo_temp");
-      console.log(temp)
-      temp.content.getElementById('title').innerHTML = this.title;
-      let cont = temp.content.cloneNode(true);
+      let cont = photo_temp.content.cloneNode(true);
       this.appendChild(cont);
+      title.innerHTML = this.title;
       text.innerHTML = "loading...";
       const image = document.getElementById('img1');
       image.src = `${pic}`;
@@ -65,6 +62,7 @@ export default class Card extends HTMLElement {
       };
     };
   }
+
   render() {
     this.innerHTML = `
     <link rel="stylesheet" href="/components/photos_card/style.css">
