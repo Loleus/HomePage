@@ -49,16 +49,15 @@ a.blogPostTitle {
   text-shadow: 1px 1px 1px maroon;
 }
 
-
-
 .page {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: #131b23;
-  overflow: visible;
+  overflow: auto;
+  z-index:3;
 }
 
 
