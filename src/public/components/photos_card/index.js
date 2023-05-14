@@ -25,10 +25,10 @@ export default class Card extends HTMLElement {
     this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
     this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
     this.render();
-    this.zoomButton = this.querySelector('#zoom');
-    this.zoomButton.onclick = ()=>{
+
+    this.querySelector('#zoom').addEventListener('click', ()=>{
       this.showPic(this.picUrl)
-    };
+    },true)  
   };
 
   getEditBtns(route, id) {
