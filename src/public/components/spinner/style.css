@@ -21,13 +21,11 @@
     animation: 1s rotateAfter infinite linear;
 }
 @keyframes rotateBefore {
-
     to {
         transform: rotateX(60deg) rotateY(45deg) rotateZ(360deg);
     }
 }
 @keyframes rotateAfter {
-
     to {
         transform: rotateX(240deg) rotateY(45deg) rotateZ(360deg);
     }

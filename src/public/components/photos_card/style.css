@@ -37,7 +37,7 @@ li.blogPost {
   background: #00000080;
   color: #fff;
 }
-a.blogPostTitle {
+button.blogPostTitle {
   display: inline-block;
   font-size: 1.4em;
   width: 100%;

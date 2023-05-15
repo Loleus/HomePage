@@ -68,7 +68,7 @@ export default class Card extends HTMLElement {
     <link rel="stylesheet" href="/components/photos_card/style.css">
     <section style="background-image: url('${this.thumbUrl}')" class="blogCard">
       <li class="blogPost">
-          <button id="zoom">${this.title}</button>
+          <button class="blogPostTitle" id="zoom">${this.title}</button>
         <p class="blogPostText">${this.createdat}</p>
       </li>
       ${this.getEditBtns(window.location.href, this.id)}

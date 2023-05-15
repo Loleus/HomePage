@@ -27,7 +27,7 @@ html {
 body {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to right, rgb(72, 88, 102), rgb(19, 32, 48));
+  background-image: linear-gradient(to right, rgb(64, 80, 83), rgb(23, 31, 32));
 }
 
 .wrapper {
