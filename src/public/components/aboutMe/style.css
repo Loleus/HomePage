@@ -1,16 +1,14 @@
 p {
-  text-shadow: 1px 1px 0px #00000080;
+  text-shadow: 1px 1px 2px #000000b6;
   text-indent: 1em;
   text-align: justify;
   text-justify: auto;
   font-size: 1.4em;
   margin: 0 auto;
   padding: 0.5em 1em 0.7em;
-  background: rgb(255, 255, 255);
-  color: #000000;
+  color: #fff8d3;
   width: 50%;
   border-radius: 3px;
-  box-shadow: 1px 1px 3px 0 #181818;
 }
 
 img {
@@ -28,5 +26,13 @@ img {
     font-size: 1.4em;
     line-height: 1.4em;
     width: 90%;
+  }
+  img {
+    box-shadow: 1px 1px 3px 0 #181818;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 1em 0;
+    border-radius: 50%;
   }
 }
