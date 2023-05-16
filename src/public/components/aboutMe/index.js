@@ -23,12 +23,50 @@ export default class Spinner extends HTMLElement {
     this.loading = false;
   };
 
+  animate() {
+    const message = `  Hi, here Łukasz Kamiński aka Lolo.
+I'm passionate about programming web aplications, and taking pictures. I have been a CNC operator for several years.
+Previous occupations: beatmaker, graphic designer, sound engineer, photo editor,
+DTP, accountant, warehouseman, wire harness fitter.`;
+    const container = this.shadowRoot.querySelector('#target');
+    let n;
+    function rerun() {
+      container.textContent = '';
+      n = 0;
+      typist(message, container);
+    };
+    rerun();
+    function interval(letter) {
+      if (letter == ';' || letter == '.' || letter == ',') {
+        return Math.floor((Math.random() * 500) + 500);
+      } else {
+        return Math.floor((Math.random() * 130) + 5);
+      }
+    }
+    function typist(text, target) {
+      if (typeof (text[n]) != 'undefined') {
+        target.textContent += text[n];
+      }
+      n++;
+      if (n < text.length) {
+        setTimeout(function () {
+          typist(text, target)
+        }, interval(text[n - 1]));
+      }
+      if (n === message.length) {
+        console.log("interwal");
+        // return setTimeout(() => { rerun() }, 2000)
+      }
+    }
+  }
+
   async connectedCallback() {
     this.shadowRoot.addEventListener("click", (e) => {
       console.log(e.target)
     });
     await this.getCard();
     this.render();
+    this.animate();
   };
 
   htmlToElement(html) {
