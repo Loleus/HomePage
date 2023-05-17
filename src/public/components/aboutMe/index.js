@@ -1,4 +1,4 @@
-export default class Spinner extends HTMLElement {
+export default class About extends HTMLElement {
 
   static get observedAttributes() { return ["loading"]; }
 
@@ -23,11 +23,31 @@ export default class Spinner extends HTMLElement {
     this.loading = false;
   };
 
+  async connectedCallback() {
+    await this.getCard();
+    this.render();
+    this.animate();
+  };
+
+  htmlToElement(html) {
+    const temp = document.createElement('template');
+    temp.innerHTML += html;
+    return temp.content;
+  };
+
+  render() {
+    const { shadowRoot } = this;
+    const tmp = this.htmlToElement(this.base);
+    if (this.loading) {
+      shadowRoot.innerHTML = `Loading...`;
+    } else {
+      shadowRoot.innerHTML = ``;
+      shadowRoot.appendChild(tmp.cloneNode(true));
+    }
+  };
+
   animate() {
-    const message = `  Hi, here Łukasz Kamiński aka Lolo.
-I'm passionate about programming web aplications, and taking pictures. I have been a CNC operator for several years.
-Previous occupations: beatmaker, graphic designer, sound engineer, photo editor,
-DTP, accountant, warehouseman, wire harness fitter.`;
+    const message = `  Hi, here Łukasz Kamiński aka Lolo. I'm passionate about programming web aplications, and taking pictures. I have been a CNC operator for several years. Previous occupations: beatmaker, graphic designer, sound engineer, photo editor, DTP, accountant, warehouseman, wire harness fitter.`;
     const container = this.shadowRoot.querySelector('#target');
     let n;
     function rerun() {
@@ -59,30 +79,4 @@ DTP, accountant, warehouseman, wire harness fitter.`;
       }
     }
   }
-
-  async connectedCallback() {
-    this.shadowRoot.addEventListener("click", (e) => {
-      console.log(e.target)
-    });
-    await this.getCard();
-    this.render();
-    this.animate();
-  };
-
-  htmlToElement(html) {
-    const temp = document.createElement('template');
-    temp.innerHTML += html;
-    return temp.content;
-  };
-
-  render() {
-    const { shadowRoot } = this;
-    const tmp = this.htmlToElement(this.base);
-    if (this.loading) {
-      shadowRoot.innerHTML = `Loading...`;
-    } else {
-      shadowRoot.innerHTML = ``;
-      shadowRoot.appendChild(tmp.cloneNode(true));
-    }
-  };
 };
