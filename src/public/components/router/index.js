@@ -39,7 +39,6 @@ export default class Router extends HTMLElement {
 
   disconnectedCallback() {
     window.removeEventListener("popstate", this._handlePopstate);
-    window.removeEventListener("beforeunload", this.preventNav);
   }
 
   _handlePopstate = () => {

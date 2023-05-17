@@ -9,7 +9,7 @@ module.exports = (req, res) => {
 
     console.log("notLogged")
 
-    res.redirect('/')
+    res.sendFile(path.resolve(__dirname, '../pages/index.html'));
 
   };
 };
