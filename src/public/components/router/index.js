@@ -35,10 +35,6 @@ export default class Router extends HTMLElement {
     if (window.history.replaceState) {
       window.history.replaceState(null, null, window.location.href);
     }
-    window.addEventListener("beforeunload", event => {
-      event.preventDefault()
-      event.returnValue = ""
-    })
   }
 
   disconnectedCallback() {
