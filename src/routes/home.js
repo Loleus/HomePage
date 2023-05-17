@@ -13,6 +13,8 @@ homeRouter
     .get('/contact', index)
     .get('/music', index)
     .get('/video', index)
+    .get('/photos', index)
+    .get('/repos', index)
     .get('*', auth)
 
 module.exports = {
