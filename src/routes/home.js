@@ -15,6 +15,7 @@ homeRouter
     .get('/video', index)
     .get('/photos', index)
     .get('/repos', index)
+    .get('/login', index)
     .get('*', auth)
 
 module.exports = {
