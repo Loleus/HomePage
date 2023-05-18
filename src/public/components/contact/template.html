@@ -1,3 +1,126 @@
 <link rel="stylesheet" href="/components/contact/style.css">
 
 <h1 class="title">Feel free to <a href="mailto:07zglossie@wp.pl?subject=aboutCode"> @ mail me</a></h1>
+<link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    ul {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    ul li {
+        list-style: none;
+        margin: 10px 20px;
+        display: inline-block;
+        position: relative;
+        width: 120px;
+        height: 120px;
+    }
+
+    ul li a {
+        position: relative;
+        display: inline-block;
+        color: #ca8300;
+        font-size: 40px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 120px;
+    }
+
+    ul li span {
+        display: inline-block;
+        position: absolute;
+        background: #d6b212;
+        transition: transform .3s;
+    }
+
+    ul li span:nth-of-type(1),
+    ul li span:nth-of-type(2) {
+        width: 120px;
+        height: 2px;
+    }
+
+    ul li span:nth-of-type(3),
+    ul li span:nth-of-type(4) {
+        width: 2px;
+        height: 120px;
+    }
+
+    ul li span:nth-of-type(1) {
+        top: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(1);
+    }
+
+    ul li span:nth-of-type(2) {
+        bottom: 0;
+        left: 0;
+        transform-origin: left;
+        transform: scale(1);
+    }
+
+    ul li span:nth-of-type(3) {
+        top: 0;
+        left: 0;
+        transform-origin: bottom;
+        transform: scale(0);
+    }
+
+    ul li span:nth-of-type(4) {
+        top: 0;
+        right: 0;
+        transform-origin: top;
+        transform: scale(0);
+    }
+
+    /*************  On hover  *****************/
+    ul li:hover span:nth-of-type(1) {
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+
+    ul li:hover span:nth-of-type(2) {
+        transform-origin: right;
+        transform: scale(0);
+    }
+
+    ul li:hover span:nth-of-type(3) {
+        transform-origin: top;
+        transform: scale(1);
+    }
+
+    ul li:hover span:nth-of-type(4) {
+        top: 0;
+        right: 0;
+        transform-origin: bottom;
+        transform: scale(1);
+    }
+</style>
+<ul>
+    <li>
+        <a href="https://www.facebook.com/profile.php?id=1795933173"> <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <span></span><span></span><span></span><span></span>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/channel/UCoG1KG8FrmCg_qKTASx1zlw"> <i class="fa fa-youtube"
+                aria-hidden="true"></i> </a>
+        <span></span><span></span><span></span><span></span>
+    </li>
+    <li>
+        <a href="https://github.com/loleus"> <i class="fa fa-github" aria-hidden="true"></i> </a>
+        <span></span><span></span><span></span><span></span>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com/in/%C5%82ukasz-kami%C5%84ski-ba2159277/"> <i class="fa fa-linkedin"
+                aria-hidden="true"></i> </a>
+        <span></span><span></span><span></span><span></span>
+    </li>
+    <li>
+        <a href="https://soundcloud.com/loleus"> <i class="fa fa-soundcloud aria-hidden=" true"></i> </a>
+        <span></span><span></span><span></span><span></span>
+    </li>
+
+</ul>
