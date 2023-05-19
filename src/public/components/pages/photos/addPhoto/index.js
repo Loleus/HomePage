@@ -2,7 +2,7 @@ export default class AddPhoto extends HTMLElement {
   
   connectedCallback() {
     this.innerHTML = `
-    <link rel="stylesheet" href="/components/addPhoto/style.css">
+    <link rel="stylesheet" href="/components/pages/photos/addPhoto/style.css">
     <h1 class="title">New photo</h1>
     <form class="addForm" method='POST' action='/admin'>
       <label>

@@ -8,7 +8,7 @@ export default class Soundcloud extends HTMLElement {
   htmlToElement() {
     const temp = document.createElement('template');
     temp.innerHTML += `
-    <link rel="stylesheet" href="/components/soundcloud/style.css">
+    <link rel="stylesheet" href="/components/pages/soundcloud/style.css">
     <div class="container"><iframe id="scwidget" scrolling="no" frameborder="no" allow="autoplay"></iframe></div>
     `;
     const player = temp.content.querySelector('#scwidget');

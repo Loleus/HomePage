@@ -1,4 +1,4 @@
-import { getOffset, photoList, listPerPage } from "../../js/utils/helper.util.js";
+import { getOffset, photoList, listPerPage } from "../../../js/utils/helper.util.js";
 
 const list = await photoList();
 const photoListL = list;
@@ -51,7 +51,7 @@ export default class Photos extends HTMLElement {
 
   async getCard() {
     this.loading = true;
-    const html = await fetch("/components/photos/template.html", { mode: 'cors' })
+    const html = await fetch("/components/pages/photos/template.html", { mode: 'cors' })
     const tempStream = await html.text()
     this.base = tempStream;
     this.tmp = this.htmlToElement(this.base);

@@ -1,4 +1,4 @@
-import { photoList } from "../../js/utils/helper.util.js";
+import { photoList } from "../../../../js/utils/helper.util.js";
 
 export default class EditPhoto extends HTMLElement {
 
@@ -10,7 +10,7 @@ export default class EditPhoto extends HTMLElement {
     if (this.id && this.id !== null) {
       const photo = await photoList(this.id);
       this.innerHTML = `
-      <link rel="stylesheet" href="/components/editPhoto/style.css">
+      <link rel="stylesheet" href="/components/pages/photos/editPhoto/style.css">
       <h1 class="title">Edit ${photo.title}</h1>
       <form class="addForm" method='POST' action='/admin/${photo.id}?_method=PUT'>
         <label>

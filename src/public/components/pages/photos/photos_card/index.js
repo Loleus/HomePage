@@ -34,7 +34,7 @@ export default class Card extends HTMLElement {
   getEditBtns(route, id) {
     if (route.includes("admin")) {
       return `
-        <link rel="stylesheet" href="/components/photos_card/editBtns.css">
+        <link rel="stylesheet" href="/components/pages/photos/photos_card/editBtns.css">
         <div id="edit">
           <wc-router>
             <a class="editBtn" route="photos/edit/${id}">E</a>
@@ -65,7 +65,7 @@ export default class Card extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <link rel="stylesheet" href="/components/photos_card/style.css">
+    <link rel="stylesheet" href="/components/pages/photos/photos_card/style.css">
     <section style="background-image: url('${this.thumbUrl}')" class="blogCard">
       <li class="blogPost">
           <button class="blogPostTitle" id="zoom">${this.title}</button>
