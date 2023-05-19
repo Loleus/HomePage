@@ -11,9 +11,9 @@ export default class Home extends HTMLElement {
 
   render() {
       this.shadowRoot.innerHTML = `
-        <link rel="stylesheet prefetch" href="/components/home/style.css">
+        <link rel="stylesheet prefetch" href="/components/pages/home/style.css">
         <div id="fsm_container" class="fsm-container">
-	        <img src="/components/home/logo.svg" fetchpriority="high" alt="" srcset="">
+	        <img src="/components/pages/home/logo.svg" fetchpriority="high" alt="" srcset="">
         </div>
       `
     };

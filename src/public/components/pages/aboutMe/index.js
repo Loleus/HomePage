@@ -17,7 +17,7 @@ export default class About extends HTMLElement {
 
   async getCard() {
     this.loading = true;
-    const html = await fetch("/components/aboutMe/template.html", { mode: 'cors' })
+    const html = await fetch("/components/pages/aboutMe/template.html", { mode: 'cors' })
     const tempStream = await html.text()
     this.base = tempStream;
     this.loading = false;

@@ -8,7 +8,7 @@ export default class Youtube extends HTMLElement {
   htmlToElement() {
     const temp = document.createElement('template');
     temp.innerHTML += `
-      <link rel="stylesheet" href="/components/youtube/style.css">
+      <link rel="stylesheet" href="/components/pages/youtube/style.css">
       <iframe id="player" type="text/html" frameborder="0"></iframe>
     `;
     const playerI = temp.content.querySelector('#player');
