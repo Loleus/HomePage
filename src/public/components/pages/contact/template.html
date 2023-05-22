@@ -3,6 +3,7 @@
 <h1 class="title">Feel free to send an <a href="mailto:07zglossie@wp.pl?subject=aboutCode"> e-mail</a></h1>
 <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
   ul {
     position: relative;
     margin: 0 auto 30px;
@@ -32,8 +33,11 @@
   ul li span {
     display: inline-block;
     position: absolute;
-    background: darkslategray;
+    background: rgb(165, 165, 165);
     transition: transform .3s;
+  }
+  ul li:hover span {
+    background: #c7c7c7;
   }
 
   ul li span:nth-of-type(1),
@@ -100,12 +104,12 @@
   }
 
   p {
-    color: darkslategray;
+    color: #a5a5a5;
     transition: color 0.2s ease-in-out;
   }
    li:hover p {
     display: block;
-    color: dimgrey;
+    color: #c7c7c7;
    }
     li:hover a {
       transform: scale(1.3);

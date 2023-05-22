@@ -5,11 +5,15 @@
   padding: 0 10vh 2vh;
 }
 .pager p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 6vh;
   background:#aaa;
   border:1px solid #333;
   border-radius: 3px;
   line-height: 2em;
+  font-weight: bold;
+  font-size: 1em;
+  text-shadow: 0 0 1px #666;
 }
 .pager button {
   width: 12vh;
