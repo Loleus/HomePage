@@ -28,6 +28,7 @@ body {
   display: flex;
   justify-content: center;
   background-image:  radial-gradient(circle, #00000000 33%, #000000ff 100%),linear-gradient(to right, rgb(43, 44, 48), rgb(30, 34, 46));
+  background-attachment: fixed;
 }
 
 .wrapper {
