@@ -14,9 +14,9 @@ Frontend: WebComponents based client router
 See in action: https://lolo-cvgk.onrender.com
 
 ## To do:
-- photos routing (add :page to photo path)
+
 - tests
 - errors handling
 - alternate photo upload input
 - exif metadata reader
-- comments & scoring component -> migration to sql (rebuild app struct)
+- comments & scoring component
