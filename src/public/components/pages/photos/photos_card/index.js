@@ -20,15 +20,31 @@ export default class Card extends HTMLElement {
     return this.getAttribute("text");
   };
 
+  async getCard() {
+    const html = await fetch("/components/pages/photos/photos_card/template.html", { mode: 'cors' })
+    const tempStream = await html.text()
+    this.base = tempStream;
+  };
 
-  connectedCallback() {
+  htmlToElement(html) {
+    const temp = document.createElement('template');
+    temp.innerHTML += html;
+    return temp.content;
+  };
+
+  async connectedCallback() {
+
+    await this.getCard();
+    
     this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
     this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
+
     this.render();
 
-    this.querySelector('#zoom').addEventListener('click', ()=>{
-      this.showPic(this.picUrl)
-    },true)  
+    this.querySelector('#zoom').addEventListener('click', async () => {
+      await this.showPic(this.picUrl)
+    }, true )
+
   };
 
   getEditBtns(route, id) {
@@ -48,9 +64,11 @@ export default class Card extends HTMLElement {
       return ''
     }
   }
+
   async showPic(pic) {
     if (this.id && this.id !== null) {
-      let cont = photo_temp.content.cloneNode(true);
+      const tmp = this.htmlToElement(this.base);
+      let cont = tmp.cloneNode(true);
       this.appendChild(cont);
       title.innerHTML = this.title;
       text.innerHTML = "loading...";
