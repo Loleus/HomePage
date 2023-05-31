@@ -14,11 +14,11 @@
 }
 .spinner:before {
     transform: rotateX(60deg) rotateY(45deg) rotateZ(0deg);
-    animation: 1s rotateBefore infinite linear;
+    animation: 1.36s rotateBefore infinite linear;
 }
 .spinner:after {
     transform: rotateX(240deg) rotateY(45deg) rotateZ(0deg);
-    animation: 1s rotateAfter infinite linear;
+    animation: 1.36s rotateAfter infinite linear;
 }
 @keyframes rotateBefore {
     to {
