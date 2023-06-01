@@ -9,7 +9,9 @@
 /* navbar regular css start */
 .navbar-area {
   background: rgb(33,30,40);
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
+  mix-blend-mode: difference;
+  box-shadow: 0 0px 26px -1px #ddd;
 }
 
 .site-navbar {
@@ -154,7 +156,11 @@ a.site-logo:hover {
     max-height: 100vh;
     overflow: hidden;
   }
-
+  .navbar-area {
+    background: rgb(33,30,40);
+    /* border-bottom: 1px solid #000; */
+    mix-blend-mode: normal;
+  }
   /* navbar css for mobile end */
 }
 
