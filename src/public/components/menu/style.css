@@ -6,12 +6,9 @@
   position:relative;
 }
 
-/* navbar regular css start */
 .navbar-area {
-  background: rgb(33,30,40);
-  /* border-bottom: 1px solid #000; */
-  mix-blend-mode: difference;
-  box-shadow: 0 0px 26px -1px #ddd;
+  background: rgb(4, 4, 5);
+  box-shadow: 0px 0px 26px -1px #111;
 }
 
 .site-navbar {
@@ -25,7 +22,7 @@ a.site-logo {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffd700bd;
+  color: #b39200;
   margin-left:10px;
 }
 
@@ -34,7 +31,7 @@ a.site-logo:hover {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
-  color: #bb8a2f;
+  color: gold;
   text-shadow: none;
 }
 
@@ -56,7 +53,7 @@ a.site-logo:hover {
 
 .site-navbar ul li a:hover {
   background: rgb(32, 42, 51);
-  color: #e6a52e;
+  color: gold;
 }
 
 /* navbar regular css end */
@@ -130,7 +127,6 @@ a.site-logo:hover {
     top: 60px;
     flex-direction: column;
     align-items: center;
-    border-top: 1px solid #444;
     background-color: rgba(10, 5, 7, 0.9);
     max-height: 0;
     overflow: hidden;

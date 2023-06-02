@@ -45,6 +45,7 @@ footer {
   width: 100%;
   color: #ffa70480;
   z-index: 1;
+  box-shadow: 0 0px 26px -1px #000;
 }
 
 button {
