@@ -49,11 +49,13 @@ a.site-logo:hover {
   text-transform: uppercase;
   color: #b39200;
   font-size: 28px;
+  transition: all 0.16s linear;
 }
 
 .site-navbar ul li a:hover {
   background: rgb(32, 42, 51);
   color: gold;
+  transform: scale(1.1);
 }
 
 /* navbar regular css end */
