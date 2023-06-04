@@ -3,12 +3,13 @@
   width:100%;
   justify-content: space-evenly;
   padding: 0 10vh 2vh;
+  margin-top: 1.67vh;
 }
 .pager p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 6vh;
   background:#aaa;
-  border:1px solid #333;
+  /* border:1px solid #333; */
   border-radius: 3px;
   line-height: 2em;
   font-weight: bold;
@@ -19,6 +20,7 @@
   width: 12vh;
   padding-bottom: 0.2rem;
   line-height: 2em;
+  border: none;
 }
 .blogCards {
   flex-basis: 100%;
