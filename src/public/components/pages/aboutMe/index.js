@@ -47,7 +47,7 @@ export default class About extends HTMLElement {
   };
 
   animate() {
-    const message = `  Hi, here Łukasz Kamiński aka Lolo. I'm passionate about programming web aplications, and taking pictures. I have been a CNC operator for several years. Previous occupations: beatmaker, graphic designer, sound engineer, photo editor, DTP, accountant, warehouseman, wire harness fitter.`;
+    const message = `  Hi, here Łukasz Kamiński aka Lolo. I'm passionate about programming web aplications, taking pictures and mixing sound. I have been a CNC operator for several years.`;
     const container = this.shadowRoot.querySelector('#target');
     let n;
     function rerun() {
