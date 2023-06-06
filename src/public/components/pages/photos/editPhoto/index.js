@@ -1,4 +1,4 @@
-import { photoList } from "../../../../js/utils/helper.util.js";
+import { photoList } from "../utils/helper.util.js";
 
 export default class EditPhoto extends HTMLElement {
 

@@ -1,4 +1,4 @@
-import { getOffset, photoList, listPerPage } from "../../../js/utils/helper.util.js";
+import { getOffset, photoList, listPerPage } from "./utils/helper.util.js";
 
 const list = await photoList();
 const photoListL = list;
