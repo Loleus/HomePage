@@ -1,4 +1,4 @@
-import Router from "/components/router/index.js";
+import Router from "/components/core/router/index.js";
 import Home from "/components/pages/home/index.js";
 import Repos from "/components/pages/repos/index.js";
 import About from "/components/pages/aboutMe/index.js";
@@ -9,9 +9,9 @@ import Login from "/components/pages/login/index.js";
 import AddPhoto from "/components/pages/photos/addPhoto/index.js";
 import EditPhoto from "/components/pages/photos/editPhoto/index.js";
 import Photos from "/components/pages/photos/index.js";
-import NotFound from "/components/errors/index.js";
-import Menu from "/components/menu/index.js";
-import Spinner from "/components/spinner/index.js";
+import NotFound from "/components/pages/errors/index.js";
+import Menu from "/components/core/menu/index.js";
+import Spinner from "/components/vendors/spinner/index.js";
 import Card from "/components/pages/photos/photos_card/index.js";
 
 const routes = [

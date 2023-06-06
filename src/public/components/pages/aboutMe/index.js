@@ -1,4 +1,4 @@
-import animate from "/components/writer/index.js"
+import animate from "/components/vendors/writer/index.js"
 export default class About extends HTMLElement {
 
   static get observedAttributes() { return ["loading"]; }
