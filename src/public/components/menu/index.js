@@ -1,7 +1,9 @@
-const listeners = () => {
+export default () => {
+
   const navToggler = document.querySelector('.nav-toggler');
   const navMenu = document.querySelector('.site-navbar ul');
   const navLinks = document.querySelectorAll('.site-navbar a');
+
   const allEventListners = () => {
     navToggler.addEventListener('click', togglerClick);
     navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
@@ -21,4 +23,3 @@ const listeners = () => {
   allEventListners();
 };
 
-export default listeners();
