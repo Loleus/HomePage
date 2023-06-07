@@ -18,6 +18,14 @@
   font-family: Barlow;
   src: url(../assets/fonts/Barlow/Barlow-Regular.ttf);
 }
+@font-face {
+  font-family: Dokdo;
+  src: url(../assets/fonts/Dokdo/Dokdo-Regular.ttf);
+}
+@font-face {
+  font-family: VT323;
+  src: url(../assets/fonts/VT323/VT323-Regular.ttf);
+}
 
 html {
   height: 100%;
