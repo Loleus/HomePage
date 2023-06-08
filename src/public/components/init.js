@@ -20,7 +20,7 @@ const routes = [
   ["wc-repos", Repos],
   ["wc-about", About],
   ["wc-music", Music],
-  ["wc-video", Video], 
+  ["wc-video", Video],
   ["wc-contact", Contact],
   ["wc-login", Login],
   ["wc-addphoto", AddPhoto],
@@ -32,22 +32,23 @@ const routes = [
 ];
 
 for (let route of routes) {
-  customElements.define(route[0],route[1])
+  customElements.define(route[0], route[1])
 };
 
-export { Router,
-          Home,
-          Repos,
-          About,
-          Music,
-          Video,
-          Contact,
-          Login,
-          AddPhoto,
-          EditPhoto,
-          Photos,
-          NotFound,
-          Menu,
-          Spinner,
-          Card
-        };
+export {
+  Router,
+  Home,
+  Repos,
+  About,
+  Music,
+  Video,
+  Contact,
+  Login,
+  AddPhoto,
+  EditPhoto,
+  Photos,
+  NotFound,
+  Menu,
+  Spinner,
+  Card
+};
