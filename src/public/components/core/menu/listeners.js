@@ -1,5 +1,4 @@
-const listeners = () => {
-
+export default function() {
   const navToggler = document.querySelector('.nav-toggler');
   const navMenu = document.querySelector('.site-navbar ul');
   const navLinks = document.querySelectorAll('.site-navbar a');
@@ -21,6 +20,4 @@ const listeners = () => {
   };
 
   allEventListners();
-};
-
-export default listeners();
+}

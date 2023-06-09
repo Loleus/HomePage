@@ -1,5 +1,3 @@
-import Router from "./core/router/index.js";
-import Menu from "./core/menu/index.js";
 import Home from "./pages/home/index.js";
 import Repos from "./pages/repos/index.js";
 import About from "./pages/aboutMe/index.js";
@@ -15,7 +13,6 @@ import NotFound from "./pages/errors/index.js";
 import Spinner from "./vendors/spinner/index.js";
 
 const routes = [
-  ["wc-router", Router],
   ["wc-home", Home],
   ["wc-repos", Repos],
   ["wc-about", About],
@@ -35,8 +32,7 @@ for (let route of routes) {
   customElements.define(route[0], route[1])
 };
 
-export {
-  Router,
+export default {
   Home,
   Repos,
   About,
@@ -48,7 +44,6 @@ export {
   EditPhoto,
   Photos,
   NotFound,
-  Menu,
   Spinner,
   Card
 };
