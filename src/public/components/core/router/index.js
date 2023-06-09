@@ -1,4 +1,6 @@
 import { match } from "./util.js";
+import init from "/components/init.js";
+import listeners from "/components/core/menu/listeners.js";
 
 export default class Router extends HTMLElement {
 
@@ -26,8 +28,45 @@ export default class Router extends HTMLElement {
         resourceUrl: r.getAttribute("resourceUrl")
       }));
   }
+  static get observedAttributes() { return ["loading"]; }
 
-  connectedCallback() {
+  get loading() {
+    return JSON.parse(this.getAttribute("loading"));
+  };
+
+  set loading(v) {
+    this.setAttribute("loading", JSON.stringify(v));
+  };
+
+  async getCard() {
+    this.loading = true;
+    const html = await fetch("/components/core/router/template.html", { mode: 'cors' })
+    const tempStream = await html.text()
+    this.base = tempStream;
+    this.loading = false;
+  };
+
+  htmlToElement(html) {
+    const temp = document.createElement('template');
+    temp.innerHTML += html;
+    return temp.content;
+  };
+
+  render() {
+    const tmp = this.htmlToElement(this.base);
+    if (this.loading) {
+      this.innerHTML = `<p>Loading...</p>`;
+    } else {
+      this.innerHTML = ``;
+      this.appendChild(tmp.cloneNode(true));
+      listeners();
+    }
+  };
+
+  async connectedCallback() {
+    await this.getCard();
+    this.render();
+    init;
     this.updateLinks();
     this.anchors[1] ? this.anchors[0].style.color = "gold" : null
     this.navigate(window.location.pathname);

@@ -1,5 +1,3 @@
-import Router from "./core/router/index.js";
-import Menu from "./core/menu/index.js";
 import Home from "./pages/home/index.js";
 import Repos from "./pages/repos/index.js";
 import About from "./pages/aboutMe/index.js";
@@ -15,12 +13,11 @@ import NotFound from "./pages/errors/index.js";
 import Spinner from "./vendors/spinner/index.js";
 
 const routes = [
-  ["wc-router", Router],
   ["wc-home", Home],
   ["wc-repos", Repos],
   ["wc-about", About],
   ["wc-music", Music],
-  ["wc-video", Video], 
+  ["wc-video", Video],
   ["wc-contact", Contact],
   ["wc-login", Login],
   ["wc-addphoto", AddPhoto],
@@ -32,22 +29,21 @@ const routes = [
 ];
 
 for (let route of routes) {
-  customElements.define(route[0],route[1])
+  customElements.define(route[0], route[1])
 };
 
-export { Router,
-          Home,
-          Repos,
-          About,
-          Music,
-          Video,
-          Contact,
-          Login,
-          AddPhoto,
-          EditPhoto,
-          Photos,
-          NotFound,
-          Menu,
-          Spinner,
-          Card
-        };
+export default {
+  Home,
+  Repos,
+  About,
+  Music,
+  Video,
+  Contact,
+  Login,
+  AddPhoto,
+  EditPhoto,
+  Photos,
+  NotFound,
+  Spinner,
+  Card
+};

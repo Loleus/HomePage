@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+  
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
@@ -10,48 +10,15 @@
   <meta property="og:title" content="Lolo'2023" />
   <meta property="og:description" content="Homepage" />
   <meta property="og:image" content="http://lolo-cvgk.onrender.com/assets/bcg.jpg" />
-  <meta property="fb:page_id" content="1795933173" />
   <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/components/core/menu/style.css">
-  <link rel="stylesheet" href="/components/pages/repos/style.css">
   <title>LOLO:2023</title>
 </head>
 
 <body>
-  <wc-router class="wrapper">
-    <div class="navbar-area">
-      <div class="container">
-        <nav class="site-navbar nav">
-          <a route="/" class="site-logo">lolo:2023</a>
-          <ul>
-            <li><a route="/repos">Repos</a></li>
-            <li><a route="/about">About</a></li>
-            <li><a route="/music">Music</a></li>
-            <li><a route="/video">Video</a></li>
-            <li><a route="/photos">Photo</a></li>
-            <li><a route="/contact">Contact</a></li>
-          </ul>
-          <button class="nav-toggler">
-            <div></div>
-          </button>
-        </nav>
-      </div>
-    </div>
-    <wc-route path="/" title="Home" component="wc-home"></wc-route>
-    <wc-route path="/repos" title="Repos" component="wc-repos"></wc-route>
-    <wc-route path="/about" title="About" component="wc-about"></wc-route>
-    <wc-route path="/music" title="Music" component="wc-music"></wc-route>
-    <wc-route path="/video" title="Video" component="wc-video"></wc-route>
-    <wc-route path="/contact" title="Contact" component="wc-contact"></wc-route>
-    <wc-route path="/login" title="Login" component="wc-login"></wc-route>
-    <wc-route path="/photos" title="Photo" component="wc-photos"></wc-route>
-    <wc-route path="*" title="404" component="wc-notfound"></wc-route>
-    <wc-outlet class="wc-outlet"></wc-outlet>
-    <footer>No time Toulouse</footer>
-  </wc-router>
-
-  <script type="module" src="/components/init.js"></script>
+  <wc-router class="wrapper"></wc-router>
+  <script type="module" src="/js/index.js"></script>
 </body>
 
 </html>
