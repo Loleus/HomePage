@@ -1,22 +1,23 @@
 h1.title {
   pointer-events: none;
   margin: 3vh 0;
-  color: #6e6e6e;
+  color: #6e6e6e00;
   line-height: 2em;
   font-size: 1.3em;
-  text-shadow: 1px 1px 2px #272727;
   transition: color 0.2s linear;
+  text-shadow: 0 0 2px #fce354d5;
 }
 h1.title a {
   pointer-events: auto;
   text-decoration: none;
   display: inline-block;
-  text-shadow: 1px 2px 1px #272727;
-  color: #c7c7c7;
+  text-shadow: 0px 0px 3px #aaa;
+  color: #ffe600;
   text-transform: uppercase;
+  transition: color 0.14s linear;
 }
 h1.title a:hover {
-  color: #ff4500;
+  color: #918626;
 }
 
 .socials {

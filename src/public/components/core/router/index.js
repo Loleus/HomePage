@@ -92,9 +92,9 @@ export default class Router extends HTMLElement {
         e.preventDefault();
         this.navigate(target);
         this.anchors.forEach(link => {
-          link.style.color = ""
+          link.style.textShadow = "0 0 3px #ffffe0"
         });
-       !e.target.classList.contains('site-logo') ? e.target.style.color = "#ffff0060" : null;
+       !e.target.classList.contains('site-logo') ? e.target.style.textShadow = '0 0 2px #fce354d5' : null;
       };
     });
   }
