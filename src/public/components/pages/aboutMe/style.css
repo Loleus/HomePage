@@ -10,10 +10,11 @@ p {
   width: 50%;
   font-family: 'VT323', sans-serif;
   border-radius: 3px;
+  text-shadow: 1px 1px 5px #009c0a;
 }
 
 img {
-  box-shadow: 1px 1px 3px 0 #181818;
+  box-shadow: -2px 2px 27px -7px #c7c7c7;
   width: 260px;
   height: 260px;
   padding: 0;

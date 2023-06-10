@@ -36,6 +36,7 @@ td {
   color: #a5a5a5;
   box-shadow: 0px 0px 3px 0px #20677c;
   transition: all 0.2s linear;
+  text-shadow: 0 0 3px #a5a5a5;
 }
 
 tr:nth-child(n + 1) td:first-child {
@@ -49,8 +50,9 @@ table td:hover {
 tr th {
   background: rgba(17, 17, 17, 0.7);
   overflow: hidden;
-  color: rgb(165, 165, 165);
+  color: #a5a5a5;
   padding: 1vh;
+  text-shadow: 0 0 3px #a5a5a5;
 }
 
 td a {
@@ -65,6 +67,7 @@ td a {
   text-transform: uppercase;
   padding: .5vh 0 1.1vh;
   display: block;
+  text-shadow: -1px 2px 3px #ff4500;
 }
 
 table td:hover a {
@@ -77,7 +80,7 @@ a.blogListTitle {
 }
 a.blogListTitle {
   color: #d6b212;
-  
+
 }
 
 @media only screen and (max-width: 1020px) {
