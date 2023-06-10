@@ -18,12 +18,14 @@
 }
 
 a.site-logo {
-  font-size: 45px;
+  font-size: 48px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #dbbb2d;
+  color: #dbbb2d00;
   margin-left:10px;
   font-family: 'Dokdo', sans-serif;
+  text-shadow: 0 0 4px wheat;
+  transition: text-shadow 0.2s linear;
 }
 
 .site-navbar ul {
@@ -34,26 +36,32 @@ a.site-logo {
 }
 
 .site-navbar ul li a {
+  font-size: 28px;
+  transition: all 0.18s linear,  text-shadow 0.2s linear;
   padding: 14px 13px;
   display: block;
   text-decoration: none;
+  background: #20202000;
   text-transform: uppercase;
-  color: #b39200;
+  color: #b3920000;
   border-radius: 12px;
-  font-size: 28px;
-  transition: all 0.16s linear;
+  box-shadow: 0px 0px 0 -5px #aaa;
+  text-shadow: 0 0 3px lightyellow;
 }
 
 .site-navbar ul li a:hover {
-  background: #202020;
-  color: gold;
+  transition: all 0.18s linear, text-shadow 0.2s linear;
+  background: #2020206e;
+  color: #ffd90000;
   transform: scale(1.1);
-  box-shadow: 0px 0px 26px -5px #aaa;
   border-radius: 12px;
+  box-shadow: 0px 0px 26px -5px #aaa;
+  text-shadow: 0 0 2px #fce354d5;
 }
 a.site-logo:hover {
-  color: #ffffff7c;
+  color: #ffffff00;
   cursor: pointer;
+  text-shadow: 0 0 4px gold;
 }
 .nav-toggler {
   border: 3px solid #d6b212;
@@ -109,6 +117,7 @@ a.site-logo:hover {
   .nav-toggler {
     display: block;
     width: auto;
+    filter: blur(1px);
   }
 
   .site-navbar {
