@@ -1,6 +1,6 @@
 section.blogCard {
-  width: 30vh;
-  height: 30vh;
+  width: 15vw;
+  height: 15vw;
   display: inline-block;
   background-size: auto 150%;
   background-position: bottom;
@@ -21,8 +21,8 @@ li.blogPost {
   flex-direction: column;
   color: bisque;
   justify-content: center;
-  width: 30vh;
-  height: 30vh;
+  width: 15vw;
+  height: 15vw;
   background: #6666663b;
   border-radius: 3px;
 }
