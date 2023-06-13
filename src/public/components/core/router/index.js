@@ -68,7 +68,6 @@ export default class Router extends HTMLElement {
     this.render();
     init;
     this.updateLinks();
-    // this.anchors[1] ? this.anchors[0].style.color = "gold" : null
     this.navigate(window.location.pathname);
     window.addEventListener("popstate", this._handlePopstate);
     if (window.history.replaceState) {
