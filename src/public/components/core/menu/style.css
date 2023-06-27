@@ -34,7 +34,9 @@ a.site-logo {
   list-style: none;
   display: flex;
 }
-
+.site-navbar ul li{
+  padding: 0 5px;
+}
 .site-navbar ul li a {
   font-size: 28px;
   transition: all 0.18s linear,  text-shadow 0.2s linear;

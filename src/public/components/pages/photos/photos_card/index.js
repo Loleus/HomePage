@@ -47,8 +47,7 @@ export default class Card extends HTMLElement {
 
   };
 
-  getEditBtns(route, id) {
-    if (route.includes("admin")) {
+  getEditBtns(id) {
       return `
         <link rel="stylesheet" href="/components/pages/photos/photos_card/editBtns.css">
         <div id="edit">
@@ -60,9 +59,7 @@ export default class Card extends HTMLElement {
            <button type='submit' class='btn-delete'>X</button>
           </form>
         </div>`
-    } else {
-      return ''
-    }
+
   }
 
   async showPic(pic) {
@@ -89,7 +86,7 @@ export default class Card extends HTMLElement {
           <button class="blogPostTitle" id="zoom">${this.title}</button>
         <p class="blogPostText">${this.createdat}</p>
       </li>
-      ${this.getEditBtns(window.location.href, this.id)}
+      ${window.location.href.includes("admin") ? this.getEditBtns(this.id) : ''}
     </section>`;
   };
 };

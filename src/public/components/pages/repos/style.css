@@ -11,8 +11,7 @@ table {
   margin: 10vh auto;
   font-size: 27px;
   transition: all 0.16s linear;
-  box-shadow: 0 0 8px 0 rgb(60, 48, 88);
-  background: rgb(16, 31, 36);
+  background: rgb(22, 31, 34);
   border-spacing: 0px;
 }
 
@@ -34,17 +33,13 @@ td {
   font-size: 0.7em;
   line-height: 0.7em;
   color: #a5a5a5;
-  box-shadow: 0px 0px 3px 0px #20677c;
+  box-shadow: 0px 0px 3px 0px #345a65;
   transition: all 0.2s linear;
   text-shadow: 0 0 3px #a5a5a5;
 }
 
 tr:nth-child(n + 1) td:first-child {
   background: rgba(17, 17, 17, 0.7);
-}
-
-table td:hover {
-  box-shadow: 0px 0px 3px -1px #d6b212;
 }
 
 tr th {
@@ -58,7 +53,7 @@ tr th {
 td a {
   pointer-events: auto;
   font-weight: bold;
-  color: #d6b212;
+  color: #b19000;
   font-size: 1.2em;
   line-height: 1.2em;
   text-underline-position: under;
@@ -71,7 +66,7 @@ td a {
 }
 
 table td:hover a {
-  color: #eccb5c;
+  color: #ffcb1e;
 }
 
 h1.blogListTitle.title,
