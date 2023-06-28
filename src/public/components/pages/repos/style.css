@@ -19,7 +19,7 @@ table:hover {
   margin: 10vh auto;
   font-size: 27px;
   transition: border-spacing 0.16s linear;
-  box-shadow: 0 0 8px -3px #aaa;
+  /* box-shadow: 0 0 8px -3px #aaa; */
   background: rgba(212, 220, 223, 0.02);
   border-spacing: 9px;
   border-radius: 12px;
@@ -58,7 +58,7 @@ td a {
   line-height: 1.2em;
   text-underline-position: under;
   text-decoration: none;
-  transition: color 0.17s linear;
+  transition: all 0.17s linear;
   text-transform: uppercase;
   padding: .5vh 0 1.1vh;
   display: block;
@@ -67,6 +67,7 @@ td a {
 
 table td:hover a {
   color: #ffcb1e;
+  transform: scale(0.9);
 }
 
 h1.blogListTitle.title,
