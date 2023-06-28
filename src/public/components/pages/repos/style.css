@@ -46,7 +46,7 @@ tr th {
   background: rgba(17, 17, 17, 0.7);
   overflow: hidden;
   color: #a5a5a5;
-  padding: 1vh;
+  padding: 0.6vh 1vh 1.3vh;
   text-shadow: 0 0 3px #a5a5a5;
 }
 
@@ -54,7 +54,7 @@ td a {
   pointer-events: auto;
   font-weight: bold;
   color: #b19000;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.2em;
   text-underline-position: under;
   text-decoration: none;
