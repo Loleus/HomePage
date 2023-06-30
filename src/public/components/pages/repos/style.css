@@ -20,9 +20,9 @@ table:hover {
   font-size: 27px;
   transition: border-spacing 0.16s linear;
   /* box-shadow: 0 0 8px -3px #aaa; */
-  background: rgba(212, 220, 223, 0.02);
+  background: rgb(17, 30, 10);
   border-spacing: 9px;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 th,
@@ -33,7 +33,7 @@ td {
   font-size: 0.7em;
   line-height: 0.7em;
   color: #a5a5a5;
-  box-shadow: 0px 0px 3px 0px #345a65;
+  box-shadow: 0px 0px 3px 0px #18840e;
   transition: all 0.2s linear;
   text-shadow: 0 0 3px #a5a5a5;
 }
@@ -53,7 +53,7 @@ tr th {
 td a {
   pointer-events: auto;
   font-weight: bold;
-  color: #b19000;
+  color: #4ab779;
   font-size: 1.1em;
   line-height: 1.2em;
   text-underline-position: under;
@@ -62,12 +62,13 @@ td a {
   text-transform: uppercase;
   padding: .5vh 0 1.1vh;
   display: block;
-  text-shadow: -1px 2px 3px #ff4500;
+  text-shadow: -1px 2px 3px #336914;
 }
 
 table td:hover a {
-  color: #ffcb1e;
-  transform: scale(0.9);
+color: #091704;
+transform: scale(0.9);
+text-shadow: -1px 2px 3px #05ff15;
 }
 
 h1.blogListTitle.title,
