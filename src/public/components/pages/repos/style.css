@@ -66,9 +66,9 @@ td a {
 }
 
 table td:hover a {
-color: #091704;
-transform: scale(0.9);
-text-shadow: -1px 2px 3px #05ff15;
+  color: #6aec3c;
+  text-shadow: -1px 2px 3px #52ff64;
+  background: #073400;
 }
 
 h1.blogListTitle.title,
