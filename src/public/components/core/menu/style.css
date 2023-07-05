@@ -25,7 +25,7 @@ a.site-logo {
   margin-left:10px;
   font-family: 'Dokdo', sans-serif;
   text-shadow: 0 0 4px wheat;
-  transition: text-shadow 0.2s linear;
+  transition: text-shadow 0.13s linear;
 }
 
 .site-navbar ul {
@@ -40,7 +40,7 @@ a.site-logo {
 }
 .site-navbar ul li a {
   font-size: 28px;
-  transition: all 0.18s linear,  text-shadow 0.2s linear;
+  transition: all 0.13s linear,  text-shadow 0.13s linear;
   padding: 14px 13px;
   display: block;
   text-decoration: none;
@@ -53,7 +53,7 @@ a.site-logo {
 }
 
 .site-navbar ul li a:hover {
-  transition: all 0.18s linear, text-shadow 0.2s linear;
+  transition: all 0.13s linear, text-shadow 0.13s linear;
   background-image:linear-gradient(to bottom, black 10%, #0c1314 100%) ;
   color: #ffd90000;
   transform: rotateX(29deg);
@@ -141,7 +141,7 @@ a.site-logo:hover {
     background-color: rgba(10, 5, 7, 0.9);
     max-height: 0;
     overflow: hidden;
-    transition: 0.3s;
+    transition: 0.2s;
   }
 
   .site-navbar ul li {
