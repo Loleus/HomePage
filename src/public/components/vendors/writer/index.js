@@ -10,9 +10,9 @@ export default function animate(msg) {
   rerun();
   function interval(letter) {
     if (letter == ';' || letter == '.' || letter == ',') {
-      return Math.floor((Math.random() * 500) + 500);
+      return Math.floor((Math.random() * 300) + 300);
     } else {
-      return Math.floor((Math.random() * 130) + 5);
+      return Math.floor((Math.random() * 100) + 5);
     }
   }
   function typist(text, target) {

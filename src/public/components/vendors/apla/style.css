@@ -1,0 +1,9 @@
+.fsm-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 86%;
+    box-sizing: border-box;
+  }
+  
