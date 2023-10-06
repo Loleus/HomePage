@@ -52,7 +52,8 @@ h1.title a:hover {
 .socials li span {
   display: inline-block;
   position: absolute;
-  background: #897e38;
+  background: #493c07;
+  ;
   transition: transform 0.3s;
   /* border-bottom: 3px solid rosybrown; */
 }
