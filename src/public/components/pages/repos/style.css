@@ -10,7 +10,7 @@ table {
   margin: 10vh auto;
   font-size: 27px;
   transition: all 0.13s linear;
-  background: hsla(195, 21%, 11%, 0.497);
+  background: rgba(22, 31, 34, 0.3);
   border-spacing: 0px;
 }
 
@@ -22,11 +22,11 @@ table:hover {
   border-radius: 4px;
 }
 tr  {
-  box-shadow: 0px 0px 3px 0px #47a4fc;
+  box-shadow: 0px 0px 3px -1px #47a4fc;
 }
-tr td {
-  border: 1px solid rgba(0, 119, 255, 0.5)
-}
+/* tr td {
+  border: 1px solid rgba(0, 119, 255, 0.481)
+} */
 th,
 td {
   padding: 0 1.1vh;
@@ -35,17 +35,16 @@ td {
   font-size: 0.7em;
   line-height: 0.7em;
   color: #a5a5a5;
-
   transition: all 0.13s linear;
   text-shadow: 0 0 3px #a5a5a5;
+  background: rgba(17, 17, 17, 0.451);
 }
-
-/* tr:nth-child(n + 1) td:first-child {
+/* 
+tr:nth-child(n + 1) td:first-child {
   background: rgba(17, 17, 17, 0.7);
 } */
 
 tr th {
-  background: rgba(17, 17, 17, 0.7);
   overflow: hidden;
   color: #a5a5a5;
   line-height: 2em;

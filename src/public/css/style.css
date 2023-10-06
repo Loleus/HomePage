@@ -32,14 +32,15 @@ html {
   width: 100%;
   background:  url(../assets/apla.jpg);
   background-size: cover;
-  background-blend-mode: luminosity;
+  background-blend-mode: darken;
 }
 
 body {
   display: flex;
   justify-content: center;
-  /* background-color: #1b1b1d; */
-  background-image:  radial-gradient(circle, #060202c7 13%, #0e0b05e6 50%, #010d01fb 100%);
+  background-color: #11142000;
+  /* backdrop-filter: blur(15px); */
+  /* background-image:  radial-gradient(circle, #060202c7 13%, #0e0b05e6 50%, #010d01fb 100%); */
 
 }
 
