@@ -33,14 +33,13 @@ html {
   background:  url(../assets/apla.jpg);
   background-size: cover;
   background-position: center bottom;
-  background-blend-mode: darken;
 }
 
 body {
   display: flex;
   justify-content: center;
-  background-color: #11142000;
-  /* backdrop-filter: blur(15px); */
+  background-color: #1b02027d;
+  /* backdrop-filter: blur(5px); */
   /* background-image:  radial-gradient(circle, #060202c7 13%, #0e0b05e6 50%, #010d01fb 100%); */
 
 }
