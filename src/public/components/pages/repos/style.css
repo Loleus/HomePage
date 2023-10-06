@@ -12,6 +12,7 @@ table {
   transition: all 0.13s linear;
   background: rgba(22, 31, 34, 0.3);
   border-spacing: 0px;
+  backdrop-filter: blur(5px);
 }
 
 table:hover {

@@ -11,6 +11,7 @@ p {
   font-family: 'VT323', sans-serif;
   border-radius: 3px;
   text-shadow: 1px 1px 5px #009c0a;
+  backdrop-filter: blur(5px);
 }
 
 img {

@@ -6,3 +6,8 @@
   height: 86%;
   box-sizing: border-box;
 }
+
+img {
+  min-width:320px;
+  width:45vw;
+}

@@ -32,6 +32,7 @@ html {
   width: 100%;
   background:  url(../assets/apla.jpg);
   background-size: cover;
+  background-position: center bottom;
   background-blend-mode: darken;
 }
 
