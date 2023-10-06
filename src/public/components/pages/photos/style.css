@@ -33,4 +33,5 @@
   list-style: none;
   position: relative;
   padding: 0 0 0.5rem 0;
+  backdrop-filter: blur(5px);
 }

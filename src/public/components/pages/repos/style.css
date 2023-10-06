@@ -4,7 +4,6 @@ span {
   overflow: auto;
   justify-content: center;
   width: 100%;
-  /* margin-bottom: 12vh; */
 }
 
 table {
@@ -13,17 +12,22 @@ table {
   transition: all 0.13s linear;
   background: rgba(22, 31, 34, 0.3);
   border-spacing: 0px;
+  backdrop-filter: blur(5px);
 }
 
 table:hover {
   margin: 10vh auto;
   font-size: 27px;
   transition: border-spacing 0.12s linear;
-  /* background: rgb(17, 30, 10); */
   border-spacing: 9px;
   border-radius: 4px;
 }
-
+tr  {
+  box-shadow: 0px 0px 3px -1px #47a4fc;
+}
+/* tr td {
+  border: 1px solid rgba(0, 119, 255, 0.481)
+} */
 th,
 td {
   padding: 0 1.1vh;
@@ -32,27 +36,27 @@ td {
   font-size: 0.7em;
   line-height: 0.7em;
   color: #a5a5a5;
-  box-shadow: 0px 0px 3px 0px #493c07;
   transition: all 0.13s linear;
   text-shadow: 0 0 3px #a5a5a5;
+  background: rgba(17, 17, 17, 0.451);
 }
-
+/* 
 tr:nth-child(n + 1) td:first-child {
   background: rgba(17, 17, 17, 0.7);
-}
+} */
 
 tr th {
-  background: rgba(17, 17, 17, 0.7);
   overflow: hidden;
   color: #a5a5a5;
-  padding: 0.6vh 1vh 1.3vh;
+  line-height: 2em;
   text-shadow: 0 0 3px #a5a5a5;
+
 }
 
 td a {
   pointer-events: auto;
   font-weight: bold;
-  color: #4ab0b7;
+  color: #4a82b7;
   font-size: 1.1em;
   line-height: 1.2em;
   text-underline-position: under;
@@ -61,12 +65,11 @@ td a {
   text-transform: uppercase;
   padding: .5vh 0 1.1vh;
   display: block;
-  text-shadow: -1px 2px 3px #336914;
+  text-shadow: -1px 2px 3px #000000;
 }
 
 table td:hover a {
-  color: #6aec3c;
-  text-shadow: -1px 2px 3px #52ff64;
+  color: #47a4fc;
 }
 
 h1.blogListTitle.title,
