@@ -7,7 +7,7 @@
 }
 
 .navbar-area {
-  background:rgba(48, 44, 42, 0.5);
+  background:rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 26px -1px #111;
 }
 
@@ -163,7 +163,7 @@ a.site-logo:hover {
     overflow: hidden;
   }
   .navbar-area {
-    background: rgba(48, 44, 42, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     /* border-bottom: 1px solid #000; */
     mix-blend-mode: normal;
   }
