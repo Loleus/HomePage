@@ -68,7 +68,7 @@ a.site-logo:hover {
   text-shadow: 0 0 2px #ffffffd5;
 }
 .nav-toggler {
-  border: 3px solid #d6b212;
+  border: 3px solid wheat;
   padding: 5px;
   background-color: transparent;
   cursor: pointer;
@@ -82,7 +82,7 @@ a.site-logo:hover {
 .nav-toggler div:after {
   width: 28px;
   height: 3px;
-  background-color:#d6b212;
+  background-color:wheat;
   display: block;
   transition: 0.3s;
 }

@@ -31,10 +31,9 @@ html {
   height: 100%;
   width: 100%;
   background: repeating-conic-gradient(
-                hsla(0,0%,100%,.2) 0deg 15deg,
+                hsla(0, 0%, 100%, 0.212) 0deg 15deg,
                 hsla(0,0%,100%,0) 0deg 30deg
             ) #0ac;
-
 background-size: cover;
 }
 
@@ -42,9 +41,9 @@ body {
   display: flex;
   justify-content: center;
   background-color: #1b02027d;
-  /* backdrop-filter: blur(5px); */
-  background-image:  radial-gradient(circle, #280202 13%, #200d0dcc 50%, #0000006f 100%);;
-
+  backdrop-filter: blur(2px);
+  background-image:  radial-gradient(circle, #280202db 13%, #180505c1 50%, #08040478 100%);;
+  tab-size: 100%;
 }
 
 .wrapper {
