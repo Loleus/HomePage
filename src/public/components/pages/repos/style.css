@@ -7,18 +7,19 @@ span {
 }
 
 table {
-  margin: 10vh auto;
+  margin: 15vh auto;
   font-size: 27px;
   transition: all 0.13s linear;
-  background: rgba(3, 66, 86, 0.3);
+  background: rgba(3, 67, 86, 0.16);
   border-spacing: 0px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1px);
+  border-radius: 3px;
 }
 
 table:hover {
   margin: 10vh auto;
   font-size: 27px;
-  transition: border-spacing 0.12s linear;
+  /* transition: border-spacing 0.12s linear; */
   border-spacing: 9px;
   border-radius: 4px;
 }
@@ -28,6 +29,10 @@ table:hover {
 /* tr td {
   border: 1px solid rgba(0, 119, 255, 0.481)
 } */
+table:hover th, table:hover td {
+  background: rgb(12, 20, 29);
+  border-radius: 3px;
+}
 th,
 td {
   padding: 0 1.1vh;
@@ -38,7 +43,7 @@ td {
   color: #a5a5a5;
   transition: all 0.13s linear;
   text-shadow: 0 0 3px #a5a5a5;
-  background: rgb(12, 20, 29);
+  background: rgba(12, 20, 29, 0);
 }
 /* 
 tr:nth-child(n + 1) td:first-child {

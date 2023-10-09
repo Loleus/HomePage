@@ -1,6 +1,6 @@
 import Home from "./pages/home/index.js";
 import Repos from "./pages/repos/index.js";
-import About from "./pages/aboutMe/index.js";
+// import About from "./pages/aboutMe/index.js";
 import Music from "./pages/soundcloud/index.js";
 import Video from "./pages/youtube/index.js";
 import AddPhoto from "./pages/photos/addPhoto/index.js";
@@ -15,7 +15,7 @@ import Spinner from "./vendors/spinner/index.js";
 const routes = [
   ["wc-home", Home],
   ["wc-repos", Repos],
-  ["wc-about", About],
+  // ["wc-about", About],
   ["wc-music", Music],
   ["wc-video", Video],
   ["wc-contact", Contact],
@@ -35,7 +35,7 @@ for (let route of routes) {
 export default {
   Home,
   Repos,
-  About,
+  // About,
   Music,
   Video,
   Contact,
