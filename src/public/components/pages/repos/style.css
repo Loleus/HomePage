@@ -12,23 +12,16 @@ table {
   transition: all 0.13s linear;
   background: rgba(3, 67, 86, 0.16);
   border-spacing: 0px;
-  backdrop-filter: blur(1px);
   border-radius: 3px;
 }
 
 table:hover {
   margin: 10vh auto;
   font-size: 27px;
-  /* transition: border-spacing 0.12s linear; */
   border-spacing: 9px;
   border-radius: 4px;
 }
-/* tr  {
-  box-shadow: 0px 0px 3px -1px #47a4fc;
-} */
-/* tr td {
-  border: 1px solid rgba(0, 119, 255, 0.481)
-} */
+
 table:hover th, table:hover td {
   background: rgb(12, 20, 29);
   border-radius: 3px;
