@@ -14,14 +14,14 @@ table {
   border-spacing: 0px;
   backdrop-filter: blur(1px);
   border-radius: 3px;
+  box-shadow: 0 0 2px 0 beige;
 }
 
 table:hover {
   margin: 10vh auto;
   font-size: 27px;
-  /* transition: border-spacing 0.12s linear; */
   border-spacing: 9px;
-  border-radius: 4px;
+  box-shadow: none;
 }
 /* tr  {
   box-shadow: 0px 0px 3px -1px #47a4fc;
@@ -30,7 +30,7 @@ table:hover {
   border: 1px solid rgba(0, 119, 255, 0.481)
 } */
 table:hover th, table:hover td {
-  background: rgb(12, 20, 29);
+  background: rgb(35, 54, 75);
   border-radius: 3px;
 }
 th,
@@ -61,20 +61,23 @@ tr th {
 td a {
   pointer-events: auto;
   font-weight: bold;
-  color: #62aac1;
+
+  color: #cc7373;
   font-size: 1.1em;
   line-height: 1.2em;
   text-underline-position: under;
   text-decoration: none;
-  transition: all 0.13s linear;
+  transition: all 0.01s linear;
   text-transform: uppercase;
   padding: .5vh 0 1.1vh;
   display: block;
   text-shadow: -1px 2px 3px #000000;
 }
-
+table:hover td a {
+  color: #62aac1;
+}
 table td:hover a {
-  color: rgb(32, 177, 255);
+  color: rgb(162, 207, 255);
 }
 
 h1.blogListTitle.title,
@@ -91,4 +94,17 @@ a.blogListTitle {
   td {
     font-size: 16px;
   }
+  table {
+    margin: 10vh auto;
+    font-size: 27px;
+    border-spacing: 9px;
+    box-shadow: none;
+  }
+  table th, table td {
+    background: rgb(35, 54, 75);
+    border-radius: 3px;
+  }
+  table td a {
+    color:#62aac1
+;  }
 }
