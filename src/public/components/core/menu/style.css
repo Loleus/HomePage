@@ -18,12 +18,11 @@
 }
 
 a.site-logo {
-  font-size: 48px;
+  font-size: 50px;
   text-transform: uppercase;
   text-decoration: none;
   color: #dbbb2d00;
   margin-left:10px;
-  font-family: 'Dokdo', sans-serif;
   text-shadow: 0 0 4px wheat;
   transition: text-shadow 0.13s linear;
 }
