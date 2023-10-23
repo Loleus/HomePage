@@ -39,24 +39,19 @@ td {
   text-shadow: 0 0 3px #a5a5a5;
   background: rgba(12, 20, 29, 0);
 }
-/* 
-tr:nth-child(n + 1) td:first-child {
-  background: rgba(17, 17, 17, 0.7);
-} */
 
 tr th {
   overflow: hidden;
   color: #a5a5a5;
   line-height: 2em;
   text-shadow: 0 0 3px #a5a5a5;
-
 }
 
 td a {
   pointer-events: auto;
   font-weight: bold;
 
-  color: #cc7373;
+  color: #d22d2dc8;
   font-size: 1.1em;
   line-height: 1.2em;
   text-underline-position: under;
