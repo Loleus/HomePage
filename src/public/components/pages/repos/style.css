@@ -14,7 +14,7 @@ table {
   border-spacing: 0px;
   backdrop-filter: blur(1px);
   border-radius: 3px;
-  box-shadow: 0 0 2px 0 beige;
+  box-shadow: 0 0 46px 0 #0f0a0a;
 }
 
 table:hover {
