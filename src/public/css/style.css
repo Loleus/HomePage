@@ -30,10 +30,7 @@
 html {
   height: 100%;
   width: 100%;
-  background: repeating-conic-gradient(
-                hsla(0, 0%, 100%, 0.212) 0deg 15deg,
-                hsla(0,0%,100%,0) 0deg 30deg
-            ) #0ac;
+  background: repeating-conic-gradient( hsla(229.6, 56.1%, 92%, 0.43) 0deg 15deg, hsl(225.3, 35.3%, 72.7%) 0deg 30deg ) #16181f;
 background-size: cover;
 }
 
@@ -42,7 +39,7 @@ body {
   justify-content: center;
   background-color: #1b02027d;
   backdrop-filter: blur(2px);
-  background-image:  radial-gradient(circle, #280202db 13%, #180505c1 50%, #08040478 100%);;
+  background-image: radial-gradient(circle, #020328db 13%, #050a18c1 50%, #04050878 100%);
   tab-size: 100%;
 }
 
