@@ -50,7 +50,7 @@ tr th {
 td a {
   pointer-events: auto;
   font-weight: bold;
-  color: #d22d2dc8;
+  color: #748691;
   font-size: 1.1em;
   line-height: 1.2em;
   text-underline-position: under;
@@ -60,6 +60,7 @@ td a {
   padding: .5vh 0 1.1vh;
   display: block;
   text-shadow: -1px 2px 3px #000000;
+
 }
 table:hover td a {
   color: #62aac1;

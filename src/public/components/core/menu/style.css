@@ -63,7 +63,7 @@ a.site-logo:hover {
 .site-navbar ul li a.active {
   transform: rotateX(29deg);
   box-shadow: 0px 9px 24px -10px #aaa;
-  text-shadow: 0 0 3px #93c8efd4;
+  text-shadow: 0 0 3px #efc9c9;
 }
 .nav-toggler {
   border: 3px solid wheat;
