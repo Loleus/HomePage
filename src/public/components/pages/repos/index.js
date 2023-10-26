@@ -44,7 +44,6 @@ export default class Repos extends HTMLElement {
       if (repo.name != "loleus.github.io" && !(repo.description.includes('#'))) {
         this.tmp.content.getElementById("repos").innerHTML += `
           <tr>
-            <td id="no">${i++}</td>
             <td id="name"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
             <td id="type">${repo.description}</td>
             <td id="lang">${repo.language}</td>
