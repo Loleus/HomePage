@@ -67,13 +67,13 @@ export default class Card extends HTMLElement {
       const tmp = this.htmlToElement(this.base);
       let cont = tmp.cloneNode(true);
       this.appendChild(cont);
-      title.innerHTML = this.title;
+      // title.innerHTML = this.title;
       text.innerHTML = "loading...";
       const image = document.getElementById('img1');
       image.src = `${pic}`;
       image.onload =  () => {
-        text.innerHTML = this.text;
-        image.style = "background:bisque";
+        text.innerHTML = "";
+        image.style = "background:none";
       };
     };
   }
