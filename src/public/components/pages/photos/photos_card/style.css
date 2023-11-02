@@ -55,25 +55,38 @@ button.blogPostTitle {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100vw;
   max-width: 1200px;
-  width: 100%;
-  min-height: 84vh;
-  background: #131b23;
+  min-height: 90vh;
+  background: #cce5ff17;
   overflow: auto;
   z-index: 3;
   overflow-x: hidden;
+  backdrop-filter: blur(7px);
 }
 
 img#img1 {
   position: relative;
   width: auto;
-  left: 0;
-  top: 0 !important;
+  margin: 0 auto;
   display: block;
   z-index: 2;
-  max-width: 1200px;
+  max-height: 89vh;
   border: none;
   background: none;
+}
+
+.page .modalClose {
+  position: absolute;
+  z-index: 2;
+  padding: 0.5% 1%;
+  color: red;
+  border-radius: 8px;
+  font-size: 1.5em;
+  background: #68322385;
+  backdrop-filter: blur(7px);
+  top: 1%;
+  right: 1%;
 }
 
 #lmb {
