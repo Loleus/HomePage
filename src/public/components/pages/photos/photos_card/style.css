@@ -10,6 +10,7 @@ section.blogCard {
   box-shadow: 2px 2px 3px black;
   border-radius: 0.1em;
 }
+
 section.blogCard:hover {
   background-size: auto 160%;
 }
@@ -51,23 +52,28 @@ button.blogPostTitle {
 
 .page {
   display: block;
-  position: fixed;
-  top: 0;
+  position: absolute;
   left: 0;
-  right: 0;
+  top: 0;
+  max-width: 1200px;
+  width: 100%;
+  min-height: 84vh;
   background: #131b23;
   overflow: auto;
-  z-index:3;
+  z-index: 3;
+  overflow-x: hidden;
 }
-
 
 img#img1 {
   position: relative;
   width: auto;
-  display: inline-block;
-  max-height: 100vh;
-  max-width: 1440px;
-  padding: 7px;
+  left: 0;
+  top: 0 !important;
+  display: block;
+  z-index: 2;
+  max-width: 1200px;
+  border: none;
+  background: none;
 }
 
 #lmb {
@@ -105,8 +111,8 @@ form.addForm button {
 @media screen and (max-width: 767px) {
   section.blogCard {
     display: block;
-      width:33vh;
-      height:33vh;
+    width: 33vh;
+    height: 33vh;
   }
   li.blogPost {
     opacity: 1;
