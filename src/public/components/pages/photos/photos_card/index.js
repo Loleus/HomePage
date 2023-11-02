@@ -71,9 +71,11 @@ export default class Card extends HTMLElement {
       text.innerHTML = "loading...";
       const image = document.getElementById('img1');
       image.src = `${pic}`;
+
       image.onload =  () => {
         text.innerHTML = "";
         image.style = "background:none";
+        document.getElementById('modalClose').style = "display:block"
       };
     };
   }
