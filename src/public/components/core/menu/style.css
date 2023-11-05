@@ -18,12 +18,12 @@
 }
 
 a.site-logo {
-  font-size: 50px;
+  font-size: 45px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #dbbb2d00;
-  margin-left:10px;
-  text-shadow: 0 0 3px wheat;
+  color: #a6b5d87f;
+  margin-left: 10px;
+  text-shadow: -6px -6px 3px #e6715f4a;
   transition: text-shadow 0.13s linear;
 }
 
