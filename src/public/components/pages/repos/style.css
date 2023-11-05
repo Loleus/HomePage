@@ -10,12 +10,13 @@ span {
 table {
   margin: 19vh auto;
   font-size: 27px;
-  transition: border-spacing 0.05s linear, margin 0.05s linear;
+  transition: border-spacing 0.12s linear, margin 0.12s linear;
   background: rgba(3, 67, 86, 0.16);
   border-spacing: 0px;
   backdrop-filter: blur(2px);
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 0 0 46px 0 #0f0a0a;
+  padding: 1%;
 
 }
 
@@ -27,7 +28,7 @@ table:hover {
 }
 
 table:hover th, table:hover td {
-  background: rgb(35, 54, 75);
+  background: rgba(41, 67, 96, 0.3);
   border-radius: 1em;
 }
 th,
@@ -53,7 +54,7 @@ tr th {
 td a {
   pointer-events: auto;
   font-weight: bold;
-  color: #748691;
+  color: #7ba3b0;
   font-size: 1.1em;
   line-height: 1.2em;
   text-underline-position: under;
