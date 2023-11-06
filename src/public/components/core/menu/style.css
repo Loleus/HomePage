@@ -21,9 +21,9 @@ a.site-logo {
   font-size: 40px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fd9a8f59;
+  color: #05183d;
   margin-left: 10px;
-  text-shadow: -6px -6px 3px #d9978d4a;
+  text-shadow: -3px -3px 5px #0c438a;
   transition: text-shadow 0.13s linear;
 }
 
@@ -45,25 +45,28 @@ a.site-logo {
   text-decoration: none;
   background: #20202000;
   text-transform: uppercase;
-  color: #b3920000;
+  color: #7d1616;
   border-radius: 5px;
   box-shadow: 0px 0px 0 -5px #aaa;
-  text-shadow: 0 0 2px #b4897e;
+  text-shadow: -2px -2px 6px #911d00
 }
 
 .site-navbar ul li a:hover {
   transition: all 0.13s linear, text-shadow 0.13s linear;
-  box-shadow: 0px 9px 24px -10px #aaa;
-  text-shadow: 0 0 2px #ffffffd5;
+  box-shadow: 0px 0px 22px -5px #ff0f0f;
+  text-shadow: -2px -2px 6px #911d00;
   transform-origin: top center;
+  color: #c01d1d;
+  background: #0b0e1cba;
 }
 a.site-logo:hover {
   cursor: pointer;
 }
 .site-navbar ul li a.active {
   transform: rotateX(29deg);
-  box-shadow: 0px 9px 24px -10px #aaa;
-  text-shadow: 0 0 3px #efc9c9;
+  box-shadow: 0px 9px 22px -8px #ff0f0f;
+  text-shadow: -2px -2px 6px #911d00;
+  color: #c01d1d;
 }
 .nav-toggler {
   border: 3px solid wheat;
