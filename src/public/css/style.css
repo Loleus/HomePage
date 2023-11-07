@@ -18,10 +18,7 @@
   font-family: Barlow;
   src: url(../assets/fonts/Barlow/Barlow-Regular.ttf);
 }
-@font-face {
-  font-family: Dokdo;
-  src: url(../assets/fonts/Dokdo/Dokdo-Regular.ttf);
-}
+
 @font-face {
   font-family: VT323;
   src: url(../assets/fonts/VT323/VT323-Regular.ttf);
@@ -31,7 +28,9 @@ html {
   height: 100%;
   width: 100%;
   background: repeating-conic-gradient( hsla(229.6, 56.1%, 92%, 0.43) 0deg 15deg, hsl(225.3, 35.3%, 72.7%) 0deg 30deg ) #16181f;
-background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
