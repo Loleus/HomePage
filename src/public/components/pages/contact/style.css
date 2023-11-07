@@ -13,13 +13,13 @@ h1.title a {
   pointer-events: auto;
   text-decoration: none;
   display: inline-block;
-  text-shadow: -2px -2px 5px #074063;
+  text-shadow: -2px -2px 5px #112633;
   color: #216082;
   text-transform: uppercase;
   transition: color 0.14s linear;
 }
 h1.title a:hover {
-  color: #1aaa2d;
+  color: #5b95d3;
 }
 
 .socials {
@@ -60,9 +60,10 @@ h1.title a:hover {
   transition: transform 0.3s;
   /* border-bottom: 3px solid rosybrown; */
 }
-/* .socials li:hover span {
-  border-left: 3px solid rosybrown;
-} */
+.socials li:hover span {
+  background: #216082;
+  box-shadow: 0 0 4px 0 #083d6b;;
+}
 
 .socials li span:nth-of-type(1),
 .socials li span:nth-of-type(2) {
