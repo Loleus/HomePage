@@ -3,7 +3,7 @@
     width: 80%;
     height: calc(98vh - 90px);
   }
-
+  
   @media only screen and (max-width: 1020px) {
     #scwidget {
       width: 100vw;

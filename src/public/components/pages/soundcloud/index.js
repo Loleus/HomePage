@@ -8,8 +8,8 @@ export default class Soundcloud extends HTMLElement {
   htmlToElement() {
     const temp = document.createElement('template');
     temp.innerHTML += `
-    <link rel="stylesheet" href="/components/pages/soundcloud/style.css">
     <div class="container"><iframe id="scwidget" scrolling="no" frameborder="no" allow="autoplay"></iframe></div>
+    <link rel="stylesheet" href="/components/pages/soundcloud/style.css">
     `;
     const player = temp.content.querySelector('#scwidget');
     player.setAttribute('src', "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/loleus/");
