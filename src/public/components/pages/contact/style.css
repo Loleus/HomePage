@@ -62,7 +62,7 @@ h1.title a:hover {
 }
 .socials li:hover span {
   background: #216082;
-  box-shadow: 0 0 4px 0 #083d6b;;
+  box-shadow: 0 0 4px 0 #538bbb;
 }
 
 .socials li span:nth-of-type(1),
