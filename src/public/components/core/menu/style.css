@@ -19,12 +19,16 @@
 
 a.site-logo {
   font-size: 40px;
-  text-transform: uppercase;
+  transition: all 0.13s linear, text-shadow 0.13s linear;
+  padding: 14px 13px;
+  display: block;
   text-decoration: none;
-  color: #536980;
-  margin-left: 10px;
-  text-shadow: -3px -3px 5px #325786;
-  transition: text-shadow 0.13s linear;
+  background: #20202000;
+  text-transform: uppercase;
+  color: #7d1616;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0 -5px #aaa;
+  text-shadow: -2px -2px 6px #911d00;
 }
 
 .site-navbar ul {
@@ -32,6 +36,9 @@ a.site-logo {
   padding: 0;
   list-style: none;
   display: flex;
+}
+.site-navbar li.logo {
+  perspective: 600px;
 }
 .site-navbar ul li {
   padding: 0 5px;
@@ -60,9 +67,15 @@ a.site-logo {
   background: #0b0e1cba;
 }
 a.site-logo:hover {
+  transition: all 0.13s linear, text-shadow 0.13s linear;
+  box-shadow: 0px 0px 22px -5px #ff0f0f;
+  text-shadow: -2px -2px 6px #911d00;
+  transform-origin: top center;
+  color: #c01d1d;
+  background: #0b0e1cba;
   cursor: pointer;
 }
-.site-navbar ul li a.active {
+.site-navbar ul li a.active, a.site-logo.active {
   transform: rotateX(29deg);
   box-shadow: 0px 9px 22px -8px #ff0f0f;
   text-shadow: -2px -2px 6px #911d00;
@@ -123,6 +136,21 @@ a.site-logo:hover {
     display: block;
     width: auto;
     filter: blur(1px);
+  }
+
+  a.site-logo.active {
+    font-size: 40px;
+  transition: all 0.13s linear, text-shadow 0.13s linear;
+  padding: 14px 13px;
+  display: block;
+  text-decoration: none;
+  background: #20202000;
+  text-transform: uppercase;
+  color: #7d1616;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0 -5px #aaa;
+  text-shadow: -2px -2px 6px #911d00;
+  transform: rotateX(0deg);
   }
 
   .site-navbar {
