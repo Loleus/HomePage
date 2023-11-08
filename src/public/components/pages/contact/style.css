@@ -23,14 +23,14 @@ h1.title a:hover {
 }
 
 .socials {
-  display: inline-block;
+  display: flex;
   backdrop-filter: blur(5px);
   list-style: none;
-  padding: 1vh;
-  position: relative;
-  margin: 40px auto;
+  padding: 1vh 1vh 5vh;
+  margin: 13vw 0 40px;
   background: #16397c17;
-  padding-bottom: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .socials li {
@@ -142,4 +142,17 @@ li:hover p {
 li:hover a {
   transform: scale(1.167);
   color:#c7c7c7;
+}
+@media screen and (max-width: 767px) {
+  .socials {
+    display: flex;
+    backdrop-filter: blur(5px);
+    list-style: none;
+    padding: 1vh 1vh 5vh;
+    margin: 0 0 40px;
+    background: #16397c17;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 }

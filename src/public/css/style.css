@@ -55,12 +55,12 @@ footer {
   bottom: 0;
   display: block;
   left: 0;
-  background: black;
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  color: #ffa70480;
+  color: #888;
   z-index: 1;
   box-shadow: 0 0px 26px -1px #000;
-  text-shadow: 2px 2px 8px #dda63fbe;
+  text-shadow: 2px 2px 8px #333;
 }
 
 button {
