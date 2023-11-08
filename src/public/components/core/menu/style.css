@@ -132,7 +132,7 @@ a.site-logo {
   a.site-logo.active {
     font-size: 36px;
   transition: all 0.13s linear, text-shadow 0.13s linear;
-  padding: 14px 13px;
+  padding: 9px 13px;
   display: block;
   text-decoration: none;
   background: #20202000;
