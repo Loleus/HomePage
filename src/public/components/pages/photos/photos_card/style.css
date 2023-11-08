@@ -1,12 +1,12 @@
 section.blogCard {
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   display: inline-block;
   background-size: auto 150%;
   background-position: bottom;
   background-repeat: no-repeat;
   transition: background-size 0.1s linear;
-  margin: 3vh 7vh;
+  margin: 1vh 2px;
   box-shadow: 2px 2px 3px black;
   border-radius: 0.1em;
 }
@@ -22,8 +22,8 @@ li.blogPost {
   flex-direction: column;
   color: bisque;
   justify-content: center;
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   background: #6666663b;
   border-radius: 3px;
 }
@@ -124,8 +124,9 @@ form.addForm button {
 @media screen and (max-width: 767px) {
   section.blogCard {
     display: block;
-    width: 33vh;
-    height: 33vh;
+    width: 28vw;
+    height: 28vw;
+    margin: 2vw 0;
   }
   li.blogPost {
     opacity: 1;
