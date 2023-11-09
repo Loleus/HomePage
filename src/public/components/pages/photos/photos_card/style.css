@@ -9,6 +9,7 @@ section.blogCard {
   margin: 1vh 2px;
   box-shadow: 2px 2px 3px black;
   border-radius: 0.1em;
+  cursor: pointer;
 }
 
 section.blogCard:hover {

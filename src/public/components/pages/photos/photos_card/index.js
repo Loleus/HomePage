@@ -83,9 +83,9 @@ export default class Card extends HTMLElement {
   render() {
     this.innerHTML = `
     <link rel="stylesheet" href="/components/pages/photos/photos_card/style.css">
-    <section style="background-image: url('${this.thumbUrl}')" class="blogCard">
+    <section id="zoom" style="background-image: url('${this.thumbUrl}')" class="blogCard">
       <li class="blogPost">
-          <button class="blogPostTitle" id="zoom">${this.title}</button>
+          <button class="blogPostTitle" >${this.title}</button>
         <p class="blogPostText">${this.createdat}</p>
       </li>
       ${window.location.href.includes("admin") ? this.getEditBtns(this.id) : ''}
