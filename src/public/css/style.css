@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #1b02027d;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
   background-image: radial-gradient(circle, #020328db 13%, #050a18c1 50%, #04050878 100%);
   tab-size: 100%;
 }
