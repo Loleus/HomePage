@@ -20,7 +20,7 @@
 a.site-logo {
   font-size: 36px;
   transition: all 0.13s linear, text-shadow 0.13s linear;
-  padding: 14px 13px;
+  padding: 9px 13px;
   display: block;
   text-decoration: none;
   background: #20202000;
@@ -38,10 +38,12 @@ a.site-logo {
 }
 .site-navbar li.logo {
   perspective: 600px;
+  z-index: 1;
 }
 .site-navbar ul li {
   padding: 0 5px;
   perspective: 600px;
+  z-index: 1;
 }
 .site-navbar ul li a {
   font-size: 28px;
