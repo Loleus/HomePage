@@ -23,7 +23,7 @@ a.site-logo {
   padding: 9px 13px;
   display: block;
   text-decoration: none;
-  background: #20202000;
+  background: none;
   text-transform: uppercase;
   color: #7d1616;
   border-radius: 5px;
@@ -75,7 +75,7 @@ a.site-logo {
   color: #c01d1d;
 }
 .nav-toggler {
-  border: 3px solid wheat;
+  border: 3px solid #7d1616;
   padding: 5px;
   background-color: transparent;
   cursor: pointer;
@@ -89,7 +89,7 @@ a.site-logo {
 .nav-toggler div:after {
   width: 28px;
   height: 3px;
-  background-color: wheat;
+  background-color: #7d1616;
   display: block;
   transition: 0.3s;
 }
@@ -137,9 +137,9 @@ a.site-logo {
   padding: 9px 13px;
   display: block;
   text-decoration: none;
-  background: #20202000;
+  background: none;
   text-transform: uppercase;
-  color: #7d1616;
+  color: #ff0f0f;
   border-radius: 5px;
   text-shadow: -2px -2px 6px #911d00;
   transform: rotateX(0deg);
