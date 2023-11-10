@@ -13,7 +13,6 @@ export default class Home extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet prefetch" href="/components/pages/home/style.css">
       <div id="fsm_container" class="fsm-container">
-	      <img src="/components/pages/home/logo.svg" fetchpriority="high" alt="" srcset="">
       </div>
     `
   };

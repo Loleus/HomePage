@@ -27,7 +27,7 @@
 html {
   height: 100%;
   width: 100%;
-  background: repeating-conic-gradient( hsla(229.6, 56.1%, 92%, 0.43) 0deg 15deg, hsl(225.3, 35.3%, 72.7%) 0deg 30deg ) #16181f;
+  background: repeating-conic-gradient( hsl(0, 0%, 45%) 0deg 15deg, hsl(225.3, 35.3%, 72.7%) 0deg 30deg ) #16181f;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +37,6 @@ body {
   display: flex;
   justify-content: center;
   background-color: #1b02027d;
-  backdrop-filter: blur(3px);
   background-image: radial-gradient(circle, #020328db 13%, #050a18c1 50%, #04050878 100%);
   tab-size: 100%;
 }
@@ -46,7 +45,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-blend-mode: screen;
-  /* backdrop-filter: blur(8px); */
+  backdrop-filter: blur(8px);
 }
 
 footer {
