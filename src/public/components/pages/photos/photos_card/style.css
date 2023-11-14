@@ -121,8 +121,8 @@ form.addForm button {
     display: flex;
     width:100%;
     justify-content: space-evenly;
-    padding: 0 10vh 3vh;
-    margin-top: 1.67vh;
+    padding: 0 10vh;
+    margin-top: 0.67vh;
   }
   .page {
     display: block;

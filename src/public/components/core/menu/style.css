@@ -200,9 +200,17 @@ a.site-logo {
     background-color: rgba(26, 22, 13, 0.84);
   }
   .navbar-area {
-    background: rgba(0, 0, 0, 0.5);
-    /* border-bottom: 1px solid #000; */
+    background: rgb(13, 11, 7);
     mix-blend-mode: normal;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -191px;
+    border-radius: 14px;
+  }
+  .active {
+    left: 0px;
   }
   /* navbar css for mobile end */
 }
