@@ -2,6 +2,7 @@ export default function() {
   const navToggler = document.querySelector('.nav-toggler');
   const navMenu = document.querySelector('.site-navbar ul');
   const navLinks = document.querySelectorAll('.site-navbar a');
+  const navBarArea = document.querySelector('.navbar-area');
   
   const allEventListners = () => {
     navToggler.addEventListener('click', togglerClick);
@@ -11,6 +12,7 @@ export default function() {
   const togglerClick = () => {
     navToggler.classList.toggle('toggler-open');
     navMenu.classList.toggle('open');
+    navBarArea.classList.toggle('active');
   };
   
   const navLinkClick = () => {
