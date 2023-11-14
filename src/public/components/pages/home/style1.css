@@ -32,7 +32,8 @@
   }
 }
 .text {
-  /* filter: drop-shadow(1px .5px .1px rgba(255, 0, 0, .3)); */
+  
+  filter: drop-shadow(1px .5px 1px rgba(255, 0, 0, .3)) blur(0.3px);
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
