@@ -1,0 +1,21 @@
+<svg style="display: none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:ev="http://www.w3.org/2001/xml-events" xml:space="preserve">
+  <defs>
+    <radialGradient id="grad1" cx="50%" cy="65%" r="40%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color: #00a000; stop-opacity: 0.5" />
+      <stop offset="80%" style="stop-color: #023802; stop-opacity: 0.2" />
+      <stop offset="100%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0.01" />
+    </radialGradient>
+    <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color: rgb(199, 63, 0); stop-opacity: 1" />
+      <stop offset="60%" style="stop-color: rgb(129, 61, 5); stop-opacity: 0.4" />
+      <stop offset="100%" style="stop-color: rgb(46, 04, 0); stop-opacity: 0.01" />
+    </radialGradient>
+  </defs>
+
+  <g id="text">
+    <text dy="-22" font-size="2rem">NOW</text>
+    <text font-size="1.45rem">other</text>
+    <text dy="18" font-size="1.13rem">THING</text>
+  </g>
+</svg>
