@@ -1,10 +1,10 @@
-span {
+host:span {
   display: flex;
   flex-flow: column;
   overflow: auto;
   justify-content: center;
   width: 100%;
-  height: auto;
+  max-height: 100%;
 }
 
 table {
@@ -82,7 +82,7 @@ a.blogListTitle {
 
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 768px) {
   th,
   td {
     font-size: 16px;
@@ -98,6 +98,14 @@ a.blogListTitle {
     border-radius: 3px;
   }
   table td a {
-    color:#62aac1
-;  }
+    color:#62aac1;
+  }
+span {
+  display: flex;
+  flex-flow: column;
+  overflow: auto;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
 }
