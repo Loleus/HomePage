@@ -7,7 +7,7 @@
   @media only screen and (max-width: 1020px) {
     #scwidget {
       width: 100vw;
-      height: calc(100vh - 65px);
+      height: 97vh;
     }
 
   }
