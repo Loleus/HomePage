@@ -1,26 +1,22 @@
-const setup = async () => {
-  const resp = await fetch("/components/pages/home/template.html", {mode: "cors",});
-  const html = await resp.text();
-  const base = html;
+import { initer } from "/.././components/vendors/loader/index.js";
 
-  let htmlToElement = () => {
-    const temp = document.createElement("template");
-    temp.innerHTML += base;
-    return temp.content;
-  };
-
+const index = (tmp) => {
   return class Home extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({ mode: "open" });
     }
-
+  
     async connectedCallback() {
-      const tmp = htmlToElement(base);
       this.shadowRoot.innerHTML = ``;
       this.shadowRoot.appendChild(tmp.cloneNode(true));
     }
-  };
+  }
+}
+const name = "home"
+
+const setup = async () => {
+  return initer(index, name);
 };
 
 export default await setup();
