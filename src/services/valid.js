@@ -7,7 +7,7 @@ module.exports = (req, res) => {
 
     console.log("loggedIn")
     
-    res.redirect('/admin')
+    // res.redirect('/admin')
   } else {
     res.send('Please enter Username and Password!');
   }
