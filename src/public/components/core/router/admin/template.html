@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/components/core/menu/style.css">
+<link rel="stylesheet" href="/components/pages/repos/style.css">
+<div class="navbar-area">
+    <div class="container">
+      <nav class="site-navbar nav">
+        <a route="/admin" class="site-logo">lolo:2023</a>
+        <ul>
+          <li><a route="/admin/repos">Repos</a></li>
+          <li><a route="/admin/about">About</a></li>
+          <li><a route="/admin/music">Music</a></li>
+          <li><a route="/admin/video">Video</a></li>
+          <li><a route="/admin/photos">Photo</a></li>
+          <li><a route="/admin/contact">Contact</a></li>
+          <li><a route="/admin/addPhoto">Add Photo</a></li>
+        </ul>
+        <button class="nav-toggler">
+          <div></div>
+        </button>
+      </nav>
+    </div>
+  </div>
+  <wc-route path="/" title="Repos" component="wc-home"></wc-route>
+  <wc-route path="/admin" title="Repos" component="wc-home"></wc-route>
+  <wc-route path="/admin/repos" title="home" component="wc-repos"></wc-route>
+  <wc-route path="/admin/about" title="About Me" component="wc-about"></wc-route>
+  <wc-route path="/admin/music" title="Music" component="wc-music"></wc-route>
+  <wc-route path="/admin/video" title="Video" component="wc-video"></wc-route>
+  <wc-route path="/admin/contact" title="Contact" component="wc-contact"></wc-route>
+  <wc-route path="/admin/addPhoto" title="Add photo" component="wc-addphoto"></wc-route>
+  <wc-route path="/admin/photos" title="Photos" component="wc-photos"></wc-route>
+  <wc-route path="/photos/edit/:id" title="Edit Photo" component="wc-editphoto"></wc-route>
+  <wc-route path="*" title="404" component="wc-notfound"></wc-route>
+
+  <wc-outlet class="wc-outlet"></wc-outlet>
+  
+  <footer>No time Toulouse</footer>
