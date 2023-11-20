@@ -16,7 +16,7 @@ table {
   backdrop-filter: blur(2px);
   border-radius: 5px;
   box-shadow: 0 0 46px 0 #0f0a0a;
-  padding: 1%;
+  padding: 1vh;
 
 }
 
@@ -24,16 +24,16 @@ table:hover {
   margin: 14vh auto;
   font-size: 27px;
   border-spacing: 9px;
-  border-radius: 1em;
+  border-radius: 5px;
 }
 
 table:hover th, table:hover td {
   background: rgba(41, 67, 96, 0.3);
-  border-radius: 1em;
+  border-radius: 5px;
 }
 th,
 td {
-  padding: 0 1.1vh;
+  padding: 1vh;
   border-radius: 3px;
   pointer-events: none;
   font-size: 0.7em;
@@ -61,7 +61,7 @@ td a {
   text-decoration: none;
   transition: all 0.01s linear;
   text-transform: uppercase;
-  padding: .5vh 0 1.1vh;
+  /* padding: .5vh 0 1.1vh; */
   display: block;
   text-shadow: -1px 2px 3px #000000;
 
