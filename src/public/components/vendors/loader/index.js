@@ -5,7 +5,7 @@
       
         let htmlToElement = () => {
           const temp = document.createElement("template");
-          temp.innerHTML += base;
+          temp.innerHTML = base;
           return temp.content;
         };
         const tmp = htmlToElement(base);
