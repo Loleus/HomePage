@@ -20,22 +20,8 @@ export default class Card extends HTMLElement {
     return this.getAttribute("text");
   };
 
-  async getCard() {
-    const html = await fetch("/components/pages/photos/photos_card/template.html", { mode: 'cors' })
-    const tempStream = await html.text()
-    this.base = tempStream;
-  };
-
-  htmlToElement(html) {
-    const temp = document.createElement('template');
-    temp.innerHTML += html;
-    return temp.content;
-  };
-
   async connectedCallback() {
 
-    await this.getCard();
-    
     this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
     this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
 
@@ -64,30 +50,15 @@ export default class Card extends HTMLElement {
 
   async showPic(pic) {
     if (this.id && this.id !== null) {
-      const tmp = this.htmlToElement(this.base);
-      let cont = tmp.cloneNode(true);
-      this.appendChild(cont);
-      // title.innerHTML = this.title;
-      text.innerHTML = "loading...";
-      const image = document.getElementById('img1');
-      image.src = `${pic}`;
-
-      image.onload =  () => {
-        text.innerHTML = "";
-        image.style = "background:none";
-        document.getElementById('modalClose').style = "display:block"
-      };
+      const image = document.querySelector('.show');
+      image.style = `background-image:url("${pic}"); display:block`;
     };
   }
 
   render() {
     this.innerHTML = `
     <link rel="stylesheet" href="/components/pages/photos/photos_card/style.css">
-    <section id="zoom" style="background-image: url('${this.thumbUrl}')" class="blogCard">
-      <li class="blogPost">
-          <button class="blogPostTitle" >${this.title}</button>
-        <p class="blogPostText">${this.createdat}</p>
-      </li>
+    <section id="zoom" class="blogCard" style="background-image: url('${this.thumbUrl}')">
       ${window.location.href.includes("admin") ? this.getEditBtns(this.id) : ''}
     </section>`;
   };
