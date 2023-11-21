@@ -22,7 +22,7 @@ export default class Card extends HTMLElement {
 
   async connectedCallback() {
 
-    this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
+    this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}&sz=w360-h360`
     this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
 
     this.render();
