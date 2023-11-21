@@ -1,7 +1,7 @@
 .pager {
   display: flex;
   width:100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0 10vh;
   margin-top: 1.67vh;
 }
@@ -9,7 +9,6 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 6vh;
   background:#aaa;
-  /* border:1px solid #333; */
   border-radius: 3px;
   line-height: 2em;
   font-weight: bold;
@@ -22,15 +21,32 @@
   line-height: 2em;
   border: none;
 }
-.blogCards {
+
+span#gal {
   flex-basis: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 1200px;
-  margin: 0 auto 3%;
+  margin: 0 auto;
   list-style: none;
   padding: 0;
   backdrop-filter: blur(5px);
+  overflow-x: hidden;
+}
+
+.show {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  max-width: 1200px;
+  height: 100vh;
+  background: url();
+  overflow: auto;
+  z-index: 3;
+  overflow: hidden;
+  backdrop-filter: blur(7px);
 }

@@ -64,17 +64,19 @@ export default class Card extends HTMLElement {
 
   async showPic(pic) {
     if (this.id && this.id !== null) {
-      const tmp = this.htmlToElement(this.base);
-      let cont = tmp.cloneNode(true);
-      this.appendChild(cont);
-      // title.innerHTML = this.title;
-      text.innerHTML = "loading...";
-      const image = document.getElementById('img1');
-      image.src = `${pic}`;
+      // const tmp = this.htmlToElement(this.base);
+      // let cont = tmp.cloneNode(true);
+      // this.appendChild(cont);
+      // text.innerHTML = "loading...";
+      const image = document.querySelector('.show');
+      console.log(image)
+      image.style = `background:url("${pic}")`;
+
 
       image.onload =  () => {
         text.innerHTML = "";
-        image.style = "background:none";
+        image.style = `block`;
+        // image.style = "background:none";
         document.getElementById('modalClose').style = "display:block"
       };
     };
@@ -84,10 +86,6 @@ export default class Card extends HTMLElement {
     this.innerHTML = `
     <link rel="stylesheet" href="/components/pages/photos/photos_card/style.css">
     <section id="zoom" style="background-image: url('${this.thumbUrl}')" class="blogCard">
-      <li class="blogPost">
-          <button class="blogPostTitle" >${this.title}</button>
-        <p class="blogPostText">${this.createdat}</p>
-      </li>
       ${window.location.href.includes("admin") ? this.getEditBtns(this.id) : ''}
     </section>`;
   };
