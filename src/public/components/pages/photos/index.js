@@ -66,7 +66,7 @@ export default class Photos extends HTMLElement {
   };
 
   getPhotoCard(e) {
-    let {picId, id, title, createdAt, text}= e;
+    let {picId, id, title, createdAt, text} = e;
     return `
     <wc-card id="${id}" picid="${picId}" title="${title}" createdat="${createdAt}" text="${text}"></wc-card>
     `
@@ -78,7 +78,8 @@ export default class Photos extends HTMLElement {
     page.innerText = this.page;
     const gallery = this.tmp.getElementById("gal");
     const photoParams = await photoListL.slice(getOffset(this.page), getOffset(this.page) + listPerPage);
-    const setCards = photoParams.map(e => this.getPhotoCard(e));
+    console.log(await photoListL[1].picId)
+    const setCards = photoParams.map((e,index) => this.getPhotoCard(e, index));
     gallery.innerHTML = setCards.join("");
     this.loading = false;
   }

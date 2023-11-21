@@ -55,10 +55,10 @@
 .show .modalClose {
   position: absolute;
   z-index: 2;
-  padding: 0.5% 1%;
+  padding: 0.2% 0.75%;
   color: red;
   border-radius: 8px;
-  font-size: 1.5em;
+  font-size: 2.5em;
   background: #68322385;
   backdrop-filter: blur(7px);
   top: 1%;
