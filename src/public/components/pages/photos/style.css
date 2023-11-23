@@ -55,7 +55,7 @@
 .show .modalClose {
   position: absolute;
   z-index: 2;
-  padding: 0.2% 0.75%;
+  padding: 0 10px 4px;
   color: red;
   border-radius: 8px;
   font-size: 2.5em;
@@ -63,6 +63,7 @@
   backdrop-filter: blur(7px);
   top: 1%;
   right: 1%;
+  line-height: 1.1em;
 }
 
 @media screen and (max-width: 767px) {
