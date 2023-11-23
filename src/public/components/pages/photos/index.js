@@ -34,6 +34,14 @@ export default class Photos extends HTMLElement {
       case "dec":
         (this.page == 1) ? this.page = this.page : this.page -= 1;
         break;
+        
+      case "prev":
+        (this.page == lastPage) ? this.page : this.page += 1;
+        break;
+      case "next":
+        (this.page == 1) ? this.page = this.page : this.page -= 1;
+        break;
+
       default:
         break;
     }
