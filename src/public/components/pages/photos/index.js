@@ -31,10 +31,10 @@ export default class Photos extends HTMLElement {
     let image = document.querySelector('.show');
     switch (id) {
       case "inc":
-        (this.page == lastPage) ? this.page : this.page += 1;
+        (this.page == lastPage) ? this.page  = 0 : this.page += 1;
         break;
       case "dec":
-        (this.page == 1) ? this.page = this.page : this.page -= 1;
+        (this.page == 1) ? this.page = lastPage : this.page -= 1;
         break;
       case "prev":
         index == 0 ? index = photoListL.length-1 : index = index - 1;
