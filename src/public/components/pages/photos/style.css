@@ -81,8 +81,8 @@
   line-height: 50px;
   font-weight: 700;
   top: 0;
-  background: rgb(157, 167, 157);
-  padding: 0 16px;
+  background: rgba(82, 88, 97, 0.47);
+  padding: 0 16px 5px;
 }
 .swiper#prev {
   left: 0;

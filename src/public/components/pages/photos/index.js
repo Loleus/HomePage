@@ -26,7 +26,6 @@ export default class Photos extends HTMLElement {
   };
 
   buttonStates(e) {
-    let pic = `http://drive.google.com/uc?id=${currPic}`;
     let id = e.target.id
     e.preventDefault();
     let image = document.querySelector('.show');
@@ -38,14 +37,14 @@ export default class Photos extends HTMLElement {
         (this.page == 1) ? this.page = this.page : this.page -= 1;
         break;
       case "prev":
-        index = index - 1;
+        index == 0 ? index = photoListL.length-1 : index = index - 1;
         currPic = photoListL[index].picId
-        this.showing(image, pic)
+        this.showing(image)
         break;
       case "next":
-        index = index + 1;
+        index == photoListL.length-1 ? index = 0 : index = index + 1;
         currPic = photoListL[index].picId
-        this.showing(image, pic)
+        this.showing(image)
         break;
 
       default:
@@ -54,7 +53,8 @@ export default class Photos extends HTMLElement {
     console.log(photoListL)
     
   };
-showing(image,pic) {
+showing(image) {
+  let pic = `http://drive.google.com/uc?id=${currPic}`;
   image.style = `background-image:url("${pic}"); display:block`;
 }
   attributeChangedCallback(attrName, oldVal, newVal) {
@@ -99,7 +99,7 @@ showing(image,pic) {
     page.innerText = this.page;
     const gallery = this.tmp.getElementById("gal");
     photoParams = await photoListL.slice(getOffset(this.page), getOffset(this.page) + listPerPage);
-   const  setCards = photoParams.map((e,index) => this.getPhotoCard(e, index));
+   const setCards = photoParams.map((e,index) => this.getPhotoCard(e, index));
     gallery.innerHTML = setCards.join("");
     this.loading = false;
   }
