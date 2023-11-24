@@ -1,10 +1,10 @@
 import { getOffset, photoList, listPerPage } from "./utils/helper.util.js";
-const show = document.querySelector(".show")
 const list = await photoList();
 const photoListL = list;
 const lastPage = Math.ceil(photoListL.length / listPerPage);
-let currPic = undefined;
+let currPic;
 let photoParams;
+let index;
 export default class Photos extends HTMLElement {
 
   static get observedAttributes() { return ["loading", "page"]; }
@@ -26,8 +26,10 @@ export default class Photos extends HTMLElement {
   };
 
   buttonStates(e) {
+    let pic = `http://drive.google.com/uc?id=${currPic}`;
     let id = e.target.id
     e.preventDefault();
+    let image = document.querySelector('.show');
     switch (id) {
       case "inc":
         (this.page == lastPage) ? this.page : this.page += 1;
@@ -35,13 +37,26 @@ export default class Photos extends HTMLElement {
       case "dec":
         (this.page == 1) ? this.page = this.page : this.page -= 1;
         break;
+      case "prev":
+        index = index - 1;
+        currPic = photoListL[index].picId
+        this.showing(image, pic)
+        break;
+      case "next":
+        index = index + 1;
+        currPic = photoListL[index].picId
+        this.showing(image, pic)
+        break;
 
       default:
         break;
     }
-    console.log(photoParams)
+    console.log(photoListL)
+    
   };
-
+showing(image,pic) {
+  image.style = `background-image:url("${pic}"); display:block`;
+}
   attributeChangedCallback(attrName, oldVal, newVal) {
     attrName == "page" ? this.updatePage() : this.render();
   };
@@ -64,7 +79,8 @@ export default class Photos extends HTMLElement {
   async connectedCallback() {
     this.addEventListener("click", (e) => {
       e.target.parentElement.picid ? currPic = e.target.parentElement.picid : null;
-      console.log(currPic)
+      e.target.parentElement.picid ? index = photoListL.map(function(e) { return e.picId; }).indexOf(`${currPic}`) : null
+ 
       this.buttonStates(e)
     }, true);
     await this.getCard();
