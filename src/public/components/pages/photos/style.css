@@ -65,7 +65,31 @@
   right: 1%;
   line-height: 1.1em;
 }
-
+.switch {
+  width:100vw;
+  height: 50px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 50px);
+}
+.swiper {
+  position: absolute;
+  display: block;
+  height: auto;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 700;
+  top: 0;
+  background: rgb(157, 167, 157);
+  padding: 0 16px;
+}
+.swiper#prev {
+  left: 0;
+}
+.swiper#next {
+  right: 0;
+}
 @media screen and (max-width: 767px) {
   .pager {
     display: flex;

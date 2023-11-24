@@ -1,9 +1,10 @@
 import { getOffset, photoList, listPerPage } from "./utils/helper.util.js";
-
+const show = document.querySelector(".show")
 const list = await photoList();
 const photoListL = list;
 const lastPage = Math.ceil(photoListL.length / listPerPage);
-
+let currPic = undefined;
+let photoParams;
 export default class Photos extends HTMLElement {
 
   static get observedAttributes() { return ["loading", "page"]; }
@@ -34,17 +35,11 @@ export default class Photos extends HTMLElement {
       case "dec":
         (this.page == 1) ? this.page = this.page : this.page -= 1;
         break;
-        
-      case "prev":
-        (this.page == lastPage) ? this.page : this.page += 1;
-        break;
-      case "next":
-        (this.page == 1) ? this.page = this.page : this.page -= 1;
-        break;
 
       default:
         break;
     }
+    console.log(photoParams)
   };
 
   attributeChangedCallback(attrName, oldVal, newVal) {
@@ -68,6 +63,8 @@ export default class Photos extends HTMLElement {
 
   async connectedCallback() {
     this.addEventListener("click", (e) => {
+      e.target.parentElement.picid ? currPic = e.target.parentElement.picid : null;
+      console.log(currPic)
       this.buttonStates(e)
     }, true);
     await this.getCard();
@@ -85,8 +82,8 @@ export default class Photos extends HTMLElement {
     const page = this.tmp.getElementById("page");
     page.innerText = this.page;
     const gallery = this.tmp.getElementById("gal");
-    const photoParams = await photoListL.slice(getOffset(this.page), getOffset(this.page) + listPerPage);
-    const setCards = photoParams.map((e,index) => this.getPhotoCard(e, index));
+    photoParams = await photoListL.slice(getOffset(this.page), getOffset(this.page) + listPerPage);
+   const  setCards = photoParams.map((e,index) => this.getPhotoCard(e, index));
     gallery.innerHTML = setCards.join("");
     this.loading = false;
   }
