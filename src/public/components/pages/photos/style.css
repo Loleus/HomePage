@@ -55,7 +55,7 @@
 .show .modalClose {
   position: absolute;
   z-index: 2;
-  padding: 0.2% 0.75%;
+  padding: 0 10px 4px;
   color: red;
   border-radius: 8px;
   font-size: 2.5em;
@@ -63,8 +63,33 @@
   backdrop-filter: blur(7px);
   top: 1%;
   right: 1%;
+  line-height: 1.1em;
 }
-
+.switch {
+  width:100vw;
+  height: 50px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 50px);
+}
+.swiper {
+  position: absolute;
+  display: block;
+  height: auto;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 700;
+  top: 0;
+  background: rgba(82, 88, 97, 0.47);
+  padding: 0 16px 5px;
+}
+.swiper#prev {
+  left: 0;
+}
+.swiper#next {
+  right: 0;
+}
 @media screen and (max-width: 767px) {
   .pager {
     display: flex;

@@ -1,9 +1,10 @@
 import { getOffset, photoList, listPerPage } from "./utils/helper.util.js";
-
 const list = await photoList();
 const photoListL = list;
 const lastPage = Math.ceil(photoListL.length / listPerPage);
-
+let currPic;
+let photoParams;
+let index;
 export default class Photos extends HTMLElement {
 
   static get observedAttributes() { return ["loading", "page"]; }
@@ -27,6 +28,7 @@ export default class Photos extends HTMLElement {
   buttonStates(e) {
     let id = e.target.id
     e.preventDefault();
+    let image = document.querySelector('.show');
     switch (id) {
       case "inc":
         (this.page == lastPage) ? this.page : this.page += 1;
@@ -34,11 +36,27 @@ export default class Photos extends HTMLElement {
       case "dec":
         (this.page == 1) ? this.page = this.page : this.page -= 1;
         break;
+      case "prev":
+        index == 0 ? index = photoListL.length-1 : index = index - 1;
+        currPic = photoListL[index].picId
+        this.showing(image)
+        break;
+      case "next":
+        index == photoListL.length-1 ? index = 0 : index = index + 1;
+        currPic = photoListL[index].picId
+        this.showing(image)
+        break;
+
       default:
         break;
     }
+    console.log(photoListL)
+    
   };
-
+showing(image) {
+  let pic = `http://drive.google.com/uc?id=${currPic}`;
+  image.style = `background-image:url("${pic}"); display:block`;
+}
   attributeChangedCallback(attrName, oldVal, newVal) {
     attrName == "page" ? this.updatePage() : this.render();
   };
@@ -60,6 +78,9 @@ export default class Photos extends HTMLElement {
 
   async connectedCallback() {
     this.addEventListener("click", (e) => {
+      e.target.parentElement.picid ? currPic = e.target.parentElement.picid : null;
+      e.target.parentElement.picid ? index = photoListL.map(function(e) { return e.picId; }).indexOf(`${currPic}`) : null
+ 
       this.buttonStates(e)
     }, true);
     await this.getCard();
@@ -77,8 +98,8 @@ export default class Photos extends HTMLElement {
     const page = this.tmp.getElementById("page");
     page.innerText = this.page;
     const gallery = this.tmp.getElementById("gal");
-    const photoParams = await photoListL.slice(getOffset(this.page), getOffset(this.page) + listPerPage);
-    const setCards = photoParams.map((e,index) => this.getPhotoCard(e, index));
+    photoParams = await photoListL.slice(getOffset(this.page), getOffset(this.page) + listPerPage);
+   const setCards = photoParams.map((e,index) => this.getPhotoCard(e, index));
     gallery.innerHTML = setCards.join("");
     this.loading = false;
   }
