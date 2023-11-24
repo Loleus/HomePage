@@ -37,12 +37,12 @@ export default class Photos extends HTMLElement {
         (this.page == 1) ? this.page = lastPage : this.page -= 1;
         break;
       case "prev":
-        index == 0 ? index = photoListL.length-1 : index = index - 1;
+        index == 0 ? index = photoListL.length-1 : index -= 1;
         currPic = photoListL[index].picId
         this.showing(image)
         break;
       case "next":
-        index == photoListL.length-1 ? index = 0 : index = index + 1;
+        index == photoListL.length-1 ? index = 0 : index += 1;
         currPic = photoListL[index].picId
         this.showing(image)
         break;
