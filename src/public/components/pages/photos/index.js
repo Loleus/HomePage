@@ -5,6 +5,7 @@ const lastPage = Math.ceil(photoListL.length / listPerPage);
 let currPic;
 let photoParams;
 let index;
+let counter;;
 export default class Photos extends HTMLElement {
 
   static get observedAttributes() { return ["loading", "page"]; }
@@ -26,9 +27,11 @@ export default class Photos extends HTMLElement {
   };
 
   buttonStates(e) {
+    let counter = document.querySelector('.counter');
     let id = e.target.id
     e.preventDefault();
     let image = document.querySelector('.show');
+    counter.innerHTML = `${index+1}/${photoListL.length}`
     switch (id) {
       case "inc":
         (this.page == lastPage) ? this.page  = 0 : this.page += 1;
@@ -45,15 +48,16 @@ export default class Photos extends HTMLElement {
         index == photoListL.length-1 ? index = 0 : index += 1;
         currPic = photoListL[index].picId
         this.showing(image)
+        
         break;
 
       default:
         break;
     }
-    console.log(photoListL)
-    
   };
 showing(image) {
+  let counter = document.querySelector('.counter');
+  counter.innerHTML = `${index+1}/${photoListL.length}`
   let pic = `http://drive.google.com/uc?id=${currPic}`;
   image.style = `background-image:url("${pic}"); display:block`;
 }
