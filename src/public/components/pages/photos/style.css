@@ -57,12 +57,12 @@
   z-index: 2;
   padding: 0 10px 4px;
   color: red;
-  border-radius: 8px;
+  border-radius: 3px;
   font-size: 2.5em;
   background: #68322385;
   backdrop-filter: blur(7px);
-  top: 1%;
-  right: 1%;
+  top: 5px;
+  right: 5px;
   line-height: 1.1em;
 }
 .switch {
@@ -81,6 +81,7 @@
   line-height: 50px;
   font-weight: 700;
   top: 0;
+  color: azure;
   background: rgba(82, 88, 97, 0.47);
   padding: 0 16px 5px;
 }
@@ -90,20 +91,31 @@
 .swiper#next {
   right: 0;
 }
+span.counter {
+  position: absolute;
+  left: 5px;
+  color: azure;
+  width: auto;
+  height: auto;
+  border: 1px solid #666;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 700;
+  background: rgba(82, 88, 97, 0.47);
+  padding: 0 16px 5px;
+  bottom: 5px;
+}
+
 @media screen and (max-width: 767px) {
+
   .pager {
     display: flex;
     width:100%;
     justify-content: space-evenly;
     padding: 0 10vh;
     margin-bottom: 3vh;
-  }
-
-  section.blogCard {
-    display: block;
-    width: 28vw;
-    height: 28vw;
-    margin: 1vh 0;
   }
 
 }

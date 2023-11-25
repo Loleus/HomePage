@@ -39,13 +39,6 @@ form.addForm button {
   border-radius: 3px;
 }
 @media screen and (max-width: 767px) {
-  .pager {
-    display: flex;
-    width:100%;
-    justify-content: space-evenly;
-    padding: 0 10vh;
-    margin-bottom: 3vh;
-  }
 
   section.blogCard {
     display: block;
