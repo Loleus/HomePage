@@ -8,9 +8,9 @@ host:span {
 }
 
 table {
-  margin: 19vh auto;
-  font-size: 27px;
-  transition: border-spacing 0.12s linear, margin 0.12s linear;
+  margin: 13vh auto;
+  font-size: 1em;
+  transition: border-spacing 0.12s linear, margin 0.12s linear, font-size 0.12s linear;
   background: rgba(3, 67, 86, 0.16);
   border-spacing: 0px;
   backdrop-filter: blur(2px);
@@ -20,8 +20,7 @@ table {
 }
 
 table:hover {
-  margin: 14vh auto;
-  font-size: 27px;
+  margin: 11vh auto;
   border-spacing: 9px;
   border-radius: 5px;
 }
@@ -31,17 +30,18 @@ table:hover td {
   background: rgba(41, 67, 96, 0.3);
   border-radius: 5px;
 }
+
 th,
 td {
   padding: 1vh;
   border-radius: 3px;
   pointer-events: none;
-  font-size: 0.7em;
   color: #a5a5a5;
   transition: all 0.13s linear;
   text-shadow: 0 0 3px #a5a5a5;
   background: rgba(12, 20, 29, 0);
   background-position: center;
+  background-blend-mode: color-burn;
 }
 
 tr th {
@@ -55,19 +55,18 @@ td a {
   pointer-events: auto;
   font-weight: bold;
   color: #7ba3b0;
-  font-size: 1.1em;
   line-height: 1.2em;
   text-underline-position: under;
   text-decoration: none;
   transition: all 0.01s linear;
   text-transform: uppercase;
-  /* padding: .5vh 0 1.1vh; */
+  transition: all 0.13s linear;
   display: block;
   text-shadow: -1px 2px 3px #000000;
 }
 table:hover td a {
   color: #62aac1;
-  line-height: 1.67em;
+  font-size: 27px;
 }
 table td:hover a {
   color: rgb(162, 207, 255);
@@ -87,10 +86,11 @@ a.blogListTitle {
     font-size: 16px;
     line-height: 1.7em;
     background-position: center;
+    background-blend-mode: hard-light;
   }
   table {
     margin: 10vh auto;
-    font-size: 27px;
+    font-size: 28px;
     border-spacing: 9px;
     box-shadow: none;
   }
@@ -101,6 +101,7 @@ a.blogListTitle {
   }
   table td a {
     color: #62aac1;
+    font-size: 24px;
   }
   span {
     display: flex;
