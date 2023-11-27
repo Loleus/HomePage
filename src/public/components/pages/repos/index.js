@@ -40,7 +40,7 @@ return class Repos extends HTMLElement {
       if (repo.name != "loleus.github.io" && !(repo.description.includes('#'))) {
         tmp.getElementById("repos").innerHTML += `
           <tr>
-            <td id="name" style="background-image:url('https://loleus.github.io/${repo.name}/bogp.jpg'); background-size:cover"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
+            <td id="name" style="background-image:url('https://loleus.github.io/${repo.name}/bogp.jpg')"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
             <td id="type">${repo.description}</td>
             <td id="lang">${repo.language}</td>
           </tr>
