@@ -22,13 +22,10 @@ table {
 table:hover {
   margin: 11vh auto;
   border-spacing: 9px;
-  border-radius: 5px;
 }
-
-table:hover th,
 table:hover td {
-  background: rgba(41, 67, 96, 0.3);
-  border-radius: 5px;
+  background-size: cover;
+  background-blend-mode: color-dodge;
 }
 
 th,
@@ -41,7 +38,8 @@ td {
   text-shadow: 0 0 3px #a5a5a5;
   background: rgba(12, 20, 29, 0);
   background-position: center;
-  background-blend-mode: color-burn;
+  background-blend-mode: hard-light;
+  background-size: cover;
 }
 
 tr th {
@@ -64,9 +62,10 @@ td a {
   display: block;
   text-shadow: -1px 2px 3px #000000;
 }
+
 table:hover td a {
   color: #62aac1;
-  font-size: 27px;
+  font-size: 25px;
 }
 table td:hover a {
   color: rgb(162, 207, 255);
