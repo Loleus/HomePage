@@ -38,7 +38,7 @@ td {
   text-shadow: 0 0 3px #a5a5a5;
   background: rgba(12, 20, 29, 0);
   background-position: center;
-  background-blend-mode: hard-light;
+  background-blend-mode: color-burn;
   background-size: cover;
 }
 
@@ -85,7 +85,7 @@ a.blogListTitle {
     font-size: 16px;
     line-height: 1.7em;
     background-position: center;
-    background-blend-mode: hard-light;
+    background-blend-mode: normal;
   }
   table {
     margin: 10vh auto;
@@ -97,6 +97,7 @@ a.blogListTitle {
   table td {
     background: rgb(35, 54, 75);
     border-radius: 3px;
+    background-size: cover;
   }
   table td a {
     color: #62aac1;
