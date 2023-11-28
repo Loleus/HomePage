@@ -5,6 +5,7 @@
   padding: 0 10vh;
   margin-top: 1.67vh;
 }
+
 .pager p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 6vh;
@@ -22,6 +23,7 @@
   line-height: 2em;
   border: none;
 }
+
 #gal {
   flex-basis: 100%;
   display: flex;
@@ -64,6 +66,7 @@
   top: 5px;
   right: 5px;
 }
+
 .switch {
   width:100vw;
   height: 50px;
@@ -72,6 +75,7 @@
   left: 0;
   top: calc(50% - 50px);
 }
+
 .swiper {
   position: absolute;
   display: block;
@@ -84,12 +88,15 @@
   background: rgba(82, 88, 97, 0.47);
   padding: 0 16px 5px;
 }
+
 .swiper#prev {
   left: 0;
 }
+
 .swiper#next {
   right: 0;
 }
+
 span.counter {
   position: absolute;
   left: 5px;
