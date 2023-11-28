@@ -32,9 +32,10 @@ td {
   color: #a5a5a5;
   transition: all 0.13s linear;
   text-shadow: 0 0 3px #a5a5a5;
-  background: rgb(35, 54, 75);
+  /* background: rgb(35, 54, 75); */
   background-position: center;
   background-size: auto;
+  background-blend-mode: none;
 }
 
 td a {
@@ -51,11 +52,18 @@ td a {
   text-shadow: -1px 2px 3px #000000;
 }
 
+table:hover td {
+  background: rgb(35, 54, 75);
+  background-position: center;
+  background-size: auto;
+  background-blend-mode: hard-light;
+}
+
 table:hover td a {
   color:#c6e2f1;
   font-size: 25px;
 }
-td:hover {
+table td:hover {
   background-blend-mode: color-dodge;
 }
 table td:hover a {
@@ -77,7 +85,7 @@ table td:hover a {
     line-height: 1.7em;
     background-position: center;
     border-radius: 3px;
-    background-blend-mode: difference;
+    background-blend-mode: hard-light;
   }
 
   table td a {
