@@ -5,7 +5,6 @@ const lastPage = Math.ceil(photoListL.length / listPerPage);
 let currPic;
 let photoParams;
 let index;
-let counter;;
 export default class Photos extends HTMLElement {
 
   static get observedAttributes() { return ["loading", "page"]; }
