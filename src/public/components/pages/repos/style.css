@@ -41,6 +41,7 @@ td a {
   transition: all 0.13s linear;
   display: block;
   text-shadow: -1px 2px 3px #000000;
+  display: inline-block;
 }
 
 table:hover td {
