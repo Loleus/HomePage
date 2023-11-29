@@ -1,5 +1,5 @@
 table {
-  margin: 13vh auto;
+  margin: 17vh auto;
   font-size: 1em;
   transition: border-spacing 0.12s linear, margin 0.12s linear, font-size 0.12s linear;
   background: rgba(3, 67, 86, 0.16);
@@ -11,7 +11,7 @@ table {
 }
 
 table:hover {
-  margin: 11vh auto;
+  margin: 8vh auto;
   border-spacing: 9px;
 }
 
@@ -26,10 +26,11 @@ td {
   background-position: center;
   background-size: auto;
   background-blend-mode: none;
+  box-shadow: 0px 3px 2px 0 black;
 }
 
 td a {
-  padding: 1vh;
+  padding: 1vh 0;
   pointer-events: auto;
   font-weight: bold;
   color: #7ba3b0;
@@ -42,6 +43,7 @@ td a {
   display: block;
   text-shadow: -1px 2px 3px #000000;
   display: inline-block;
+  width: 160px;
 }
 
 table:hover td {
@@ -54,6 +56,8 @@ table:hover td {
 table:hover td a {
   color:#c6e2f1;
   font-size: 25px;
+  width: 200px;
+  border: none;
 }
 table td:hover {
   background-blend-mode: color-dodge;
@@ -65,7 +69,7 @@ table td:hover a {
 
 @media only screen and (max-width: 768px) {
   table {
-    margin: 10vh auto;
+    margin: 12vh auto;
     font-size: 28px;
     border-spacing: 9px;
     box-shadow: none;
