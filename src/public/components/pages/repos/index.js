@@ -41,8 +41,8 @@ return class Repos extends HTMLElement {
         tmp.getElementById("repos").innerHTML += `
           <tr>
             <td id="name" style="background-image:url('https://loleus.github.io/${repo.name}/bogp.jpg')"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
-            <td id="type">${repo.description}</td>
-            <td id="lang">${repo.language}</td>
+            <td style="padding: 0 1vh" id="type">${repo.description}</td>
+            <td style="padding: 0 1vh" id="lang">${repo.language}</td>
           </tr>
         `
       };
