@@ -17,7 +17,7 @@ table:hover {
 
 th,
 td {
-  padding: 1vh;
+  /* padding: 1vh; */
   border-radius: 3px;
   pointer-events: none;
   color: #a5a5a5;
@@ -29,6 +29,7 @@ td {
 }
 
 td a {
+  padding: 1vh;
   pointer-events: auto;
   font-weight: bold;
   color: #7ba3b0;
