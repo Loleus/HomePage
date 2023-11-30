@@ -4,6 +4,7 @@
   margin: 0 auto;
   list-style: none;
   position: relative;
+  font-family: "Reenie Beanie", sans-serif;
 }
 
 .navbar-area {
@@ -17,8 +18,8 @@
   align-items: center;
 }
 
-a.site-logo {
-  font-size: 36px;
+li a.site-logo {
+  font-size: 46px;
   transition: all 0.13s linear, text-shadow 0.13s linear;
   padding: 9px 13px;
   display: block;
@@ -28,6 +29,7 @@ a.site-logo {
   color: #7d1616;
   border-radius: 5px;
   text-shadow: -2px -2px 6px #911d00;
+  font-family: "VT323", sans-serif;
 }
 
 .site-navbar ul {
@@ -39,6 +41,7 @@ a.site-logo {
 .site-navbar li.logo {
   perspective: 600px;
   z-index: 1;
+  font-family: "Barlow", sans-serif;
 }
 .site-navbar ul li {
   padding: 0 5px;
@@ -46,7 +49,7 @@ a.site-logo {
   z-index: 1;
 }
 .site-navbar ul li a {
-  font-size: 28px;
+  font-size: 38px;
   transition: all 0.13s linear, text-shadow 0.13s linear;
   padding: 14px 13px;
   display: block;
@@ -57,6 +60,7 @@ a.site-logo {
   border-radius: 5px;
   box-shadow: 0px 0px 0 -5px #aaa;
   text-shadow: -2px -2px 6px #911d00;
+  font-family: "Reenie Beanie", sans-serif;
 }
 
 .site-navbar ul li a:hover, a.site-logo:hover {
@@ -206,7 +210,7 @@ a.site-logo {
     position: absolute;
     z-index: 1;
     top: 0;
-    left: -191px;
+    left: -145px;
     border-radius: 14px;
   }
   .active {

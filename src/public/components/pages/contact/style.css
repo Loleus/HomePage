@@ -17,6 +17,7 @@ h1.title a {
   color: #6e6e6e;
   text-transform: uppercase;
   transition: color 0.14s linear;
+
 }
 h1.title a:hover {
   color: #c7c7c7;
@@ -53,6 +54,7 @@ h1.title a:hover {
   line-height: 120px;
   transition: all 0.2s ease-in-out;
   text-shadow: 0px 0 5px rgb(0, 0, 0);
+
 }
 
 .socials li span {
@@ -134,6 +136,7 @@ h1.title a:hover {
 p {
   color: #6e6e6e;
   transition: color 0.2s ease-in-out;
+  font-family: "Barlow", sans-serif;
 }
 li:hover p {
   display: block;

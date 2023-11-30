@@ -4,7 +4,6 @@
   margin: 0;
   box-sizing: border-box;
   text-align: center;
-  font-family: "Barlow", sans-serif;
   font-size: 1.1rem;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -25,6 +24,10 @@
 @font-face {
   font-family: Gravitas One;
   src: url(../assets/fonts/Gravitas/GravitasOne-Regular.ttf);
+}
+@font-face {
+  font-family: Reenie Beanie;
+  src: url(../assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf);
 }
 
 html {
