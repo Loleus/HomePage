@@ -56,7 +56,7 @@ li a.site-logo {
   text-decoration: none;
   background: #20202000;
   text-transform: uppercase;
-  color: #7d1616;
+  color: #8f0404;
   border-radius: 5px;
   box-shadow: 0px 0px 0 -5px #aaa;
   text-shadow: -2px -2px 6px #911d00;
@@ -76,7 +76,7 @@ li a.site-logo {
   transform: rotateX(29deg);
   box-shadow: 0px 9px 22px -12px #ff0f0f;
   text-shadow: -2px -2px 6px #911d00;
-  color: #c01d1d;
+  color: #cd0606;
 }
 .nav-toggler {
   border: 3px solid #7d1616;
@@ -177,7 +177,7 @@ li a.site-logo {
     padding: 17px 25px;
     font-size: 28px;
     box-shadow: none;
-    background: #0e172978;
+    background: #0c0d1078;
   }
 
   .site-navbar ul li a:hover {

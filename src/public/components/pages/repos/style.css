@@ -15,10 +15,15 @@ table:hover {
   margin: 10vh auto;
   border-spacing: 9px;
 }
-
+td svg {
+  transition: opacity 0.1s linear;
+  opacity:0.3;
+}
+table:hover td svg {
+  opacity:1;
+}
 th,
 td {
-  
   font-size: 20px;
   /* padding: 1vh; */
   border-radius: 3px;
@@ -36,8 +41,8 @@ td a {
   padding: 1vh 0;
   pointer-events: auto;
   font-weight: bold;
-  color: #b7d5df;
-  line-height: 1.2em;
+  color: #5a808c;
+  line-height: 0.8em;
   text-underline-position: under;
   text-decoration: none;
   transition: all 0.01s linear;
@@ -47,7 +52,9 @@ td a {
   text-shadow: -1px 2px 3px #000000;
   display: inline-block;
   width: 160px;
-  background: rgba(35, 40, 61, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 32px;
+  font-family: "VT323", sans-serif;
 }
 
 table:hover td {
@@ -56,12 +63,13 @@ table:hover td {
   background-size: auto;
   background-blend-mode: hard-light;
   box-shadow: 0px 3px 2px 0 black;
-  color: #c8f2ec;
+  color: #bed1d9;
 }
 
 table:hover td a {
+
   color:#c6e2f1;
-  font-size: 25px;
+  font-size: 36px;
   width: 200px;
   border: none;
   background: transparent;
@@ -75,6 +83,9 @@ table td:hover a {
 }
 
 @media only screen and (max-width: 768px) {
+  td svg {
+    opacity:1;
+  }
   table {
     margin: 12vh auto 0;
     font-size: 28px;
@@ -93,7 +104,7 @@ table td:hover a {
 
   table td a {
     color: #add6e3;
-    font-size: 24px;
+    font-size: 32px;
     width: 180px;
   }
 }
