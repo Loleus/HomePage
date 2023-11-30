@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   padding: 0 10vh;
   margin-top: 1.67vh;
+  font-family: "Barlow", sans-serif;
 }
 
 .pager p {
@@ -15,6 +16,7 @@
   font-weight: bold;
   font-size: 1em;
   text-shadow: 0 0 1px #666;
+  font-family: "Barlow", sans-serif;
 }
 
 .pager button {
@@ -22,6 +24,7 @@
   padding-bottom: 0.2rem;
   line-height: 2em;
   border: none;
+  font-family: "Barlow", sans-serif;
 }
 
 #gal {
@@ -52,6 +55,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: "Barlow", sans-serif;
 }
 
 .show .modalClose {
