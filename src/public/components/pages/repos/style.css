@@ -1,5 +1,5 @@
 table {
-  margin: 10% auto 0;
+  margin: 7% auto 0;
   /* font-size: 1em; */
   transition: border-spacing 0.12s linear, margin 0.12s linear, font-size 0.12s linear;
   background: rgba(3, 67, 86, 0.16);
@@ -12,7 +12,7 @@ table {
 }
 
 table:hover {
-  margin: 6% auto 0;
+  margin: 4% auto 0;
   border-spacing: 9px;
 }
 td svg {
@@ -22,10 +22,14 @@ td svg {
 table:hover td svg {
   opacity:1;
 }
+td:nth-child(n + 2) {
+  display: block;
+  visibility: hidden;
+  width: 0;
+}
 th,
 td {
   font-size: 14px;
-  line-height: 1.7em;
   border-radius: 3px;
   pointer-events: none;
   color: #849e9a;
@@ -67,6 +71,12 @@ table:hover td {
   box-shadow: 0px 3px 2px 0 black;
   color: #bed1d9;
 }
+table:hover td:nth-child(n + 2) {
+  visibility: visible;
+  display: block;
+  width: auto;
+}
+
 
 table:hover td a {
   color: #8ebcca;
@@ -91,8 +101,7 @@ table td:hover a {
     opacity:1;
   }
   table {
-    margin: 12vh auto 0;
-
+    margin: 14% auto 0;
     border-spacing: 9px;
     box-shadow: none;
   }
@@ -100,12 +109,15 @@ table td:hover a {
   table td {
     background: rgb(35, 54, 75);
     font-size: 14px;
-    line-height: 1.7em;
     background-position: center;
     border-radius: 3px;
     background-blend-mode: hard-light;
   }
-
+  td:nth-child(n + 2) {
+    display: block;
+    width:auto;
+    visibility: visible;
+  }
   table td a {
     color: #8ebcca;
     font-size: 32px;
