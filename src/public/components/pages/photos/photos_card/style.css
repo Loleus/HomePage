@@ -1,6 +1,6 @@
 section.blogCard {
-  width: 12vw;
-  height: 12vw;
+  width: 22vh;
+  height: 22vh;
   display: inline-block;
   background-size: auto 150%;
   background-position: bottom;
@@ -42,8 +42,8 @@ form.addForm button {
 
   section.blogCard {
     display: block;
-    width: 28vw;
-    height: 28vw;
+    width: 16vh;
+    height: 16vh;
     margin: 1vh 0;
   }
 
