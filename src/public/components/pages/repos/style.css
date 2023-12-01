@@ -34,7 +34,7 @@ td {
   background-position: center;
   background-size: auto;
   background-blend-mode: none;
-  
+  overflow: hidden;
 }
 
 td a {
@@ -55,6 +55,8 @@ td a {
   background: rgba(0, 0, 0, 0.5);
   font-size: 32px;
   font-family: "VT323", sans-serif;
+  transform: translateX(-100%);
+
 }
 
 table:hover td {
@@ -72,7 +74,10 @@ table:hover td a {
   width: 200px;
   border: none;
   background: transparent;
+  transform: translateX(0%);
 }
+
+
 table td:hover {
   background-blend-mode: color-dodge;
 }
@@ -105,5 +110,6 @@ table td:hover a {
     color: #8ebcca;
     font-size: 32px;
     width: 180px;
+    transform: translateX(0%);
   }
 }
