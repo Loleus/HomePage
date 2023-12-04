@@ -9,20 +9,19 @@ table {
   font-size: 28px;
   font-family: "Barlow", sans-serif;
 }
+table tr {
+  transform-style: preserve-3d;
+  perspective: 100px;
+}
 table tr:nth-child(odd) td:first-child {
-  animation: polygons 1.81s linear infinite reverse;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transform: rotateX(36deg);
 }
 table tr:nth-child(even) td:first-child {
-  animation: polygons 1.81s linear infinite;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transform: rotateX(-36deg);
 }
 table:hover {
   margin: 4% auto 0;
   border-spacing: 9px;
-  box-shadow: 0 0 46px 0 #0f0a0a;
 }
 table:hover td {
   background: rgb(35, 40, 61);
@@ -39,6 +38,8 @@ table:hover td:nth-child(n+2) {
   visibility: visible;
   display: block;
   width: auto;
+  margin-left: 14px;
+  font-size: 0.4em;
 }
 table:hover td svg {
   opacity: 1;
@@ -88,6 +89,7 @@ table td:nth-child(n+2) {
   display: block;
   visibility: hidden;
   width: 0;
+  font-size: 0.4em;
 }
 table td a {
   padding: 1vh 0;
@@ -97,7 +99,6 @@ table td a {
   line-height: 0.8em;
   text-underline-position: under;
   text-decoration: none;
-  transition: all 0.01s linear;
   text-transform: uppercase;
   transition: all 0.13s linear;
   display: block;
@@ -131,6 +132,7 @@ table td svg {
     display: block;
     width: auto;
     visibility: visible;
+    margin-left: 14px;
   }
   table td:nth-child(n+2) svg {
     opacity: 1;
