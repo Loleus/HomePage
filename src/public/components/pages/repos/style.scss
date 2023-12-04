@@ -14,7 +14,7 @@ table {
     &:nth-child(odd) {
       td {
         &:first-child {
-          animation: polygons 0.67s linear infinite reverse;
+          animation: polygons 1.81s linear infinite reverse;
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
       }
@@ -22,7 +22,7 @@ table {
     &:nth-child(even) {
       td {
         &:first-child {
-          animation: polygons 0.67s linear infinite;
+          animation: polygons 1.81s linear infinite;
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
       }
