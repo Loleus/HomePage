@@ -10,20 +10,26 @@ table {
   border-radius: 5px;
   font-size: 28px;
   font-family: "Barlow", sans-serif;
+
   tr {
+    transform-style: preserve-3d;
+    perspective: 100px;
+    // transform: rotateY(45deg);
     &:nth-child(odd) {
       td {
         &:first-child {
-          animation: polygons 1.81s linear infinite reverse;
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          // animation: polygons 1.81s linear infinite reverse;
+          // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          transform: rotateX(36deg);
         }
       }
     }
     &:nth-child(even) {
       td {
         &:first-child {
-          animation: polygons 1.81s linear infinite;
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          // animation: polygons 1.81s linear infinite;
+          // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          transform: rotateX(-36deg);
         }
       }
     }
@@ -32,7 +38,7 @@ table {
   &:hover {
     margin: 4% auto 0;
     border-spacing: 9px;
-    box-shadow: 0 0 46px 0 #0f0a0a;
+    // box-shadow: 0 0 46px 0 #0f0a0a;
     td {
       background: rgb(35, 40, 61);
       background-position: center;
@@ -45,6 +51,8 @@ table {
         visibility: visible;
         display: block;
         width: auto;
+        margin-left: 14px;
+        font-size: .4em;
       }
       svg {
         opacity: 1;
@@ -95,6 +103,7 @@ table {
       display: block;
       visibility: hidden;
       width: 0;
+      font-size: .4em;
     }
     a {
       padding: 1vh 0;
@@ -104,7 +113,6 @@ table {
       line-height: 0.8em;
       text-underline-position: under;
       text-decoration: none;
-      transition: all 0.01s linear;
       text-transform: uppercase;
       transition: all 0.13s linear;
       display: block;
@@ -139,6 +147,8 @@ table {
         display: block;
         width: auto;
         visibility: visible;
+        margin-left: 14px;
+
         svg {
           opacity: 1;
         }
