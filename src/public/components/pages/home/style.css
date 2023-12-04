@@ -4,9 +4,9 @@
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  filter: drop-shadow(0px 0.5px 1px rgb(94, 22, 22)) blur(0.1px);;
 }
 .text {
+  filter: drop-shadow(0px 0.5px 1px rgb(94, 22, 22)) blur(0.1px);;
   -webkit-user-select: none; /* Chrome all / Safari all */
   -moz-user-select: none; /* Firefox all */
   -ms-user-select: none; /* IE 10+ */
