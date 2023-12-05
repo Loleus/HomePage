@@ -1,3 +1,7 @@
+.span {
+  transform-style: preserve-3d;
+  perspective: 80px;
+}
 table {
   margin: 7% auto 0;
   transition:
@@ -10,26 +14,33 @@ table {
   border-radius: 5px;
   font-size: 28px;
   font-family: "Barlow", sans-serif;
-
+  transform-style: preserve-3d;
+  perspective: 80px;
   tr {
     transform-style: preserve-3d;
-    perspective: 100px;
-    // transform: rotateY(45deg);
+    perspective: 80px;
+    transform: rotateY(45deg);
+    animation: rotate45deg 5.81s linear infinite alternate;
+    @keyframes rotate45deg {
+      to {
+        transform: rotateY(-45deg);
+      }
+    }
     &:nth-child(odd) {
       td {
         &:first-child {
-          // animation: polygons 1.81s linear infinite reverse;
-          // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-          transform: rotateX(36deg);
+          animation: polygons 5.81s linear infinite reverse;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          transform: rotateX(33deg);
         }
       }
     }
     &:nth-child(even) {
       td {
         &:first-child {
-          // animation: polygons 1.81s linear infinite;
-          // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-          transform: rotateX(-36deg);
+          animation: polygons 5.81s linear infinite;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          transform: rotateX(-33deg);
         }
       }
     }
@@ -38,32 +49,37 @@ table {
   &:hover {
     margin: 4% auto 0;
     border-spacing: 9px;
-    // box-shadow: 0 0 46px 0 #0f0a0a;
-    td {
-      background: rgb(35, 40, 61);
-      background-position: center;
-      background-size: auto;
-      background-blend-mode: hard-light;
-      box-shadow: 0px 3px 2px 0 black;
-      color: #bed1d9;
-      transition: clip-path 0.2s linear;
-      &:nth-child(n + 2) {
-        visibility: visible;
-        display: block;
-        width: auto;
-        margin-left: 14px;
-        font-size: .4em;
-      }
-      svg {
-        opacity: 1;
-      }
-      a {
-        color: #8ebcca;
-        font-size: 36px;
-        width: 200px;
-        border: none;
-        background: transparent;
-        transform: translateX(0%);
+    transform-style: preserve-3d;
+    perspective: 80px;
+    tr {
+      transform-style: preserve-3d;
+      perspective: 80px;
+      td {
+        background: rgb(35, 40, 61);
+        background-position: center;
+        background-size: auto;
+        background-blend-mode: hard-light;
+        box-shadow: 0px 3px 2px 0 black;
+        color: #bed1d9;
+        transition: clip-path 0.2s linear;
+        &:nth-child(n + 2) {
+          visibility: visible;
+          display: block;
+          width: auto;
+          margin-left: 14px;
+          font-size: 0.4em;
+        }
+        svg {
+          opacity: 1;
+        }
+        a {
+          color: #8ebcca;
+          font-size: 36px;
+          width: 200px;
+          border: none;
+          background: transparent;
+          transform: translateX(0%);
+        }
       }
     }
   }
@@ -103,7 +119,7 @@ table {
       display: block;
       visibility: hidden;
       width: 0;
-      font-size: .4em;
+      font-size: 0.4em;
     }
     a {
       padding: 1vh 0;

@@ -1,3 +1,8 @@
+.span {
+  transform-style: preserve-3d;
+  perspective: 80px;
+}
+
 table {
   margin: 7% auto 0;
   transition: border-spacing 0.12s linear, margin 0.12s linear, font-size 0.12s linear;
@@ -8,22 +13,43 @@ table {
   border-radius: 5px;
   font-size: 28px;
   font-family: "Barlow", sans-serif;
+  transform-style: preserve-3d;
+  perspective: 80px;
 }
 table tr {
   transform-style: preserve-3d;
-  perspective: 100px;
+  perspective: 80px;
+  transform: rotateY(45deg);
+  animation: rotate45deg 5.81s linear infinite alternate;
+}
+@keyframes rotate45deg {
+  to {
+    transform: rotateY(-45deg);
+  }
 }
 table tr:nth-child(odd) td:first-child {
-  transform: rotateX(36deg);
+  animation: polygons 5.81s linear infinite reverse;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transform: rotateX(33deg);
 }
 table tr:nth-child(even) td:first-child {
-  transform: rotateX(-36deg);
+  animation: polygons 5.81s linear infinite;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transform: rotateX(-33deg);
 }
 table:hover {
   margin: 4% auto 0;
   border-spacing: 9px;
+  transform-style: preserve-3d;
+  perspective: 80px;
 }
-table:hover td {
+table:hover tr {
+  transform-style: preserve-3d;
+  perspective: 80px;
+}
+table:hover tr td {
   background: rgb(35, 40, 61);
   background-position: center;
   background-size: auto;
@@ -34,17 +60,17 @@ table:hover td {
   transition: clip-path 0.2s linear;
   transition: clip-path 0.2s linear, -webkit-clip-path 0.2s linear;
 }
-table:hover td:nth-child(n+2) {
+table:hover tr td:nth-child(n+2) {
   visibility: visible;
   display: block;
   width: auto;
   margin-left: 14px;
   font-size: 0.4em;
 }
-table:hover td svg {
+table:hover tr td svg {
   opacity: 1;
 }
-table:hover td a {
+table:hover tr td a {
   color: #8ebcca;
   font-size: 36px;
   width: 200px;
