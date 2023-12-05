@@ -14,12 +14,9 @@ table {
   tr {
     transform-style: preserve-3d;
     perspective: 100px;
-    // transform: rotateY(45deg);
     &:nth-child(odd) {
       td {
         &:first-child {
-          // animation: polygons 1.81s linear infinite reverse;
-          // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
           transform: rotateX(36deg);
         }
       }
@@ -27,8 +24,6 @@ table {
     &:nth-child(even) {
       td {
         &:first-child {
-          // animation: polygons 1.81s linear infinite;
-          // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
           transform: rotateX(-36deg);
         }
       }
@@ -79,18 +74,6 @@ table {
     background-size: auto;
     background-blend-mode: none;
     overflow: hidden;
-
-    @keyframes polygons {
-      25% {
-        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-      }
-      50% {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-      }
-      75% {
-        clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
-      }
-    }
 
     &:hover {
       background-blend-mode: color-dodge;
