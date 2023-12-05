@@ -14,6 +14,8 @@ table {
   tr {
     transform-style: preserve-3d;
     perspective: 100px;
+    transform: rotateY(55deg);
+    animation: rotate55 2s linear infinite alternate;
     &:nth-child(odd) {
       td {
         &:first-child {
@@ -33,7 +35,6 @@ table {
   &:hover {
     margin: 4% auto 0;
     border-spacing: 9px;
-    // box-shadow: 0 0 46px 0 #0f0a0a;
     td {
       background: rgb(35, 40, 61);
       background-position: center;
@@ -143,5 +144,10 @@ table {
         transform: translateX(0%);
       }
     }
+  }
+}
+@keyframes rotate55 {
+  to {
+    transform: rotateY(-55deg);
   }
 }
