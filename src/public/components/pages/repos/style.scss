@@ -10,77 +10,14 @@ table {
   border-radius: 5px;
   font-size: 28px;
   font-family: "Barlow", sans-serif;
-
-  tr {
+  tbody#repos {
     transform-style: preserve-3d;
-    perspective: 100px;
-    transform: rotateY(0deg);
-    animation: rotate55 2s linear infinite;
-    &:nth-child(odd) {
-      td {
-        &:first-child {
-          transform: rotateX(36deg);
-        }
-      }
-    }
-    &:nth-child(even) {
-      td {
-        &:first-child {
-          transform: rotateX(36deg);
-        }
-      }
-    }
-    td {
-      font-size: 14px;
-      border-radius: 3px;
-      pointer-events: none;
-      color: #849e9a;
-      transition: transform 0.12s linear;
-      text-shadow: 0 0 3px #a5a5a5;
-      background-position: center;
-      background-size: auto;
-      background-blend-mode: none;
-      overflow: hidden;
-      &:nth-child(n + 2) {
-        display: block;
-        visibility: hidden;
-        width: 0;
-        font-size: 0.4em;
-      }
-      a {
-        padding: 1vh 0;
-        pointer-events: auto;
-        font-weight: bold;
-        color: #5a808c;
-        line-height: 0.8em;
-        text-underline-position: under;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: all 0.13s linear;
-        display: block;
-        text-shadow: -1px 2px 3px #000000;
-        display: inline-block;
-        width: 160px;
-        background: rgba(0, 0, 0, 0.5);
-        font-size: 32px;
-        font-family: "VT323", sans-serif;
-        transform: translateX(-100%);
-      }
-      svg {
-        transition: opacity 0.1s linear;
-        opacity: 0.3;
-      }
-    }
-  }
-
-  &:hover {
-    margin: 4% auto 0;
-    border-spacing: 9px;
+    perspective: 680px;
     tr {
       transform-style: preserve-3d;
       perspective: 100px;
       transform: rotateY(0deg);
-      animation: none;
+      animation: rotate55 2s linear infinite;
       &:nth-child(odd) {
         td {
           &:first-child {
@@ -96,39 +33,109 @@ table {
         }
       }
       td {
-        &:first-child {
-          background: rgb(35, 40, 61);
-          background-position: center;
-          background-size: auto;
-          background-blend-mode: hard-light;
-          box-shadow: 0px 3px 2px 0 black;
-          color: #bed1d9;
-          &:hover {
-            background-blend-mode: color-dodge;
-            transform: rotateX(0deg);
-            a {
-              color: rgb(180, 216, 255);
-              background: transparent;
+        font-size: 14px;
+        border-radius: 3px;
+        pointer-events: none;
+        color: #849e9a;
+        transition: transform 0.12s linear;
+        text-shadow: 0 0 3px #a5a5a5;
+        background-position: center;
+        background-size: auto;
+        background-blend-mode: none;
+        overflow: hidden;
+        &:nth-child(n + 2) {
+          display: block;
+          visibility: hidden;
+          width: 0;
+          font-size: 0.4em;
+        }
+        a {
+          padding: 1vh 0;
+          pointer-events: auto;
+          font-weight: bold;
+          color: #5a808c;
+          line-height: 0.8em;
+          text-underline-position: under;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: all 0.13s linear;
+          display: block;
+          text-shadow: -1px 2px 3px #000000;
+          display: inline-block;
+          width: 160px;
+          background: rgba(0, 0, 0, 0.5);
+          font-size: 32px;
+          font-family: "VT323", sans-serif;
+          transform: translateX(-100%);
+        }
+        svg {
+          transition: opacity 0.1s linear;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    margin: 4% auto 0;
+    border-spacing: 9px;
+    tbody#repos {
+      transform-style: inherit;
+      perspective: none;
+      tr {
+        transform-style: preserve-3d;
+        perspective: 100px;
+        transform: rotateY(0deg);
+        animation: none;
+        &:nth-child(odd) {
+          td {
+            &:first-child {
+              transform: rotateX(36deg);
             }
           }
         }
-        &:nth-child(n + 2) {
-          visibility: visible;
-          display: block;
-          width: auto;
-          margin-left: 14px;
-          font-size: 0.4em;
+        &:nth-child(even) {
+          td {
+            &:first-child {
+              transform: rotateX(36deg);
+            }
+          }
         }
-        svg {
-          opacity: 1;
-        }
-        a {
-          color: #8ebcca;
-          font-size: 36px;
-          width: 200px;
-          border: none;
-          background: transparent;
-          transform: translateX(0%);
+        td {
+          &:first-child {
+            background: rgb(35, 40, 61);
+            background-position: center;
+            background-size: auto;
+            background-blend-mode: hard-light;
+            box-shadow: 0px 3px 2px 0 black;
+            color: #bed1d9;
+            &:hover {
+              background-blend-mode: color-dodge;
+              transform: rotateX(0deg);
+              a {
+                color: rgb(180, 216, 255);
+                background: transparent;
+              }
+            }
+          }
+          &:nth-child(n + 2) {
+            visibility: visible;
+            display: block;
+            width: auto;
+            margin-left: 14px;
+            font-size: 0.4em;
+          }
+          svg {
+            opacity: 1;
+          }
+          a {
+            color: #8ebcca;
+            font-size: 36px;
+            width: 200px;
+            border: none;
+            background: transparent;
+            transform: translateX(0%);
+          }
         }
       }
     }
@@ -140,32 +147,35 @@ table {
     margin: 14% auto 0;
     border-spacing: 9px;
     box-shadow: none;
-    tr {
-      transform: rotateY(0deg);
-      animation: none;
-      td {
-        &:first-child {
-  
-          background: rgb(35, 54, 75);
-          font-size: 14px;
-          background-position: center;
-          border-radius: 3px;
-          background-blend-mode: hard-light;
-          a {
-            color: #8ebcca;
-            font-size: 32px;
-            width: 180px;
-            transform: translateX(0%);
+    tbody#repos {
+      transform-style: inherit;
+      perspective: none;
+      tr {
+        transform: rotateY(0deg);
+        animation: none;
+        td {
+          &:first-child {
+            background: rgb(35, 54, 75);
+            font-size: 14px;
+            background-position: center;
+            border-radius: 3px;
+            background-blend-mode: hard-light;
+            a {
+              color: #8ebcca;
+              font-size: 32px;
+              width: 180px;
+              transform: translateX(0%);
+            }
           }
-        }
-        &:nth-child(n + 2) {
-          display: block;
-          width: auto;
-          visibility: visible;
-          margin-left: 14px;
-  
-          svg {
-            opacity: 1;
+          &:nth-child(n + 2) {
+            display: block;
+            width: auto;
+            visibility: visible;
+            margin-left: 14px;
+
+            svg {
+              opacity: 1;
+            }
           }
         }
       }
