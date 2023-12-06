@@ -35,6 +35,12 @@ table {
   &:hover {
     margin: 4% auto 0;
     border-spacing: 9px;
+    tr {
+      transform-style: preserve-3d;
+      perspective: 100px;
+      transform: rotateY(0deg);
+      animation: none;
+    }
     td {
       background: rgb(35, 40, 61);
       background-position: center;
@@ -69,7 +75,7 @@ table {
     border-radius: 3px;
     pointer-events: none;
     color: #849e9a;
-    transition: all 0.13s linear;
+    transition: transform 0.13s linear;
     text-shadow: 0 0 3px #a5a5a5;
     background-position: center;
     background-size: auto;
@@ -120,7 +126,10 @@ table {
     margin: 14% auto 0;
     border-spacing: 9px;
     box-shadow: none;
-
+tr {
+  transform: rotateY(0deg);
+  animation: none;
+}
     td {
       background: rgb(35, 54, 75);
       font-size: 14px;
