@@ -147,6 +147,16 @@ table {
     margin: 14% auto 0;
     border-spacing: 9px;
     box-shadow: none;
+    &:hover {
+      tbody#repos {
+        tr {
+          td {
+            &:first-child {
+              &:hover, &:active {
+                background-blend-mode: normal;
+                transform: rotateX(36deg);
+              }}}}}
+    }
     tbody#repos {
       transform-style: inherit;
       perspective: none;
@@ -160,6 +170,7 @@ table {
             background-position: center;
             border-radius: 3px;
             background-blend-mode: hard-light;
+
             a {
               color: #8ebcca;
               font-size: 32px;
