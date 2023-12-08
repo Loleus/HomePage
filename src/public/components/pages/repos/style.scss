@@ -1,9 +1,9 @@
 table {
   margin: 7% auto 0;
   transition:
-    border-spacing 0.12s linear,
-    margin 0.12s linear,
-    font-size 0.12s linear;
+    border-spacing 0.17s linear,
+    margin 0.17s linear,
+    font-size 0.17s linear;
   background: rgba(3, 67, 86, 0);
   border-spacing: 0px;
   backdrop-filter: blur(2px);
@@ -17,7 +17,7 @@ table {
       transform-style: preserve-3d;
       perspective: 100px;
       transform: rotateY(0deg);
-      animation: rotate55 2s linear infinite;
+      animation: rotate55 2s ease-in-out infinite;
       &:nth-child(odd) {
         td {
           &:first-child {
@@ -37,7 +37,7 @@ table {
         border-radius: 3px;
         pointer-events: none;
         color: #849e9a;
-        transition: transform 0.12s linear;
+        transition: transform 0.15s linear;
         text-shadow: 0 0 3px #a5a5a5;
         background-position: center;
         background-size: auto;
@@ -58,7 +58,7 @@ table {
           text-underline-position: under;
           text-decoration: none;
           text-transform: uppercase;
-          transition: all 0.13s linear;
+          transition: all 0.17s linear;
           display: block;
           text-shadow: -1px 2px 3px #000000;
           display: inline-block;
@@ -111,7 +111,7 @@ table {
             color: #bed1d9;
             &:hover {
               background-blend-mode: color-dodge;
-              transform: rotateX(0deg);
+              transform: rotateX(00deg);
               a {
                 color: rgb(180, 216, 255);
                 background: transparent;
