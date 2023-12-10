@@ -152,10 +152,15 @@ table {
         tr {
           td {
             &:first-child {
-              &:hover, &:active {
+              &:hover,
+              &:active {
                 background-blend-mode: normal;
                 transform: rotateX(36deg);
-              }}}}}
+              }
+            }
+          }
+        }
+      }
     }
     tbody#repos {
       transform-style: inherit;
