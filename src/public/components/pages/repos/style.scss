@@ -12,13 +12,14 @@ table {
   font-family: "Barlow", sans-serif;
   tbody#repos {
     transform-style: preserve-3d;
-    perspective: 680px;
+    perspective: 800px;
     tr {
       transform-style: preserve-3d;
       perspective: 100px;
       transform: rotateY(0deg);
-      animation: rotate55 2s ease-in-out infinite;
       &:nth-child(odd) {
+        animation: rotate55 3.34s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite reverse;
+        
         td {
           &:first-child {
             transform: rotateX(36deg);
@@ -26,6 +27,7 @@ table {
         }
       }
       &:nth-child(even) {
+        animation: rotate55 3.34s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
         td {
           &:first-child {
             transform: rotateX(36deg);
@@ -37,7 +39,7 @@ table {
         border-radius: 3px;
         pointer-events: none;
         color: #849e9a;
-        transition: transform 0.15s linear;
+        transition: transform 0.15s ease-out;
         text-shadow: 0 0 3px #a5a5a5;
         background-position: center;
         background-size: auto;
@@ -58,7 +60,7 @@ table {
           text-underline-position: under;
           text-decoration: none;
           text-transform: uppercase;
-          transition: all 0.17s linear;
+          transition: all 0.19s ease-out;
           display: block;
           text-shadow: -1px 2px 3px #000000;
           display: inline-block;
@@ -67,10 +69,6 @@ table {
           font-size: 32px;
           font-family: "VT323", sans-serif;
           transform: translateX(-100%);
-        }
-        svg {
-          transition: opacity 0.1s linear;
-          opacity: 0.3;
         }
       }
     }
@@ -110,11 +108,11 @@ table {
             box-shadow: 0px 3px 2px 0 black;
             color: #bed1d9;
             &:hover {
-              background-blend-mode: color-dodge;
+              background-blend-mode: screen;
               transform: rotateX(00deg);
               a {
-                color: rgb(180, 216, 255);
-                background: transparent;
+                color: rgb(191, 215, 240);
+                background: rgba(0, 0, 0, 0.5);
               }
             }
           }
@@ -150,6 +148,7 @@ table {
     &:hover {
       tbody#repos {
         tr {
+          animation: none;
           td {
             &:first-child {
               &:hover,
@@ -168,6 +167,12 @@ table {
       tr {
         transform: rotateY(0deg);
         animation: none;
+        &:nth-child(odd) {
+          animation: none;
+        }
+        &:nth-child(even) {
+          animation: none;
+        }
         td {
           &:first-child {
             background: rgb(35, 54, 75);
