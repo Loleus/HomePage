@@ -1,5 +1,5 @@
 table {
-  margin: 7% auto 0;
+  margin: 16vh auto 0;
   transition:
     border-spacing 0.17s linear,
     margin 0.17s linear,
@@ -45,6 +45,10 @@ table {
         background-size: auto;
         background-blend-mode: none;
         overflow: hidden;
+        &:first-child {
+          box-shadow: 0 0 7px 0 black inset;
+          border-radius: 5px;
+        }
         &:nth-child(n + 2) {
           display: block;
           visibility: hidden;
@@ -75,7 +79,7 @@ table {
   }
 
   &:hover {
-    margin: 4% auto 0;
+    margin: 10vh auto 0;
     border-spacing: 9px;
     tbody#repos {
       transform-style: inherit;
