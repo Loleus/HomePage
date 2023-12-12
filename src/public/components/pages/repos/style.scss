@@ -18,19 +18,18 @@ table {
       perspective: 100px;
       transform: rotateY(0deg);
       &:nth-child(odd) {
-        animation: rotate55 3.34s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite reverse;
-        
+        animation: rotate55 3.34s cubic-bezier(0.175, 0.885, 0.02, 1.975) infinite reverse;
         td {
           &:first-child {
-            transform: rotateX(36deg);
+            transform: rotateX(26deg);
           }
         }
       }
       &:nth-child(even) {
-        animation: rotate55 3.34s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+        animation: rotate55 3.34s cubic-bezier(0.175, 0.885, 0.02, 1.975) infinite;
         td {
           &:first-child {
-            transform: rotateX(36deg);
+            transform: rotateX(26deg);
           }
         }
       }
@@ -46,7 +45,7 @@ table {
         background-blend-mode: none;
         overflow: hidden;
         &:first-child {
-          box-shadow: 0 0 7px 0 black inset;
+          box-shadow: 0 0 4px 02px black inset;
           border-radius: 5px;
         }
         &:nth-child(n + 2) {
@@ -56,7 +55,6 @@ table {
           font-size: 0.4em;
         }
         a {
-          padding: 1vh 0;
           pointer-events: auto;
           font-weight: bold;
           color: #5a808c;
@@ -116,7 +114,7 @@ table {
               transform: rotateX(00deg);
               a {
                 color: rgb(191, 215, 240);
-                background: rgba(0, 0, 0, 0.5);
+                background: rgba(39, 64, 79, 0.5);
               }
             }
           }
@@ -146,7 +144,7 @@ table {
 
 @media only screen and (max-width: 768px) {
   table {
-    margin: 14% auto 0;
+    margin: 25% auto 0;
     border-spacing: 9px;
     box-shadow: none;
     &:hover {
@@ -180,7 +178,7 @@ table {
         td {
           &:first-child {
             background: rgb(35, 54, 75);
-            font-size: 14px;
+            font-size: 15px;
             background-position: center;
             border-radius: 3px;
             background-blend-mode: hard-light;
