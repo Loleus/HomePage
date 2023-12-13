@@ -1,5 +1,5 @@
 let list
-let listPerPage = 21;
+let listPerPage = 54;
 
 let getOffset = (page) => {
   return (page - 1) * [listPerPage];
