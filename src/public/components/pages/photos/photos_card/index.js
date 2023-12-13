@@ -21,16 +21,17 @@ export default class Card extends HTMLElement {
   };
 
   async connectedCallback() {
-
-    this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
-    this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
-
+    let img = new Image();
     this.render();
-
-    this.querySelector('#zoom').addEventListener('click', async () => {
-      await this.showPic(this.picUrl)
-    }, true )
-
+    img.onload = () => {
+      this.querySelector("#zoom").style =`background-image: url("${this.thumbUrl}");animation:none`
+      this.querySelector('#zoom').addEventListener('click', async () => {
+        await this.showPic(this.picUrl)
+      }, true )
+    }
+    this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
+    img.src = this.thumbUrl;
+    this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
   };
 
   getEditBtns(id) {
@@ -58,7 +59,7 @@ export default class Card extends HTMLElement {
   render() {
     this.innerHTML = `
     <link rel="stylesheet" href="/components/pages/photos/photos_card/style.css">
-    <section id="zoom" class="blogCard" style="background-image: url('${this.thumbUrl}')">
+    <section id="zoom" class="blogCard">
       ${window.location.href.includes("admin") ? this.getEditBtns(this.id) : ''}
     </section>`;
   };
