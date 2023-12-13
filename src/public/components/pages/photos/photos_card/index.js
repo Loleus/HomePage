@@ -22,8 +22,9 @@ export default class Card extends HTMLElement {
 
   async connectedCallback() {
     let img = new Image();
-    this.render();
+
     img.onload = () => {
+      this.render();
       this.querySelector("#zoom").style =`background-image: url("${this.thumbUrl}");animation:none`
       this.querySelector('#zoom').addEventListener('click', async () => {
         await this.showPic(this.picUrl)
