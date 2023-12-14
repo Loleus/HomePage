@@ -63,7 +63,8 @@ li a.site-logo {
   font-family: "Reenie Beanie", sans-serif;
 }
 
-.site-navbar ul li a:hover, a.site-logo:hover {
+.site-navbar ul li a:hover,
+a.site-logo:hover {
   transition: all 0.13s linear, text-shadow 0.13s linear;
   box-shadow: 0px 9px 22px -8px #ff0f0f;
   text-shadow: -2px -2px 6px #911d00;
@@ -72,7 +73,8 @@ li a.site-logo {
   background: #0b0e1cba;
 }
 
-.site-navbar ul li a.active, a.site-logo.active {
+.site-navbar ul li a.active,
+a.site-logo.active {
   transform: rotateX(29deg);
   box-shadow: 0px 9px 22px -12px #ff0f0f;
   text-shadow: -2px -2px 6px #911d00;
@@ -135,18 +137,21 @@ li a.site-logo {
     filter: blur(1px);
   }
 
-  a.site-logo.active {
+  li a.site-logo {
     font-size: 46px;
-  transition: all 0.13s linear, text-shadow 0.13s linear;
-  padding: 9px 13px;
-  display: block;
-  text-decoration: none;
-  background: none;
-  text-transform: uppercase;
-  color: #ff0f0f;
-  border-radius: 5px;
-  text-shadow: -2px -2px 6px #911d00;
-  transform: rotateX(0deg);
+  }
+  li a.site-logo.active {
+    font-size: 46px;
+    transition: all 0.13s linear, text-shadow 0.13s linear;
+    padding: 9px 13px;
+    display: block;
+    text-decoration: none;
+    background: none;
+    text-transform: uppercase;
+    color: #ff0f0f;
+    border-radius: 5px;
+    text-shadow: -2px -2px 6px #911d00;
+    transform: rotateX(0deg);
   }
 
   .site-navbar {

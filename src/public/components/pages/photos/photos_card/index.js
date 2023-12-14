@@ -21,21 +21,17 @@ export default class Card extends HTMLElement {
   };
 
   async connectedCallback() {
-    let img = new Image();
-    this.render();
-    img.onload = () => {
-      this.querySelector("#zoom").style =`background-image: url("${this.thumbUrl}");animation:none`
+      this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
+      this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
+      this.render();
+      this.querySelector("#zoom").style =`background-image: url("${this.thumbUrl}")`
       this.querySelector('#zoom').addEventListener('click', async () => {
-        await this.showPic(this.picUrl)
-      }, true )
-    }
-    this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
-    img.src = this.thumbUrl;
-    this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
+          await this.showPic(this.picUrl)
+        }, true )
   };
 
   getEditBtns(id) {
-      return html`
+      return `
         <link rel="stylesheet" href="/components/pages/photos/photos_card/editBtns.css">
         <div id="edit">
           <wc-router>
