@@ -22,9 +22,8 @@ export default class Card extends HTMLElement {
 
   async connectedCallback() {
     let img = new Image();
-
+    this.render();
     img.onload = () => {
-      this.render();
       this.querySelector("#zoom").style =`background-image: url("${this.thumbUrl}");animation:none`
       this.querySelector('#zoom').addEventListener('click', async () => {
         await this.showPic(this.picUrl)
@@ -36,7 +35,7 @@ export default class Card extends HTMLElement {
   };
 
   getEditBtns(id) {
-      return `
+      return html`
         <link rel="stylesheet" href="/components/pages/photos/photos_card/editBtns.css">
         <div id="edit">
           <wc-router>
@@ -47,7 +46,6 @@ export default class Card extends HTMLElement {
            <button type='submit' class='btn-delete'>X</button>
           </form>
         </div>`
-
   }
 
   async showPic(pic) {
