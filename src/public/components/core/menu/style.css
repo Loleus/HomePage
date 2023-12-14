@@ -19,7 +19,7 @@
 }
 
 li a.site-logo {
-  font-size: 46px;
+  font-size: 6vh;
   transition: all 0.13s linear, text-shadow 0.13s linear;
   padding: 9px 13px;
   display: block;
@@ -49,9 +49,9 @@ li a.site-logo {
   z-index: 1;
 }
 .site-navbar ul li a {
-  font-size: 38px;
+  font-size: 4vh;
   transition: all 0.13s linear, text-shadow 0.13s linear;
-  padding: 14px 13px;
+  padding: 10px 13px;
   display: block;
   text-decoration: none;
   background: #20202000;

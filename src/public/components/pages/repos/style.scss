@@ -59,7 +59,7 @@ table {
           pointer-events: auto;
           font-weight: bold;
           color: #5a808c;
-          line-height: 0.8em;
+          line-height: 6vh;
           text-underline-position: under;
           text-decoration: none;
           text-transform: uppercase;
@@ -67,7 +67,7 @@ table {
           display: block;
           text-shadow: -1px -1px 2px #000000;
           display: inline-block;
-          width: 20vh;
+          width: 22vh;
           background: rgba(0, 0, 0, 0.5);
           font-size: 1em;
           font-family: "VT323", sans-serif;
@@ -115,7 +115,7 @@ table {
               transform: rotateX(00deg);
               a {
                 color: rgb(191, 215, 240);
-                background: rgba(39, 64, 79, 0.5);
+                background: rgba(39, 64, 79, 0.295);
               }
             }
           }
@@ -124,14 +124,14 @@ table {
             display: block;
             width: auto;
             margin-left: 14px;
-            font-size: 0.67em;
+            font-size: 0.5em;
           }
           svg {
             opacity: 1;
           }
           a {
             color: #8ebcca;
-            font-size: 1.5em;
+            font-size: 4vh;
             width: 200px;
             border: none;
             background: transparent;
@@ -145,7 +145,7 @@ table {
 
 @media only screen and (max-width: 768px) {
   table {
-    margin: 25% auto 0;
+    margin: 20% auto 0;
     border-spacing: 9px;
     box-shadow: none;
     &:hover {
@@ -178,24 +178,23 @@ table {
         }
         td {
           &:first-child {
-            background: rgb(35, 54, 75);
-            font-size: 15px;
             background-position: center;
             border-radius: 3px;
-            background-blend-mode: hard-light;
+            background-blend-mode: screen;
 
             a {
               color: #8ebcca;
-              font-size: 32px;
-              width: 180px;
+              font-size: 5vh;
+              width:50vw;
               transform: translateX(0%);
             }
           }
           &:nth-child(n + 2) {
             display: block;
-            width: auto;
+            width: 5vh;
             visibility: visible;
             margin-left: 14px;
+            font-size: 0.5em;
 
             svg {
               opacity: 1;
