@@ -1,5 +1,5 @@
 table {
-  margin: 14vh auto 0;
+  margin: 12vh auto 0;
   transition:
     border-spacing 0.17s linear,
     margin 0.17s linear,
@@ -69,7 +69,7 @@ table {
           display: inline-block;
           width: 22vh;
           background: rgba(0, 0, 0, 0.5);
-          font-size: 1em;
+          font-size: 0h;
           font-family: "VT323", sans-serif;
           transform: translateX(-100%);
         }
@@ -131,8 +131,8 @@ table {
           }
           a {
             color: #8ebcca;
-            font-size: 4vh;
-            width: 200px;
+            font-size: 3.5vh;
+            width: 22vh;
             border: none;
             background: transparent;
             transform: translateX(0%);
