@@ -1,5 +1,5 @@
 table {
-  margin: 16vh auto 0;
+  margin: 14vh auto 0;
   transition:
     border-spacing 0.17s linear,
     margin 0.17s linear,
@@ -44,6 +44,7 @@ table {
         background-size: auto;
         background-blend-mode: none;
         overflow: hidden;
+        height: 3vh;
         &:first-child {
           box-shadow: 0 0 4px 02px black inset;
           border-radius: 5px;
@@ -66,7 +67,7 @@ table {
           display: block;
           text-shadow: -1px -1px 2px #000000;
           display: inline-block;
-          width: 160px;
+          width: 20vh;
           background: rgba(0, 0, 0, 0.5);
           font-size: 1em;
           font-family: "VT323", sans-serif;
@@ -77,7 +78,7 @@ table {
   }
 
   &:hover {
-    margin: 10vh auto 0;
+    margin: 8vh auto 0;
     border-spacing: 9px;
     tbody#repos {
       transform-style: inherit;
@@ -123,7 +124,7 @@ table {
             display: block;
             width: auto;
             margin-left: 14px;
-            font-size: 0.4em;
+            font-size: 0.67em;
           }
           svg {
             opacity: 1;
