@@ -125,6 +125,10 @@ table {
             width: auto;
             margin-left: 14px;
             font-size: 0.5em;
+            line-height: 3vh;
+          }
+          &:nth-child(n + 3) {
+            height: auto;;
           }
           svg {
             opacity: 1;
@@ -132,7 +136,7 @@ table {
           a {
             color: #8ebcca;
             font-size: 3.5vh;
-            width: 22vh;
+            width: 23vh;
             border: none;
             background: transparent;
             transform: translateX(0%);
@@ -145,7 +149,7 @@ table {
 
 @media only screen and (max-width: 768px) {
   table {
-    margin: 20% auto 0;
+    margin: 8vh auto 0;
     border-spacing: 9px;
     box-shadow: none;
     &:hover {
@@ -185,17 +189,19 @@ table {
             a {
               color: #8ebcca;
               font-size: 5vh;
-              width:50vw;
+              width: 33vh;
               transform: translateX(0%);
             }
           }
           &:nth-child(n + 2) {
             display: block;
-            width: 5vh;
+            width: auto;
             visibility: visible;
-            margin-left: 14px;
-            font-size: 0.5em;
-
+            margin: 0 0 0 1vh;
+            font-size: 0.6em;
+          }
+          &:nth-child(n + 3) {
+            height: auto;;
             svg {
               opacity: 1;
             }
