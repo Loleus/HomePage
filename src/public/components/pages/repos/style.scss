@@ -145,7 +145,7 @@ table {
 
 @media only screen and (max-width: 768px) {
   table {
-    margin: 20% auto 0;
+    margin: 15% auto 0;
     border-spacing: 9px;
     box-shadow: none;
     &:hover {
@@ -194,8 +194,11 @@ table {
             width: 5vh;
             visibility: visible;
             margin-left: 14px;
-            font-size: 0.5em;
-
+            font-size: 0.7em;
+            line-height: 1em;
+          }
+          &:nth-child(n + 3) {
+            height: auto;
             svg {
               opacity: 1;
             }
