@@ -166,11 +166,11 @@ a.site-logo.active {
     top: 60px;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(26, 22, 13, 0.1);
+    /* background-color: rgba(26, 22, 13, 0.1); */
     max-height: 0;
     overflow: hidden;
     transition: 0.2s;
-    backdrop-filter: blur(8px);
+
   }
 
   .site-navbar ul li {
@@ -182,7 +182,8 @@ a.site-logo.active {
     padding: 17px 25px;
     font-size: 28px;
     box-shadow: none;
-    background: #0c0d1078;
+    background: #101114ec;
+    backdrop-filter: blur(8px);
   }
 
   .site-navbar ul li a:hover {
@@ -198,15 +199,16 @@ a.site-logo.active {
     transform: rotateX(0deg);
     text-shadow: -2px -2px 6px #911d00;
     color: #c01d1d;
-    background: #4b0909;
+    background: #4b0909e5;
     box-shadow: none;
+    backdrop-filter: blur(8px);
   }
 
   .site-navbar ul.open {
     z-index: 1;
     max-height: 100vh;
     overflow: hidden;
-    background-color: rgba(26, 22, 13, 0.84);
+    /* background-color: rgba(26, 22, 13, 0.84); */
   }
   .navbar-area {
     background: rgb(13, 11, 7);
