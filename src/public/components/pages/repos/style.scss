@@ -92,6 +92,7 @@ table {
           td {
             &:first-child {
               transform: rotateX(36deg);
+              
             }
           }
         }
@@ -172,16 +173,27 @@ table {
         animation: none;
         &:nth-child(odd) {
           animation: none;
+          
+          td {
+              &:first-child {
+              // transform: translateX(0vh) rotateX(26deg);
+            }
+          }
         }
         &:nth-child(even) {
           animation: none;
+          td {
+            &:first-child {
+            // transform: translateX(0vh) rotateX(26deg);
+          }
+        }
         }
         td {
           &:first-child {
             background-position: center;
             border-radius: 3px;
             background-blend-mode: screen;
-
+            transform: translateX(0vh);
             a {
               color: #8ebcca;
               font-size: 5vh;
