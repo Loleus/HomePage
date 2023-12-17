@@ -126,7 +126,7 @@
 .socials li:hover a {
   transform: scale(1.167);
   background: transparent;
-  background: radial-gradient(circle farthest-corner at center center, #5D87A34D 0, #0000 100%);
+  background: radial-gradient(circle farthest-corner at center center, #5D87A34D 0, #0000 70%);
   opacity: 1;
 }
 @media screen and (max-width: 767px) {
