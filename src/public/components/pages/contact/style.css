@@ -1,17 +1,24 @@
 .socials {
-  display: flex;
+  /* display: flex;
   backdrop-filter: blur(5px);
   list-style: none;
   padding: 1vh 1vh 5vh;
   margin: 13vw 0 40px;
-  background: #16397c17;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  display: flex;
+    backdrop-filter: blur(5px);
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 80vh;
+    padding: 0;margin: 0;
 }
 
 .socials li {
   list-style: none;
-  margin: 20px;
+  margin: 0;
   display: inline-block;
   position: relative;
   width: 120px;
@@ -28,7 +35,6 @@
   text-align: center;
   line-height: 120px;
   transition: all 0.2s ease-in-out;
-  text-shadow: 0px 0 5px rgb(0, 0, 0);
   opacity: 0.33;
 
 }
@@ -38,8 +44,7 @@
   position: absolute;
   background: #0f2b44;
   box-shadow: 0 0 4px 0 #083d6b;;
-  transition: transform 0.3s;
-  /* border-bottom: 3px solid rosybrown; */
+  transition: transform 0.2s;
 }
 .socials li:hover span {
   background: #216082;
@@ -109,18 +114,19 @@
   transform: scale(1);
 }
 
-p {
+.socials p {
   color: #6e6e6e;
   transition: color 0.2s ease-in-out;
   font-family: "Barlow", sans-serif;
 }
-li:hover p {
+.socials li:hover p {
   display: block;
   color: #c7c7c7;
 }
-li:hover a {
+.socials li:hover a {
   transform: scale(1.167);
-  color:#c7c7c7;
+  background: transparent;
+  background: radial-gradient(circle farthest-corner at center center, #5D87A34D 0, #0000 100%);
   opacity: 1;
 }
 @media screen and (max-width: 767px) {
@@ -129,12 +135,16 @@ li:hover a {
     display: flex;
     backdrop-filter: blur(5px);
     list-style: none;
-    padding: 1vh 1vh 5vh;
-    margin: 8vh 0 0px;
-    background: #16397c17;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: center;
+    height: 100vh;
+    padding: 0;margin: 0;
   }
+  .socials li {
+    margin:20px;
+  }
+  
   .socials   li a {
     opacity: 1;
   } 
