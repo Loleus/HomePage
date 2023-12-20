@@ -21,6 +21,7 @@
 
 .pager button {
   width: 12vh;
+  z-index: 0;
   padding-bottom: 0.2rem;
   line-height: 2em;
   border: none;
