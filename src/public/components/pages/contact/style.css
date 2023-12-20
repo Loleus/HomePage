@@ -1,14 +1,12 @@
 .socials {
 
   display: flex;
-    backdrop-filter: blur(5px);
     list-style: none;
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
     height: 80vh;
-    padding: 0;
-    margin: 0;
+    padding: 0;margin: 0;
 }
 
 .socials li {
@@ -127,7 +125,6 @@
 
   .socials {
     display: flex;
-    backdrop-filter: blur(5px);
     list-style: none;
     justify-content: center;
     flex-wrap: wrap;
