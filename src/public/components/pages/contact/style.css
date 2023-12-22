@@ -16,6 +16,7 @@
   position: relative;
   width: 120px;
   height: 120px;
+  backdrop-filter: blur(4px);
 }
 
 .socials li a {

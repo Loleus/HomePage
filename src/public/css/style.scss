@@ -46,7 +46,7 @@
   body {
     display: flex;
     justify-content: center;
-    background-color: #1b02027d;
+    // background-color: #1b02027d;
     background-image: radial-gradient(circle,
         #020328db 13%,
         #050a18c1 50%,
@@ -71,22 +71,24 @@
     content: "";
     height: 133vh;
     width: 133vw;
-    background: repeating-conic-gradient(hsl(37, 90%, 58%) 0deg 2deg,
-        hsl(51, 35%, 73%) 0deg 4deg) #16181f;
+    background: repeating-conic-gradient(hsla(37, 90%, 58%, 0.068) 0deg 2deg,
+        hsla(51, 35%, 73%, 0.089) 4deg 8deg) #16181f23;
     background-repeat: repeat;
     background-attachment: scroll;
     background-size: auto;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.05;
+    opacity: 1;
     animation: rotate 3.33s linear infinite;
     overflow: hidden;
     z-index: -1;  }
   
   @keyframes rotate {
     to {
-      transform: translate(-50%, -50%) rotate(4deg);
+      transform: translate(-50%, -50%) rotate(-8deg);
+      // background: repeating-conic-gradient(hsl(37, 90%, 58%) 0deg 2deg,
+      //   hsl(51, 35%, 73%) 4deg 8deg) #16181f;
     }
   }
   
@@ -105,7 +107,7 @@
   }
   
   button {
-    background-color: #333;
+    background-color: #171515;
     border: 1px solid #666;
     cursor: pointer;
     font-weight: bold;
