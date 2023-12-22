@@ -82,7 +82,7 @@
     opacity: 0.05;
     animation: rotate 3.33s linear infinite;
     overflow: hidden;
-  }
+    z-index: -1;  }
   
   @keyframes rotate {
     to {
