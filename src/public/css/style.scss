@@ -1,131 +1,119 @@
 * {
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 1.1rem;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    text-shadow: 1px 1px 0px black;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.1rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-shadow: 1px 1px 0px black;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url(../assets/fonts/Barlow/Barlow-Regular.ttf);
+}
+
+@font-face {
+  font-family: VT323;
+  src: url(../assets/fonts/VT323/VT323-Regular.ttf);
+}
+
+@font-face {
+  font-family: Gravitas One;
+  src: url(../assets/fonts/Gravitas/GravitasOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: Reenie Beanie;
+  src: url(../assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf);
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: repeating-conic-gradient(hsl(0, 0%, 45%) 0deg 15deg, hsl(225.3, 35.3%, 72.7%) 0deg 30deg);
+}
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-blend-mode: screen;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  background: radial-gradient(circle, #020328db 13%, #050a18c1 50%, #04050878 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  display: block;
+  content: "";
+  height: 133vh;
+  width: 133vw;
+  background: repeating-conic-gradient(hsla(37, 90%, 58%, 0.068) 0deg 2deg, hsla(51, 35%, 73%, 0.089) 4deg 8deg) #16181f23;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  animation: rotate 3.68s linear infinite;
+  overflow: hidden;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) rotate(-8deg);
   }
-  
-  @font-face {
-    font-family: Barlow;
-    src: url(../assets/fonts/Barlow/Barlow-Regular.ttf);
+}
+
+footer {
+  height: 1.3em;
+  position: fixed;
+  bottom: 0;
+  display: block;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  color: #7c1515;
+  z-index: 1;
+  box-shadow: 0 0px 26px -1px #000;
+  text-shadow: 2px 2px 8px #333;
+}
+
+button {
+  background-color: #171515;
+  border: 1px solid #666;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 1020px) {
+  * {
+    font-size: 0.9rem;
   }
-  
-  @font-face {
-    font-family: VT323;
-    src: url(../assets/fonts/VT323/VT323-Regular.ttf);
-  }
-  
-  @font-face {
-    font-family: Gravitas One;
-    src: url(../assets/fonts/Gravitas/GravitasOne-Regular.ttf);
-  }
-  
-  @font-face {
-    font-family: Reenie Beanie;
-    src: url(../assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf);
-  }
-  
-  html {
-    height: 100%;
-    width: 100%;
-    background: repeating-conic-gradient(hsl(0, 0%, 45%) 0deg 15deg,
-        hsl(225.3, 35.3%, 72.7%) 0deg 30deg) #16181f;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    // background-color: #1b02027d;
-    background-image: radial-gradient(circle,
-        #020328db 13%,
-        #050a18c1 50%,
-        #04050878 100%);
-    tab-size: 100%;
-  }
-  
-  .wrapper {
-    width: 100%;
-    min-height: 100vh;
-    background-blend-mode: screen;
-    backdrop-filter: blur(8px);
-    overflow: hidden;
-  }
-  
-  .wrapper::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@media screen and (max-width: 767px) {
+  .wc-outlet {
+    overflow: scroll;
+    height: 100vh;
     display: block;
-    content: "";
-    height: 133vh;
-    width: 133vw;
-    background: repeating-conic-gradient(hsla(37, 90%, 58%, 0.068) 0deg 2deg,
-        hsla(51, 35%, 73%, 0.089) 4deg 8deg) #16181f23;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-size: auto;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 1;
-    animation: rotate 3.33s linear infinite;
-    overflow: hidden;
-    z-index: -1;  }
-  
-  @keyframes rotate {
-    to {
-      transform: translate(-50%, -50%) rotate(-8deg);
-      // background: repeating-conic-gradient(hsl(37, 90%, 58%) 0deg 2deg,
-      //   hsl(51, 35%, 73%) 4deg 8deg) #16181f;
-    }
   }
-  
-  footer {
-    height: 1.3em;
-    position: fixed;
-    bottom: 0;
-    display: block;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    color: #7c1515;
-    z-index: 1;
-    box-shadow: 0 0px 26px -1px #000;
-    text-shadow: 2px 2px 8px #333;
-  }
-  
-  button {
-    background-color: #171515;
-    border: 1px solid #666;
-    cursor: pointer;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 0;
-    border-radius: 3px;
-  }
-  
-  @media only screen and (max-width: 1020px) {
-    * {
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .wc-outlet {
-      overflow: scroll;
-      height: 100vh;
-      display: block;
-    }
-  }
+}

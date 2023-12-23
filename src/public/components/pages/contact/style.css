@@ -1,12 +1,12 @@
 .socials {
-
   display: flex;
-    list-style: none;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
-    height: 80vh;
-    padding: 0;margin: 0;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 80vh;
+  padding: 0;
+  margin: 0;
 }
 
 .socials li {
@@ -16,32 +16,38 @@
   position: relative;
   width: 120px;
   height: 120px;
-  backdrop-filter: blur(4px);
+}
+
+.socials li a .fa {
+  opacity: 0.5;
+  color: var(--socialColor);
 }
 
 .socials li a {
   position: relative;
   display: inline-block;
-  color: #6e6e6e;
   font-size: 40px;
   width: 100%;
   height: 100%;
   text-align: center;
   line-height: 120px;
   transition: all 0.2s ease-in-out;
-  opacity: 0.33;
+  backdrop-filter: blur(6px);
 }
 
 .socials li span {
   display: inline-block;
   position: absolute;
-  background: #0f2b44;
-  box-shadow: 0 0 4px 0 #083d6b;;
+  background: #273c4d;
+  box-shadow: 0 0 4px 0 #083d6b;
   transition: transform 0.2s;
+  opacity: 1;
 }
+
 .socials li:hover span {
-  background: #216082;
+  background: var(--socialColor);
   box-shadow: 0 0 4px 0 #538bbb;
+  opacity: 0.3;
 }
 
 .socials li span:nth-of-type(1),
@@ -107,23 +113,29 @@
   transform: scale(1);
 }
 
-.socials p {
+.socials li p.socialName {
   color: #6e6e6e;
   transition: color 0.2s ease-in-out;
   font-family: "Barlow", sans-serif;
 }
-.socials li:hover p {
-  display: block;
-  color: #c7c7c7;
-}
+
+
 .socials li:hover a {
-  transform: scale(1.167);
   background: transparent;
-  background: radial-gradient(circle farthest-corner at center center, #5D87A34D 0, #0000 70%);
+  backdrop-filter: blur(0);
+}
+
+.socials li:hover a .fa {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.367);
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
+.socials li:hover p.socialName {
+  display: block;
+  color: var(--socialColor);
+}
 
+@media screen and (max-width: 767px) {
   .socials {
     display: flex;
     list-style: none;
@@ -131,21 +143,23 @@
     flex-wrap: wrap;
     align-content: center;
     height: 100vh;
-    padding: 0;margin: 0;
+    padding: 0;
+    margin: 0;
   }
+
   .socials li {
-    margin:20px;
+    margin: 20px;
   }
-  
-  .socials   li a {
+
+  .socials li a {
     opacity: 1;
-  } 
-  .socials   li p {
+  }
+
+  .socials li p {
     padding-top: 0%;
     display: block;
     color: #c7c7c7;
     font-size: 1.2em;
     line-height: 0em;
-  } 
-
+  }
 }
