@@ -21,6 +21,8 @@
 .socials li a .fa {
   opacity: 0.5;
   color: var(--socialColor);
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1);
 }
 
 .socials li a {
