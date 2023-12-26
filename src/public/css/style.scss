@@ -53,25 +53,24 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.wrapper::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  display: block;
-  content: "";
-  height: 133vh;
-  width: 133vw;
-  background: repeating-conic-gradient(hsla(60, 8%, 45%, 0.089)0deg 2deg, hsla(52, 35%, 8%, 0.3) 4deg 8deg) #1a1a0f20;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 1;
-  animation: rotate 5.3s linear infinite;
-  overflow: hidden;
-  z-index: -1;
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    display: block;
+    content: "";
+    height: 133vh;
+    width: 133vw;
+    background: repeating-conic-gradient(hsla(60, 8%, 45%, 0.089) 0deg 2deg, hsla(52, 35%, 8%, 0.3) 4deg 8deg) #1a1a0f20;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    animation: rotate 5.3s linear infinite;
+    overflow: hidden;
+    z-index: -1;
+  }
 }
 
 @keyframes rotate {
