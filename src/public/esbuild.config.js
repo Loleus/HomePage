@@ -1,11 +1,11 @@
-import esbuild from 'esbuild';
+const esbuild = require('esbuild');
 
 esbuild
     .build({
-        entryPoints: ['./src/public/index.js'],
+        entryPoints: ['./src/public/js/index.mjs'],
         bundle: true,
 	minify: true,
-        outfile: './src/public/main.js',
+        outfile: './src/public/js/main.mjs',
         plugins: []
     })
     .catch(() => process.exit(1));
