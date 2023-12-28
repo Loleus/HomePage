@@ -119,6 +119,7 @@
     color: #6e6e6e;
     transition: color 0.2s ease-in-out;
     font-family: "Barlow", sans-serif;
+    margin-top: 1em;
   }
   
   
@@ -135,6 +136,7 @@
   .socials li:hover p.socialName {
     display: block;
     color: var(--socialColor);
+
   }
   
   @media screen and (max-width: 767px) {

@@ -6,11 +6,6 @@ const index = (tmp) => {
       return ["loading"];
     }
 
-    constructor() {
-      super();
-      this.attachShadow({ mode: "open" });
-    }
-
     get loading() {
       return JSON.parse(this.getAttribute("loading"));
     }
@@ -72,10 +67,10 @@ const index = (tmp) => {
 
     render() {
       if (this.loading) {
-        this.shadowRoot.innerHTML = `<wc-spinner></wc-spinner>`;
+        this.innerHTML = `<wc-spinner></wc-spinner>`;
       } else {
-        this.shadowRoot.innerHTML = ``;
-        this.shadowRoot.appendChild(tmp.cloneNode(true));
+        this.innerHTML = ``;
+        this.appendChild(tmp.cloneNode(true));
       }
     }
   };
