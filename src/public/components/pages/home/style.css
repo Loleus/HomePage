@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 .text {
-  filter: drop-shadow(0px 1.5px 0px rgb(37, 37, 50)) ;
+  filter: drop-shadow(0px 1.5px 0px rgb(10, 22, 34)) ;
   -webkit-user-select: none; /* Chrome all / Safari all */
   -moz-user-select: none; /* Firefox all */
   -ms-user-select: none; /* IE 10+ */
