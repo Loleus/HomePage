@@ -209,6 +209,10 @@ table {
             font-size: 0.7em;
             line-height: 1em;
           }
+          &:nth-child(2n) {
+            margin-bottom: -5px;;
+            font-size: 1em;
+          }
           &:nth-child(n + 3) {
             height: auto;
             svg {
