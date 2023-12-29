@@ -2,14 +2,10 @@ import { initer } from "/.././components/vendors/loader/index.js";
 
 const index = (tmp) => {
   return class Home extends HTMLElement {
-    constructor() {
-      super();
-      this.attachShadow({ mode: "open" });
-    }
   
     async connectedCallback() {
-      this.shadowRoot.innerHTML = ``;
-      this.shadowRoot.appendChild(tmp.cloneNode(true));
+      this.innerHTML = ``;
+      this.appendChild(tmp.cloneNode(true));
     }
   }
 }
