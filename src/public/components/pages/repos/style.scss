@@ -88,6 +88,7 @@ table {
         perspective: 100px;
         transform: rotateY(0deg);
         animation: none;
+
         &:nth-child(odd) {
           td {
             &:first-child {
@@ -111,6 +112,15 @@ table {
             background-blend-mode: hard-light;
             box-shadow: 0px 3px 2px 0 black;
             color: #bed1d9;
+
+            a {
+              color: #8ebcca;
+              font-size: 3.5vh;
+              width: 22vh;
+              border: none;
+              background: transparent;
+              transform: translateX(0%);
+            }
             &:hover {
               background-blend-mode: screen;
               transform: rotateX(00deg);
@@ -126,18 +136,16 @@ table {
             width: auto;
             margin-left: 14px;
             font-size: 0.5em;
+            svg {
+              opacity: 1;
+              width: 1.7rem;
+            }
+
           }
-          svg {
-            opacity: 1;
+          &:nth-child(2) {
+              font-size: 0.8rem;
           }
-          a {
-            color: #8ebcca;
-            font-size: 3.5vh;
-            width: 22vh;
-            border: none;
-            background: transparent;
-            transform: translateX(0%);
-          }
+
         }
       }
     }
@@ -209,12 +217,13 @@ table {
             font-size: 0.7em;
             line-height: 1em;
           }
-          &:nth-child(n + 3) {
+          &:nth-child(3) {
             height: auto;
             svg {
               opacity: 1;
             }
           }
+
         }
       }
     }
