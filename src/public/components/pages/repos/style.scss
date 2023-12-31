@@ -36,9 +36,11 @@ table {
         overflow: hidden;
         height: 3vh;
         &:first-child {
-          box-shadow: inset 0 0 8px 1px black, 0 5px 12px -7px black  ;
+          box-shadow:
+            inset 0 0 8px 1px black,
+            0 5px 12px -7px black;
           border-radius: 5px;
-          transform: rotateX(26deg)
+          transform: rotateX(26deg);
         }
         &:nth-child(n + 2) {
           display: block;
@@ -84,7 +86,6 @@ table {
           td {
             &:first-child {
               transform: rotateX(36deg);
-              
             }
           }
         }
@@ -131,12 +132,10 @@ table {
               opacity: 1;
               width: 1.7rem;
             }
-
           }
           &:nth-child(2) {
-              font-size: 0.8rem;
+            font-size: 0.8rem;
           }
-
         }
       }
     }
@@ -172,20 +171,9 @@ table {
         animation: none;
         &:nth-child(odd) {
           animation: none;
-          
-          td {
-              &:first-child {
-              // transform: translateX(0vh) rotateX(26deg);
-            }
-          }
         }
         &:nth-child(even) {
           animation: none;
-          td {
-            &:first-child {
-            // transform: translateX(0vh) rotateX(26deg);
-          }
-        }
         }
         td {
           &:first-child {
@@ -196,7 +184,7 @@ table {
             a {
               color: #8ebcca;
               font-size: 5vh;
-              width:50vw;
+              width: 50vw;
               transform: translateX(0%);
             }
           }
@@ -214,7 +202,6 @@ table {
               opacity: 1;
             }
           }
-
         }
       }
     }
