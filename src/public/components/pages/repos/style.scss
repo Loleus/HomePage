@@ -135,6 +135,7 @@ table {
           }
           &:nth-child(2) {
             font-size: 0.8rem;
+            line-height: 1.5rem;
           }
         }
       }
@@ -188,13 +189,13 @@ table {
               transform: translateX(0%);
             }
           }
-          &:nth-child(n + 2) {
+          &:nth-child(n+2) {
             display: block;
             width: 5vh;
             visibility: visible;
             margin-left: 14px;
-            font-size: 0.7em;
-            line-height: 1em;
+            font-size: 0.6em;
+            line-height: 1.3em;
           }
           &:nth-child(3) {
             height: auto;
