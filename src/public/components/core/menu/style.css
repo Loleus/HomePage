@@ -53,7 +53,7 @@ li a.site-logo {
   transition: all 0.13s linear, text-shadow 0.13s linear;
   padding: 10px 13px;
   display: block;
-  text-decoration: none;
+  text-decoration: none; 
   background: #20202000;
   text-transform: uppercase;
   color: #8f0404;
@@ -129,7 +129,7 @@ a.site-logo.active {
   span#lmb {
     display: none;
   }
-  /* navbar css for mobile start */
+
   .nav-toggler {
     display: block;
     width: auto;
@@ -165,7 +165,6 @@ a.site-logo.active {
     top: 60px;
     flex-direction: column;
     align-items: center;
-    /* background-color: rgba(26, 22, 13, 0.1); */
     max-height: 0;
     overflow: hidden;
     transition: 0.2s;
@@ -207,7 +206,7 @@ a.site-logo.active {
     z-index: 1;
     max-height: 100vh;
     overflow: hidden;
-    /* background-color: rgba(26, 22, 13, 0.84); */
+
   }
   .navbar-area {
     background: rgb(13, 11, 7);
@@ -222,7 +221,4 @@ a.site-logo.active {
   .active {
     left: 0px;
   }
-  /* navbar css for mobile end */
 }
-
-/* mobile breakpoint end */
