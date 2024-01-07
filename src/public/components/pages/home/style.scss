@@ -1,0 +1,32 @@
+.cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    background: none;
+    .svg {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        -webkit-user-select: none; /* Chrome all / Safari all */
+        -moz-user-select: none; /* Firefox all */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Likely future */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cont {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: none;
+    }
+}
