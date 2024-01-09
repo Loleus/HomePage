@@ -92,7 +92,7 @@ showing(image) {
   getPhotoCard(e) {
     let {picId, id, title, createdAt, text} = e;
     return `
-    <wc-card id="${id}" picid="${picId}" title="${title}" createdat="${createdAt}" text="${text}"></wc-card>
+    <wc-card id="${id}" picid="${picId}" title="${title}"></wc-card>
     `
   }
 
