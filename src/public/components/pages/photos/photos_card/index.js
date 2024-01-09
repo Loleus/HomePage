@@ -12,14 +12,6 @@ export default class Card extends HTMLElement {
     return this.getAttribute("title");
   };
 
-  get createdat() {
-    return this.getAttribute("createdat");
-  };
-
-  get text() {
-    return this.getAttribute("text");
-  };
-
   async connectedCallback() {
       this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
       this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
