@@ -57,7 +57,7 @@ export default class Photos extends HTMLElement {
 showing(image) {
   let counter = document.querySelector('.counter');
   counter.innerHTML = `${index+1}/${photoListL.length}`
-  let pic = `http://drive.google.com/uc?id=${currPic}`;
+  let pic = `http://drive.google.com/thumbnail?id=${currPic}&sz=w2160`;
   image.style = `background-image:url("${pic}"); display:block`;
 }
   attributeChangedCallback(attrName, oldVal, newVal) {

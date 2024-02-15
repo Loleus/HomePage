@@ -13,8 +13,8 @@ export default class Card extends HTMLElement {
   };
 
   async connectedCallback() {
-      this.thumbUrl = `https://drive.google.com/thumbnail?id=${this.picid}`
-      this.picUrl = `http://drive.google.com/uc?id=${this.picid}`;
+      this.thumbUrl = `http://drive.google.com/thumbnail?id=${this.picid}`
+      this.picUrl = `http://drive.google.com/thumbnail?id=${this.picid}&sz=w2160`;
       this.render();
       this.querySelector("#zoom").style =`background-image: url("${this.thumbUrl}")`
       this.querySelector('#zoom').addEventListener('click', async () => {
