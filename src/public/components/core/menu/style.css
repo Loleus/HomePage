@@ -29,7 +29,7 @@ li a.site-logo {
   color: #7d1616;
   border-radius: 5px;
   text-shadow: -2px -2px 6px #911d00;
-  font-family: "VT323", sans-serif;
+  /* font-family: "VT323", sans-serif; */
 }
 
 .site-navbar ul {
@@ -41,7 +41,7 @@ li a.site-logo {
 .site-navbar li.logo {
   perspective: 600px;
   z-index: 1;
-  font-family: "Barlow", sans-serif;
+  /* font-family: "Barlow", sans-serif; */
 }
 .site-navbar ul li {
   padding: 0 5px;
@@ -215,7 +215,7 @@ a.site-logo.active {
     position: absolute;
     z-index: 1;
     top: 0;
-    left: -180px;
+    left: -162px;
     border-radius: 14px;
   }
   .active {
