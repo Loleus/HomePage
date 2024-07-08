@@ -21,7 +21,7 @@
 li a.site-logo {
   font-size: 6vh;
   transition: all 0.13s linear, text-shadow 0.13s linear;
-  padding: 9px 13px;
+  padding: 9px 9px 9px 22px;
   display: block;
   text-decoration: none;
   background: none;
@@ -29,6 +29,7 @@ li a.site-logo {
   color: #7d1616;
   border-radius: 5px;
   text-shadow: -2px -2px 6px #911d00;
+  transform-origin: top center;
   /* font-family: "VT323", sans-serif; */
 }
 
@@ -61,23 +62,23 @@ li a.site-logo {
   box-shadow: 0px 0px 0 -5px #aaa;
   text-shadow: -2px -2px 6px #911d00;
   font-family: "Reenie Beanie", sans-serif;
+  transform-origin: top center;
 }
 
 .site-navbar ul li a:hover,
 a.site-logo:hover {
   transition: all 0.13s linear, text-shadow 0.13s linear;
-  box-shadow: 0px 9px 22px -8px #ff0f0f;
   text-shadow: -2px -2px 6px #911d00;
   transform-origin: top center;
-  color: #c01d1d;
+  color: #cf2828;
 }
 
 .site-navbar ul li a.active,
 a.site-logo.active {
-  transform: rotateX(29deg);
-  box-shadow: 0px 9px 22px -12px #ff0f0f;
+  /* transform: rotateX(29deg); */
+  /* box-shadow: 0px 2px 16px -8px #ee5252d5; */
   text-shadow: -2px -2px 6px #911d00;
-  color: #cd0606;
+  color: #dbc4c4;
 }
 .nav-toggler {
   border: 3px solid #7d1616;
@@ -215,7 +216,7 @@ a.site-logo.active {
     position: absolute;
     z-index: 1;
     top: 0;
-    left: -162px;
+    left: -122px;
     border-radius: 14px;
   }
   .active {
