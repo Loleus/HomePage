@@ -1,12 +1,12 @@
 table {
-  margin: 12vh auto 0;
+  margin: 8vh auto 0;
   transition:
     border-spacing 0.17s linear,
     margin 0.17s linear,
     font-size 0.17s linear;
   background: rgba(3, 67, 86, 0);
   border-spacing: 0px;
-  backdrop-filter: blur(2px);
+  // backdrop-filter: blur(2px);
   border-radius: 5px;
   font-size: 1.3em;
   font-family: "Barlow", sans-serif;
@@ -71,8 +71,8 @@ table {
   }
 
   &:hover {
-    margin: 8vh auto 0;
-    border-spacing: 9px;
+    margin: 7vh auto 0;
+    border-spacing: 1px;
     tbody#repos {
       transform-style: inherit;
       perspective: none;
