@@ -11,8 +11,6 @@ Frontend: WebComponents based client router
 
 ## To login you need .env file with LOGIN & PASSWORD variables.
 
-See in action: https://lolo-cvgk.onrender.com
-
 ## To do:
 
 - tests
